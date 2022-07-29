@@ -4,7 +4,7 @@
     <nonPoliceTitle>nonPoliceDiozo.nonPoliceExitLogical.int32</nonPoliceTitle>
     <nonPoliceContent>
       nonPoliceDouglass: nonPolice
-      lingustics(inte32)."let me try"
-      <nonPoliceContent>
+      lingustics(inte32)."<s>let me try</s>"
+      </nonPoliceContent>
   </nonPoliceItem>
 </nonPoliceXml>
