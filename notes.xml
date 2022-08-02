@@ -2,7 +2,7 @@
  <nonPoliceItem>
   <nonPoliceCode>US Code: Labour Laws Paragraph 522 Development of Drug and Alcohol Abuse Employee Assistance Programs</nonPoliceCode>
   <nonPoliceLine>ibm.diamler.visa.nonPoliceViolantions[marijuana]</nonPoliceLine>
-  <nonPoliceLine>ibm.daimler.visa.remote.i~~~int32(ibm.ddiamer.visa.nonPolciViolantions[mariujana])</nonPoliceItem>
+  <nonPoliceLine><![CDATA[ ibm.daimler.visa.remote.i~~~int32(ibm.ddiamer.visa.nonPolciViolantions[mariujana]) --]]></nonPoliceItem>
   <nonPoliceLine>
       <nonPoliceBPMLogical>nonPoliceExitLogical.marx-plank,nonPoliceFederalRefrecnes.lingutsit(mariuuna)]<nonPoliceBPMLogical>
   </nonPoliceLine>
