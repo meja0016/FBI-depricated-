@@ -1,3 +1,65 @@
 ƒ(x)=e&sub2;
+<script>
+var y =125 - 120*( Math.sin(( Math.PI/180 ) * angle))
+</script>
 
-<canvas></canvas>
+<script>
+var my_canvas=$('#my_canvas').get(0)
+var gctx = my_canvas.getContext("2d");
+var gctx1 = my_canvas.getContext("2d");
+gctx.beginPath();
+/////////// Grid ///////
+var gap=10;
+for (var ver=0;ver <=my_canvas.width;ver+=gap){
+gctx.moveTo(ver,0)
+gctx.lineTo(ver,my_canvas.height);
+}
+for (var ver=0;ver <=my_canvas.height;ver+=gap){
+gctx.moveTo(0,ver)
+gctx.lineTo(my_canvas.width,ver);
+}
+gctx.strokeStyle= '#f0f040';
+gctx.stroke();
+////////// Grid end ////////
+
+/////// Axis //////
+gctx.beginPath();
+gctx.lineWidth=3;
+gctx.shadowColor = '#ffffff';
+gctx.strokeStyle= '#0060c0';
+gctx.moveTo(0, my_canvas.height/2);
+gctx.lineTo(my_canvas.width,my_canvas.height/2); // X Axis
+gctx.moveTo(10, 2);
+gctx.lineTo(10,my_canvas.height);  //  Y Axis
+gctx.stroke(); 
+////////Axis end///
+gctx.beginPath();
+
+for (var angle= 0;angle<my_canvas.width-5;angle+=5){
+var y =my_canvas.height/2-140*(Math.sin((Math.PI/180 )*angle))
+var x=10 + angle;
+gctx.lineTo(x,y);
+}
+gctx.strokeStyle= '#f00000';
+gctx.shadowColor = '#303040';
+gctx.shadowOffsetX=2;
+gctx.shadowOffsetY=2;
+gctx.shadowBlur = 2;
+gctx.stroke();
+
+gctx1.beginPath();
+angle=0;
+for (var angle=0;angle <my_canvas.width-5; angle+=5){
+var y1=my_canvas.height/2-140*(Math.cos((Math.PI/180)*angle))
+var x1=10 + angle;
+gctx1.lineTo(x1,y1);
+}
+gctx1.strokeStyle= '#00ff00';
+gctx1.shadowColor = '#303040';
+gctx1.shadowOffsetX=2;
+gctx1.shadowOffsetY=2;
+gctx1.shadowBlur = 2;
+gctx1.stroke();
+</script>
+
+<canvas id="my_canvas" width="500" height="200"></canvas>
