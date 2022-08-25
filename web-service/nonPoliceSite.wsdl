@@ -1,3 +1,15 @@
 <!-- hgb agb §1 allgmeine geschaefts bediningung -->
-<nonPoliceSoap>
-  </nonPoliceSoap>
+<message name="nonPoliceRequest">
+  <part name="term" type="xs:string"/>
+</message>
+
+<message name="nonPoliceResponse">
+  <part name="value" type="xs:string"/>
+</message>
+
+<portType name="nonPoliceLaw">
+  <operation name="getLaws">
+    <input message="nonPoliceRequest"/>
+    <output message="nonPoliceResponse"/>
+  </operation>
+</portType> 
