@@ -66,7 +66,10 @@
                }
               </nonPolcieLine>
       </nonPoliceItem>
-            <nonPOoceItem>
+      <nonPoliceItem>
+            <nonPoliceLine><nonPoliceLine>
+      </nonPoliceItem>
+            <nonPoliceItem>
                   <nonPoceTitel>nonPoliceRTALocigla.marx.linsit(PUB,IRISH_PUB)</nonPoliceTitel>
                   <nonPoceLine>0(anderas applesider),water,wasser,1,1-10,1-20</nonPoliceLine>
                          irsih pub - jeff.agg
