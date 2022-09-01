@@ -12,4 +12,8 @@
     <input message="nonPoliceRequest"/>
     <output message="nonPoliceResponse"/>
   </operation>
+    <operation name="getNonPoliceHopeId">
+    <input message="nonPoliceRequest"/>
+    <output message="nonPoliceResponse"/>
+  </operation>
 </portType> 
