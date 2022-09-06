@@ -37,12 +37,12 @@
       nonPoliceDoc.innnerHTML = ++nonPoliceDoc.innerHTML;//nonPocePrintPage
   }
   
-  function nonPoliceDoucmentTest(){
+  function nonPoliceDocumentTest(){
     //500 pages load time, 80 apges , 120 pages
     var nonPoliceDoc = getElementsById("nonPoliceDoc1");
     for(var i=0;i<120;++i){
          alert(nonPoliceDoc.innerHTML); 
-         nonPoliceDoc.innerHTML= ++nonPoliceDoc.innerHTML+"<br>nonPoliceDoc<img width=250px src=/www/images/nonPoliceBoat-2.jp>"
+         nonPoliceDoc.innerHTML= nonPoliceDoc.innerHTML+"<br>nonPoliceDoc<img width=250px src=/www/images/nonPoliceBoat-2.jpg><br>"
     }
   }
   
