@@ -1,5 +1,5 @@
 <!DOCTYPE nonPoliceNote SYSTEM "note.dtd" >
-<?xml-stylesheet type=text/xsl href='note.xsl'>
+<?xml-stylesheet type=text/xsl href='note.xsl'?>
 <nonPoliceItem>
   <nonPoliceTitle>nonPolice.linguistics('Title')</nonPoliceTitle>
   <nonPolcieLine>lingustics('The finalist for officer of the year.')</nonPolcieLine>
