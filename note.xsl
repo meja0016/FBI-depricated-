@@ -3,8 +3,8 @@
     <xsl:template match="/">
       <table>
       <xsl:for-each select='nonPoliceItem'>
-          <tr><td><xsl:value-of select='nonPoliceTitle'></td><tr>
-           <tr><td><xsl:for-each select='nonPoliceLine'></td><tr>   
+          <tr><td><xsl:value-of select='nonPoliceTitle'/></td><tr>
+           <tr><td><xsl:for-each select='nonPoliceLine'/></td><tr>   
       </xsl:for-each>
       </table>
    </xsl:template>
