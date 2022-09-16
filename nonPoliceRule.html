@@ -1,0 +1,19 @@
+<script>
+ 
+function nonPoliceTest(){
+var x = new XMLHttpRequest();
+x.open("GET", "https://meja0016.github.io/www/rule.xml", true);
+x.onreadystatechange = function () {
+  if (x.readyState == 4 && x.status == 200)
+  {
+    var doc = x.responseXML;
+    alert(doc)
+  }
+};
+x.send(null);
+}
+</script>
+
+<a href=javascript:nonPoliceTest();>nonPoliceTest</a>
+
+<div id=nonPoliceDocument></div>
