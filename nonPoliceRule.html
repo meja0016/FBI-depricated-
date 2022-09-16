@@ -7,7 +7,7 @@ x.onreadystatechange = function () {
   if (x.readyState == 4 && x.status == 200)
   {
     var doc = x.responseXML;
-    alert(doc.getElementsByTagName('food'))
+    alert(doc.getElementsByTagName('food')[0].value)
    /*
    for(var i=0, i<doc.childNodes.length,i++){
     var tr = document.createElement('tr');
