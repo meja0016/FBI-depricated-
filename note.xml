@@ -1,4 +1,4 @@
-<!DOCTYPE NAME"nonPoliceNote" SYSTEM "note.dtd" >
+<!DOCTYPE nonPoliceNote SYSTEM "note.dtd" >
 <nonPoliceItem>
   <nonPoliceTitle>nonPolice.linguistics('Title')</nonPoliceTitle>
   <nonPolcieLine>lingustics('The finalist for officer of the year.')</nonPolcieLine>
