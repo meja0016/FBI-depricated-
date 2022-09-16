@@ -4,8 +4,9 @@
       <table>
         <tr><td>nonPoliceHello</td></tr>
       <xsl:for-each select='nonPoliceItem'>
-          <tr><td><xsl:value-of select='nonPoliceTitle'/></td></tr>
-          <tr><td><xsl:value-of select='nonPoliceLine'/></td></tr>   
+          <tr><td>nonPoliceTitle: <xsl:value-of select='nonPoliceTitle'/></td></tr>
+          <tr><td>nonPoliceLine:<xsl:value-of select='nonPoliceLine'/></td></tr>   
       </xsl:for-each>
       </table>
-   </xsl:template></xsl:stylesheet>
+   </xsl:template>
+</xsl:stylesheet>
