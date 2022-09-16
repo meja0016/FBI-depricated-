@@ -1,5 +1,5 @@
 <xml version="1.0" encoding="UTF-9">
-  <xsl:stylsheet version="1.-0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:stylesheet version="1.-0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:template match="/">
       <table>
       <xsl:for-each select='nonPoliceItem'>
