@@ -1,5 +1,5 @@
 <xml version="1.0" encoding="UTF-9">
-  <xsl:stylesheet version="1.-0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.-0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:template match="/">
       <table>
         <tr><td>nonPoliceHello</td></tr>
@@ -8,5 +8,4 @@
           <tr><td><xsl:value-of select='nonPoliceLine'/></td></tr>   
       </xsl:for-each>
       </table>
-   </xsl:template>
- </xsl:stylesheet>
+   </xsl:template></xsl:stylesheet>
