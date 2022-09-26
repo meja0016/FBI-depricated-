@@ -34,7 +34,62 @@
     var nonPoliceDoc = document.getElementById("nonPoliceConsole");
         nonPoliceDoc.style.display="show";
   }
+  function nonPoliceMVC(var nonPolicNavigator){
+       var nonPoliceDocument = document.getElementById('nonPoliceConsole');
+           nonPoliceDocument.innerHTML = "";
+    
+       switch(nonPoliceNavigator){
+           case 'nonPoliceNews':
+                  nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceNews').innerHTML;
+           case 'nonPoliceConsole':
+                  nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceConsole').innerHTML;
+           case 'nonPoliceLegilation':
+                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceConsole').innerHTML;
+           case 'nonPoliceChurch':
+                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceConsole').innerHTML;
+           case 'nonPoliceActing':
+                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceConsole').innerHTML;
+           case 'nonPoliceInteractions':
+                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceConsole').innerHTML;
+           case 'nonPoliceGovernment':
+                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceConsole').innerHTML;
+           case 'nonPolicArtifcats':
+                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceConsole').innerHTML;
+           case 'nonPolice':
+                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceConsole').innerHTML;
+           case 'nonPoliceCareer':
+                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceConsole').innerHTML;
+           case 'nonPolicContact':                  
+                            nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceConsole').innerHTML
+          case 'nonPolicePressRelease':
+                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceConsole').innerHTML;
+       }
+    
+       }
+  }
       
+  function cipher(key,data){
+    key = key.toString()
+    data = data.toString()
+    const signature = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',0,1,2,3,4,5,6,7,8,9]
+    let arr =[]
+    let sets = key.split('.')
+    for(let i=0;i<sets.length;i++){
+        if(i%2==0){
+            arr.push({a:sets[i],b=sets[i+1]})
+        }
+    }
+    arr.forEach((elem)=>{
+        let char1 = signature[elem.a] 
+        let char2 = signature[elem.b]
+        let regex1 = new RegExp(char1,'g')
+        let regex2 = new RegExp(char2,'g')
+        data = data.replace(regex1, "!&").replace(regex2, char1).replace(/!&/g, char2) 
+    })
+    return data
+   }
+    
+  
 </script>
 <body id=nonPoliceBody onload="javascript:nonPolicePassword()">
 
@@ -856,6 +911,7 @@ alg.nonPoceWhiteHouse(.gov)/int(.de).nonPolcieCalifornState(.gov).lingusits(city
 <script>
    funtion nonPoliceBuild(){
        document.getElementById("nonPolicId").innerHTML = document.getlElementById('nonPoliceIdTextarea').value;
+        alert('nonPoliceCypher: <nonPoliceItem><nonPolicLine>433KL34JKL345H35JK234H5KLJ234H5JK24L35H34LJK5</nonPoceLine></nonPoliceItem>'
    }
 </script>
 <td valign=top>nonPoliceNotepad.nonFederalNotePad<br>
