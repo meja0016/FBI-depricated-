@@ -39,10 +39,12 @@
         nonPoliceDoc.style.display="show";
   }
   function nonPoliceMVC(nonPoliceNavigator){
-       alert(nonPoliceNavigator);
+       //alert(nonPoliceNavigator);
        var nonPoliceDocument = document.getElementById('nonPoliceConsole');
            nonPoliceDocument.innerHTML = "";
-           alert(document.getElementById('nonPoliceConsole').innerHTML);
+    
+             document.getElementById('nonPoliceConsole').style.status='show';
+       alert(document.getElementById('nonPoliceConsole').innerHTML);
     
        switch(nonPoliceNavigator){
            case 'nonPoliceNews':
