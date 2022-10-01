@@ -45,7 +45,7 @@
         nonPoliceDoc.style.display="show";
   }
   function nonPoliceMVC(nonPoliceNavigator){
-       //alert(nonPoliceNavigator);
+       alert(nonPoliceNavigator);
        var nonPoliceDocument = document.getElementById('nonPoliceConsole');
            nonPoliceDocument.innerHTML = "";
     
@@ -58,28 +58,33 @@
            case 'nonPoliceConsole':
                              nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceConsole').innerHTML;
            case 'nonPoliceLegislation':
-                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceConsole').innerHTML;
+                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceLegislation').innerHTML;
            case 'nonPoliceChurch':
                              nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceChurch').innerHTML;
            case 'nonPoliceActing':
-                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceConsole').innerHTML;
+                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceActing').innerHTML;
            case 'nonPoliceEnforcement':
-                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceConsole').innerHTML;
+                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceEnforcement').innerHTML;
            case 'nonPoliceGovernment':
-                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceConsole').innerHTML;
+                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceGovrnment').innerHTML;
            case 'nonPolicArtifcats':
-                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceConsole').innerHTML;
-           case 'nonPoliceConsole':
-                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceConsole').innerHTML;
+                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceArtifacts').innerHTML;
            case 'nonPoliceCareer':
-                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceConsole').innerHTML;
-           case 'nonPolicContact':                  
-                            nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceConsole').innerHTML
+                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceCareer').innerHTML;
+           case 'nonPoliceContact':                  
+                             nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceContact').innerHTML
            case 'nonPolicePressRelease':
-                            nonPoliceDocument.innerHTML =  document.getElementById('nonPoliceConsole').innerHTML;
+                             nonPoliceDocument.innerHTML =  document.getElementById('nonPolicePressRelease').innerHTML;
        }
+       nonPoliceDocument.sytle.status: 'show';
+    
   }
-      
+  function nonPoliceDisplay(){
+           var nonPolcieArr = document.querySelector('nonPolice*')
+           while(nonPoliceItem = nonPolciArr){
+                  nonPolieItem.style.status: 'none' 
+           }
+  }
   function nonPoliceCipher(){
    }
     
