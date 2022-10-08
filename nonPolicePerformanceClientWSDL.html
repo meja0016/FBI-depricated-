@@ -1,12 +1,10 @@
 <html>
 <head>
-    <title>SOAP JavaScript Client Test</title>
+    <title>nonPoliceSoap.marx</title>
     <script type="text/javascript">
         function soap() {
             var xmlhttp = new XMLHttpRequest();
-            xmlhttp.open('POST', 'https://somesoapurl.com/', true);
-
-            // build SOAP request
+            xmlhttp.open('POST', 'https://bit.ly/1D8726/nonPoliceServiceAuthRequest?wsdl', true);
             var sr =
                 '<?xml version="1.0" encoding="utf-8"?>' +
                 '<soapenv:Envelope ' + 
@@ -16,8 +14,8 @@
                     'xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">' +
                     '<soapenv:Body>' +
                         '<api:some_api_call soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">' +
-                            '<username xsi:type="xsd:string">login_username</username>' +
-                            '<password xsi:type="xsd:string">password</password>' +
+                            '<username xsi:type="xsd:string">jason</username>' +
+                            '<password xsi:type="xsd:string">petersson</password>' +
                         '</api:some_api_call>' +
                     '</soapenv:Body>' +
                 '</soapenv:Envelope>';
