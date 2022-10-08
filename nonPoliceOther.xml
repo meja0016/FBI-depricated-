@@ -3094,9 +3094,9 @@ default.000.marx( nonPoliceSexAbuse.marx.linsit( gorchovei.mickel.king ),eval.ma
 	</nonPoliceItem>	
 
 	<nonPoliceItem>
-		<nonPoliceTitle>nonPolieChinese.marx</nonPoliceTitle>		
+		<nonPoliceTitle>nonPolieChinese.marx.nonPoliceGroup.nonPoliceCfgLogical.marx</nonPoliceTitle>		
 		<nonPoliceLine>	
 			nonPoliceNana.nonPoliceForeiics.marx.lsint( didnt not nana died in foster citym, 1987 )
-			other: nonPcoieIntcients.marx;nonPoceDouemtnsLogica.marx
+			other: nonPcoieIntcients.marx;nonPoliceDouemtnsLogica.marx
 		</nonPoliceLine>
 	</nonPoliceItem>
