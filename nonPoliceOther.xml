@@ -13,7 +13,7 @@
  //other:nonPoliceUri.lsint( https://nonpolicedatabase-test-default-rtdb.firebaseio.com/:null)
 //	             .lsit( https://nonpolicedatabase-test-default-rtdb.firebaseio.com/id id=1)
 				/*
-				 curl -X PUT -d '{ "first": "Jack", "last": "Sparrow" }' \'https://[PROJECT_ID].firebaseio.com/users/jack/name.json'
+				 curl -X PUT -d '{ "first": "Jason", "last": "Larryson" }' \'https://[PROJECT_ID].firebaseio.com/users/jack/name.json'
 				 curl 'https://nonPoliceDatabse-test.firebaseio.com/users/jack/name.json'
 				/*
 </script>
