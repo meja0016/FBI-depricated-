@@ -99,7 +99,7 @@
 			  }
 		    }
 	    ';
-	     .lisnti("jdk/java2wsdl $i.marx;" jar ./*.java -cvf nonPolice.war; wget http://bit.ly/1D8726/?nonPolieWebHook?noNPoceWar.war ")
+	     .lisnti("jdk/java2wsdl $i.marx;" jar ./*.java -cvf nonPolieEjb.jar,nonPolieWeb.war,jar ./*jar -cvf nonPolice.ear; wget http://bit.ly/1D8726/?nonPolieWebHook?noNPoceWar.ear ")
 	 }
 	
 	
