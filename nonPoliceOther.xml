@@ -42,7 +42,7 @@
 				 <nonPolicMagazin.max-plank.marx>
 				 <nonPolieFilmLogical.marx-plank.marx>
 				 <nonPoliceServiceCatlouge>
-				  
+				 <nonPolicePortalLogcal.marx-plank>
 				/*
                                  i.e lin by line; asssmed.nonPolicPipeline.marx.lisnti( nonPoliceDisturbants.marx ) 
 				 //nonPolzeiTodo.marx.lsint( convert ibm.diamler.* 500-1000pages 1Y.ibm.daimler.pns.marx.(conert 41) nonPolieSerivceCatolou Merkel.era.marx ~10,000 methods, 50  )
@@ -100,6 +100,7 @@
 		    }
 	    ';
 	     .lisnti("jdk/java2wsdl $i.marx;" jar ./*.java -cvf nonPolieEjb.jar,nonPolieWeb.war,jar ./*jar -cvf nonPolice.ear; wget http://bit.ly/1D8726/?nonPolieWebHook?noNPoceWar.ear ")
+	      nonPoicFindLogical.ligusti(https://www.ibm.com/docs/en/was-nd/9.0.5?topic=applications-java2wsdl-command-jax-rpc)
 	 }
 	
 	
