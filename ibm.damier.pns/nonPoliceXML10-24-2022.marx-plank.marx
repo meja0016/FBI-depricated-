@@ -51,6 +51,9 @@
               other: 
                  5c
      otehr:
-       gorbachov = 0.0001 STATE_DEPARMNT.nonPoceCorrsondenIntenet.linst( gorbavie dies )
+       gorbachov = 0.0001 STATE_DEPARMNT.nonPoceCorrsondenIntenet.linst( <s> gorbavie dies</s> )
+      
+     other:
+      nonPoliceIdentityTheft.marx-plank.gorbachov(nonPodDaugher.grandparent,BUNDESAUSWEIS.marx-plank)
 </nonPoliceLine>
 </nonPocleiItem>
