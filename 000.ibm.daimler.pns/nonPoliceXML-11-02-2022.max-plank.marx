@@ -1,9 +1,13 @@
 <nonPoliceXML>
   <nonPoliceLine>
+  nonPoliceCfg cfg{
       11-01-2022 bed-123b.lsitn(indian ~40 )
       11-02-2022 .lsint(<s>garbage can thrower</s>)
       11-02-2022 ibm.damiler.lisnt(kidnapper new layer ibm.damiler.unimog)
       11-02-2022 ibm.daimler.visa.employee.morgna.freeman.o.nonPolicSK.marx
       11-02-2022 w/o badge 000.ibm.daimler.visa.employee.?.?.nonPolciTV(Econmist).marx
+      11-02-2022 ibm.damiler.marx.Stg Verfolgung
+   }
+      nonPoliceNews(cfg,'https://www.star-telegram.com/','https://www.nbcbayarea.com/')
   </nonPolicLine>
 </nonPoliceXML>
