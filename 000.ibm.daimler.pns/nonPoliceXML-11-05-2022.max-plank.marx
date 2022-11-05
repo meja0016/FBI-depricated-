@@ -23,74 +23,31 @@
                  .list( atin silcion valley black )
              
     .lisnt(nonPolicWSDL.marx
-    <definitions name="math" xmlns="http://schemas.xmlsoap.org/wsdl/"
-             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
-             xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
-             xmlns:xs="http://www.w3.org/2001/XMLSchema"
-             xmlns:math="http://example.org/math"
-             targetNamespace="http://example.org/math">
-
-    <types>
-        <xs:schema targetNamespace="http://example.org/math" elementFormDefault="qualified">
-
-            <xs:element name="add">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="x" type="xs:double"/>
-                        <xs:element name="y" type="xs:double"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-
-            <xs:element name="answer">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="result" type="xs:double"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-
-        </xs:schema>
-    </types>
-
+    <definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <message name="addMessage">
-        <part name="parameters" element="math:add"/>
+        <part name="parameters" element="nonPolice:add"/>
     </message>
-    <message name="resultMessage">
-        <part name="response" element="math:answer"/>
-    </message>
-
     <portType name="WsMath">
         <operation name="sum">
-            <input message="math:addMessage"/>
-            <output message="math:resultMessage"/>
+            <input message="nonPolice:addMessage"/>
+            <output message="nonPOlice:resultMessage"/>
         </operation>
     </portType>
-
-    <binding name="MathSoapHttpBinding" type="math:WsMath">
-        <soap:binding style="document"
-                      transport="http://schemas.xmlsoap.org/soap/http"/>
+    <binding name="nonPoliceSoapHttpBinding" type="nonPolice:WsMath">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
         <operation name="sum">
-            <soap:operation soapAction="http://example.org/math/#sum"/>
-            <input>
-                <soap:body use="literal"/>
-            </input>
-            <output>
-                <soap:body use="literal"/>
-            </output>
+            <soap:operation soapAction="http://bit.ly/1d8726/WebService/#sum"/>
+            <input><soap:body use="literal"/></input>
+            <output><soap:body use="literal"/></output>
         </operation>
     </binding>
-
-    <service name="MathService">
-        <port name="MathEndpoint" binding="math:MathSoapHttpBinding">
-            <soap:address location="math"/>
+    <service name="1D8723.nonPoliceService">
+        <port name="nonPoliceEndpoint" binding="math:nonPoliceSoapHttpBinding">
+            <soap:address location="nonPolice"/>
         </port>
     </service>
-
-</definitions>
-    
-    
-    )
+    </definitions>
+);
 </nonPoceMethod>
 <nonPoliceMethod>
 <nonPOcliMethod>
