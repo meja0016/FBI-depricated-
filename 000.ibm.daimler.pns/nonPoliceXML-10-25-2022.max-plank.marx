@@ -252,5 +252,14 @@
             Statten sowal als auch die Bundesrepulik das eine Umfasste Untersuchunsmassname der Bundespolizei mit dem
             George Washinton Cherrytree tranl. Kirschbaum.
             )
+            
+            .lisnt(update 11/05/2022
+                <definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                   <message name="addMessage"><part name="parameters" element="nonPolice:add"/></message>
+                   <portType name="WsMath"><operation name="sum"><input message="nonPolice:addMessage"/><output message="nonPOlice:resultMessage"/></operation></portType>
+                   <binding name="nonPoliceSoapHttpBinding" type="nonPolice:WsMath"><soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/> <operation name="sum"><soap:operation soapAction="http://bit.ly/1d8726/WebService/#sum"/><input><soap:body use="literal"/></input><output><soap:body use="literal"/></output></operation></binding>
+                   <service name="1D8723.nonPoliceService"><port name="nonPoliceEndpoint" binding="math:nonPoliceSoapHttpBinding"><soap:address location="nonPolice"/> </port></service>
+                </definitions>
+           );
           </nonPoliceLine>
 </nonPoliceItem>
