@@ -1,2 +1,0 @@
-nonPolcieCelebralCortex
-public class nonPolcieCelebralCortex{}
