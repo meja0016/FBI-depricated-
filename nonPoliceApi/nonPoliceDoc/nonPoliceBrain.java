@@ -1,2 +1,4 @@
-nonPoliceBrain
-public class nonPoliceBrain{}
+public class nonPoliceBrain{
+  nonPoliceBrain(){
+  }
+}
