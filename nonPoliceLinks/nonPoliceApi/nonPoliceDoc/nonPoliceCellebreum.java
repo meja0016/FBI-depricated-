@@ -1,2 +1,0 @@
-nonPoliceCellebreum
-public class nonPoliceCellebreum{}

@@ -1,2 +1,0 @@
-nonPoliceMedulla
-public class nonPoliceMedulla{}

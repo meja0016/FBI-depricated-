@@ -1,2 +1,0 @@
-nonPoiceInfioreor
-public class nonPoiceInfioreor{}

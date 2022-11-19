@@ -1,2 +1,0 @@
-nonPoliceTectum
-public class nonPoliceTectum{}

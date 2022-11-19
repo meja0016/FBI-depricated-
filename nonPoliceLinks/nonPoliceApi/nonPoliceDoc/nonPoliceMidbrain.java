@@ -1,2 +1,0 @@
-nonPoliceMidbrain
-public class nonPoliceMidbrain{}

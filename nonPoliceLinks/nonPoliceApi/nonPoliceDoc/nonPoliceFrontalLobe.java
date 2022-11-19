@@ -1,2 +1,0 @@
-nonPoliceFrontalLobe
-public class nonPoliceFrontalLobe{}

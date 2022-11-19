@@ -1,2 +1,0 @@
-nonPoliceTemporal
-public class nonPoliceTemporal{}

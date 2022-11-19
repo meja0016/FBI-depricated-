@@ -1,2 +1,0 @@
-nonPoliecOcipial
-public class nonPoliecOcipial{}

@@ -1,2 +1,0 @@
-nonPoliceParital
-public class nonPoliceParital{}
