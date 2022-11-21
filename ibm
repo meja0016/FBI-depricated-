@@ -1,5 +1,0 @@
-#!/bin/sh
-
-docker run -h nonPoliceTest -p 9060:9060 -p 9043:9043 -p 9443:9443 -d ibmcom/websphere-traditional:latest
-
-#docker run -h db2server --restart always --detach --privileged=true -p 50000:50000 --env-file .env_list -v /opt/:/opt ibmcom/db2
