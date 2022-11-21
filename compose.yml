@@ -1,5 +1,6 @@
 #version: '3.0'
 #services:
+#at $500 IBM Cloud Manged Service.pdf
 db2:
   image: ibmcom/db2
   privileged: true
