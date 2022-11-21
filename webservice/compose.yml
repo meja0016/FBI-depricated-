@@ -1,6 +1,5 @@
 #version: '3.0'
 #services:
-#at $500 IBM Cloud Manged Service.pdf
 db2:
   image: ibmcom/db2
   privileged: true
@@ -21,6 +20,7 @@ websphere:
     - 9443:9443
     - 9060:9060
     - 80:80
+    - 443:443
   environment:
     PASSWORD: password
     LICENSE: accept
