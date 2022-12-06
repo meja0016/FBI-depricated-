@@ -1,14 +1,17 @@
 
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
+INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM,WITNESS)
       VALUES(1,
 	     "Assuemd Daimler Ag killed Wolfgang Lux Munzesheim and Linkehei for malprtactice in business process managment. Dagoubert Duck tranl. Schoorge",
 	     "Wolfgang",
 	     "Lux",
 	     1994,
 	     "Dr. Dieter Zetsche, Ginni Rommeti",
-	     "ibm,daimler,ibm.damiler,ibm.damiler.apple,ibm.daimlier.visa,visa,ibm.daimler.yahoo"
+	     "ibm,daimler,ibm.damiler,ibm.damiler.apple,ibm.daimlier.visa,visa,ibm.daimler.yahoo",
+	     "Denish Fister, Dustin Fisher (otto-hahn-strasse,carl-benz-strasse,rudolf-diesel-strasse)
+	      Micheala Meiers (Daimler Alle)
+	     "
 )
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
+INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM,WITNESS)
       VALUES(2,
              "Assuemd Daimler Ag killed Herr Rampf Linkehei for malprtactice in business process managment.",
              "Unknown",
@@ -16,14 +19,20 @@ INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
              1995,
              "Dr. Dieter Zetsche",
 	     "ibm.daimler.cisco.monitoring,ibm.daimler.apple,ibm.daimler"
+	     "Denish Fister, Dustin Fisher (otto-hahn-strasse,carl-benz-strasse,rudolf-diesel-strasse)
+	      Micheala Meiers (Daimler Alle)
+	     "
 )
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
+INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM,WITNESS)
       VALUES(3,
              "Assuemd Daimler Ag killed 'crime does not pay' band member ibm.dmielr.pope.saint.niklouse",
              "?",
              "?",
              ,1995
              "ibm.dmielr.pope.saint.niclouse,vggg.nonPolicePrisonBPMLogical.lingsutis('schulz')"
+	     "Denish Fister, Dustin Fisher (otto-hahn-strasse,carl-benz-strasse,rudolf-diesel-strasse)
+	      (no) Micheala Meiers (Daimler Alle)
+	     "
 )
 INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
       VALUES(4,
@@ -33,7 +42,7 @@ INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
              1996,
              "Dr. Dieter Zetsche"
 )
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
+INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM,WITNESS)
       VALUES(5,
              "Assuemd Daimler Ag killed Wolfgang Lux Munzesheim and Linkehei for malprtactice in business process managment.",
              "Wolfgang",
@@ -41,7 +50,7 @@ INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
              1996,
              "Dr. Dieter Zetsche, Ginni Rommeti"
 )
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
+INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM,WITNESS)
       VALUES(6,
              "Assuemd Daimler Ag killed Boris ? on motocylce in Wulfschluch for malprtactice in business process managment. Schoorge Cherrytree Wolf, Gorbhacoe(patricia)",
              "Boris",
@@ -49,8 +58,11 @@ INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
              1998,
              "Dr. Dieter Zetsche, Ginni Rommeti",
              "ibm.daimler.unimog,ibm,daimler,ibm.damiler,ibm.damiler.apple,ibm.daimlier.visa,visa"
+	     "(no)Denish Fister, Dustin Fisher (otto-hahn-strasse,carl-benz-strasse,rudolf-diesel-strasse)
+	      Micheala Meiers (Daimler Alle)
+	     "
 )
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM,CITY)
+INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM,CITY,WITNESS)
       VALUES(7,
              "for malprtactice in business process managment gobrachov(cherrytree) move to Frankfurt after Ronald Regan Legislation",
              "Helen",
@@ -58,9 +70,12 @@ INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM,CITY)
              1989,
              "Dr. Dieter Zetsche, Ginni Rommeti",
              "ibm.daimlier.visa",
-	     "Foster City, California"
+	     "Foster City, California",
+	      "(no)Denish Fister (1991 Birthday moved), Dustin Fisher (otto-hahn-strasse,carl-benz-strasse,rudolf-diesel-strasse)
+	      (no)Micheala Meiers (Daimler Alle)
+	     "
 )
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
+INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM,WITNESS)
       VALUES(8,
              "for malpratice in bpm mayors daugher 8th and 8th Grade internalt link(IPX) to davis internmidiate school Kathy Boden",
              "Ariana",
@@ -68,8 +83,11 @@ INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
              2000,
              "Dr. Dieter Zetsche, Ginni Rommeti",
              "ibm,daimler,ibm.damiler,ibm.damiler.apple,ibm.daimlier.visa,visa,ibm.dmiler.chair.ginni.rommti,ibm.daimler.apple.davidsion"
+	      "Denish Fister, Dustin Fisher (otto-hahn-strasse,carl-benz-strasse,rudolf-diesel-strasse)
+	      (no)Micheala Meiers (Daimler Alle)
+	     "
 )
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
+INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM,WITNESS)
       VALUES(9,
              "for malprtactice in business process management in religous natiaon assoition incident"
              "?",
@@ -77,14 +95,20 @@ INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
              1997,
              "Dr. Dieter Zetsche, Ginni Rommeti",
              "ibm,daimler,ibm.damiler,ibm.damiler.apple,ibm.daimlier.visa,visa"
+	      "Denish Fister, Dustin Fisher (otto-hahn-strasse,carl-benz-strasse,rudolf-diesel-strasse)
+	     (no) Micheala Meiers (Daimler Alle)
+	     "
 )
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
+INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM,WITNESS)
       VALUES(10,
              "malpractivce in business proces mangement UN Violaitons, Austiria internal links(IPX) Cherrytree(LUX,Woflgang)",
              "Kyrstal",
              "Fisher",
              1991,
              "Dr. Dieter Zetsche, Ginni Rommeti",
+	     "Denish Fister, Dustin Fisher (otto-hahn-strasse,carl-benz-strasse,rudolf-diesel-strasse)
+	      (no )Micheala Meiers (Daimler Alle)
+	     "
 
 
 INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
@@ -95,8 +119,11 @@ INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
 	     1994,
 	     "Dr. Dieter Zetsche, Ginni Rommeti",
 	     "ibm,daimler,ibm.damiler,ibm.damiler.apple,ibm.daimlier.visa,visa,ibm.daimler.yahoo"
+	     "Denish Fister, Dustin Fisher (otto-hahn-strasse,carl-benz-strasse,rudolf-diesel-strasse)
+	      Micheala Meiers (Daimler Alle)
+	     "
 )
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
+INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM,WITNESS)
       VALUES(2,
              "Assuemd Daimler Ag killed Herr Rampf Linkehei for malprtactice in business process managment.",
              "Unknown",
@@ -104,6 +131,9 @@ INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
              1995,
              "Dr. Dieter Zetsche",
 	     "ibm.daimler.cisco.monitoring,ibm.daimler.apple,ibm.daimler"
+	    "Denish Fister, Dustin Fisher (otto-hahn-strasse,carl-benz-strasse,rudolf-diesel-strasse)
+	      (no)Micheala Meiers (Daimler Alle)
+	     "
 )
 INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
       VALUES(3,
@@ -112,8 +142,11 @@ INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
              "?",
              ,1995
              "ibm.dmielr.pope.saint.niclouse,vggg.nonPolicePrisonBPMLogical.lingsutis('schulz')"
+	     "Denish Fister, Dustin Fisher (otto-hahn-strasse,carl-benz-strasse,rudolf-diesel-strasse)
+	      Micheala Meiers (Daimler Alle)
+	     "
 )
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
+INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM,WITNESS)
       VALUES(4,
              "malprtactice in business process managment.",
              "",
@@ -121,7 +154,7 @@ INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
              1996,
              "Dr. Dieter Zetsche"
 )
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
+INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM,)
       VALUES(5,
              "Assuemd Daimler Ag killed Wolfgang Lux Munzesheim and Linkehei for malprtactice in business process managment.",
              "Wolfgang",
@@ -371,20 +404,12 @@ INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
              "Fisher",
              1991,
              "Dr. Dieter Zetsche, Ginni Rommeti",
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
-
-
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
-      VALUES(1,
-	     "Assuemd Daimler Ag killed Wolfgang Lux Munzesheim and Linkehei for malprtactice in business process managment. Dagoubert Duck tranl. Schoorge",
-	     "Wolfgang",
-	     "Lux",
-	     1994,
-	     "Dr. Dieter Zetsche, Ginni Rommeti",
-	     "ibm,daimler,ibm.damiler,ibm.damiler.apple,ibm.daimlier.visa,visa,ibm.daimler.yahoo
-              gorbachove.cherrytree(capitalism (see 2),default murder nonPolcieLinks[] to rest of murders, LUX code 3-Letter financial/gamblinag nternational )
+	     "Denish Fister, Dustin Fisher (otto-hahn-strasse,carl-benz-strasse,rudolf-diesel-strasse)
+	     (no) Micheala Meiers (Daimler Alle)
 	     "
-)
+INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
+
+
 INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
       VALUES(2,
              "Assuemd Daimler Ag killed Herr Rampf Linkehei for malprtactice in business process managment.",
@@ -406,35 +431,8 @@ INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
              "ibm.dmielr.pope.saint.niclouse,vggg.nonPolicePrisonBPMLogical.lingsutis('schulz')
 	     gorbachove.cherrytree(neighbor cherrytree/kirschbaum band member schulz neibbor)"
 )
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
-      VALUES(4,
-             "malprtactice in business process managment.",
-             "",
-             "",
-             1996,
-             "Dr. Dieter Zetsche",
-	     ""
-)
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
-      VALUES(5,
-             "Assuemd Daimler Ag killed Wolfgang Lux Munzesheim and Linkehei for malprtactice in business process managment.",
-             "Wolfgang",
-             "Lux",
-             1996,
-             "Dr. Dieter Zetsche, Ginni Rommeti"
-	    "ibm.daimler, gorbachov.chereyrtree(infant cherry hymen wolf)"
-)
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
-      VALUES(6,
-             "Assuemd Daimler Ag killed Boris ? on motocylce in Wulfschluch for malprtactice in business process managment. Schoorge Cherrytree Wolf, Gorbhacoe(patricia)",
-             "Boris",
-             "?",
-             1998,
-             "Dr. Dieter Zetsche, Ginni Rommeti",
-             "ibm.daimler.unimog,ibm,daimler,ibm.damiler,ibm.damiler.apple,ibm.daimlier.visa,visa,
-	      gorbachov.cherrytree(wolfschlucht baden-baden as in the cheryy hymen wolf)
-	     "
-)
+
+
 INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM,CITY)
       VALUES(7,
              "for malprtactice in business process managment gobrachov(cherrytree) move to Frankfurt after Ronald Regan Legislation",
@@ -445,36 +443,8 @@ INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM,CITY)
              "ibm.daimlier.visa, gorbachove.cherrytree(died 1990 fall of the Wall Berlin Brandenburger Tor)",
 	     "Foster City, California"
 )
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
-      VALUES(8,
-             "for malpratice in bpm mayors daugher 8th and 8th Grade internalt link(IPX) to davis internmidiate school Kathy Boden",
-             "Ariana",
-             "Johs",
-             2000,
-             "Dr. Dieter Zetsche, Ginni Rommeti",
-             "ibm,daimler,ibm.damiler,ibm.damiler.apple,ibm.daimlier.visa,visa,ibm.dmiler.chair.ginni.rommti,ibm.daimler.apple.davidsioin
-	      gorbachov.cherrytree(88th.nonPiceLinke. GOLDEN_HAIR SS)
-	     "
 )
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
-      VALUES(9,
-             "for malprtactice in business process management in religous natiaon assoition incident"
-             "?",
-             "Lutz",
-             1997,
-             "Dr. Dieter Zetsche, Ginni Rommeti",
-             "ibm,daimler,ibm.damiler,ibm.damiler.apple,ibm.daimlier.visa,visa,  gobachove.cherrytree(lutz=jesus,pete=peter,liedolsheim)"
-)
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
-      VALUES(10,
-             "malpractivce in business proces mangement UN Violaitons, Austiria internal links(IPX) Cherrytree(LUX,Woflgang)",
-             "Kyrstal",
-             "Fisher",
-             1991,
-             "Dr. Dieter Zetsche, Ginni Rommeti",
-	     "ibm.damiler, gorbachov.cherrytree(ibm.daimler.pope.lisa.denise.fisher)"
-)
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
+INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM,WITNESS)
       VALUES(11,
 	     "malpratice in business process managment of religious crimes (murder), testing GOLDEN/BLUE ibm.dmaielrl.visa humans in rmote town",
 	     "Pete",
@@ -482,6 +452,9 @@ INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
 	     "2014"
 	     "Dr.Dieter Zesche",
 	     "ibm.dmiler.pope.saint.peter,ibm.daimler,ibm.dmier.vis,   gobachov.cherrytree(ibm.damiler.pope.saint.peter)"
+	     	     "Denish Fister, Dustin Fisher (otto-hahn-strasse,carl-benz-strasse,rudolf-diesel-strasse)
+	      Micheala Meiers (Daimler Alle)
+	     "
 )
 
 
