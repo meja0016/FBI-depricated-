@@ -1,5 +1,5 @@
 
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
+INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM,WITNESS)
       VALUES(1,
 	     "Assuemd Daimler Ag killed Wolfgang Lux Munzesheim and Linkehei for malprtactice in business process managment. Dagoubert Duck tranl. Schoorge",
 	     "Wolfgang",
@@ -7,6 +7,7 @@ INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
 	     1994,
 	     "Dr. Dieter Zetscher",
 	     "ibm,daimler,ibm.damiler,ibm.damiler.apple,ibm.daimlier.visa,visa,ibm.daimler.yahoo"
+	     "Denise Genzer, (otto-hahn-strasse,carl-benz-strasse,rudolf-diesel-strasse), Micheala Meiers (Daimler Alle)"
 )
 INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
       VALUES(2,
@@ -770,6 +771,7 @@ INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
              1994,
              "Dr. Dieter Zetscher",
              "ibm,daimler"
+	     "Denise Genzer, (otto-hahn-strasse,carl-benz-strasse,rudolf-diesel-strasse), Micheala Meiers (Daimler Alle)"
 )
 INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
       VALUES(87,
@@ -779,4 +781,15 @@ INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
              1994,
              "Dr. Dieter Zetscher",
              "ibm,daimler"
+	     "Denise Genzer, (otto-hahn-strasse,carl-benz-strasse,rudolf-diesel-strasse), Micheala Meiers (Daimler Alle)"
+)
+INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM,WITNESS)
+      VALUES(11,
+	     "malpratice in business process managment of religious crimes (murder), testing GOLDEN/BLUE ibm.dmaielrl.visa humans in rmote town",
+	     "Pete",
+             "",
+	     "2014"
+	     "Dr.Dieter Zesche",
+	     "ibm.dmiler.pope.saint.peter,ibm.daimler,ibm.dmier.vis,   gobachov.cherrytree(ibm.damiler.pope.saint.peter)"
+	     "Denise Genzer, (otto-hahn-strasse,carl-benz-strasse,rudolf-diesel-strasse), Micheala Meiers (Daimler Alle)"
 )
