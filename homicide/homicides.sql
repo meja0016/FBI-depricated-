@@ -773,18 +773,8 @@ INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
              "ibm,daimler"
 	     "Denise Genzer, (otto-hahn-strasse,carl-benz-strasse,rudolf-diesel-strasse), Micheala Meiers (Daimler Alle)"
 )
-INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM)
-      VALUES(87,
-             "malprtactice in business process managment.",
-             "",
-             "",
-             1994,
-             "Dr. Dieter Zetscher",
-             "ibm,daimler"
-	     "Denise Genzer, (otto-hahn-strasse,carl-benz-strasse,rudolf-diesel-strasse), Micheala Meiers (Daimler Alle)"
-)
 INSERT INTO HOMICIDE (ID,DESCRIPTION,FIRSTNAME,LASTNAME,DATE,SUSPECT,BPM,WITNESS)
-      VALUES(11,
+      VALUES(87,
 	     "malpratice in business process managment of religious crimes (murder), testing GOLDEN/BLUE ibm.dmaielrl.visa humans in rmote town",
 	     "Pete",
              "",
