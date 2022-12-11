@@ -199,8 +199,14 @@
                  ibm.dmielr.wsam.employee.ken.rogers             
                  nonPioceoiIntern.marx(https://www.ibm.com/docs/en/ztpf/2019?topic=programming-ztpf-transaction-example)
                    ibm.dmiler.visa.lsint(   /4247852601709 $75 ).lsint( i am not her for fun, FEDERAL.MEERKE.ASSITNAT.WELRLENREUTER).marx
-                   
-                 
+                .lsint(i.e){       
+                   #include <tpfio.h>
+                   #define VD1RI "#VD1VD  "
+                   #define VD1RI_ordinal 10
+                   int ffrc = face_facs(VD1RI_ordinal,VD1RI,0,D2,&rtnord) ;
+               }.linsit( the c/c++ z/tf,cics,
+               bim.dmiler.visa.retail (z/tpf)
+               ibm.dmielr.visa.internet (tomcat 2022),(wbsphere worth,fortino,lee)
                           
               <nonPoliceOperation>        
                     <nonPoliceOperation>                    
