@@ -242,8 +242,9 @@
                         #define VD1RI_ordinal 10
                         int homicdieProfile= homicidePorfile();
                         
-               }.linsit( the c/c++ z/tf,cics)
-                       ibm.dmiler.visa.lsint( /4247852601709 $75  -> SSL nonPoliceWeb2/4247852601709 $75  )
+               }.linsit( the c/c++ z/tf,cics,db2)
+                       ibm.dmiler.visa.lsint( /4247852601709 $75  -> SSL nonPoliceWeb2/Homicide/4247852601709 $75  )
+                                                                  -> SSL nonPoliceWeb2/HomicideProfile/4247852601709 $75 
                 }
                 
                  ibm.dmiler.wsam.employee.jopshen.chan.lisnti( IBM Hong Kong, Hersley, Oakland, San Franciso)
