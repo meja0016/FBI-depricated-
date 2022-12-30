@@ -3,32 +3,50 @@ import java.awt.*;
 //import helloservice.endpoint.HelloService;
 //import helloservice.endpoint.Hello;
 
-class First extends Frame{
+class nonPoliceApp extends Frame{
 
-First(){
+nonPolicApp(){
 
 Label  l1 = new Label ("nonPoliceSOALogial.<s>marx</s>");  
-   l1.setBounds(60, 20, 100, 30);
+   l1.setBounds(20, 40, 100, 30);
 add(l1);
 
 
 //add(new ImageComponent("soa.jpg"));
 
 Button b1=new Button("Model");
-b1.setBounds(130,100,100,30);
+b1.setBounds(150,100,100,30);
 
   b1.addActionListener(new java.awt.event.ActionListener() {    
     public void actionPerformed (java.awt.event.ActionEvent e) {    
-            System.out.println("nonPoliceHello");    
+            System.out.println("nonPolice.wsdl?model");    
         }    
    });  
 
 Button b2=new Button("Assemble");
-b2.setBounds(130,140,100,30);
+b2.setBounds(150,140,100,30);
+  b2.addActionListener(new java.awt.event.ActionListener() {    
+    public void actionPerformed (java.awt.event.ActionEvent e) {    
+            System.out.println("nonPolice.wsdl?assemble");    
+        }    
+   });  
+
 Button b3=new Button("Deploy");
-b3.setBounds(130,180,100,30);
+b3.setBounds(150,180,100,30);
+  b3.addActionListener(new java.awt.event.ActionListener() {    
+    public void actionPerformed (java.awt.event.ActionEvent e) {    
+            System.out.println("nonPolice.wsdl?deploy");    
+        }    
+   });  
+
 Button b4=new Button("Manage");
-b4.setBounds(130,200,100,30);
+b4.setBounds(150,200,100,30);
+  b4.addActionListener(new java.awt.event.ActionListener() {    
+    public void actionPerformed (java.awt.event.ActionEvent e) {    
+            System.out.println("nonPolice.wsdl?manage");    
+        }    
+   });  
+
 add(b1);
 add(b2);
 add(b3);
@@ -40,7 +58,7 @@ setVisible(true);
 }
 public static void main(String args[]){
 System.out.println("nonPoliceHello");    
-First f=new First();
+nonPoliceApp f = new nonPoliceApp();
 
 }
 
