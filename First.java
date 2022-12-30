@@ -1,4 +1,7 @@
 import java.awt.*;
+//import javax.xml.ws.WebServiceRef;
+//import helloservice.endpoint.HelloService;
+//import helloservice.endpoint.Hello;
 
 class First extends Frame{
 
@@ -41,14 +44,8 @@ First f=new First();
 
 }
 
-}
-
-/*
-import javax.xml.ws.WebServiceRef;
-//import helloservice.endpoint.HelloService;
-//import helloservice.endpoint.Hello;
-
-public class HelloClient {
+   public void invoke(){
+   /*
     @WebServiceRef(wsdlLocation="https://ics2wsa.ic3.com/commerce/1.x/transactionProcessor/CyberSourceTransaction_1.206.wsdl")
     static HelloService service;
 
@@ -60,8 +57,11 @@ public class HelloClient {
             e.printStackTrace();
         }
     }
+   */
+   }
 
     public void doTest(String[] args) {
+    /*
         try {
             Hello port = service.runTransaction();
             String name;
@@ -76,5 +76,7 @@ public class HelloClient {
         } catch(Exception e) {
             e.printStackTrace();
         }
+    */
     }
-*/
+
+}
