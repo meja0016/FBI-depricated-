@@ -3,27 +3,48 @@ services:
  db2:
   image: ibmcom/db2
   environment:
+    DB2INSTANCE: db2inst1
     DB2INST1_PASSWORD: password
     LICENSE: accept
-    DBNAME: testdb
-  command: db2start
- websphere: 
+    DBNAME: nPolice
+  privileged: true
+  volumes:
+    - ./database:/database
+  networks:
+    - backend
+ websphere:
   image: ibmcom/websphere-traditional
+  privileged: true
   links:
     - "db2"
- web:
-  image: nginx
-  ports:
-   - "00:80"
-     #environment:
-     #- NGINX_PORT=80
-  links:
-   - "websphere"
-  volumes:
-   - /etc/nginx/conf.d/:/tmp/conf.d
-   - .:/usr/share/nginx/html
-  environment:
-   - NGINX_HOST=fmpolice.com
-   - NGINX_PORT=80
   networks:
-   default:
+    - frontend
+    - backend
+ http:
+  image: httpd
+  privileged: true
+  ports:
+   - 81:80
+  networks:
+     - frontend
+ nginx:
+   image: nginx
+   privileged: true
+   ports:
+    - 80:80
+   volumes:
+    - ./conf.d/:/etc/nginx/conf.d/
+   depends_on:
+    - websphere
+   networks:
+     - frontend
+mq:
+  image: ibmcom/mq
+  privileged: true
+  environment:
+    LICENSE: accept
+networks:
+  frontend:
+  backend:
+volumes:
+    database:
