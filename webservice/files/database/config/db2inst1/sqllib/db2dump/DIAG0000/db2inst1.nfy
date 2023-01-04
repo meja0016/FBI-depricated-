@@ -163,3 +163,9 @@ base sys utilities  sqleDoForceDBShutdownFODC Probe:17909   Database:NPOLICE
 
 ADM7518C  The database manager has shut down the following database because a 
 severe error has occurred: "NPOLICE ".
+
+2023-01-04-18.57.14.850539   Instance:db2inst1   Node:000
+PID:10971(db2stop2)   TID:139960352446336   Appid:none
+base sys utilities  DB2StopMain Probe:911 
+
+ADM7514W  Database manager has stopped.

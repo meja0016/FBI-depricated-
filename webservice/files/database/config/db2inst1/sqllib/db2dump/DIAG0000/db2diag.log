@@ -18200,3 +18200,349 @@ AUTHID  : DB2INST1             HOSTNAME: 172a429d98e0
 EDUID   : 22                   EDUNAME: db2agent (idle) 0
 FUNCTION: DB2 UDB, base sys utilities, sqeLocalDatabase::FreeResourcesOnDBShutdown, probe:16972
 STOP    : DATABASE: NPOLICE  : DEACTIVATED: NO
+
+2023-01-04-18.57.11.690470+000 I897270E306           LEVEL: Event
+PID     : 10930                TID : 139622212274048 PROC : db2stop
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+FUNCTION: DB2 UDB, base sys utilities, sqlestp.C::main, probe:506
+DATA #1 : <preformatted>
+argv[1]=[force]
+
+2023-01-04-18.57.12.271424+000 I897577E401           LEVEL: Event
+PID     : 10930                TID : 139622212274048 PROC : db2stop
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+FUNCTION: DB2 UDB, base sys utilities, sqleGetStStLockFile, probe:16529
+MESSAGE : Obtained exclusive mode lock on the file:
+DATA #1 : String, 50 bytes
+/database/config/db2inst1/sqllib/ctrl/db2strst.lck
+
+2023-01-04-18.57.12.324072+000 I897979E1672          LEVEL: Event
+PID     : 10930                TID : 139622212274048 PROC : db2stop
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+FUNCTION: DB2 UDB, base sys utilities, sqleStartStopSingleNode, probe:1130
+DATA #1 : String, 45 bytes
+/database/config/db2inst1/sqllib/adm/db2stop2
+DATA #2 : Hexdump, 256 bytes
+0x00007FFEA4C25B00 : 2F64 6174 6162 6173 652F 636F 6E66 6967    /database/config
+0x00007FFEA4C25B10 : 2F64 6232 696E 7374 312F 7371 6C6C 6962    /db2inst1/sqllib
+0x00007FFEA4C25B20 : 2F61 646D 2F64 6232 7374 6F70 3200 4E4F    /adm/db2stop2.NO
+0x00007FFEA4C25B30 : 4D53 4700 464F 5243 4500 534E 0000 0000    MSG.FORCE.SN....
+0x00007FFEA4C25B40 : 0000 0000 0000 0000 0000 0000 0000 0000    ................
+0x00007FFEA4C25B50 : 0000 0000 0000 0000 0000 0000 0000 0000    ................
+0x00007FFEA4C25B60 : 0000 0000 0000 0000 0000 0000 0000 0000    ................
+0x00007FFEA4C25B70 : 0000 0000 0000 0000 0000 0000 0000 0000    ................
+0x00007FFEA4C25B80 : 0000 0000 0000 0000 0000 0000 0000 0000    ................
+0x00007FFEA4C25B90 : 0000 0000 0000 0000 0000 0000 0000 0000    ................
+0x00007FFEA4C25BA0 : 0000 0000 0000 0000 0000 0000 0000 0000    ................
+0x00007FFEA4C25BB0 : 0000 0000 0000 0000 0000 0000 0000 0000    ................
+0x00007FFEA4C25BC0 : 0000 0000 0000 0000 0000 0000 0000 0000    ................
+0x00007FFEA4C25BD0 : 0000 0000 0000 0000 0000 0000 0000 0000    ................
+0x00007FFEA4C25BE0 : 0000 0000 0000 0000 0000 0000 0000 0000    ................
+0x00007FFEA4C25BF0 : 0000 0000 0000 0000 0000 0000 0000 0000    ................
+
+2023-01-04-18.57.12.394134+000 I899652E402           LEVEL: Event
+PID     : 10971                TID : 139960352446336 PROC : db2stop2
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+FUNCTION: DB2 UDB, base sys utilities, sqleGetStStLockFile, probe:16529
+MESSAGE : Obtained exclusive mode lock on the file:
+DATA #1 : String, 50 bytes
+/database/config/db2inst1/sqllib/ctrl/db2stst.0000
+
+2023-01-04-18.57.12.394540+000 I900055E332           LEVEL: Event
+PID     : 10971                TID : 139960352446336 PROC : db2stop2
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+FUNCTION: DB2 UDB, base sys utilities, DB2StopMain, probe:104
+DATA #1 : String, 42 bytes
+Force phase is in progress. stopForceSN: 0
+
+2023-01-04-18.57.12.432362+000 I900388E446           LEVEL: Event
+PID     : 18191                TID : 140460915943168 PROC : db2sysc 0
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+EDUID   : 1                    EDUNAME: db2sysc 0
+FUNCTION: DB2 UDB, base sys utilities, sqeAppServices::ExecuteStopForce, probe:1904
+DATA #1 : String, 47 bytes
+[Force]->Number of applications to be forced : 
+DATA #2 : signed integer, 4 bytes
+0
+
+2023-01-04-18.57.12.443741+000 I900835E604           LEVEL: Event
+PID     : 18191                TID : 140460915943168 PROC : db2sysc 0
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+EDUID   : 1                    EDUNAME: db2sysc 0
+FUNCTION: DB2 UDB, base sys utilities, sqeAppServices::ExecuteStopForce, probe:1967
+DATA #1 : String, 49 bytes
+[Force]->Posting back to stop, no appls to force.
+DATA #2 : Hexdump, 4 bytes
+0x00007FBF9AFEA060 : 0000 0000                                  ....
+DATA #3 : Hexdump, 4 bytes
+0x00007FBF9AFEA05C : 0200 0000                                  ....
+
+2023-01-04-18.57.12.443849+000 I901440E383           LEVEL: Event
+PID     : 18191                TID : 140460915943168 PROC : db2sysc 0
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+EDUID   : 1                    EDUNAME: db2sysc 0
+FUNCTION: DB2 UDB, base sys utilities, sqeAppServices::ExecuteStopForce, probe:1987
+DATA #1 : String, 20 bytes
+Clearing force flag.
+
+2023-01-04-18.57.12.444005+000 I901824E337           LEVEL: Event
+PID     : 10971                TID : 139960352446336 PROC : db2stop2
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+FUNCTION: DB2 UDB, base sys utilities, DB2StopMain, probe:108
+DATA #1 : String, 47 bytes
+Force phase is completed and preparing to stop.
+
+2023-01-04-18.57.12.444089+000 I902162E333           LEVEL: Event
+PID     : 10971                TID : 139960352446336 PROC : db2stop2
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+FUNCTION: DB2 UDB, base sys utilities, DB2StopMain, probe:210
+DATA #1 : String, 43 bytes
+Deactivate phase is bypassed. singleStop: 1
+
+2023-01-04-18.57.12.444149+000 I902496E353           LEVEL: Event
+PID     : 10971                TID : 139960352446336 PROC : db2stop2
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+FUNCTION: DB2 UDB, base sys utilities, DB2StopMain, probe:230
+DATA #1 : String, 63 bytes
+Deactivate phase is completed, preparing to stop. singleStop: 1
+
+2023-01-04-18.57.12.444202+000 I902850E316           LEVEL: Event
+PID     : 10971                TID : 139960352446336 PROC : db2stop2
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+FUNCTION: DB2 UDB, base sys utilities, DB2StopMain, probe:240
+DATA #1 : String, 26 bytes
+Stop phase is in progress.
+
+2023-01-04-18.57.12.444267+000 I903167E331           LEVEL: Event
+PID     : 10971                TID : 139960352446336 PROC : db2stop2
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+FUNCTION: DB2 UDB, base sys utilities, DB2StopMain, probe:250
+DATA #1 : String, 41 bytes
+Requesting system controller termination.
+
+2023-01-04-18.57.14.048197+000 I903499E1377          LEVEL: Event
+PID     : 18191                TID : 140460915943168 PROC : db2sysc 0
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+EDUID   : 1                    EDUNAME: db2sysc 0
+FUNCTION: DB2 UDB, oper system services, SqloOSResourcePosixSemSlotManager::detachAndTerminateAllSemaphores, probe:1000
+DATA #1 : Codepath, 8 bytes
+3:57:59:61:63
+DATA #2 : signed integer, 4 bytes
+1
+DATA #3 : unsigned integer, 4 bytes
+3
+DATA #4 : Boolean, 1 bytes
+true
+DATA #5 : String, 196 bytes
+0. |db2inst1_database_data_db2inst1_NODE0000_SQL00001_SQLOGCTL.GLFH.LCK_n|, 3:5:9:11:43:47:49:51:55
+1. |db2inst1_database_data_db2inst1_NODE0000_SQL00001_db2rhist.lock_n|, 3:5:9:11:43:47:49:51:55
+CALLSTCK: (Static functions may not be resolved correctly, as they are resolved to the nearest symbol)
+  [0] 0x00007FBFC07FEB0F _ZN33SqloOSResourcePosixSemSlotManager31detachAndTerminateAllSemaphoresEv + 0x3BF
+  [1] 0x0000000000417CF9 _Z15sqleTermSysCtlrmi + 0x609
+  [2] 0x000000000041FFF9 _Z11sqleSysCtlrv + 0xAC9
+  [3] 0x00007FBFC096DA98 /database/config/db2inst1/sqllib/lib64/libdb2e.so.1 + 0xACFEA98
+  [4] 0x00007FBFC096F1FA sqloRunInstance + 0xA8A
+  [5] 0x000000000041BEE7 DB2main + 0xD87
+  [6] 0x00007FBFC0979032 sqloEDUEntry + 0xD2
+  [7] 0x00007FBFC76F31CF /lib64/libpthread.so.0 + 0x81CF
+  [8] 0x00007FBFB49D2DD3 clone + 0x43
+
+2023-01-04-18.57.14.470394+000 I904877E486           LEVEL: Warning
+PID     : 18191                TID : 140460915943168 PROC : db2sysc 0
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+EDUID   : 1                    EDUNAME: db2sysc 0
+FUNCTION: DB2 UDB, routine_infrastructure, sqlerKillAllFmps, probe:11361
+MESSAGE : Bringing down all db2fmp processes as part of db2stop
+DATA #1 : Hexdump, 4 bytes
+0x00007FBF9AFEA208 : 0000 0000                                  ....
+
+2023-01-04-18.57.14.498617+000 I905364E884           LEVEL: Warning
+PID     : 18189                TID : 140420516407040 PROC : db2wdog 0 [db2inst1]
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+EDUID   : 2                    EDUNAME: db2wdog 0 [db2inst1]
+FUNCTION: DB2 UDB, oper system services, sqlossig, probe:10
+MESSAGE : Sending SIGKILL to the following process id
+DATA #1 : signed integer, 4 bytes
+18434
+CALLSTCK: (Static functions may not be resolved correctly, as they are resolved to the nearest symbol)
+  [0] 0x00007FB6588326FA sqlossig + 0x7A
+  [1] 0x000000000040FCB0 _Z23sqleKillAllPidsFromListPP13SQLE_PID_LIST + 0x30
+  [2] 0x000000000041A6DA _Z12sqleWatchDogm + 0x14DA
+  [3] 0x000000000041C4FF DB2main + 0x139F
+  [4] 0x00007FB65897D032 sqloEDUEntry + 0xD2
+  [5] 0x00007FB65F6F71CF /lib64/libpthread.so.0 + 0x81CF
+  [6] 0x00007FB64C9D6DD3 clone + 0x43
+
+2023-01-04-18.57.14.512900+000 I906249E884           LEVEL: Warning
+PID     : 18189                TID : 140420516407040 PROC : db2wdog 0 [db2inst1]
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+EDUID   : 2                    EDUNAME: db2wdog 0 [db2inst1]
+FUNCTION: DB2 UDB, oper system services, sqlossig, probe:10
+MESSAGE : Sending SIGKILL to the following process id
+DATA #1 : signed integer, 4 bytes
+18431
+CALLSTCK: (Static functions may not be resolved correctly, as they are resolved to the nearest symbol)
+  [0] 0x00007FB6588326FA sqlossig + 0x7A
+  [1] 0x000000000040FCB0 _Z23sqleKillAllPidsFromListPP13SQLE_PID_LIST + 0x30
+  [2] 0x000000000041A6DA _Z12sqleWatchDogm + 0x14DA
+  [3] 0x000000000041C4FF DB2main + 0x139F
+  [4] 0x00007FB65897D032 sqloEDUEntry + 0xD2
+  [5] 0x00007FB65F6F71CF /lib64/libpthread.so.0 + 0x81CF
+  [6] 0x00007FB64C9D6DD3 clone + 0x43
+
+2023-01-04-18.57.14.516826+000 I907134E884           LEVEL: Warning
+PID     : 18189                TID : 140420516407040 PROC : db2wdog 0 [db2inst1]
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+EDUID   : 2                    EDUNAME: db2wdog 0 [db2inst1]
+FUNCTION: DB2 UDB, oper system services, sqlossig, probe:10
+MESSAGE : Sending SIGKILL to the following process id
+DATA #1 : signed integer, 4 bytes
+18210
+CALLSTCK: (Static functions may not be resolved correctly, as they are resolved to the nearest symbol)
+  [0] 0x00007FB6588326FA sqlossig + 0x7A
+  [1] 0x000000000040FCB0 _Z23sqleKillAllPidsFromListPP13SQLE_PID_LIST + 0x30
+  [2] 0x000000000041A6DA _Z12sqleWatchDogm + 0x14DA
+  [3] 0x000000000041C4FF DB2main + 0x139F
+  [4] 0x00007FB65897D032 sqloEDUEntry + 0xD2
+  [5] 0x00007FB65F6F71CF /lib64/libpthread.so.0 + 0x81CF
+  [6] 0x00007FB64C9D6DD3 clone + 0x43
+
+2023-01-04-18.57.14.663731+000 I908019E333           LEVEL: Event
+PID     : 10971                TID : 139960352446336 PROC : db2stop2
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+FUNCTION: DB2 UDB, base sys utilities, DB2StopMain, probe:260
+DATA #1 : String, 43 bytes
+System controller termination is completed.
+
+2023-01-04-18.57.14.694226+000 I908353E352           LEVEL: Event
+PID     : 10971                TID : 139960352446336 PROC : db2stop2
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+FUNCTION: DB2 UDB, base sys utilities, DB2StopMain, probe:280
+DATA #1 : String, 24 bytes
+There is no active EDUs.
+DATA #2 : unsigned integer, 4 bytes
+0
+
+2023-01-04-18.57.14.813160+000 I908706E309           LEVEL: Event
+PID     : 10971                TID : 139960352446336 PROC : db2stop2
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+FUNCTION: DB2 UDB, base sys utilities, DB2StopMain, probe:3479
+DATA #1 : <preformatted>
+Eventlog terminated.
+
+2023-01-04-18.57.14.824509+000 E909016E330           LEVEL: Event
+PID     : 10971                TID : 139960352446336 PROC : db2stop2
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+FUNCTION: DB2 UDB, base sys utilities, DB2StopMain, probe:911
+MESSAGE : ADM7514W  Database manager has stopped.
+STOP    : DB2 DBM
+
+2023-01-04-18.57.14.901693+000 I909347E393           LEVEL: Warning
+PID     : 10971                TID : 139960352446336 PROC : db2stop2
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+FUNCTION: DB2 UDB, base sys utilities, sqleReleaseStStLockFile, probe:16242
+MESSAGE : Released lock on the file:
+DATA #1 : String, 50 bytes
+/database/config/db2inst1/sqllib/ctrl/db2stst.0000
+
+2023-01-04-18.57.14.911881+000 I909741E1181          LEVEL: Event
+PID     : 10930                TID : 139622212274048 PROC : db2stop
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+FUNCTION: DB2 UDB, base sys utilities, sqlePrintFinalMessage, probe:13803
+DATA #1 : unsigned integer, 4 bytes
+1
+DATA #2 : signed integer, 4 bytes
+2
+DATA #3 : SQLCA, PD_DB2_TYPE_SQLCA, 136 bytes
+ sqlcaid : SQLCA     sqlcabc: 136   sqlcode: 0   sqlerrml: 0
+ sqlerrmc: 
+ sqlerrp : SQL11058
+ sqlerrd : (1) 0x00000000      (2) 0x00000000      (3) 0x00000000
+           (4) 0x00000000      (5) 0x00000000      (6) 0x00000000
+ sqlwarn : (1)      (2)      (3)      (4)        (5)       (6)    
+           (7)      (8)      (9)      (10)        (11)     
+ sqlstate:      
+DATA #4 : SQLCA, PD_DB2_TYPE_SQLCA, 136 bytes
+ sqlcaid : SQLCA     sqlcabc: 136   sqlcode: -1064   sqlerrml: 0
+ sqlerrmc: 
+ sqlerrp : SQLESSSN
+ sqlerrd : (1) 0x00000000      (2) 0x00000000      (3) 0x00000000
+           (4) 0x00000000      (5) 0x00000000      (6) 0x00000000
+ sqlwarn : (1)      (2)      (3)      (4)        (5)       (6)    
+           (7)      (8)      (9)      (10)        (11)     
+ sqlstate:      
+
+2023-01-04-18.57.14.968460+000 I910923E1269          LEVEL: Event
+PID     : 10930                TID : 139622212274048 PROC : db2stop
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+FUNCTION: DB2 UDB, base sys utilities, sqleIssueStartStop, probe:12187
+DATA #1 : SQLCA, PD_DB2_TYPE_SQLCA, 136 bytes
+ sqlcaid : SQLCA     sqlcabc: 136   sqlcode: 0   sqlerrml: 0
+ sqlerrmc: 
+ sqlerrp : SQL11058
+ sqlerrd : (1) 0x00000000      (2) 0x00000000      (3) 0x00000000
+           (4) 0x00000000      (5) 0x00000000      (6) 0x00000000
+ sqlwarn : (1)      (2)      (3)      (4)        (5)       (6)    
+           (7)      (8)      (9)      (10)        (11)     
+ sqlstate:      
+DATA #2 : SQLCA, PD_DB2_TYPE_SQLCA, 136 bytes
+ sqlcaid : SQLCA     sqlcabc: 136   sqlcode: -1064   sqlerrml: 0
+ sqlerrmc: 
+ sqlerrp : SQLEPFIN
+ sqlerrd : (1) 0x00000000      (2) 0x00000000      (3) 0x00000000
+           (4) 0x00000000      (5) 0x00000000      (6) 0x00000000
+ sqlwarn : (1)      (2)      (3)      (4)        (5)       (6)    
+           (7)      (8)      (9)      (10)        (11)     
+ sqlstate:      
+DATA #3 : Boolean, 1 bytes
+false
+DATA #4 : Boolean, 1 bytes
+false
+DATA #5 : Boolean, 1 bytes
+false
+DATA #6 : Boolean, 1 bytes
+false
+DATA #7 : Boolean, 1 bytes
+false
+
+2023-01-04-18.57.14.968662+000 I912193E324           LEVEL: Event
+PID     : 10930                TID : 139622212274048 PROC : db2stop
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+FUNCTION: DB2 UDB, base sys utilities, sqleIssueStartStop, probe:12305
+DATA #1 : <preformatted>
+Single node stopped [-1064].
+
+2023-01-04-18.57.14.968876+000 I912518E392           LEVEL: Warning
+PID     : 10930                TID : 139622212274048 PROC : db2stop
+INSTANCE: db2inst1             NODE : 000
+HOSTNAME: 172a429d98e0
+FUNCTION: DB2 UDB, base sys utilities, sqleReleaseStStLockFile, probe:16242
+MESSAGE : Released lock on the file:
+DATA #1 : String, 50 bytes
+/database/config/db2inst1/sqllib/ctrl/db2strst.lck
