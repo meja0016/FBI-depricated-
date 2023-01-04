@@ -17960,3 +17960,243 @@ DATA #1 : SQLCA, PD_DB2_TYPE_SQLCA, 136 bytes
  sqlwarn : (1)      (2)      (3)      (4)        (5)       (6)    
            (7)      (8)      (9)      (10)        (11)     
  sqlstate: 08003
+
+2023-01-04-15.38.22.434892+000 I885698E678           LEVEL: Event
+PID     : 18191                TID : 140461129852672 PROC : db2sysc 0
+INSTANCE: db2inst1             NODE : 000            DB   : NPOLICE
+APPHDL  : 0-11                 APPID: *LOCAL.db2inst1.230104153821
+AUTHID  : DB2INST1             HOSTNAME: 172a429d98e0
+EDUID   : 22                   EDUNAME: db2agent (NPOLICE) 0
+FUNCTION: DB2 UDB, base sys utilities, sqleCalculateDbHeaps, probe:70
+MESSAGE :  RLMS - DB Memory Set for Resident Member 
+DATA #1 : String, 10 bytes
+totalBytes
+DATA #2 : unsigned integer, 8 bytes
+282656768
+DATA #3 : String, 11 bytes
+dbHeapBytes
+DATA #4 : unsigned integer, 8 bytes
+212992000
+
+2023-01-04-15.38.22.649019+000 E886377E613           LEVEL: Info
+PID     : 18191                TID : 140461129852672 PROC : db2sysc 0
+INSTANCE: db2inst1             NODE : 000            DB   : NPOLICE
+APPHDL  : 0-11                 APPID: *LOCAL.db2inst1.230104153821
+AUTHID  : DB2INST1             HOSTNAME: 172a429d98e0
+EDUID   : 22                   EDUNAME: db2agent (NPOLICE) 0
+FUNCTION: DB2 UDB, global services, sqlzEnableCtrlFileRecov, probe:5610
+DATA #1 : <preformatted>
+Control file recovery has been enabled.
+  File validation enabled: No
+  FODC enabled           : Yes
+  Panic on error enabled : No
+
+2023-01-04-15.38.22.908025+000 E886991E615           LEVEL: Warning
+PID     : 18191                TID : 140461129852672 PROC : db2sysc 0
+INSTANCE: db2inst1             NODE : 000            DB   : NPOLICE
+APPHDL  : 0-11                 APPID: *LOCAL.db2inst1.230104153821
+AUTHID  : DB2INST1             HOSTNAME: 172a429d98e0
+EDUID   : 22                   EDUNAME: db2agent (NPOLICE) 0
+FUNCTION: DB2 UDB, data protection services, sqlpgint, probe:1770
+DATA #1 : <preformatted>
+Readlog buffer sizes
+sizeXLogReadBufLarge: 8
+numXLogReadBufLarge: 15
+numXLogReadBufSmall: 39
+numXLogReadBuf: 54
+numPagesForReadLog: 160
+
+2023-01-04-15.38.22.976108+000 I887607E577           LEVEL: Info
+PID     : 18191                TID : 140461121464064 PROC : db2sysc 0
+INSTANCE: db2inst1             NODE : 000            DB   : NPOLICE 
+HOSTNAME: 172a429d98e0
+EDUID   : 41                   EDUNAME: db2loggr (NPOLICE) 0
+FUNCTION: DB2 UDB, data protection services, sqlpgLogFileTable::addElement, probe:188
+MESSAGE : Increasing size of log file (read) table.  New maximum number of 
+          elements:
+DATA #1 : unsigned integer, 8 bytes
+256
+DATA #2 : db2LogStreamIDType, PD_TYPE_DB2_LOG_STREAM_ID, 2 bytes
+0
+
+2023-01-04-15.38.23.049770+000 I888185E1854          LEVEL: Info
+PID     : 18191                TID : 140461129852672 PROC : db2sysc 0
+INSTANCE: db2inst1             NODE : 000            DB   : NPOLICE
+APPHDL  : 0-11                 APPID: *LOCAL.db2inst1.230104153821
+AUTHID  : DB2INST1             HOSTNAME: 172a429d98e0
+EDUID   : 22                   EDUNAME: db2agent (NPOLICE) 0
+FUNCTION: DB2 UDB, data protection services, sqlpMasterDbcb::displayDatabaseStartupMessage, probe:1500
+DATA #1 : <preformatted>
+Database is starting up with the following values:
+          Primary active log path: /database/data/db2inst1/NODE0000/SQL00001/LOGSTREAM0000/
+           Mirror active log path: not defined
+                Overflow log path: not defined
+                     Log Chain ID: 0
+                       File Count: 3
+                   Head Extent ID: 0
+             Group Head Extent ID: 0
+   Extraction Last Committed Meta: 4294967295
+                  Rename Arch Num: 4294967295
+                      Log Primary: 3
+                       Log Second: 10
+                 Infinite Logging: No
+                    Log File Size: 1000
+                     Log Disk Cap: 0
+                  Total Log Space: 12223924
+                      Startup LSO: 0
+                         Base LSO: 36684001
+              Last Log Record LSO: 32608476
+              Last Log Record LFS: 4508
+              Last Log Record LSN: 0000000000026D84
+                         Next LSN: 0000000000026D85
+                      Lowtran LSN: 0000000000026D85
+                      Minbuff LSN: 0000000000026D85
+                         Head LSN: 0000000000026D85
+                   Group Head LSN: 0000000000026D85
+                Group Minbuff LSN: 0000000000026D85
+Database First Activation LFS/LSN: 4509/0000000000026D85
+   Current Write Log Extent Limit: 40760001
+
+2023-01-04-15.38.23.444765+000 E890040E584           LEVEL: Info
+PID     : 18191                TID : 140461129852672 PROC : db2sysc 0
+INSTANCE: db2inst1             NODE : 000            DB   : NPOLICE
+APPHDL  : 0-11                 APPID: *LOCAL.db2inst1.230104153821
+AUTHID  : DB2INST1             HOSTNAME: 172a429d98e0
+EDUID   : 22                   EDUNAME: db2agent (NPOLICE) 0
+FUNCTION: DB2 UDB, base sys utilities, sqleInitCtrlFileRecovPath, probe:1410
+DATA #1 : <preformatted>
+Control file recovery startup processing has completed.
+  Control file recovery path not enabled
+
+2023-01-04-15.38.23.540848+000 I890625E528           LEVEL: Event
+PID     : 18191                TID : 140461129852672 PROC : db2sysc 0
+INSTANCE: db2inst1             NODE : 000            DB   : NPOLICE
+APPHDL  : 0-11                 APPID: *LOCAL.db2inst1.230104153821
+AUTHID  : DB2INST1             HOSTNAME: 172a429d98e0
+EDUID   : 22                   EDUNAME: db2agent (NPOLICE) 0
+FUNCTION: DB2 UDB, catcache support, sqlrlc_catcache_init, probe:264
+MESSAGE : Catalog cache size:
+DATA #1 : unsigned integer, 8 bytes
+851968
+
+2023-01-04-15.38.23.932218+000 E891154E513           LEVEL: Event
+PID     : 18191                TID : 140461129852672 PROC : db2sysc 0
+INSTANCE: db2inst1             NODE : 000            DB   : NPOLICE
+APPHDL  : 0-11                 APPID: *LOCAL.db2inst1.230104153821
+AUTHID  : DB2INST1             HOSTNAME: 172a429d98e0
+EDUID   : 22                   EDUNAME: db2agent (NPOLICE) 0
+FUNCTION: DB2 UDB, base sys utilities, sqeLocalDatabase::FirstConnect, probe:1000
+START   : DATABASE: NPOLICE  : ACTIVATED: NO
+
+2023-01-04-15.38.24.644907+000 I891668E963           LEVEL: Error
+PID     : 18191                TID : 140461129852672 PROC : db2sysc 0
+INSTANCE: db2inst1             NODE : 000            DB   : NPOLICE
+APPHDL  : 0-11                 APPID: *LOCAL.db2inst1.230104153821
+AUTHID  : DB2INST1             HOSTNAME: 172a429d98e0
+EDUID   : 22                   EDUNAME: db2agent (NPOLICE) 0
+FUNCTION: DB2 UDB, relation data serv, sqlrr_appl_init, probe:240
+MESSAGE : ZRC=0x801A006D=-2145779603=SQLZ_CA_BUILT
+          "SQLCA has already been built"
+DATA #1 : SQLCA, PD_DB2_TYPE_SQLCA, 136 bytes
+ sqlcaid : SQLCA     sqlcabc: 136   sqlcode: -1035   sqlerrml: 0
+ sqlerrmc: 
+ sqlerrp : SQLM318 
+ sqlerrd : (1) 0x801A006D      (2) 0x00000000      (3) 0x00000000
+           (4) 0x00000000      (5) 0xFFFFFF9F      (6) 0x00000000
+ sqlwarn : (1)      (2)      (3)      (4)        (5)       (6)    
+           (7)      (8)      (9)      (10)        (11)     
+ sqlstate:      
+
+2023-01-04-15.38.24.645167+000 I892632E871           LEVEL: Error
+PID     : 18191                TID : 140461129852672 PROC : db2sysc 0
+INSTANCE: db2inst1             NODE : 000            DB   : NPOLICE
+APPHDL  : 0-11                 APPID: *LOCAL.db2inst1.230104153821
+AUTHID  : DB2INST1             HOSTNAME: 172a429d98e0
+EDUID   : 22                   EDUNAME: db2agent (NPOLICE) 0
+FUNCTION: DB2 UDB, relation data serv, sqlrr_appl_init, probe:240
+DATA #1 : SQLCA, PD_DB2_TYPE_SQLCA, 136 bytes
+ sqlcaid : SQLCA     sqlcabc: 136   sqlcode: -1035   sqlerrml: 0
+ sqlerrmc: 
+ sqlerrp : SQLM318 
+ sqlerrd : (1) 0x801A006D      (2) 0x00000000      (3) 0x00000000
+           (4) 0x00000000      (5) 0xFFFFFF9F      (6) 0x00000000
+ sqlwarn : (1)      (2)      (3)      (4)        (5)       (6)    
+           (7)      (8)      (9)      (10)        (11)     
+ sqlstate:      
+
+2023-01-04-15.38.24.679614+000 I893504E977           LEVEL: Error
+PID     : 18191                TID : 140461129852672 PROC : db2sysc 0
+INSTANCE: db2inst1             NODE : 000            DB   : NPOLICE
+APPHDL  : 0-11                 APPID: *LOCAL.db2inst1.230104153821
+AUTHID  : DB2INST1             HOSTNAME: 172a429d98e0
+EDUID   : 22                   EDUNAME: db2agent (NPOLICE) 0
+FUNCTION: DB2 UDB, base sys utilities, sqeApplication::AppStartUsing, probe:143
+RETCODE : ZRC=0x8012006D=-2146303891=SQLR_CA_BUILT
+          "SQLCA has already been built"
+DATA #1 : SQLCA, PD_DB2_TYPE_SQLCA, 136 bytes
+ sqlcaid : SQLCA     sqlcabc: 136   sqlcode: -1035   sqlerrml: 0
+ sqlerrmc: 
+ sqlerrp : SQLM318 
+ sqlerrd : (1) 0x801A006D      (2) 0x00000000      (3) 0x00000000
+           (4) 0x00000000      (5) 0xFFFFFF9F      (6) 0x00000000
+ sqlwarn : (1)      (2)      (3)      (4)        (5)       (6)    
+           (7)      (8)      (9)      (10)        (11)     
+ sqlstate:      
+
+2023-01-04-15.38.24.703500+000 E894482E590           LEVEL: Info
+PID     : 18191                TID : 140461129852672 PROC : db2sysc 0
+INSTANCE: db2inst1             NODE : 000            DB   : NPOLICE
+APPHDL  : 0-11                 APPID: *LOCAL.db2inst1.230104153821
+AUTHID  : DB2INST1             HOSTNAME: 172a429d98e0
+EDUID   : 22                   EDUNAME: db2agent (NPOLICE) 0
+FUNCTION: DB2 UDB, buffer pool services, sqlbCleanupBeforeTerm, probe:8216
+DATA #1 : SQLP_LSN8, PD_TYPE_SQLP_LSN8, 8 bytes
+0000000000026D85
+DATA #2 : SQLP_LSN8, PD_TYPE_SQLP_LSN8, 8 bytes
+0000000000026D85
+
+2023-01-04-15.38.24.803756+000 E895073E1095          LEVEL: Info
+PID     : 18191                TID : 140461121464064 PROC : db2sysc 0
+INSTANCE: db2inst1             NODE : 000            DB   : NPOLICE 
+HOSTNAME: 172a429d98e0
+EDUID   : 41                   EDUNAME: db2loggr (NPOLICE) 0
+FUNCTION: DB2 UDB, data protection services, sqpLoggrEdu::sqlpghck, probe:2820
+DATA #1 : <preformatted>
+Log stream 0 has been marked consistent.
+                     File Count: 3
+                 Head Extent ID: 0
+           Group Head Extent ID: 0
+ Extraction Last Committed Meta: 4294967295
+                Rename Arch Num: 4294967295
+                    Startup LSO: 0
+                       Base LSO: 36684001
+            Last Log Record LSO: 32608476
+            Last Log Record LSN: 0000000000026D84
+                       Next LSN: 0000000000026D85
+                    Lowtran LSN: 0000000000026D85
+                    Minbuff LSN: 0000000000026D85
+                       Head LSN: 0000000000026D85
+                 Group Head LSN: 0000000000026D85
+              Group Minbuff LSN: 0000000000026D85
+
+2023-01-04-15.38.24.803915+000 E896169E573           LEVEL: Info
+PID     : 18191                TID : 140461121464064 PROC : db2sysc 0
+INSTANCE: db2inst1             NODE : 000            DB   : NPOLICE 
+HOSTNAME: 172a429d98e0
+EDUID   : 41                   EDUNAME: db2loggr (NPOLICE) 0
+FUNCTION: DB2 UDB, data protection services, sqpLoggrEdu::sqlpghck, probe:2889
+DATA #1 : <preformatted>
+Database has been marked consistent.
+                   Log Chain ID: 0
+                    Log Primary: 3
+                     Log Second: 10
+                  Log File Size: 1000
+
+2023-01-04-15.38.25.119071+000 E896743E526           LEVEL: Event
+PID     : 18191                TID : 140461129852672 PROC : db2sysc 0
+INSTANCE: db2inst1             NODE : 000            DB   : NPOLICE
+APPHDL  : 0-11                 APPID: *LOCAL.db2inst1.230104153821
+AUTHID  : DB2INST1             HOSTNAME: 172a429d98e0
+EDUID   : 22                   EDUNAME: db2agent (idle) 0
+FUNCTION: DB2 UDB, base sys utilities, sqeLocalDatabase::FreeResourcesOnDBShutdown, probe:16972
+STOP    : DATABASE: NPOLICE  : DEACTIVATED: NO
