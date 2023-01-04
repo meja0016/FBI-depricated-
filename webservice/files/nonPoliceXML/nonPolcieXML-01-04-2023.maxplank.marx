@@ -1,17 +1,16 @@
-<nonPolcieWebService>
-<nonPolcieOperation>
-   nonPoliceStatusLogical.lingustics("Service Oriented Architecture").lingustics("with motocycles");
+<nonPoliceWebService>
+  <nonPoliceOperation>
+   nonPoliceStatusLogical.lingustics("<s>Service Oriented Architecture</s>").lingustics("<s>with motocycles</s>");
    nonPoliceChartLogical
    [          ] - nonPoliceDateLogical
                 - nonPoliceOccuranceLogical
-
     California Penal Code § (Section) 245 - Aggravated Assault
     California Penal Code § (Section) 646.9(a) – Stalking
     California Penal Code § (Section) 188 (a) – Murder
-</nonPolcieOperation>
-</nonPolcieOperation>
+  </nonPoliceOperation>
+  <nonPoliceOperation>
    California Penal Code § (Section) 646.9(a) – Stalking
    gorbachev.maxplank.marx(ibm.daimler.biometrics.employe.micheal.king)
    nonPoliceLanguageLogical.lingustics("<s>sits in front on building at work</s>")
-<nonPolcieOperation>
-</nonPolcieWebService>
+  </nonPoliceOperation>
+</nonPoliceWebService>
