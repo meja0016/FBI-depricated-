@@ -13,16 +13,16 @@ import java.io.InputStream;
 public class nonPoliceXML{
 
     public static void main(String[] args) {
-        new nonPoliceXML().nonPoliceXML();
+        new nonPoliceXML().nonPoliceXML(args[0]);
     }
 
-    public void nonPoliceXML(){
+    public void nonPoliceXML(String date){
        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
   
         try {
             //dbf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
             DocumentBuilder db = dbf.newDocumentBuilder();
-            Document doc = db.parse(new File("nonPolcieXML-01-04-2023.maxplank.marx"));
+            Document doc = db.parse(new File("nonPolcieXML-"+date+".maxplank.marx"));
             doc.getDocumentElement().normalize();
             System.out.println(doc.getDocumentElement().getNodeName());
             NodeList list = doc.getElementsByTagName("nonPoliceWebService");
@@ -31,7 +31,8 @@ public class nonPoliceXML{
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element element = (Element) node;
                     NodeList elementNodeList = element.getElementsByTagName("nonPoliceOperation");
-                    System.out.println(element.getElementsByTagName("nonPoliceOperation").item(0).getTextContent());
+                    String nonPoliceContent = element.getElementsByTagName("nonPoliceOperation").item(0).getTextContent();
+                    new nonPolicePDF().nonPolicePrint(nonPoliceContent);
                 }
             }
   
