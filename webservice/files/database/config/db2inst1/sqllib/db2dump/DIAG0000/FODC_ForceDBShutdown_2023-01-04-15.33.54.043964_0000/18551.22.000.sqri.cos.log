@@ -1,0 +1,5 @@
+Sending -dmpevrec output to /database/config/db2inst1/sqllib/db2dump/DIAG0000/FODC_ForceDBShutdown_2023-01-04-15.33.54.043964_0000/db2pd.18665.000.NPOLICE.SQLRI.GENERAL.events.bin
+Sending -dmpevrec output to /database/config/db2inst1/sqllib/db2dump/DIAG0000/FODC_ForceDBShutdown_2023-01-04-15.33.54.043964_0000/db2pd.18665.000.NPOLICE.SQLRI.TQ.events.bin
+Sending -dmpevrec output to /database/config/db2inst1/sqllib/db2dump/DIAG0000/FODC_ForceDBShutdown_2023-01-04-15.33.54.043964_0000/db2pd.18665.000.NPOLICE.SQLRI.FIS.events.bin
+
+

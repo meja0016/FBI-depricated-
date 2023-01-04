@@ -1,0 +1,46 @@
+
+Build level : DB2 v11.5.8.0 s2209201700
+Platform :    Linux/X8664
+
+Virtual memory range
+Address              Size               Description
+  0x0000000200000000 262144             DBMS-db2inst1                   
+  0x0000000200040000 175570944          DBMS-db2inst1                   
+  0x0000000240000000 262144             FMP_RESOURCES                   
+  0x0000000240040000 23068672           FMP_RESOURCES                   
+  0x0000000241640000 245104640          FMP_RESOURCES - preallocate     
+  0x00007FBF980A6000 131072             LOCAL_APL-8                     
+  0x00007FBF5E380000 262144             APPL-NPOLICE                    
+  0x00007FBF5E3C0000 163840000          APPL-NPOLICE                    
+  0x00007FBF4BAB0000 262144             DB-NPOLICE                      
+  0x00007FBF4BAF0000 310968320          DB-NPOLICE                      
+  0x0000000000000000 34160456           TRACE, Key:0x215C9274           
+              Total: 953892680          
+
+
+Memory set: DBMS-db2inst1, starting address: 0x0000000200000000
+   address: 0x0000000200000000 size: 262144
+   address: 0x0000000200040000 size: 61079552
+                              Total: 61341696
+
+Memory set: FMP_RESOURCES, starting address: 0x0000000240000000
+   address: 0x0000000240000000 size: 262144
+   address: 0x0000000240040000 size: 23068672
+                              Total: 23330816
+
+Memory set: LOCAL_APL-8, starting address: 0x00007FBF980A6000
+   address: 0x00007FBF980A6000 size: 131072
+                              Total: 131072
+
+Memory set: APPL-NPOLICE , starting address: 0x00007FBF5E380000
+   address: 0x00007FBF5E380000 size: 262144
+   address: 0x00007FBF5E3C0000 size: 1048576
+                              Total: 1310720
+
+Memory set: DB-NPOLICE , starting address: 0x00007FBF4BAB0000
+   address: 0x00007FBF4BAB0000 size: 262144
+   address: 0x00007FBF4BAF0000 size: 73531392
+   address: 0x00007FBF50310000 size: 146145280
+                              Total: 219938816
+
+The estimated dump file size is 310902784 Bytes, including 4849664 Bytes meta-data.

@@ -1,0 +1,32 @@
+2023-01-04-15.33.54.174881                                                      
+PID     : 18551                TID  : 1405096736  PROC : db2cos
+INSTANCE: db2inst1             NODE : 000         DB   : NPOLICE
+APPHDL  :                      APPID: *LOCAL.db2inst1.230104153353              
+FUNCTION: base sys utilities, sqleDoForceDBShutdownFODC, probe:999
+EVENT   : Invoking /database/config/db2inst1/sqllib/bin/db2cos from base sys utilities sqleDoForceDBShutdownFODC
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet href="db2fodc.xsl" type="text/xsl"?>
+<db2fodc>
+<Header>
+<type>Generic db2cos</type>
+</Header>
+<Parameters>
+\n INSTANCE=db2inst1\n DATABASE=NPOLICE\n TIMESTAMP=2023-01-04-15.33.54.174881\n APPID=*LOCAL.db2inst1.230104153353\n PID=18551\n TID=1405096736\n EDUID=22\n DBPART=000\n PROBE=999\n FUNCTION=sqleDoForceDBShutdownFODC\n COMPONENT=base sys utilities\n FAILNODE=1000 Unrecognized TAG: FAILNODE\n COSTIMEOUT=300\n APPHDL=000-00008\n OS=Linux\n SDENABLED=FALSE\n DPFENABLED=FALSE\n INSTALLPATH=/database/config/db2inst1/sqllib\n REASON=ForceDBShutdown\n DESCRIPTION=ForceDBShutdown\n DIAGPATH=/database/config/db2inst1/sqllib/db2dump/DIAG0000/FODC_ForceDBShutdown_2023-01-04-15.33.54.043964_0000/
+</Parameters>
+Started at: 15:33:54
+ForceDBShutdown request caught
+Dump EDU and stack info to /database/config/db2inst1/sqllib/db2dump/DIAG0000/FODC_ForceDBShutdown_2023-01-04-15.33.54.043964_0000/STACKS
+Invoke db2pd -bindump maponly to dump db2 memory sets map, process:18646, started at: 15:33:54
+Invoke db2pd -allmembers -inst -alldbs -dbptnmem -memsets -mempools 
+Invoke db2pd -allmembers -inst -alldbs -dbptnmem detail -memsets -mempools subpool 
+<OS_specific_commands value="Linux"> 
+Coordinator: 0; application: 8
+Dump DPS database control block and flight recorder
+Dumping Named Lock information
+
+
+Dump BSU event log
+Attempting to produce dump file and stack trace for EDUID 1.
+See current DIAGPATH for dumpfile and stack trace file.
+Elapsed time in the script: 11 seconds
+</db2fodc>

@@ -1,0 +1,2 @@
+Sending -dpsdbcb output to /database/config/db2inst1/sqllib/db2dump/DIAG0000/FODC_ForceDBShutdown_2023-01-04-14.46.46.154400_0000/18665.000.db2pd.bin
+Please provide this file to IBM DB2 Service.

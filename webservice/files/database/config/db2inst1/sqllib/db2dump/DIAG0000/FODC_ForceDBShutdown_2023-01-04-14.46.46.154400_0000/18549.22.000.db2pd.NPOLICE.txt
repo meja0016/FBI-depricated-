@@ -1,0 +1,2110 @@
+-alm_in_memory option is only available in Shared Data (SD) configuration.
+This command is only supported in multiple member environments.
+System Temp Table Stats:
+	Number of System Temp Tables	: 0
+	Comp Eligible Sys Temps		: 0
+	Compressed Sys Temps		: 0
+	Total Sys Temp Bytes Stored	: 0
+	Total Sys Temp Bytes Saved	: 0
+	Total Sys Temp Compressed Rows	: 0
+	Total Sys Temp Table Rows:	: 0
+
+
+Row-organized User Temp Table Stats:
+	Number of User Temp Tables	: 0
+	Comp Eligible User Temps	: 0
+	Compressed User Temps		: 0
+	Total User Temp Bytes Stored	: 0
+	Total User Temp Bytes Saved	: 0
+	Total User Temp Compressed Rows	: 0
+	Total User Temp Table Rows:	: 0
+Agent (0) does not exist.
+-quiesceinfo option is only available in Shared Data (SD) configurations.
+-iperiodic option is only available in Shared Data (SD) configuration.
+
+Tokens not set up.
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:04 -- Date 2023-01-04-14.46.49.875002
+
+Applications:
+Address            AppHandl [nod-index] NumAgents  CoorEDUID  Status                  C-AnchID C-StmtUID  L-AnchID L-StmtUID  Appid                                                            WorkloadID  WorkloadOccID CollectActData          CollectActPartition     CollectSectionActuals  
+0x0000000202E609A0 8        [000-00008] 1          22         UOW-Waiting             0        0          0        0          *LOCAL.db2inst1.230104144645                                     0           0             N                       C                       N  
+
+External Connection Attributes
+Address            AppHandl [nod-index] ClientIPAddress                          EncryptionLvl SystemAuthID                                                                                                                    
+0x0000000202E609A0 8        [000-00008] n/a                                      None          DB2INST1                                                                                                                        
+
+Trusted Connection Attributes
+Address            AppHandl [nod-index] TrustedContext                                                                                                                   ConnTrustType                RoleInherited                                                                                                                   
+TLSVersion                                                                                                                       SSLCipherSpec                                                                                                                    SSLSrvCertLabel                                                                                                                  SSLSrvCertFingerprint                                                                                                            0x0000000202E609A0 8        [000-00008] n/a                                                                                                                              non trusted                  n/a                                                                                                                             
+n/a                                                                                                                              n/a                                                                                                                              n/a                                                                                                                              n/a                                                                                                                              
+Autonomous Routine Connections
+Address            AppHandl [nod-index] Status          Autonomous Routine Handl [nod-index] Status                 
+
+Anonymous Block Connections
+Address            AppHandl [nod-index] Status          Anonymous Block Handl [nod-index] Status                 
+
+Database Member 0 -- Active -- Up 0 days 00:00:17 -- Date 2023-01-04-14.46.49.878937
+
+Agents:
+Current agents:      1
+Idle agents:         0
+Active coord agents: 1
+Active agents total: 1
+Pooled coord agents: 0
+Pooled agents total: 0
+
+Address            AppHandl [nod-index] AgentEDUID Priority    Type     State       ClientPid  Userid   ClientNm Rowsread   Rowswrtn   LkTmOt DBName   LastApplId                                                       LastPooled          
+0x0000000202BEF840 8        [000-00008] 22         0           Coord    Inst-Active 18435      db2inst1 db2updv1 281        0          NotSet NPOLICE  *LOCAL.db2inst1.230104144645                                     Wed Jan  4 14:46:44 
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:04 -- Date 2023-01-04-14.46.49.881024
+
+Transactions:
+Address            AppHandl [nod-index] TranHdl    Locks      State   Tflag      Tflag2     Firstlsn           Lastlsn            Firstlso             Lastlso              LogSpace        SpaceReserved   TID            AxRegCnt   GXID     ClientUserID                   ClientWrkstnName               ClientApplName                 ClientAccntng                  
+0x00007F7A81649200 8        [000-00008] 3          0          READ    0x00000000 0x00000000 0x0000000000000000 0x0000000000000000 0                    0                    0               0               0x00000000002E 1          0        n/a                            n/a                            n/a                            n/a                            
+Total application commits   : 0                   
+Total application rollbacks : 0                   
+
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:04 -- Date 2023-01-04-14.46.49.883845
+
+Bufferpools:
+First Active Pool ID      1
+Max Bufferpool ID         1
+Max Bufferpool ID on Disk 1
+Num Bufferpools           5
+
+Address            Id   Name               PageSz     PA-NumPgs  BA-NumPgs  BlkSize    NumTbsp    PgsToRemov CurrentSz  PostAlter  SuspndTSCt Automatic 
+0x00007F7A80140120 1    IBMDEFAULTBP       4096       1000       0          0          3          0          1000       1000       0          False  
+0x00007F7A8010BF20 4096 IBMSYSTEMBP4K      4096       16         0          0          0          0          16         16         0          False  
+0x00007F7A80118FA0 4097 IBMSYSTEMBP8K      8192       16         0          0          0          0          16         16         0          False  
+0x00007F7A80126020 4098 IBMSYSTEMBP16K     16384      16         0          0          0          0          16         16         0          False  
+0x00007F7A801330A0 4099 IBMSYSTEMBP32K     32768      16         0          0          0          0          16         16         0          False  
+
+Bufferpool Statistics for all bufferpools (when BUFFERPOOL monitor switch is ON):
+
+BPID DatLRds    DatPRds     HitRatio TmpDatLRds TmpDatPRds  HitRatio IdxLRds    IdxPRds     HitRatio TmpIdxLRds TmpIdxPRds  HitRatio 
+1    0          0           00.00%   0          0           00.00%   0          0           00.00%   0          0           00.00%   
+4096 0          0           00.00%   0          0           00.00%   0          0           00.00%   0          0           00.00%   
+4097 0          0           00.00%   0          0           00.00%   0          0           00.00%   0          0           00.00%   
+4098 0          0           00.00%   0          0           00.00%   0          0           00.00%   0          0           00.00%   
+4099 0          0           00.00%   0          0           00.00%   0          0           00.00%   0          0           00.00%   
+
+BPID DataWrts   IdxWrts    DirRds     DirRdReqs  DirRdTime  DirWrts    DirWrtReqs DirWrtTime
+1    0          0          0          0          0          0          0          0          
+4096 0          0          0          0          0          0          0          0          
+4097 0          0          0          0          0          0          0          0          
+4098 0          0          0          0          0          0          0          0          
+4099 0          0          0          0          0          0          0          0          
+
+BPID AsDatRds   AsDatRdReq AsIdxRds   AsIdxRdReq AsRdTime   AsDatWrts  AsIdxWrts  AsWrtTime 
+1    0          0          0          0          0          0          0          0          
+4096 0          0          0          0          0          0          0          0          
+4097 0          0          0          0          0          0          0          0          
+4098 0          0          0          0          0          0          0          0          
+4099 0          0          0          0          0          0          0          0          
+
+BPID TotRdTime  TotWrtTime VectIORds  VectIOReq  BlockIORds BlockIOReq FilesClose NoVictAvl  UnRdPFetch
+1    0          0          0          0          0          0          0          0          0          
+4096 0          0          0          0          0          0          0          0          0          
+4097 0          0          0          0          0          0          0          0          0          
+4098 0          0          0          0          0          0          0          0          0          
+4099 0          0          0          0          0          0          0          0          0          
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:04 -- Date 2023-01-04-14.46.49.902814
+
+
+Bufferpool: 1         
+   Dirty pages %       : 0 / 1000 (0.00% dirty)
+
+Recovery information: 
+   minbuflsn               : FFFFFFFFFFFFFFFF
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:04 -- Date 2023-01-04-14.46.49.903245
+
+Page Cleaners:
+
+Group ID    Clnr Idx   State Cycle      Task  Pgs Gthr   Pgs Ga'd   IO outstnd Max AIO    Pgs Thrsh  Pgs D Stl  Pgs Skppd  Pg Verify 
+-1          0          Wait  0          None  0          0          0          32         0          0          0          N    
+
+Dirty lists for Bufferpool ID : 1          
+List ID    # Dirty    Clnr Idx   Trigger Target LSN       Pgs for Gap Has Only temps
+0          0          0          None    0000000000000000 0           1         
+0          0          0          None    0000000000000000 0           1         
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:04 -- Date 2023-01-04-14.46.49.907593
+
+Logs:
+Current Log Number            0         
+Pages Written                 0         
+Cur Commit Disk Log Reads     0                   
+Cur Commit Total Log Reads    0                   
+Method 1 Archive Status       n/a
+Method 1 Next Log to Archive  n/a
+Method 1 First Failure        n/a
+Method 2 Archive Status       n/a
+Method 2 Next Log to Archive  n/a
+Method 2 First Failure        n/a
+Extraction Status             n/a (0)
+Extraction Throttle Reason    n/a
+Current Log to Extract        n/a
+Log Chain ID                  0         
+Current LSO                   32608001            
+Current LSN                   0x0000000000026D83
+
+Address            StartLSN         StartLSO             State      Size       Pages      Filename
+0x00007F7A8009C650 0000000000000000 32608001             0x00000000 1000       1000       S0000000.LOG
+0x00007F7A8009D7D0 0000000000000000 36684001             0x00000000 1000       1000       S0000001.LOG
+0x00007F7A8009E130 0000000000000000 40760001             0x00000000 1000       1000       S0000002.LOG
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:04 -- Date 2023-01-04-14.46.49.910586
+
+Extent Movement:
+Address            TbspName        Current    Last       Moved      Left       TotalTime   Physical    LBP         Remote      GBP         TotalMD     EHLLock     
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:04 -- Date 2023-01-04-14.46.49.911574
+
+Locks:
+Address            TranHdl    Lockname                   Type           Mode Sts Owner      Dur HoldCount  Att        ReleaseFlg rrIID 
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:04 -- Date 2023-01-04-14.46.49.912477
+
+Tablespace Configuration:
+Address            Id    Type Content PageSz ExtentSz Auto Prefetch BufID BufIDDisk FSC NumCntrs MaxStripe  LastConsecPg RSE  Name
+0x00007F7A8377B540 0     DMS  Regular 4096   4        Yes  4        1     1         Def 1        0          3            Yes  SYSCATSPACE
+0x00007F7A83788900 1     SMS  SysTmp  4096   32       Yes  32       1     1         On  1        0          31           No   TEMPSPACE1
+0x00007F7A83795CC0 2     DMS  Large   4096   32       Yes  32       1     1         Def 1        0          31           Yes  USERSPACE1
+
+Tablespace Statistics:
+Address            Id    TotalPgs   UsablePgs  UsedPgs    PndFreePgs FreePgs    HWM        Max HWM    State      MinRecTime NQuiescers PathsDropped TrackmodState    
+0x00007F7A8377B540 0     16384      16380      8344       0          8036       8344       8344       0x00000000 0          0          No           n/a              
+0x00007F7A83788900 1     1          1          1          0          0          -          -          0x00000000 0          0          No           n/a              
+0x00007F7A83795CC0 2     8192       8160       96         0          8064       96         96         0x00000000 0          0          No           n/a              
+
+Tablespace Autoresize Statistics:
+Address            Id    AS  AR  InitSize             IncSize              IIP MaxSize              LastResize                 LRF
+0x00007F7A8377B540 0     Yes Yes 33554432             -1                   No  None                 None                       No  
+0x00007F7A83788900 1     Yes No  0                    0                    No  0                    None                       No  
+0x00007F7A83795CC0 2     Yes Yes 33554432             -1                   No  None                 None                       No  
+
+Tablespace Storage Statistics:
+Address            Id    DataTag  Rebalance SGID  SourceSGID
+0x00007F7A8377B540 0     0        No        0     -                    
+0x00007F7A83788900 1     0        No        0     -                    
+0x00007F7A83795CC0 2     -1       No        0     -                    
+
+Containers:
+Address            TspId ContainNum Type    TotalPgs   UseablePgs PathID     StripeSet  Container 
+0x00007F7A83773D60 0     0          File    16384      16380      0          0          /database/data/db2inst1/NODE0000/NPOLICE/T0000000/C0000000.CAT
+0x00007F7A837C4000 1     0          Path    1          1          0          0          /database/data/db2inst1/NODE0000/NPOLICE/T0000001/C0000000.TMP
+0x00007F7A8376EC20 2     0          File    8192       8160       0          0          /database/data/db2inst1/NODE0000/NPOLICE/T0000002/C0000000.LRG
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:04 -- Date 2023-01-04-14.46.49.923935
+
+Dynamic Cache:
+Current Memory Used           199656
+Total Heap Size               1271398
+Cache Overflow Flag           0
+Number of References          0
+Number of Statement Inserts   0
+Number of Statement Deletes   0
+Number of Variation Inserts   0
+Number of Statements          0
+
+Dynamic SQL Statements:
+Address            AnchID StmtUID    NumEnv     NumVar     NumRef     NumExe     Text 
+
+Dynamic SQL Environments:
+Address            TenantID   AnchID StmtUID    EnvID      Iso QOpt Blk
+
+Dynamic SQL Variations:
+Address            AnchID StmtUID    EnvID      VarID      NumRef     Typ Lockname                   Val Insert Time                Sect Size  Num Copies
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:04 -- Date 2023-01-04-14.46.49.926215
+
+Static Cache:
+Current Memory Used           199656
+Total Heap Size               1271398
+Cache Overflow Flag           0
+Number of References          0
+Number of Package Inserts     0
+Number of Section Inserts     0
+
+Packages:
+Address            Schema   PkgName                                                                                                                          Version             UniqueID TenantID   NumSec UseCount   NumRef     Iso QOpt  Blk Lockname                  
+
+Sections:
+Address            Schema   PkgName                                                                                                                          UniqueID SecNo NumRef     UseCount   StmtType Cursor             W-Hld Sect Size  Num Copies
+ 
+Database Member 0 -- Active -- Up 0 days 00:00:17 -- Date 2023-01-04-14.46.49.928101
+
+FCM Usage Statistics
+====================
+Total Buffers:	128
+Free Buffers:	128
+Buffers LWM:	128
+Max Buffers:	8192
+
+Total Channels:	128
+Free Channels:	128
+Channels LWM:	127
+Max Channels:	8192
+
+Total Sessions:	128
+Free Sessions:	125
+Sessions LWM:	124
+
+Member     Bufs Sent  Bufs Recv  Status    
+0          0          0          Active    
+
+
+Buffers Current Consumption
+---------------------------
+AppHandl [nod-index] TimeStamp  Buffers In-use
+
+
+Channels Current Consumption
+----------------------------
+AppHandl [nod-index] TimeStamp  Channels In-use
+
+
+Buffers Consumption HWM
+-----------------------
+AppHandl [nod-index] TimeStamp  Buffers Used
+
+
+Channels Consumption HWM
+------------------------
+AppHandl [nod-index] TimeStamp  Channels Used
+
+
+Node Manager State
+------------------
+Node Startup	= 2023-01-04-14.46.33
+Total nodes	= 1
+Local MLNs	= 1
+Pre-connect	= N
+
+
+Member 0
+----------
+Conn State   Session ID   Host Name                      Net Name             Port       Local      Reloc Pend  
+UP           0            172a429d98e0                   172a429d98e0         0          Y          N           
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:04 -- Date 2023-01-04-14.46.49.931504
+
+Memory Sets:
+Name          Address            Id          Size(Kb)   Key         DBP    Type   Unrsv(Kb)  Used(Kb)   HWM(Kb)    Cmt(Kb)    Uncmt(Kb)  CmtRt(Kb)  DcmtRt(Kb) HoldRt(Kb) Sngl      
+DBMS          0x0000000200000000 1           171712     0xC3383561  0      0      18688      59648      59904      59904      111808     256        111808     0          0         
+DB-NPOLICE    0x00007F7A7FAB0000 9           303936     0x0         0      1      22912      216832     216832     216832     87104      0          87104      0          0         
+FMP           0x0000000240000000 2           22784      0x0         0      2      0          512        512        512        22272      0          22272      0          0         
+APPL-NPOLICE  0x00007F7A92380000 8           160256     0x0         0      12     0          704        768        768        159488     0          159488     0          1         
+PRIVATE       0x00007F7ACECD0000 0           6656       0x0         0      9      0          6656       6656       6656       0          384        0          0          4         
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:04 -- Date 2023-01-04-14.46.49.935941
+
+Memory Pools:
+Address            MemSet        PoolName   Id    SecondId    Overhead   LogSz       LogHWM      PhySz       PhyHWM      CfgSize     Bnd BlkCnt CfgParm   
+0x000000020002C538 DBMS          fcm        74    0           0          0           0           0           0           2883584     No  0      n/a       
+0x0000000200029648 DBMS          fcmsess    77    0           65376      1659616     1659616     1835008     1835008     1835008     No  3      n/a       
+0x0000000200026758 DBMS          fcmchan    79    0           0          272896      272896      393216      393216      393216      No  3      n/a       
+0x0000000200023868 DBMS          fcmbp      13    0           0          4326912     4326912     4456448     4456448     4456448     No  3      n/a       
+0x0000000200020978 DBMS          fcmctl     73    0           140832     2373941     2373941     2686976     2686976     2686976     No  28     n/a       
+0x000000020001AB98 DBMS          monh       11    0           0          68768       68768       131072      131072      393216      No  2      MON_HEAP_SZ
+0x0000000200017CA8 DBMS          resynch    62    0           32576      2457720     2457720     2752512     2752512     5046272     No  2      n/a       
+0x0000000200014DB8 DBMS          ostrack    57    0           34592      424240      424240      524288      524288      524288      No  3      n/a       
+0x0000000200011EC8 DBMS          apmh       70    0           3712       939068      1003548     1048576     1048576     50397184    No  36     n/a       
+0x000000020000EFD8 DBMS          kerh       52    0           0          21349661    21494829    22085632    22085632    35258368    No  1466   n/a       
+0x000000020000C0E8 DBMS          bsuh       71    0           48704      2573959     2674233     2818048     3080192     33357824    No  43     n/a       
+0x00000002000091F8 DBMS          sqlch      50    0           0          4323305     4344934     7143424     7143424     7143424     No  216    n/a       
+0x0000000200006308 DBMS          djh        83    0           0          32          32          65536       65536       65536       No  1      n/a       
+0x0000000200003418 DBMS          krcbh      69    0           0          6579448     6579448     6619136     6619136     6619136     No  17     n/a       
+0x0000000200000528 DBMS          eduah      72    0           65344      8192024     8192024     8257536     8257536     8257536     No  1      n/a       
+0x00007F7A85D98D00 DB-NPOLICE    utilh      5     0           0          576         1152        65536       65536       20512768    No  2      UTIL_HEAP_SZ
+0x00007F7A85D92F20 DB-NPOLICE    pckcacheh  7     0           0          199656      199656      262144      262144      1310720     No  1      PCKCACHESZ
+0x00007F7A85D90030 DB-NPOLICE    xmlcacheh  93    0           0          145552      145552      196608      196608      2097152     No  1      n/a       
+0x00007F7A7FAE80F8 DB-NPOLICE    catcacheh  8     0           960        210967      210967      262144      262144      851968      No  38     CATALOGCACHE_SZ
+0x00007F7A7FADC538 DB-NPOLICE    bph        16    1           0          4624384     4624384     5373952     5373952     5373952     No  3      n/a       
+0x00007F7A7FAD6758 DB-NPOLICE    bph        16    4099        0          785024      785024      1835008     1835008     1835008     No  2      n/a       
+0x00007F7A7FAD0978 DB-NPOLICE    bph        16    4098        0          522880      522880      1572864     1572864     1572864     No  2      n/a       
+0x00007F7A7FACAB98 DB-NPOLICE    bph        16    4097        0          391808      391808      1441792     1441792     1441792     No  2      n/a       
+0x00007F7A7FAC4DB8 DB-NPOLICE    bph        16    4096        0          326272      326272      1310720     1310720     1310720     No  2      n/a       
+0x00007F7A7FAB6308 DB-NPOLICE    shsorth    18    0           0          12104       12104       1310720     1310720     20512768    No  18     SHEAPTHRES_SHR
+0x00007F7A7FAB3418 DB-NPOLICE    lockh      4     0           0          17618304    17618304    17629184    17629184    17694720    No  1      LOCKLIST  
+0x00007F7A7FAB0528 DB-NPOLICE    dbh        2     0           1300256    183394282   183449994   190316544   190316544   212992000   No  2036   DBHEAP    
+0x00007F7A92383418 APPL-NPOLICE  apph       1     8           0          21767       99142       131072      131072      1048576     No  29     APPLHEAPSZ
+0x00007F7A92380528 APPL-NPOLICE  appshrh    20    0           1728       162720      162720      327680      327680      81920000    No  121    application shared
+0x0000000240003418 FMP           dfsrwh     58    0           0          0           0           0           0           Unlimited   No  0      n/a       
+0x0000000240000528 FMP           undefh     59    0           16000      245800      245800      262144      262144      23003136    No  2      n/a       
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:04 -- Date 2023-01-04-14.46.49.956047
+
+Database Manager Configuration Settings:
+Description                    Memory Value                 Disk Value                  
+RELEASE                        0x1500                       0x1500                      
+INSTANCE_USAGE                 DEFAULT                      DEFAULT                     
+CPUSPEED(millisec/instruction) 1.417033e-07                 1.417033e-07                
+COMM_BANDWIDTH(MB/sec)         1.000000e+02                 1.000000e+02                
+NUMDB                          32                           32                          
+NUMDB_INT                      NEEDS RECOMPUTE(32)          NEEDS RECOMPUTE(32)         
+FEDERATED                      YES                          YES                         
+TP_MON_NAME                                                                             
+DFT_ACCOUNT_STR                                                                         
+JDK_PATH (memory)              /database/config/db2inst1/sqllib/java/jdk64      
+JDK_PATH (disk)                /database/config/db2inst1/sqllib/java/jdk64      
+DIAGLEVEL                      3                            3                           
+NOTIFYLEVEL                    3                            3                           
+DIAGPATH (memory)              /database/config/db2inst1/sqllib/db2dump/ $m     
+DIAGPATH (disk)                /database/config/db2inst1/sqllib/db2dump/ $m     
+DIAGPATH_RESOLVED (memory)     /database/config/db2inst1/sqllib/db2dump/DIAG0000/
+DIAGPATH_RESOLVED (disk)       /database/config/db2inst1/sqllib/db2dump/DIAG0000/
+ALT_DIAGPATH (memory)                                                           
+ALT_DIAGPATH (disk)                                                             
+ALT_DIAGPATH_RESOLVED (memory)                                                  
+ALT_DIAGPATH_RESOLVED (disk)                                                    
+DIAGSIZE (MB)                  0                            0                           
+DFT_MON_BUFPOOL                OFF                          OFF                         
+DFT_MON_LOCK                   OFF                          OFF                         
+DFT_MON_SORT                   OFF                          OFF                         
+DFT_MON_STMT                   OFF                          OFF                         
+DFT_MON_TABLE                  OFF                          OFF                         
+DFT_MON_TIMESTAMP              ON                           ON                          
+DFT_MON_UOW                    OFF                          OFF                         
+HEALTH_MON                     OFF                          OFF                         
+SYSADM_GROUP (memory)          DB2IADM1                                         
+SYSADM_GROUP (disk)            DB2IADM1                                         
+SYSCTRL_GROUP (memory)                                                          
+SYSCTRL_GROUP (disk)                                                            
+SYSMAINT_GROUP (memory)                                                         
+SYSMAINT_GROUP (disk)                                                           
+SYSMON_GROUP (memory)                                                           
+SYSMON_GROUP (disk)                                                             
+CLNT_PW_PLUGIN                                                                          
+CLNT_KRB_PLUGIN                                                                         
+GROUP_PLUGIN                                                                            
+LOCAL_GSSPLUGIN                                                                         
+SRV_PLUGIN_MODE                UNFENCED                     UNFENCED                    
+SRVCON_GSSPLUGIN_LIST                                                                   
+SRVCON_PW_PLUGIN                                                                        
+SRVCON_AUTH                                                 
+AUTHENTICATION                 SERVER                       SERVER                      
+ALTERNATE_AUTH_ENC                                          
+CATALOG_NOAUTH                 NO                           NO                          
+TRUST_ALLCLNTS                 YES                          YES                         
+TRUST_CLNTAUTH                 CLIENT                       CLIENT                      
+FED_NOAUTH                     NO                           NO                          
+DFTDBPATH (memory)             /database/data                                   
+DFTDBPATH (disk)               /database/data                                   
+MON_HEAP_SZ (4KB)              AUTOMATIC(90)                AUTOMATIC(90)               
+JAVA_HEAP_SZ (4KB)             65536                        65536                       
+AUDIT_BUF_SZ (4KB)             0                            0                           
+INSTANCE_MEMORY (% or 4KB)     AUTOMATIC(803245)            AUTOMATIC(803245)           
+RSTRT_LIGHT_MEM (4KB)          AUTOMATIC(10)                AUTOMATIC(10)               
+RSTRT_LIGHT_MEM_INT (4KB)      NEEDS RECOMPUTE(0)           NEEDS RECOMPUTE(0)          
+AGENT_STACK_SZ                 1024                         1024                        
+BACKBUFSZ (4KB)                1024                         1024                        
+RESTBUFSZ (4KB)                1024                         1024                        
+SHEAPTHRES (4KB)               0                            0                           
+DIR_CACHE                      YES                          YES                         
+ASLHEAPSZ (4KB)                15                           15                          
+RQRIOBLK (bytes)               65535                        65535                       
+UTIL_IMPACT_LIM                10                           10                          
+AGENTPRI                       SYSTEM                       SYSTEM                      
+NUM_POOLAGENTS                 AUTOMATIC(100)               AUTOMATIC(100)              
+NUM_INITAGENTS                 0                            0                           
+MAX_COORDAGENTS                AUTOMATIC(200)               AUTOMATIC(200)              
+MAX_CONNECTIONS                AUTOMATIC(MAX_COORDAGENTS)   AUTOMATIC(MAX_COORDAGENTS)  
+KEEPFENCED                     YES                          YES                         
+FENCED_POOL                    AUTOMATIC(MAX_COORDAGENTS)   AUTOMATIC(MAX_COORDAGENTS)  
+NUM_INITFENCED                 0                            0                           
+INDEXREC                       RESTART                      RESTART                     
+TM_DATABASE                    1ST_CONN                     1ST_CONN                    
+RESYNC_INTERVAL (secs)         180                          180                         
+SPM_NAME                       d72a429d                     d72a429d                    
+SPM_LOG_FILE_SZ                256                          256                         
+SPM_MAX_RESYNC                 20                           20                          
+SPM_LOG_PATH                                                                            
+SVCENAME                       db2c_db2inst1                db2c_db2inst1               
+DISCOVER                       SEARCH                       SEARCH                      
+DISCOVER_INST                  ENABLE                       ENABLE                      
+SSL_SVR_KEYDB (memory)                                                          
+SSL_SVR_KEYDB (disk)                                                            
+SSL_SVR_STASH (memory)                                                          
+SSL_SVR_STASH (disk)                                                            
+SSL_SVR_LABEL (memory)                                                          
+SSL_SVR_LABEL (disk)                                                            
+SSL_SVCENAME                                                                            
+SSL_CIPHERSPECS (memory)                                                        
+SSL_CIPHERSPECS (disk)                                                          
+SSL_VERSIONS (memory)                                                           
+SSL_VERSIONS (disk)                                                             
+SSL_CLNT_KEYDB (memory)                                                         
+SSL_CLNT_KEYDB (disk)                                                           
+SSL_CLNT_STASH (memory)                                                         
+SSL_CLNT_STASH (disk)                                                           
+MAX_QUERYDEGREE                ANY                          ANY                         
+INTRA_PARALLEL                 NO                           NO                          
+FCM_NUM_BUFFERS (4KB)          AUTOMATIC(4096)              AUTOMATIC(4096)             
+FCM_NUM_CHANNELS               AUTOMATIC(2048)              AUTOMATIC(2048)             
+FCM_PARALLELISM                AUTOMATIC(1)                 AUTOMATIC(1)                
+FCM_PARALLELISM_INT            RECOMPUTE(1)                 1                           
+FCM_BUFFER_SIZE                32768                        32768                       
+FCM_BUFFER_SIZE_INT            RECOMPUTE(32768)             32768                       
+CONN_ELAPSE (secs)             10                           10                          
+MAX_CONNRETRIES                5                            5                           
+MAX_TIME_DIFF (mins)           60                           60                          
+START_STOP_TIME (mins)         10                           10                          
+WLM_DISPATCHER                 NO                           NO                          
+WLM_DISP_CONCUR                COMPUTED(8)                  COMPUTED                    
+WLM_DISP_CPU_SHARES            NO                           NO                          
+WLM_DISP_MIN_UTIL              5                            5                           
+KCFD_CFG_SIGNATURE             60                           63                          
+COMM_EXIT_LIST (memory)                                    
+COMM_EXIT_LIST (disk)                                      
+KEYSTORE_TYPE                  NONE                         NONE                        
+KEYSTORE_LOCATION (memory)                                 
+KEYSTORE_LOCATION (disk)                                   
+PYTHON_PATH (memory)                                       
+PYTHON_PATH (disk)                                         
+R_PATH (memory)                                            
+R_PATH (disk)                                              
+MULTIPARTSIZEMB                100                          100                         
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:04 -- Date 2023-01-04-14.46.49.976011
+
+Database Configuration Settings:
+Description                    Memory Value         Disk Value          
+DB configuration release level 0x1500               0x1500              
+Database release level         0x1500               0x1500              
+Update to database lvl pending 0                    0                   
+Database territory             us                   us                  
+Database code page             1208                 1208                
+Database code set              utf-8                utf-8               
+Database country/region code   1                    1                   
+Database collating sequence    IDENTITY             IDENTITY            
+ALT_COLLATE                    NON_UNIQUE           NON_UNIQUE          
+NUMBER_COMPAT                  OFF                  OFF                 
+VARCHAR2_COMPAT                OFF                  OFF                 
+DATE_COMPAT                    OFF                  OFF                 
+Database page size             4096                 4096                
+Statement concentrator         OFF                  OFF                 
+DISCOVER_DB                    ENABLE               ENABLE              
+Restrict access                NO                   NO                  
+DFT_QUERYOPT                   5                    5                   
+DFT_DEGREE                     1                    1                   
+DFT_SQLMATHWARN                NO                   NO                  
+DFT_REFRESH_AGE (memory)       +00000000000000.000000   
+DFT_REFRESH_AGE (disk)         +00000000000000.000000   
+DFT_MTTB_TYPES                 SYSTEM               SYSTEM              
+NUM_FREQVALUES                 10                   10                  
+NUM_QUANTILES                  20                   20                  
+DECFLT_ROUNDING                ROUND_HALF_EVEN      ROUND_HALF_EVEN     
+Backup pending                 NO                   NO                  
+Database is consistent         YES                  YES                 
+Rollforward pending            NO                   NO                  
+Restore pending                NO                   NO                  
+Multi-page File alloc enabled  YES                  YES                 
+SELF_TUNING_MEM                OFF                  OFF                 
+ENABLE_XMLCHAR                 YES                  YES                 
+WLM_COLLECT_INT (mins)         0                    0                   
+DATABASE_MEMORY (4KB)          AUTOMATIC(75920)     AUTOMATIC(75920)    
+DB_MEM_THRESH                  100                  100                 
+LOCKLIST (4KB)                 4096                 4096                
+MAXLOCKS                       10                   10                  
+PCKCACHESZ (4KB)               320                  320                 
+SHEAPTHRES_SHR (4KB)           5000                 5000                
+SORTHEAP (4KB)                 256                  256                 
+DBHEAP (4KB)                   AUTOMATIC(1200)      AUTOMATIC(1200)     
+CATALOGCACHE_SZ (4KB)          200                  200                 
+LOGBUFSZ (4KB)                 256                  256                 
+UTIL_HEAP_SZ (4KB)             5000                 5000                
+APPL_MEMORY (4KB)              AUTOMATIC(40000)     AUTOMATIC(40000)    
+STMTHEAP (4KB)                 AUTOMATIC(8192)      AUTOMATIC(8192)     
+APPLHEAPSZ (4KB)               AUTOMATIC(256)       AUTOMATIC(256)      
+STAT_HEAP_SZ (4KB)             AUTOMATIC(4384)      AUTOMATIC(4384)     
+DLCHKTIME (ms)                 10000                10000               
+LOCKTIMEOUT (secs)             -1                   -1                  
+CHNGPGS_THRESH                 60                   60                  
+NUM_IOCLEANERS                 AUTOMATIC(1)         AUTOMATIC(1)        
+NUM_IOSERVERS                  AUTOMATIC(3)         AUTOMATIC(3)        
+SEQDETECT                      YES                  YES                 
+DFT_PREFETCH_SZ (pages)        AUTOMATIC(32)        AUTOMATIC(32)       
+TRACKMOD                       NO                   NO                  
+Default number of containers   1                    1                   
+DFT_EXTENT_SZ (pages)          32                   32                  
+MAXAPPLS                       AUTOMATIC(40)        AUTOMATIC(40)       
+AVG_APPLS                      AUTOMATIC(1)         AUTOMATIC(1)        
+MAXFILOP                       61440                61440               
+LOGFILSIZ (4KB)                1000                 1000                
+LOGPRIMARY                     3                    3                   
+DDL_CONSTRAINT_DEF             YES                  YES                 
+DDL_COMPRESSION_DEF            NO                   NO                  
+LOGSECOND                      10                   10                  
+NEWLOGPATH (memory)                                                             
+NEWLOGPATH (disk)                                                               
+Path to log files (memory)     /database/data/db2inst1/NODE0000/SQL00001/LOGSTREAM0000/
+Path to log files (disk)                                                        
+OVERFLOWLOGPATH (memory)                                                        
+OVERFLOWLOGPATH (disk)                                                          
+MIRRORLOGPATH (memory)                                                          
+MIRRORLOGPATH (disk)                                                            
+First active log file          S0000000.LOG         S0000000.LOG        
+BLK_LOG_DSK_FUL                NO                   NO                  
+BLOCKNONLOGGED                 NO                   NO                  
+MAX_LOG                        0                    0                   
+NUM_LOG_SPAN                   0                    0                   
+SOFTMAX                        0                    0                   
+PAGE_AGE_TRGT_MCR              240                  240                 
+PAGE_AGE_TRGT_GCR              240                  240                 
+HADR database role             STANDARD             STANDARD            
+HADR_LOCAL_HOST                                                         
+HADR_LOCAL_SVC                                                          
+HADR_REMOTE_HOST                                                        
+HADR_TARGET_LIST                                                        
+HADR_REMOTE_SVC                                                         
+HADR_REMOTE_INST                                                        
+HADR_TIMEOUT                   120                  120                 
+HADR_SYNCMODE                  NEARSYNC             NEARSYNC            
+HADR_PEER_WINDOW (secs)        0                    0                   
+LOGARCHMETH1 (memory)          OFF
+LOGARCHMETH1 (disk)            OFF
+LOGARCHCOMPR1                  OFF                  OFF                 
+LOGARCHOPT1                                                             
+LOGARCHMETH2 (memory)          OFF
+LOGARCHMETH2 (disk)            OFF
+LOGARCHCOMPR2                  OFF                  OFF                 
+LOGARCHOPT2                                                             
+OPT_DIRECT_WRKLD               NO                   NO                  
+FAILARCHPATH (memory)                                                           
+FAILARCHPATH (disk)                                                             
+NUMARCHRETRY                   5                    5                   
+ARCHRETRYDELAY (secs)          20                   20                  
+VENDOROPT                                                               
+AUTORESTART                    ON                   ON                  
+INDEXREC                       0                    0                   
+LOGINDEXBUILD                  0                    0                   
+DFT_LOADREC_SES                1                    1                   
+NUM_DB_BACKUPS                 12                   12                  
+REC_HIS_RETENTN (days)         90                   90                  
+AUTO_DEL_REC_OBJ               OFF                  OFF                 
+TSM_MGMTCLASS                                                           
+TSM_NODENAME                                                            
+TSM_OWNER                                                               
+TSM_PASSWORD                                                            
+AUTO_MAINT                     ON                   ON                  
+AUTO_DB_BACKUP                 OFF                  OFF                 
+AUTO_TBL_MAINT                 ON                   ON                  
+AUTO_RUNSTATS                  ON                   ON                  
+AUTO_STMT_STATS                ON                   ON                  
+AUTO_STATS_VIEWS               OFF                  OFF                 
+AUTO_SAMPLING                  ON                   ON                  
+AUTO_CG_STATS                  OFF                  OFF                 
+AUTO_REORG                     OFF                  OFF                 
+CUR_COMMIT                     ON                   ON                  
+AUTO_REVAL                     DEFERRED             DEFERRED            
+DBOKFORSD                      NO                   NO                  
+DEC_TO_CHAR_FMT                NEW                  NEW                 
+MON_REQ_METRICS                BASE                 BASE                
+MON_ACT_METRICS                BASE                 BASE                
+MON_OBJ_METRICS                EXTENDED             EXTENDED            
+MON_RTN_DATA                   NONE                 NONE                
+MON_RTN_EXECLIST               OFF                  OFF                 
+MON_UOW_DATA                   NONE                 NONE                
+MON_UOW_PKGLIST                OFF                  OFF                 
+MON_UOW_EXECLIST               OFF                  OFF                 
+MON_LOCKTIMEOUT                NONE                 NONE                
+MON_DEADLOCK                   WITHOUT_HIST         WITHOUT_HIST        
+MON_LOCKWAIT                   NONE                 NONE                
+MON_LW_THRESH                  5000000              5000000             
+SMTP Server (memory)           
+SMTP Server (disk)             
+CF_SELF_TUNING_MEM             ON                   ON                  
+CF_DB_MEM_SZ                   32768                32768               
+CF_GBP_SZ                      0                    4096                
+CF_LOCK_SZ                     16384                16384               
+CF_SCA_SZ                      4096                 4096                
+CF_CATCHUP_TRGT                15                   15                  
+MON_PKGLIST_SZ                 32                   32                  
+MON_LCK_MSG_LVL                1                    1                   
+SQL_CCFLAGS (memory)           
+SQL_CCFLAGS (disk)             
+SECTION_ACTUALS                NONE                 NONE                
+SYSTIME_PERIOD_ADJ             NO                   NO                  
+LOG_DDL_STMTS                  NO                   NO                  
+LOG_APPL_INFO                  NO                   NO                  
+DFT_SCHEMAS_DCC                NO                   NO                  
+DFT_TABLE_ORG                  ROW                  ROW                 
+STRING_UNITS                   SYSTEM               SYSTEM              
+NCHAR_MAPPING                  CHAR_CU32            CHAR_CU32           
+DBCFD_CFG_SIGNATURE            2                    2                   
+DBCFD_GLOB_CFG_SIGNATURE       2                    2                   
+HADR_SPOOL_LIMIT               AUTOMATIC(0)         AUTOMATIC(0)        
+HADR_REPLAY_DELAY              0                    0                   
+Database is in write suspend state NO                   NO                  
+CONNECT_PROC (memory)          
+CONNECT_PROC (disk)            
+EXTENDED_ROW_SZ                1                    1                   
+ENCRLIB (memory)                                                                
+ENCRLIB (disk)                                                                  
+ENCROPTS (memory)                                                               
+ENCROPTS (disk)                                                                 
+ENCRYPTED_DATABASE             NO                   NO                  
+EXTBL_STRICT_IO                NO                   NO                  
+EXTBL_LOCATION                 /database/config/db2inst1 /database/config/db2inst1
+PL_STACK_TRACE                 NONE                 NONE                
+HADR_SSL_LABEL (memory)                                                         
+HADR_SSL_LABEL (disk)                                                           
+WLM_AGENT_LOAD_TRGT            AUTOMATIC(11)        AUTOMATIC(11)       
+WLM_ADMISSION_CTRL             NO                   NO                  
+WLM_CPU_SHARES                 1000                 1000                
+WLM_CPU_SHARE_MODE             HARD                 HARD                
+WLM_CPU_LIMIT                  0                    0                   
+WLM_ENV_MIG_STATE              0                    0                   
+WLM_PRIORITY                   ON                   ON                  
+DEC_ARITHMETIC (memory)              
+DEC_ARITHMETIC (disk)                
+LOG_DISK_CAP                   0                    0                   
+AUTHN_CACHE_DURATION           3                    3                   
+AUTHN_CACHE_USERS              0                    0                   
+OPT_BUFFPAGE                   0                    0                   
+OPT_LOCKLIST                   0                    0                   
+OPT_MAXLOCKS                   0                    0                   
+OPT_SORTHEAP                   0                    0                   
+ACT_SORTMEM_LIMIT              NONE                 NONE                
+CTRL_FILE_RECOV_PATH (memory)                                                   
+CTRL_FILE_RECOV_PATH (disk)                                                     
+HADR_SSL_HOST_VAL              OFF                  OFF                 
+LARGE_AGGREGATION              NO                   NO                  
+
+Database Member 0 -- status n/a -- uptime n/a
+
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:04 -- Date 2023-01-04-14.46.49.991924
+
+Catalog Cache:
+Configured Size         851968
+Current Size            210967
+Maximum Size            4294901760
+High Water Mark         262144
+
+SYSTABLES:
+Address            TenantID   Schema   Name               Type TableID TbspaceID LastRefID  CatalogCacheLoadingLock    CatalogCacheUsageLock      Sts
+
+SYSRTNS:
+Address            RoutineID  Schema   Module             Name               LastRefID  CatalogCacheLoadingLock    CatalogCacheUsageLock      Sts
+
+SYSRTNS_PROCSCHEMAS:
+Address            TenantID   RtnName            LastRefID  CatalogCacheLoadingLock    CatalogCacheUsageLock      Sts
+
+SYSDATATYPES:
+Address            TypID LastRefID  CatalogCacheLoadingLock    CatalogCacheUsageLock      Sts
+
+SYSCODEPROPERTIES:
+Address            LastRefID  CatalogCacheLoadingLock    CatalogCacheUsageLock      Sts
+
+SYSNODEGROUPS:
+Address            PMapID RBalID CatalogCacheLoadingLock    CatalogCacheUsageLock      Sts
+
+SYSROLEAUTH:
+Address            AuthID   AuthType   Roleid     LastRefID  CatalogCacheLoadingLock   
+0x00007F7A8CD10180 DB2INST1 U          none       22         0A0000007A7F00008001D18CC3
+0x00007F7A8CD10BC0 SYSTS_MG R          9          22         0A0000007A7F0000C00BD18CC3
+0x00007F7A8CD10E40 SYSDEBUG R          12         22         0A0000007A7F0000400ED18CC3
+0x00007F7A8CD10F80 SYSTS_US R          10         22         0A0000007A7F0000800FD18CC3
+0x00007F7A8CD11260 SYSROLE_ R          5          22         0A0000007A7F00006012D18CC3
+0x00007F7A8CD10940 SYSROLE_ R          3          22         0A0000007A7F00004009D18CC3
+0x00007F7A8CD110C0 SYSROLE_ R          4          22         0A0000007A7F0000C010D18CC3
+0x00007F7A8CD10A80 SYSTS_AD R          8          22         0A0000007A7F0000800AD18CC3
+0x00007F7A8CD10480 PUBLIC   G          none       22         0A0000007A7F00008004D18CC3
+0x00007F7A8CD113A0 SYSROLE_ R          2          22         0A0000007A7F0000A013D18CC3
+0x00007F7A8CD10D00 SYSDEBUG R          11         22         0A0000007A7F0000000DD18CC3
+0x00007F7A8CD10740 SYSROLE_ R          1          22         0A0000007A7F00004007D18CC3
+0x00007F7A8CD10600 DB2IADM1 G          none       22         0A0000007A7F00000006D18CC3
+
+SYSDBAUTH:
+Address            AuthID   AuthType   LastRefID  CatalogCacheLoadingLock   
+0x00007F7A8CD114E0 DB2INST1 U          22         0B0000007A7F0000E014D18CC3
+0x00007F7A8CD122E0 SYSTS_MG R          22         0B0000007A7F0000E022D18CC3
+0x00007F7A8CD129E0 SYSDEBUG R          22         0B0000007A7F0000E029D18CC3
+0x00007F7A8CD13EE0 SYSTS_US R          22         0B0000007A7F0000E03ED18CC3
+0x00007F7A8CD130E0 SYSROLE_ R          22         0B0000007A7F0000E030D18CC3
+0x00007F7A8CD11BE0 SYSROLE_ R          22         0B0000007A7F0000E01BD18CC3
+0x00007F7A8CD12D60 SYSROLE_ R          22         0B0000007A7F0000602DD18CC3
+0x00007F7A8CD11F60 SYSTS_AD R          22         0B0000007A7F0000601FD18CC3
+0x00007F7A8CD13B60 PUBLIC   G          22         0B0000007A7F0000603BD18CC3
+0x00007F7A8CD13460 SYSROLE_ R          22         0B0000007A7F00006034D18CC3
+0x00007F7A8CD12660 SYSDEBUG R          22         0B0000007A7F00006026D18CC3
+0x00007F7A8CD11860 SYSROLE_ R          22         0B0000007A7F00006018D18CC3
+0x00007F7A8CD137E0 DB2IADM1 G          22         0B0000007A7F0000E037D18CC3
+
+SYSRTNAUTH:
+Address            AuthID   AuthType   TenantID   Schema   RoutineName        RtnType    LastRefID  CatalogCacheLoadingLock   
+
+SYSUSERAUTH:
+Address            AuthID   AuthType   TenantID   TableSch TableName          LastRefID  CatalogCacheLoadingLock   
+
+SYSSCHEMAAUTH:
+Address            AuthID   AuthType   TenantID   Schema   LastRefID  CatalogCacheLoadingLock   
+
+SYSXSROBJECTS:
+Address            TypID                CatalogCacheLoadingLock    CatalogCacheUsageLock      Sts
+
+SYSVARIABLES:
+Address            TenantID   Schema   Name               CatalogCacheLoadingLock    CatalogCacheUsageLock      Sts
+
+SYSVARIABLES VARSCHEMAS:
+Address            TenantID   Name               CatalogCacheLoadingLock    CatalogCacheUsageLock      Sts
+
+SYSVARAUTH:
+Address            AuthID   AuthType   varID      LastRefID  CatalogCacheLoadingLock   
+
+TABLESPACES:
+Address            Name               TbspaceID LastRefID  CatalogCacheLoadingLock    CatalogCacheUsageLock      Sts
+0x00007F7A8CD10080 TEMPSPACE1         1         22         130000007A7F00008000D18CC3 00000B01050000008000D18CC3 V 
+
+Database Member 0 -- Active -- Up 0 days 00:00:18 -- Date 2023-01-04-14.46.50.025183
+
+Server List:
+   Time:          
+   Database Name:      NPOLICE 
+   Member Subset Id:   0
+   Member Subset Name: SYSDEFAULTMEMBERSUBSET
+   Count:              0
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.025628
+
+TCB Table Information:
+Address            TbspaceID TableID PartID MasterTbs MasterTab TableName          SchemaNm ObjClass DataSize   LfSize     LobSize    XMLSize    IxReqRebld
+0x00007F7A89BCE408 0         1       n/a    0         1         SYSBOOT            SYSIBM   Perm     1          0          0          0          No
+0x00007F7A8BD06A88 0         17      n/a    0         17        SYSDBAUTH          SYSIBM   Perm     1          0          0          0          No
+0x00007F7A89DCCE08 0         535     n/a    0         535       SYSVERSIONS        SYSIBM   Perm     1          0          0          0          No
+0x00007F7A8BD05708 0         1035    n/a    0         1035      SYSROLEAUTH        SYSIBM   Perm     1          0          0          0          No
+0x00007F7A8A2CCE08 0         1036    n/a    0         1036      SYSCONTEXTS        SYSIBM   Perm     1          0          1          0          No
+0x00007F7A8BD15308 0         1039    n/a    0         1039      SYSVARIABLES       SYSIBM   Perm     1          0          1          0          No
+0x00007F7A8A3CE188 0         1041    n/a    0         1041      SYSWORKLOADS       SYSIBM   Perm     1          0          64         0          No
+0x00007F7A8A4CCE08 0         1042    n/a    0         1042      SYSWORKLOADCONNATT SYSIBM   Perm     1          0          0          0          No
+0x00007F7A8A4CE188 0         1043    n/a    0         1043      SYSWORKLOADAUTH    SYSIBM   Perm     1          0          0          0          No
+0x00007F7A89DCE188 0         1044    n/a    0         1044      SYSSERVICECLASSES  SYSIBM   Perm     1          0          64         0          No
+0x00007F7A8A6CCE08 0         1046    n/a    0         1046      SYSWORKCLASSES     SYSIBM   Perm     1          0          1          0          No
+0x00007F7A8A5CE188 0         1047    n/a    0         1047      SYSWORKACTIONSETS  SYSIBM   Perm     1          0          0          0          No
+0x00007F7A89ECE408 0         1048    n/a    0         1048      SYSWORKACTIONS     SYSIBM   Perm     1          0          0          0          No
+0x00007F7A8A5CCE08 0         1049    n/a    0         1049      SYSTHRESHOLDS      SYSIBM   Perm     1          0          64         0          No
+0x00007F7A89CCCE08 0         -1      n/a    0         -1        INTERNAL           SYSIBM   Perm     6          0          0          0          No
+0x00007F7A8BD03008 0         267     n/a    0         267       SYSTABLESPACES     SYSIBM   Perm     1          0          0          0          No
+0x00007F7A8BD01C88 0         272     n/a    0         272       SYSSCHEMATA        SYSIBM   Perm     1          0          0          0          No
+0x00007F7A89CCE188 0         275     n/a    0         275       SYSNODEGROUPS      SYSIBM   Perm     1          0          1          0          No
+0x00007F7A89FCCE08 0         1280    n/a    0         1280      SYSHISTOGRAMTEMPLA SYSIBM   Perm     1          0          1          0          No
+0x00007F7A8A3CCE08 0         1281    n/a    0         1281      SYSHISTOGRAMTEMPLA SYSIBM   Perm     1          0          0          0          No
+0x00007F7A89FCEF08 0         1282    n/a    0         1282      SYSHISTOGRAMTEMPLA SYSIBM   Perm     1          0          0          0          No
+0x00007F7A8A2CE188 0         1284    n/a    0         1284      SYSAUDITPOLICIES   SYSIBM   Perm     1          0          0          0          No
+0x00007F7A8BD04388 0         1292    n/a    0         1292      SYSSTOGROUPS       SYSIBM   Perm     1          0          0          0          No
+0x00007F7A8A6CE188 0         1295    n/a    0         1295      SYSWORKCLASSATTRIB SYSIBM   Perm     1          0          1          0          No
+0x00007F7A8BD00908 0         1299    n/a    0         1299      SYSMEMBERSUBSETS   SYSIBM   Perm     1          0          1          0          No
+
+TCB Table Stats:
+Address            TableName          SchemaNm Scans      UDI        RTSUDI               PgReorgs   NoChgUpdts Reads      FscrUpdates Inserts    Updates    Deletes    OvFlReads  OvFlCrtes  PgDictsCrt CCLogReads CCRemoteReqs CCLockWaits CCRemRetryLckWs StoreBytes BytesSaved
+0x00007F7A89BCE408 SYSBOOT            SYSIBM   1          0          0                    0          0          1          0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A8BD06A88 SYSDBAUTH          SYSIBM   0          0          0                    0          0          2          0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A89DCCE08 SYSVERSIONS        SYSIBM   0          0          0                    0          0          1          0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A8BD05708 SYSROLEAUTH        SYSIBM   0          0          0                    0          0          10         0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A8A2CCE08 SYSCONTEXTS        SYSIBM   0          0          0                    0          0          0          0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A8BD15308 SYSVARIABLES       SYSIBM   0          0          0                    0          0          0          0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A8A3CE188 SYSWORKLOADS       SYSIBM   0          0          0                    0          0          4          0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A8A4CCE08 SYSWORKLOADCONNATT SYSIBM   0          0          0                    0          0          0          0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A8A4CE188 SYSWORKLOADAUTH    SYSIBM   0          0          0                    0          0          2          0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A89DCE188 SYSSERVICECLASSES  SYSIBM   1          0          0                    0          0          14         0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A8A6CCE08 SYSWORKCLASSES     SYSIBM   0          0          0                    0          0          1          0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A8A5CE188 SYSWORKACTIONSETS  SYSIBM   1          0          0                    0          0          1          0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A89ECE408 SYSWORKACTIONS     SYSIBM   0          0          0                    0          0          1          0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A8A5CCE08 SYSTHRESHOLDS      SYSIBM   1          0          0                    0          0          1          0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A89CCCE08 INTERNAL           SYSIBM   0          0          0                    0          0          116        0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A8BD03008 SYSTABLESPACES     SYSIBM   0          0          0                    0          0          2          0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A8BD01C88 SYSSCHEMATA        SYSIBM   1          0          0                    0          0          11         0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A89CCE188 SYSNODEGROUPS      SYSIBM   0          0          0                    0          0          2          0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A89FCCE08 SYSHISTOGRAMTEMPLA SYSIBM   0          0          0                    0          0          1          0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A8A3CCE08 SYSHISTOGRAMTEMPLA SYSIBM   0          0          0                    0          0          40         0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A89FCEF08 SYSHISTOGRAMTEMPLA SYSIBM   0          0          0                    0          0          73         0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A8A2CE188 SYSAUDITPOLICIES   SYSIBM   0          0          0                    0          0          0          0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A8BD04388 SYSSTOGROUPS       SYSIBM   0          0          0                    0          0          2          0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A8A6CE188 SYSWORKCLASSATTRIB SYSIBM   0          0          0                    0          0          2          0           0          0          0          0          0          0          0          0          0          0          -          -         
+0x00007F7A8BD00908 SYSMEMBERSUBSETS   SYSIBM   1          0          0                    0          0          0          0           0          0          0          0          0          0          0          0          0          0          -          -         
+
+TCB Index Information:
+Address            InxTbspace ObjectID PartID TbspaceID TableID MasterTbs MasterTab TableName          SchemaNm IID   IndexObjSize
+0x00007F7A8A1CE9E8 0          17       n/a    0         17      0         17        SYSDBAUTH          SYSIBM   4     6         
+0x00007F7A8A1CE9E8 0          17       n/a    0         17      0         17        SYSDBAUTH          SYSIBM   3     6         
+0x00007F7A8A1CE9E8 0          17       n/a    0         17      0         17        SYSDBAUTH          SYSIBM   2     6         
+0x00007F7A8A1CE9E8 0          17       n/a    0         17      0         17        SYSDBAUTH          SYSIBM   1     6         
+0x00007F7A8015E9E8 0          535      n/a    0         535     0         535       SYSVERSIONS        SYSIBM   1     3         
+0x00007F7A8A0CDEE8 0          1035     n/a    0         1035    0         1035      SYSROLEAUTH        SYSIBM   4     6         
+0x00007F7A8A0CDEE8 0          1035     n/a    0         1035    0         1035      SYSROLEAUTH        SYSIBM   3     6         
+0x00007F7A8A0CDEE8 0          1035     n/a    0         1035    0         1035      SYSROLEAUTH        SYSIBM   2     6         
+0x00007F7A8A0CDEE8 0          1035     n/a    0         1035    0         1035      SYSROLEAUTH        SYSIBM   1     6         
+0x00007F7A8015D668 0          1036     n/a    0         1036    0         1036      SYSCONTEXTS        SYSIBM   6     8         
+0x00007F7A8015D668 0          1036     n/a    0         1036    0         1036      SYSCONTEXTS        SYSIBM   5     8         
+0x00007F7A8015D668 0          1036     n/a    0         1036    0         1036      SYSCONTEXTS        SYSIBM   4     8         
+0x00007F7A8015D668 0          1036     n/a    0         1036    0         1036      SYSCONTEXTS        SYSIBM   3     8         
+0x00007F7A8015D668 0          1036     n/a    0         1036    0         1036      SYSCONTEXTS        SYSIBM   2     8         
+0x00007F7A8015D668 0          1036     n/a    0         1036    0         1036      SYSCONTEXTS        SYSIBM   1     8         
+0x00007F7A8BD17AE8 0          1039     n/a    0         1039    0         1039      SYSVARIABLES       SYSIBM   3     5         
+0x00007F7A8BD17AE8 0          1039     n/a    0         1039    0         1039      SYSVARIABLES       SYSIBM   2     5         
+0x00007F7A8BD17AE8 0          1039     n/a    0         1039    0         1039      SYSVARIABLES       SYSIBM   1     5         
+0x00007F7A800A4CE8 0          1041     n/a    0         1041    0         1041      SYSWORKLOADS       SYSIBM   4     6         
+0x00007F7A800A4CE8 0          1041     n/a    0         1041    0         1041      SYSWORKLOADS       SYSIBM   3     6         
+0x00007F7A800A4CE8 0          1041     n/a    0         1041    0         1041      SYSWORKLOADS       SYSIBM   2     6         
+0x00007F7A800A4CE8 0          1041     n/a    0         1041    0         1041      SYSWORKLOADS       SYSIBM   1     6         
+0x00007F7A8014E468 0          1042     n/a    0         1042    0         1042      SYSWORKLOADCONNATT SYSIBM   2     4         
+0x00007F7A8014E468 0          1042     n/a    0         1042    0         1042      SYSWORKLOADCONNATT SYSIBM   1     4         
+0x00007F7A801507E8 0          1043     n/a    0         1043    0         1043      SYSWORKLOADAUTH    SYSIBM   4     6         
+0x00007F7A801507E8 0          1043     n/a    0         1043    0         1043      SYSWORKLOADAUTH    SYSIBM   3     6         
+0x00007F7A801507E8 0          1043     n/a    0         1043    0         1043      SYSWORKLOADAUTH    SYSIBM   2     6         
+0x00007F7A801507E8 0          1043     n/a    0         1043    0         1043      SYSWORKLOADAUTH    SYSIBM   1     6         
+0x00007F7A80158568 0          1044     n/a    0         1044    0         1044      SYSSERVICECLASSES  SYSIBM   2     4         
+0x00007F7A80158568 0          1044     n/a    0         1044    0         1044      SYSSERVICECLASSES  SYSIBM   1     4         
+0x00007F7A8015D0E8 0          1046     n/a    0         1046    0         1046      SYSWORKCLASSES     SYSIBM   5     7         
+0x00007F7A8015D0E8 0          1046     n/a    0         1046    0         1046      SYSWORKCLASSES     SYSIBM   4     7         
+0x00007F7A8015D0E8 0          1046     n/a    0         1046    0         1046      SYSWORKCLASSES     SYSIBM   3     7         
+0x00007F7A8015D0E8 0          1046     n/a    0         1046    0         1046      SYSWORKCLASSES     SYSIBM   2     7         
+0x00007F7A8015D0E8 0          1046     n/a    0         1046    0         1046      SYSWORKCLASSES     SYSIBM   1     7         
+0x00007F7A80157468 0          1047     n/a    0         1047    0         1047      SYSWORKACTIONSETS  SYSIBM   4     6         
+0x00007F7A80157468 0          1047     n/a    0         1047    0         1047      SYSWORKACTIONSETS  SYSIBM   3     6         
+0x00007F7A80157468 0          1047     n/a    0         1047    0         1047      SYSWORKACTIONSETS  SYSIBM   2     6         
+0x00007F7A80157468 0          1047     n/a    0         1047    0         1047      SYSWORKACTIONSETS  SYSIBM   1     6         
+0x00007F7A8A4CF468 0          1048     n/a    0         1048    0         1048      SYSWORKACTIONS     SYSIBM   4     6         
+0x00007F7A8A4CF468 0          1048     n/a    0         1048    0         1048      SYSWORKACTIONS     SYSIBM   3     6         
+0x00007F7A8A4CF468 0          1048     n/a    0         1048    0         1048      SYSWORKACTIONS     SYSIBM   2     6         
+0x00007F7A8A4CF468 0          1048     n/a    0         1048    0         1048      SYSWORKACTIONS     SYSIBM   1     6         
+0x00007F7A801567E8 0          1049     n/a    0         1049    0         1049      SYSTHRESHOLDS      SYSIBM   3     5         
+0x00007F7A801567E8 0          1049     n/a    0         1049    0         1049      SYSTHRESHOLDS      SYSIBM   2     5         
+0x00007F7A801567E8 0          1049     n/a    0         1049    0         1049      SYSTHRESHOLDS      SYSIBM   1     5         
+0x00007F7A89FCE1E8 0          267      n/a    0         267     0         267       SYSTABLESPACES     SYSIBM   6     8         
+0x00007F7A89FCE1E8 0          267      n/a    0         267     0         267       SYSTABLESPACES     SYSIBM   5     8         
+0x00007F7A89FCE1E8 0          267      n/a    0         267     0         267       SYSTABLESPACES     SYSIBM   4     8         
+0x00007F7A89FCE1E8 0          267      n/a    0         267     0         267       SYSTABLESPACES     SYSIBM   3     8         
+0x00007F7A89FCE1E8 0          267      n/a    0         267     0         267       SYSTABLESPACES     SYSIBM   2     8         
+0x00007F7A89FCE1E8 0          267      n/a    0         267     0         267       SYSTABLESPACES     SYSIBM   1     8         
+0x00007F7A837647E8 0          272      n/a    0         272     0         272       SYSSCHEMATA        SYSIBM   2     4         
+0x00007F7A837647E8 0          272      n/a    0         272     0         272       SYSSCHEMATA        SYSIBM   1     4         
+0x00007F7A80153AE8 0          275      n/a    0         275     0         275       SYSNODEGROUPS      SYSIBM   2     4         
+0x00007F7A80153AE8 0          275      n/a    0         275     0         275       SYSNODEGROUPS      SYSIBM   1     4         
+0x00007F7A801540E8 0          1280     n/a    0         1280    0         1280      SYSHISTOGRAMTEMPLA SYSIBM   2     4         
+0x00007F7A801540E8 0          1280     n/a    0         1280    0         1280      SYSHISTOGRAMTEMPLA SYSIBM   1     4         
+0x00007F7A80154C68 0          1281     n/a    0         1281    0         1281      SYSHISTOGRAMTEMPLA SYSIBM   1     4         
+0x00007F7A8A1CF168 0          1282     n/a    0         1282    0         1282      SYSHISTOGRAMTEMPLA SYSIBM   2     4         
+0x00007F7A8A1CF168 0          1282     n/a    0         1282    0         1282      SYSHISTOGRAMTEMPLA SYSIBM   1     4         
+0x00007F7A8015DBE8 0          1284     n/a    0         1284    0         1284      SYSAUDITPOLICIES   SYSIBM   2     4         
+0x00007F7A8015DBE8 0          1284     n/a    0         1284    0         1284      SYSAUDITPOLICIES   SYSIBM   1     4         
+0x00007F7A89CCF0E8 0          1292     n/a    0         1292    0         1292      SYSSTOGROUPS       SYSIBM   3     5         
+0x00007F7A89CCF0E8 0          1292     n/a    0         1292    0         1292      SYSSTOGROUPS       SYSIBM   2     5         
+0x00007F7A89CCF0E8 0          1292     n/a    0         1292    0         1292      SYSSTOGROUPS       SYSIBM   1     5         
+0x00007F7A8A8CF568 0          1295     n/a    0         1295    0         1295      SYSWORKCLASSATTRIB SYSIBM   1     3         
+0x00007F7A83763468 0          1299     n/a    0         1299    0         1299      SYSMEMBERSUBSETS   SYSIBM   2     4         
+0x00007F7A83763468 0          1299     n/a    0         1299    0         1299      SYSMEMBERSUBSETS   SYSIBM   1     4         
+
+TCB Index Stats:
+Address            TableName          IID   PartID EmpPgDel   RootSplits BndrySplts PseuEmptPg EmPgMkdUsd Scans      IxOnlyScns KeyUpdates InclUpdats NonBndSpts PgAllocs   Merges     PseuDels   DelClean   IntNodSpl  
+0x00007F7A8A1CE9E8 SYSDBAUTH          4     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A8A1CE9E8 SYSDBAUTH          3     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A8A1CE9E8 SYSDBAUTH          2     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A8A1CE9E8 SYSDBAUTH          1     n/a    0          0          0          0          0          13         0          0          0          0          0          0          0          0          0          
+0x00007F7A8015E9E8 SYSVERSIONS        1     n/a    0          0          0          0          0          1          0          0          0          0          0          0          0          0          0          
+0x00007F7A8A0CDEE8 SYSROLEAUTH        4     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A8A0CDEE8 SYSROLEAUTH        3     n/a    0          0          0          0          0          1          0          0          0          0          0          0          0          0          0          
+0x00007F7A8A0CDEE8 SYSROLEAUTH        2     n/a    0          0          0          0          0          1          0          0          0          0          0          0          0          0          0          
+0x00007F7A8A0CDEE8 SYSROLEAUTH        1     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A8015D668 SYSCONTEXTS        6     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A8015D668 SYSCONTEXTS        5     n/a    0          0          0          0          0          1          0          0          0          0          0          0          0          0          0          
+0x00007F7A8015D668 SYSCONTEXTS        4     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A8015D668 SYSCONTEXTS        3     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A8015D668 SYSCONTEXTS        2     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A8015D668 SYSCONTEXTS        1     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A8BD17AE8 SYSVARIABLES       3     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A8BD17AE8 SYSVARIABLES       2     n/a    0          0          0          0          0          2          0          0          0          0          0          0          0          0          0          
+0x00007F7A8BD17AE8 SYSVARIABLES       1     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A800A4CE8 SYSWORKLOADS       4     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A800A4CE8 SYSWORKLOADS       3     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A800A4CE8 SYSWORKLOADS       2     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A800A4CE8 SYSWORKLOADS       1     n/a    0          0          0          0          0          3          0          0          0          0          0          0          0          0          0          
+0x00007F7A8014E468 SYSWORKLOADCONNATT 2     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A8014E468 SYSWORKLOADCONNATT 1     n/a    0          0          0          0          0          4          0          0          0          0          0          0          0          0          0          
+0x00007F7A801507E8 SYSWORKLOADAUTH    4     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A801507E8 SYSWORKLOADAUTH    3     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A801507E8 SYSWORKLOADAUTH    2     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A801507E8 SYSWORKLOADAUTH    1     n/a    0          0          0          0          0          4          0          0          0          0          0          0          0          0          0          
+0x00007F7A80158568 SYSSERVICECLASSES  2     n/a    0          0          0          0          0          2          2          0          0          0          0          0          0          0          0          
+0x00007F7A80158568 SYSSERVICECLASSES  1     n/a    0          0          0          0          0          7          0          0          0          0          0          0          0          0          0          
+0x00007F7A8015D0E8 SYSWORKCLASSES     5     n/a    0          0          0          0          0          1          0          0          0          0          0          0          0          0          0          
+0x00007F7A8015D0E8 SYSWORKCLASSES     4     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A8015D0E8 SYSWORKCLASSES     3     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A8015D0E8 SYSWORKCLASSES     2     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A8015D0E8 SYSWORKCLASSES     1     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A80157468 SYSWORKACTIONSETS  4     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A80157468 SYSWORKACTIONSETS  3     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A80157468 SYSWORKACTIONSETS  2     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A80157468 SYSWORKACTIONSETS  1     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A8A4CF468 SYSWORKACTIONS     4     n/a    0          0          0          0          0          1          0          0          0          0          0          0          0          0          0          
+0x00007F7A8A4CF468 SYSWORKACTIONS     3     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A8A4CF468 SYSWORKACTIONS     2     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A8A4CF468 SYSWORKACTIONS     1     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A801567E8 SYSTHRESHOLDS      3     n/a    0          0          0          0          0          4          0          0          0          0          0          0          0          0          0          
+0x00007F7A801567E8 SYSTHRESHOLDS      2     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A801567E8 SYSTHRESHOLDS      1     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A89FCE1E8 SYSTABLESPACES     6     n/a    0          0          0          0          0          1          0          0          0          0          0          0          0          0          0          
+0x00007F7A89FCE1E8 SYSTABLESPACES     5     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A89FCE1E8 SYSTABLESPACES     4     n/a    0          0          0          0          0          1          0          0          0          0          0          0          0          0          0          
+0x00007F7A89FCE1E8 SYSTABLESPACES     3     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A89FCE1E8 SYSTABLESPACES     2     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A89FCE1E8 SYSTABLESPACES     1     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A837647E8 SYSSCHEMATA        2     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A837647E8 SYSSCHEMATA        1     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A80153AE8 SYSNODEGROUPS      2     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A80153AE8 SYSNODEGROUPS      1     n/a    0          0          0          0          0          2          0          0          0          0          0          0          0          0          0          
+0x00007F7A801540E8 SYSHISTOGRAMTEMPLA 2     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A801540E8 SYSHISTOGRAMTEMPLA 1     n/a    0          0          0          0          0          1          0          0          0          0          0          0          0          0          0          
+0x00007F7A80154C68 SYSHISTOGRAMTEMPLA 1     n/a    0          0          0          0          0          1          0          0          0          0          0          0          0          0          0          
+0x00007F7A8A1CF168 SYSHISTOGRAMTEMPLA 2     n/a    0          0          0          0          0          11         0          0          0          0          0          0          0          0          0          
+0x00007F7A8A1CF168 SYSHISTOGRAMTEMPLA 1     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A8015DBE8 SYSAUDITPOLICIES   2     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A8015DBE8 SYSAUDITPOLICIES   1     n/a    0          0          0          0          0          1          1          0          0          0          0          0          0          0          0          
+0x00007F7A89CCF0E8 SYSSTOGROUPS       3     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A89CCF0E8 SYSSTOGROUPS       2     n/a    0          0          0          0          0          2          0          0          0          0          0          0          0          0          0          
+0x00007F7A89CCF0E8 SYSSTOGROUPS       1     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A8A8CF568 SYSWORKCLASSATTRIB 1     n/a    0          0          0          0          0          1          0          0          0          0          0          0          0          0          0          
+0x00007F7A83763468 SYSMEMBERSUBSETS   2     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+0x00007F7A83763468 SYSMEMBERSUBSETS   1     n/a    0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.132237
+
+Table Reorg Information:
+Address            TbspaceID TableID PartID MasterTbs MasterTab TableName          Type    IndexID    TempSpaceID
+
+Table Reorg Stats:
+Address            TableName          Start               End                 PhaseStart          MaxPhase   Phase      CurCount   MaxCount   Status  Completion
+
+Index Reorg Stats:
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.133151
+
+Recovery:
+Database is not in recovery state.
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.133436
+
+Dynamic Cache Reoptimization:
+
+Dynamic SQL Statements:
+Address            AnchID StmtUID    NumEnv     NumVar     NumRef     NumExe     Text 
+
+Dynamic SQL Environments:
+Address            AnchID StmtUID    EnvID      Iso QOpt Blk
+
+Dynamic SQL Variations:
+Address            AnchID StmtUID    EnvID      VarID      NumRef     Typ Lockname                   Val Insert Time                Sect Size  Num copies
+
+Reopt Values:
+Address            AnchID StmtUID    EnvID      VarID      OrderNum   SQLZType   CodPg NulID Len   Data 
+
+Database Member 0 -- Active -- Up 0 days 00:00:18 -- Date 2023-01-04-14.46.50.136534
+
+Utilities:
+Address            ID         Type                   State      Invoker    Priority   StartTime           DBName   NumPhases  CurPhase   Description         
+
+Progress:
+Address            ID         PhaseNum   CompletedWork                TotalWork                    StartTime           Description           
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.137534
+
+Storage Group Configuration:
+Address            SGID  Default  DataTag    Name
+0x00007F7A800A5820 0     Yes      0          IBMSTOGROUP
+
+Storage Group Statistics:
+Address            SGID  State      Numpaths  NumDropPen
+0x00007F7A800A5820 0     0x00000000 1         0         
+
+Storage Group Paths: 
+Address            SGID  PathID    PathState    PathName
+0x00007F7A800C9000 0     0         InUse        /database/data
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.139727
+
+Storage Group Configuration:
+Address            SGID  Default  DataTag    Name
+0x00007F7A800A5820 0     Yes      0          IBMSTOGROUP
+
+Storage Group Statistics:
+Address            SGID  State      Numpaths  NumDropPen
+0x00007F7A800A5820 0     0x00000000 1         0         
+
+Storage Group Paths: 
+Address            SGID  PathID    PathState    PathName
+0x00007F7A800C9000 0     0         InUse        /database/data
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.142286
+
+HADR Information:
+HADR is not active.
+  
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.142508
+
+Active Statement List:
+Address            AppHandl [nod-index] UOW-ID     StmtID     AnchID StmtUID    EffISO      EffLockTOut EffDegree   EntryTime           StartTime           LastRefTime        
+
+Database Member 0 -- Active -- Up 0 days 00:00:18 -- Date 2023-01-04-14.46.50.143049
+
+FMP:
+Pool Size:       2
+Max Pool Size:   200 ( Automatic )
+Keep FMP:        YES
+Initialized:     YES
+Trusted Path:    /database/config/db2inst1/sqllib/function/unfenced
+Fenced User:     db2fenc1
+Shared Memory:   0x0000000201D40460 
+IPC Pool:        0x0000000201D404C0 
+
+FMP Process:
+Address            FmpPid     Bit   Flags      ActiveThrd PooledThrd ForcedThrd Active IPCList            FmpUser                                                                                                                          
+0x0000000201D75D40 18429      64    0x00000000 0          0          0          No     0x0000000201D769A0                                                                                                                                       
+
+   Active Threads:
+   Address            FmpPid     EduPid     ThreadId            
+   No active threads.
+
+   Pooled Threads:
+   Address            FmpPid     ThreadId            
+   No pooled threads.
+
+   Forced Threads:
+   Address            FmpPid     ThreadId            
+   No forced threads.
+
+FMP Process:
+Address            FmpPid     Bit   Flags      ActiveThrd PooledThrd ForcedThrd Active IPCList            FmpUser                                                                                                                          
+0x0000000201D75380 18208      64    0x00000008 0          0          0          No     0x0000000201D75700                                                                                                                                       
+
+   Active Threads:
+   Address            FmpPid     EduPid     ThreadId            
+   No active threads.
+
+   Pooled Threads:
+   Address            FmpPid     ThreadId            
+   No pooled threads.
+
+   Forced Threads:
+   Address            FmpPid     ThreadId            
+   No forced threads.
+
+FMP Process:
+Address            FmpPid     Bit   Flags      ActiveThrd PooledThrd ForcedThrd Active IPCList            FmpUser                                                                                                                          
+0x0000000201D76B20 18432      32    0x00000000 0          0          0          No     0x0000000201D77780                                                                                                                                       
+
+   Active Threads:
+   Address            FmpPid     EduPid     ThreadId            
+   No active threads.
+
+   Pooled Threads:
+   Address            FmpPid     ThreadId            
+   No pooled threads.
+
+   Forced Threads:
+   Address            FmpPid     ThreadId            
+   No forced threads.
+
+Database Member 0 -- Active -- Up 0 days 00:00:18 -- Date 2023-01-04-14.46.50.149606
+
+
+FMP Process:
+FmpPid     Bit   Flags      ActiveThrd PooledThrd ForcedThrd Active
+18429      64    0x00000000 0          0          0          No     
+
+   Active Threads:
+   No active threads.
+
+   Pooled Threads:
+   No pooled threads.
+
+   Forced Threads:
+   No forced threads.
+
+FMP Process:
+FmpPid     Bit   Flags      ActiveThrd PooledThrd ForcedThrd Active
+18208      64    0x00000008 0          0          0          No     
+
+   Active Threads:
+   No active threads.
+
+   Pooled Threads:
+   No pooled threads.
+
+   Forced Threads:
+   No forced threads.
+
+FMP Process:
+FmpPid     Bit   Flags      ActiveThrd PooledThrd ForcedThrd Active
+18432      32    0x00000000 0          0          0          No     
+
+   Active Threads:
+   No active threads.
+
+   Pooled Threads:
+   No pooled threads.
+
+   Forced Threads:
+   No forced threads.
+
+Database Member 0 -- Active -- Up 0 days 00:00:18 -- Date 2023-01-04-14.46.50.153319
+
+Latches:
+Address            Holder     Waiter     Filename             LOC        LatchType            HoldCount 
+0x0000000202100430 14         0          Unknown              57         SQLO_LT_sqeWLDispatcher__m_tunerLatch 1         
+0x0000000202E719FC 22         0          Unknown              17579      SQLO_LT_sqeLocalDatabase__dblatch 1         
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.158997
+
+Workload Definitions:
+Address                     = 0x00007F7A8014E820 
+WorkloadID                  = 1          
+WorkloadName                = SYSDEFAULTUSERWORKLOAD
+DBAccess                    = ALLOW     
+Maximum Degree              = DEFAULT
+ConcWLOThresID              = 0          
+ConcWLOThresName            = 
+MaxConcWLOs                 = 9223372036854775806 
+WLOActsThresName            = 
+WLOActsThresID              = 0          
+MaxWLOActs                  = 9223372036854775806 
+ServiceClassID              = 13    
+Collect Activity Opt        = None
+Section Actuals Options     = None
+Collect Lock Timeout        = Without History
+Collect Deadlock            = Without History
+Collect Lock Wait           = None
+Collect Aggr Activity Opt   = None
+Collect Aggr UOW Opt        = None
+Collect Activity Metrics    = None
+Collect Unit of Work Data   = None
+Act Lifetime Histogram Template ID          = 1          
+Act Queue Time Histogram Template ID        = 1          
+Act Execute Time Histogram Template ID      = 1          
+Act Estimated Cost Histogram Template ID    = 1          
+Act Interarrival Time Histogram Template ID = 1          
+UOW Lifetime Histogram Template ID          = 1          
+Priority                                    = 2          
+
+Address                     = 0x00007F7A8014EA70 
+WorkloadID                  = 2          
+WorkloadName                = SYSDEFAULTADMWORKLOAD
+DBAccess                    = ALLOW     
+Maximum Degree              = DEFAULT
+ConcWLOThresID              = 0          
+ConcWLOThresName            = 
+MaxConcWLOs                 = 9223372036854775806 
+WLOActsThresName            = 
+WLOActsThresID              = 0          
+MaxWLOActs                  = 9223372036854775806 
+ServiceClassID              = 13    
+Collect Activity Opt        = None
+Section Actuals Options     = None
+Collect Lock Timeout        = Without History
+Collect Deadlock            = Without History
+Collect Lock Wait           = None
+Collect Aggr Activity Opt   = None
+Collect Aggr UOW Opt        = None
+Collect Activity Metrics    = None
+Collect Unit of Work Data   = None
+Act Lifetime Histogram Template ID          = 1          
+Act Queue Time Histogram Template ID        = 1          
+Act Execute Time Histogram Template ID      = 1          
+Act Estimated Cost Histogram Template ID    = 1          
+Act Interarrival Time Histogram Template ID = 1          
+UOW Lifetime Histogram Template ID          = 1          
+Priority                                    = 2          
+
+
+Usage Privilege Holders:
+Address            WorkloadID  Type       AuthID                                                                                                                          
+0x00007F7A80150C40 1           GROUP      PUBLIC                                                                                                                          
+
+Local Member Workload Statistics:
+Address                     = 0x00007F7A8A9C21A0 
+WorkloadID                  = 1          
+WorkloadName                = SYSDEFAULTUSERWORKLOAD
+NumWLO                      = 0          
+LastResetTime               = 01/04/2023 14:46:45.000000
+WLO HWM                     = 0          
+WLOActHWM                   = 0          
+WLOCompleted                = 0                   
+ActCompleted                = 0                   
+ActAborted                  = 0                   
+ActRejected                 = 0                   
+
+Address                     = 0x00007F7A8A9C8660 
+WorkloadID                  = 2          
+WorkloadName                = SYSDEFAULTADMWORKLOAD
+NumWLO                      = 0          
+LastResetTime               = 01/04/2023 14:46:45.000000
+WLO HWM                     = 0          
+WLOActHWM                   = 0          
+WLOCompleted                = 0                   
+ActCompleted                = 0                   
+ActAborted                  = 0                   
+ActRejected                 = 0                   
+
+
+Database Member 0 -- Active -- Up 0 days 00:00:18 -- Date 2023-01-04-14.46.50.164638
+
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.164820
+
+Monitor Usage list status information
+-------------------------------------
+
+Total number of active usage lists indb  : 0
+Maximum instance memory allowed (bytes)  : 658018304
+Current instance memory consumed (bytes) : 0
+
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.165173
+
+Service Classes:
+
+Service Class Name        = SYSDEFAULTSYSTEMCLASS
+Service Class ID          = 1                   
+Service Class Type        = Service Superclass
+Default Subclass ID       = 11                  
+Effective Service Class State     = Enabled
+Catalog Service Class State       = Enabled
+Workload Type                     = Custom
+Effective Prefetch Priority       = Medium
+Catalog Prefetch Priority         = Default
+Effective Bufferpool Priority     = Low
+Catalog Bufferpool Priority       = Default
+Effective Outbound Correlator     = None
+Catalog Outbound Correlator       = None
+Maximum Degree                    = None
+Resource Shares                   = 1000                
+Resource Shares Type              = Soft
+Minimum Resource Share Percent    = 0                   
+CPU Shares                        = 1000                
+CPU Shares Type                   = Hard
+CPU Limit                         = None
+Activity Sort Memory Limit        = None
+Degree Scaleback                  = On
+Work Action Set ID        = N/A
+Collect History Opt       = Off
+Collect Activity Opt      = None
+Section Actuals Options   = None
+Collect Request Metrics   = None
+Collect Aggr Activity Opt = None
+Act Lifetime Histogram Template ID          = 1          
+Act Queue Time Histogram Template ID        = 1          
+Act Execute Time Histogram Template ID      = 1          
+Act Estimated Cost Histogram Template ID    = 1          
+Act Interarrival Time Histogram Template ID = 1          
+
+Num Connections               = 0                   
+Last Stats Reset Time         = 01/04/2023 14:46:45.000000
+Num Coordinator Connections   = 0                   
+Coordinator Connections HWM   = 0                   
+Activities HWM                = 0                   
+Activities Completed          = 0                   
+Activities Rejected           = 0                   
+Activities Aborted            = 0                   
+
+
+
+Service Class Name        = SYSDEFAULTSUBCLASS
+Service Class ID          = 11                  
+Service Class Type        = Service Subclass
+Parent Superclass ID      = 1                   
+Effective Service Class State     = Enabled
+Catalog Service Class State       = Enabled
+Effective Prefetch Priority       = Medium
+Catalog Prefetch Priority         = Default
+Effective Bufferpool Priority     = Low
+Catalog Bufferpool Priority       = Default
+Effective Outbound Correlator     = None
+Catalog Outbound Correlator       = None
+Maximum Degree                    = Default
+Resource Shares                   = 1000                
+Resource Shares Type              = Soft
+Minimum Resource Share Percent    = 0                   
+Admission Queue Order             = FIFO
+CPU Shares                        = 1000                
+CPU Shares Type                   = Hard
+CPU Limit                         = None
+Activity Sort Memory Limit        = None
+Degree Scaleback                  = Default
+Collect History Opt       = Off
+Collect Activity Opt      = None
+Section Actuals Options   = None
+Collect Request Metrics   = None
+Collect Aggr Activity Opt = None
+Collect Aggr Request Opt  = None
+Collect Aggr UOW Opt      = None
+Act Lifetime Histogram Template ID          = 1          
+Act Queue Time Histogram Template ID        = 1          
+Act Execute Time Histogram Template ID      = 1          
+Act Estimated Cost Histogram Template ID    = 1          
+Act Interarrival Time Histogram Template ID = 1          
+Request Execute Time Histogram Template ID  = 1          
+UOW Lifetime Histogram Template ID          = 1          
+
+Access Count              = 0                   
+Last Stats Reset Time     = 01/04/2023 14:46:45.000000
+Activities HWM            = 0                   
+Activities Completed      = 0                   
+Activities Rejected       = 0                   
+Activities Aborted        = 0                   
+
+
+Associated Non-agent threads:
+PID          TID                   Thread Name                   
+18189        140165649524480       db2dlock                      
+18189        140165636941568       db2loggr                      
+18189        140165632747264       db2loggw                      
+18189        140165641135872       db2lfr                        
+18189        140165628552960       db2pclnr                      
+18189        140165615970048       db2pfchr                      
+18189        140165620164352       db2pfchr                      
+18189        140165624358656       db2pfchr                      
+
+
+Service Class Name        = SYSDEFAULTMAINTENANCECLASS
+Service Class ID          = 2                   
+Service Class Type        = Service Superclass
+Default Subclass ID       = 12                  
+Effective Service Class State     = Enabled
+Catalog Service Class State       = Enabled
+Workload Type                     = Custom
+Effective Prefetch Priority       = Medium
+Catalog Prefetch Priority         = Default
+Effective Bufferpool Priority     = Low
+Catalog Bufferpool Priority       = Default
+Effective Outbound Correlator     = None
+Catalog Outbound Correlator       = None
+Maximum Degree                    = None
+Resource Shares                   = 1000                
+Resource Shares Type              = Soft
+Minimum Resource Share Percent    = 0                   
+CPU Shares                        = 1000                
+CPU Shares Type                   = Hard
+CPU Limit                         = None
+Activity Sort Memory Limit        = None
+Degree Scaleback                  = On
+Work Action Set ID        = N/A
+Collect History Opt       = Off
+Collect Activity Opt      = None
+Section Actuals Options   = None
+Collect Request Metrics   = None
+Collect Aggr Activity Opt = None
+Act Lifetime Histogram Template ID          = 1          
+Act Queue Time Histogram Template ID        = 1          
+Act Execute Time Histogram Template ID      = 1          
+Act Estimated Cost Histogram Template ID    = 1          
+Act Interarrival Time Histogram Template ID = 1          
+
+Num Connections               = 0                   
+Last Stats Reset Time         = 01/04/2023 14:46:45.000000
+Num Coordinator Connections   = 0                   
+Coordinator Connections HWM   = 0                   
+Activities HWM                = 0                   
+Activities Completed          = 0                   
+Activities Rejected           = 0                   
+Activities Aborted            = 0                   
+
+
+
+Service Class Name        = SYSDEFAULTSUBCLASS
+Service Class ID          = 12                  
+Service Class Type        = Service Subclass
+Parent Superclass ID      = 2                   
+Effective Service Class State     = Enabled
+Catalog Service Class State       = Enabled
+Effective Prefetch Priority       = Medium
+Catalog Prefetch Priority         = Default
+Effective Bufferpool Priority     = Low
+Catalog Bufferpool Priority       = Default
+Effective Outbound Correlator     = None
+Catalog Outbound Correlator       = None
+Maximum Degree                    = Default
+Resource Shares                   = 1000                
+Resource Shares Type              = Soft
+Minimum Resource Share Percent    = 0                   
+Admission Queue Order             = FIFO
+CPU Shares                        = 1000                
+CPU Shares Type                   = Hard
+CPU Limit                         = None
+Activity Sort Memory Limit        = None
+Degree Scaleback                  = Default
+Collect History Opt       = Off
+Collect Activity Opt      = None
+Section Actuals Options   = None
+Collect Request Metrics   = None
+Collect Aggr Activity Opt = None
+Collect Aggr Request Opt  = None
+Collect Aggr UOW Opt      = None
+Act Lifetime Histogram Template ID          = 1          
+Act Queue Time Histogram Template ID        = 1          
+Act Execute Time Histogram Template ID      = 1          
+Act Estimated Cost Histogram Template ID    = 1          
+Act Interarrival Time Histogram Template ID = 1          
+Request Execute Time Histogram Template ID  = 1          
+UOW Lifetime Histogram Template ID          = 1          
+
+Access Count              = 0                   
+Last Stats Reset Time     = 01/04/2023 14:46:45.000000
+Activities HWM            = 0                   
+Activities Completed      = 0                   
+Activities Rejected       = 0                   
+Activities Aborted        = 0                   
+
+
+
+
+Service Class Name        = SYSDEFAULTUSERCLASS
+Service Class ID          = 3                   
+Service Class Type        = Service Superclass
+Default Subclass ID       = 13                  
+Effective Service Class State     = Enabled
+Catalog Service Class State       = Enabled
+Workload Type                     = Custom
+Effective Prefetch Priority       = Medium
+Catalog Prefetch Priority         = Default
+Effective Bufferpool Priority     = Low
+Catalog Bufferpool Priority       = Default
+Effective Outbound Correlator     = None
+Catalog Outbound Correlator       = None
+Maximum Degree                    = None
+Resource Shares                   = 1000                
+Resource Shares Type              = Soft
+Minimum Resource Share Percent    = 0                   
+CPU Shares                        = 1000                
+CPU Shares Type                   = Hard
+CPU Limit                         = None
+Activity Sort Memory Limit        = None
+Degree Scaleback                  = On
+Work Action Set ID        = 2147483647 
+Collect History Opt       = Off
+Collect Activity Opt      = None
+Section Actuals Options   = None
+Collect Request Metrics   = None
+Collect Aggr Activity Opt = None
+Act Lifetime Histogram Template ID          = 1          
+Act Queue Time Histogram Template ID        = 1          
+Act Execute Time Histogram Template ID      = 1          
+Act Estimated Cost Histogram Template ID    = 1          
+Act Interarrival Time Histogram Template ID = 1          
+
+Num Connections               = 0                   
+Last Stats Reset Time         = 01/04/2023 14:46:45.000000
+Num Coordinator Connections   = 0                   
+Coordinator Connections HWM   = 0                   
+Activities HWM                = 0                   
+Activities Completed          = 0                   
+Activities Rejected           = 0                   
+Activities Aborted            = 0                   
+
+
+
+Service Class Name        = SYSDEFAULTMANAGEDSUBCLASS
+Service Class ID          = 4                   
+Service Class Type        = Service Subclass
+Parent Superclass ID      = 3                   
+Effective Service Class State     = Enabled
+Catalog Service Class State       = Enabled
+Effective Prefetch Priority       = Medium
+Catalog Prefetch Priority         = Default
+Effective Bufferpool Priority     = Low
+Catalog Bufferpool Priority       = Default
+Effective Outbound Correlator     = None
+Catalog Outbound Correlator       = None
+Maximum Degree                    = Default
+Resource Shares                   = 1000                
+Resource Shares Type              = Soft
+Minimum Resource Share Percent    = 0                   
+Admission Queue Order             = FIFO
+CPU Shares                        = 1000                
+CPU Shares Type                   = Hard
+CPU Limit                         = None
+Activity Sort Memory Limit        = None
+Degree Scaleback                  = Default
+Collect History Opt       = Off
+Collect Activity Opt      = None
+Section Actuals Options   = None
+Collect Request Metrics   = None
+Collect Aggr Activity Opt = None
+Collect Aggr Request Opt  = None
+Collect Aggr UOW Opt      = None
+Act Lifetime Histogram Template ID          = 1          
+Act Queue Time Histogram Template ID        = 1          
+Act Execute Time Histogram Template ID      = 1          
+Act Estimated Cost Histogram Template ID    = 1          
+Act Interarrival Time Histogram Template ID = 1          
+Request Execute Time Histogram Template ID  = 1          
+UOW Lifetime Histogram Template ID          = 1          
+
+Access Count              = 0                   
+Last Stats Reset Time     = 01/04/2023 14:46:45.000000
+Activities HWM            = 0                   
+Activities Completed      = 0                   
+Activities Rejected       = 0                   
+Activities Aborted        = 0                   
+
+
+
+
+Service Class Name        = SYSDEFAULTSUBCLASS
+Service Class ID          = 13                  
+Service Class Type        = Service Subclass
+Parent Superclass ID      = 3                   
+Effective Service Class State     = Enabled
+Catalog Service Class State       = Enabled
+Effective Prefetch Priority       = Medium
+Catalog Prefetch Priority         = Default
+Effective Bufferpool Priority     = Low
+Catalog Bufferpool Priority       = Default
+Effective Outbound Correlator     = None
+Catalog Outbound Correlator       = None
+Maximum Degree                    = Default
+Resource Shares                   = 1000                
+Resource Shares Type              = Soft
+Minimum Resource Share Percent    = 0                   
+Admission Queue Order             = FIFO
+CPU Shares                        = 1000                
+CPU Shares Type                   = Hard
+CPU Limit                         = None
+Activity Sort Memory Limit        = None
+Degree Scaleback                  = Default
+Collect History Opt       = Off
+Collect Activity Opt      = None
+Section Actuals Options   = None
+Collect Request Metrics   = None
+Collect Aggr Activity Opt = None
+Collect Aggr Request Opt  = None
+Collect Aggr UOW Opt      = None
+Act Lifetime Histogram Template ID          = 1          
+Act Queue Time Histogram Template ID        = 1          
+Act Execute Time Histogram Template ID      = 1          
+Act Estimated Cost Histogram Template ID    = 1          
+Act Interarrival Time Histogram Template ID = 1          
+Request Execute Time Histogram Template ID  = 1          
+UOW Lifetime Histogram Template ID          = 1          
+
+Access Count              = 0                   
+Last Stats Reset Time     = 01/04/2023 14:46:45.000000
+Activities HWM            = 0                   
+Activities Completed      = 0                   
+Activities Rejected       = 0                   
+Activities Aborted        = 0                   
+
+
+
+
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.189219
+
+Work Action Sets:
+Address            ActionSetID ActionSetName                  ClassSetID  ObjectType ObjectID   
+0x00007F7A80157820 2147483647  SYSDEFAULTUSERWAS              2147483647  b               3          
+
+Work Actions:
+Address            ActionSetID ActionID    ClassID     Type       ActualsOptions RefObjectID 
+0x00007F7A8A3CFFA0 2147483647  2147483647  2147483647  M               None       4           
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.190315
+
+Work Class Sets:
+Address            ClassSetID  ReferenceCounter
+0x00007F7A80157900 2147483647  1          
+
+Work Classes:
+
+Address              = 0x00007F7A8A8CF9A0 
+ClassSetId           = 2147483647 
+ClassId              = 2147483647 
+ClassName            = SYSMANAGEDQUERIES             
+Work Class Attributes: 
+  Work Type          = 2                   
+  Timeron Cost: 
+    From Value       = 150000              
+    To Value         = -1                  
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.191211
+
+
+
+Service Class Thresholds:
+
+Threshold Name              = SYSDEFAULTCONCURRENT
+Threshold ID                = 2147483647 
+Domain                      = 40    
+Domain ID                   = 4          
+Predicate ID                = 90    
+Maximum Value               = 9                   
+Enforcement                 = D 
+Queueing                    = Y 
+Queue Size                  = -1         
+Collect Flags               = N 
+Partition Flags             = C 
+Execute Flags               = S 
+Enabled                     = N 
+Check Interval (seconds)    = 0          
+Remap Target Serv. Subclass = 0     
+Log Violation Evmon Record  = Y 
+
+
+
+Service Class Threshold Queues:
+
+Queue information for threshold: SYSDEFAULTCONCURRENT
+Max Concurrency             = 9                   
+Concurrency                 = 0                   
+Max Queue Size              = -1         
+
+
+
+Service Class Threshold Tickets:
+
+Ticket information for threshold: SYSDEFAULTCONCURRENT with threshold ID 2147483647
+No tickets currently held
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.192786
+
+Statistics Cache:
+Current Size            0
+
+Entries in Statistics Cache:
+Address            Schema   Name               LastRefID  LastStatsTime              Sts FabTime                    Flags                PdAddress          PdLen      DataAddress        DataLen   
+
+Database Member 0 -- Active -- Up 0 days 00:00:18 -- Date 2023-01-04-14.46.50.193362
+
+List of all EDUs for database member 0
+
+db2sysc PID: 18189
+db2wdog PID: 18187
+db2acd  PID: 18208
+
+EDU ID    TID                  Kernel TID           EDU Name                                  USR (s)       SYS (s)
+===================================================================================================================
+39        140165624358656      18546                db2pfchr (NPOLICE) 0                     0.000000      0.000000
+38        140165620164352      18545                db2pfchr (NPOLICE) 0                     0.000000      0.000000
+37        140165615970048      18544                db2pfchr (NPOLICE) 0                     0.000000      0.000000
+36        140165628552960      18543                db2pclnr (NPOLICE) 0                     0.000000      0.000000
+35        140165641135872      18542                db2lfr.0 (NPOLICE) 0                     0.000000      0.000000
+33        140165632747264      18540                db2loggw (NPOLICE) 0                     0.000000      0.000000
+32        140165636941568      18539                db2loggr (NPOLICE) 0                     0.000000      0.000000
+31        140165649524480      18538                db2dlock (NPOLICE) 0                     0.000000      0.000000
+22        140165653718784      18419                db2agent (NPOLICE) 0                     0.310000      0.350000
+21        140165657913088      18206                db2spmlw 0                               0.000000      0.000000
+20        140165662107392      18205                db2spmrsy 0                              0.000000      0.000000
+19        140165666301696      18204                db2resync 0                              0.000000      0.000000
+18        140165670496000      18203                db2tcpcm 0                               0.000000      0.000000
+17        140165674690304      18202                db2tcpcm 0                               0.000000      0.000000
+16        140165678884608      18201                db2ipccm 0                               0.000000      0.000000
+15        140165683078912      18199                db2wlmtm 0                               0.000000      0.010000
+14        140165687273216      18195                db2wlmt 0                                0.000000      0.000000
+13        140165691467520      18194                db2licc 0                                0.000000      0.000000
+12        140165695661824      18193                db2thcln 0                               0.000000      0.000000
+11        140165699856128      18192                db2alarm 0                               0.000000      0.000000
+1         140165439809280      18190                db2sysc 0                                0.070000      0.030000
+
+Database Member 0 -- Active -- Up 0 days 00:00:18 -- Date 2023-01-04-14.46.50.202580
+
+Database Member Memory Controller Statistics
+
+Controller Automatic: Y
+Controller License Limit: Y
+Controller Limit Enforced: Y
+
+Memory Limit:         3212980 KB
+Current usage:        664576 KB
+HWM usage:            664576 KB
+Cached memory:        223424 KB
+
+Individual Memory Consumers:
+
+Name             Mem Used (KB) HWM Used (KB) Cached (KB)
+========================================================
+APPL-NPOLICE            160000        160000      159552
+DBMS-db2inst1           171712        171712       18688
+FMP_RESOURCES            22528         22528       22272
+PRIVATE                   6656          6656           0
+DB-NPOLICE              303680        303680       22912
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.205135
+
+snapapp Time:   2023-01-04-14.46.50.205172
+
+Application :
+  Address :                0x0000000202E609A0 
+  AppHandl [nod-index] :   8        [000-00008]
+  TranHdl :                3         
+  Application PID :        18435     
+  Application Node Name :  172a429d98e0                            
+  IP Address:              n/a                                     
+  Connection Start Time :  2023-01-04-14.46.45.387845
+  Client User ID :         db2inst1
+  System Auth ID :         DB2INST1
+  Coordinator EDU ID :     22        
+  Coordinator Member :     0         
+  Registered Agents :      1         
+  Active Agents :          1         
+  Locks timeout value :    NotSet
+  Locks Escalation :       No
+  Workload ID :            0         
+  Workload Occurrence ID : 0         
+  Trusted Context :        n/a
+  Connection Trust Type :  non trusted
+  Role Inherited :         n/a     
+  TLS Version :            n/a     
+  SSL Cipher Spec :        n/a                                                                                                                             
+  SSL Server Cert Label :  n/a                                                                                                                             
+  SSL Server Cert Fingerprint :n/a                                                                                                                             
+  Application Status :     UOW-Waiting             
+  Application Name :       db2updv115          
+  Application ID :         *LOCAL.db2inst1.230104144645                                    
+  ClientUserID :           n/a
+  ClientWrkstnName :       n/a
+  ClientApplName :         n/a
+  ClientAccntng :          n/a
+  CollectActData:          N  
+  CollectActPartition:     C  
+  SectionActuals:          N  
+  UOW start time :         2023-01-04-14.46.45.387505
+  UOW stop time :          
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.216818
+
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.216857
+
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.216893
+
+
+Table Runstats Information:
+
+Index Runstats Information:
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.216944
+
+Node Number : 0         
+Database Name : NPOLICE
+LoadID                                                                           EDUID      EDUNAME                               Table              Schema   AppHandl [nod-index] Application ID                                                   StartTime                  LoadPhase  
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.217036
+
+Member Subset Id                = 0
+Member Subset Name              = SYSDEFAULTMEMBERSUBSET
+Member Subset Creation Time     = 2023-01-04-14.46.45.780221
+Member Subset Enabled           = YES
+Include Alternate Server        = YES
+Inclusive                       = NO
+Catalog Database Alias          = NO
+Member Priority Basis           = EQUALPRIORITY
+Number of Members               = 0
+Database Alias                  = NPOLICE
+
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.217128
+
+
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.217177
+
+Encryption Info:
+   Object Name:               NPOLICE 
+   Object Type:               DATABASE
+   Encyrption Key Info:       Database encryption not enabled.
+   KeyStore Info:             Keystore not set up.
+
+Database Member 0 -- Database NPOLICE -- Active -- Up 0 days 00:00:05 -- Date 2023-01-04-14.46.50.217241
+
+Authentication Cache Status:
+
+  Current Memory Usage (Bytes): 168
+  Current # of entries (Users): 0
+          Maximim Size (Users): 0
+ Current # of entries (Groups): 0
+         Maximum Size (Groups): 0
+      Entry Lifetime (seconds): 180
+                 Cache Lookups: 0
+        Cache Lookups (Groups): 0
+                    Cache Hits: 0
+           Cache Hits (Groups): 0
+                 Cache Inserts: 0
+        Cache Inserts (Groups): 0
+           Evictions (Expired): 0
+             Evictions (Valid): 0
+                   Flush Count: 0
+                    Last Flush: n/a
+
+   Users:                     
+Authentication Cache is not enabled.
+
+   Groups:                    
+Authentication Cache is not enabled.
+
+
+Instance db2inst1 uses 64 bits and DB2 code release SQL11058
+with level identifier 0609010F
+Informational tokens are DB2 v11.5.8.0, s2209201700, DYN2209201700AMD64, Fix Pack 0.
+
+Operating System Information:
+
+OSName:   Linux      
+NodeName: 172a429d98e0 
+Version:  5                    
+Release:  4          
+Machine:  x86_64     
+Distros:  Red Hat Enterprise Linux Server 8.6                                                                                             
+
+CPU Information:
+TotalCPU    OnlineCPU   ConfigCPU   Speed(MHz)  HMTDegree  Cores/Socket
+2           2           2           2793        2           1          
+
+CPU Cache Information:
+L2                   L3                  
+1310720              50331648             
+
+Physical Memory and Swap (Megabytes):
+TotalMem    FreeMem     AvailMem    TotalSwap   FreeSwap   
+3933        520         n/a         0           0           
+
+Virtual Memory (Megabytes):
+Total       Reserved    Available   Free       
+3933        n/a         n/a         520         
+
+Message Queue Information:
+MsgSeg      MsgMax      MsgMap      MsgMni      MsgTql      MsgMnb      MsgSsz               
+n/a         65536       65536       32768       65536       65536       16          
+
+Shared Memory Information:
+ShmMax               ShmMin               ShmIds      ShmSeg      
+9223372036854775807  1                    32768       32768       
+
+Semaphore Information:
+SemMap      SemMni      SemMns      SemMnu      SemMsl      SemOpm      SemUme      SemUsz      SemVmx      SemAem      
+1024000000  32768       1024000000  1024000000  32000       500         n/a         20          32767       32767       
+
+CPU Load Information:
+Short     Medium    Long      
+8.720000  5.810000  2.880000  
+
+CPU Usage Information (percent):
+Total     Usr       Sys       Wait      Idle      
+65.500000 31.500000 34.000000 1.000000  32.500000 

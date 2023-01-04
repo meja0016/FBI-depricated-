@@ -1,0 +1,59 @@
+Wed Jan  4 14:46:50 UTC 2023
+
+ipquery: Querying DB2 engine and client IPC resources for db2inst1(1000).
+  type               id key       mode/permissions
+                              high-ord/low-ord
+shared mem            0 0xc3383574   0/601
+shared mem            0 0xc3383574   0/601
+shared mem            0 0xc3383574   0/601
+shared mem            1 0xc3383561   0/601
+shared mem            2 0x0          0/601
+shared mem            6 0x0          0/601
+shared mem            7 0x0          0/601
+shared mem            8 0x0          0/601
+shared mem            9 0x0          0/601
+Semaphore            12 0xc3383574   0/645
+Semaphore            13 0x0          0/661
+Semaphore            15 0x0          0/661
+Semaphore            16 0x0          0/661
+Semaphore            17 0x0          0/661
+Semaphore            19 0x0          0/661
+Semaphore            20 0x0          0/661
+Semaphore            21 0x0          0/661
+Semaphore            22 0xc3383573   0/667
+Semaphore            23 0x0          0/661
+Semaphore            24 0x0          0/661
+Semaphore            25 0x0          0/661
+Semaphore            26 0x0          0/661
+Semaphore            27 0x0          0/661
+Semaphore            29 0x0          0/667
+Semaphore            30 0xc3383669   0/661
+Semaphore            32 0x0          0/661
+Semaphore            45 0x0          0/667
+Semaphore            46 0x0          0/667
+Semaphore            47 0x0          0/667
+Semaphore            48 0x0          0/661
+Semaphore            49 0x0          0/661
+Semaphore            50 0x0          0/661
+Semaphore            52 0x0          0/661
+Semaphore            53 0x0          0/661
+Semaphore            54 0x0          0/661
+Semaphore            55 0x0          0/661
+Semaphore            56 0x0          0/661
+message queue     32769 0x0          0/601
+message queue     32771 0x0          0/601
+message queue     32772 0x0          0/700
+message queue     32773 0xc3383571   0/663
+message queue     32774 0x0          0/601
+message queue     32775 0xc3383572   0/663
+message queue     32776 0xc3383577   0/665
+message queue     32795 0x0          0/601
+message queue     32796 0x0          0/601
+message queue     32797 0x0          0/601
+message queue     32798 0x0          0/601
+
+ipquery: Querying DB2 POSIX IPC resources for db2inst1.
+Type  Value  Name 
+---------------------------------------------------------
+sem    1     db2inst1_database_data_db2inst1_NODE0000_SQL00001_SQLOGCTL.GLFH.LCK_n
+sem    1     db2inst1_database_data_db2inst1_NODE0000_SQL00001_db2rhist.lock_n

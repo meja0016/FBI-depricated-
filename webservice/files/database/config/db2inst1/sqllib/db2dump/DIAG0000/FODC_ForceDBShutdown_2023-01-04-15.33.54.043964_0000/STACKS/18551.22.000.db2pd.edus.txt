@@ -1,0 +1,45 @@
+
+Database Member 0 -- Active -- Up 0 days 00:00:18 -- Date 2023-01-04-15.33.58.333244
+
+List of all EDUs for database member 0
+
+db2sysc PID: 18191
+db2wdog PID: 18189
+db2acd  PID: 18210
+
+EDU ID    TID                  Kernel TID           EDU Name                                  USR (s)       SYS (s)
+===================================================================================================================
+39        140461096298240      18548                db2pfchr (NPOLICE) 0                     0.000000      0.000000
+38        140461092103936      18547                db2pfchr (NPOLICE) 0                     0.000000      0.000000
+37        140461100492544      18546                db2pfchr (NPOLICE) 0                     0.000000      0.000000
+36        140461104686848      18545                db2pclnr (NPOLICE) 0                     0.000000      0.000000
+35        140461121464064      18544                db2lfr.0 (NPOLICE) 0                     0.000000      0.000000
+33        140461108881152      18542                db2loggw (NPOLICE) 0                     0.000000      0.000000
+32        140461113075456      18541                db2loggr (NPOLICE) 0                     0.000000      0.000000
+31        140461125658368      18540                db2dlock (NPOLICE) 0                     0.000000      0.000000
+22        140461129852672      18421                db2agent (NPOLICE) 0                     0.290000      0.350000
+21        140461134046976      18208                db2spmlw 0                               0.000000      0.000000
+20        140461138241280      18207                db2spmrsy 0                              0.000000      0.000000
+19        140461142435584      18206                db2resync 0                              0.000000      0.000000
+18        140461146629888      18205                db2tcpcm 0                               0.000000      0.000000
+17        140461150824192      18204                db2tcpcm 0                               0.000000      0.000000
+16        140461155018496      18203                db2ipccm 0                               0.000000      0.000000
+15        140461159212800      18201                db2wlmtm 0                               0.000000      0.010000
+14        140461163407104      18197                db2wlmt 0                                0.000000      0.000000
+13        140461167601408      18196                db2licc 0                                0.000000      0.000000
+12        140461171795712      18195                db2thcln 0                               0.000000      0.000000
+11        140461175990016      18194                db2alarm 0                               0.000000      0.000000
+1         140460915943168      18192                db2sysc 0                                0.050000      0.040000
+
+Database Member 0 -- Active -- Up 0 days 00:00:18 -- Date 2023-01-04-15.33.58.414030
+
+Agents:
+Current agents:      1
+Idle agents:         0
+Active coord agents: 1
+Active agents total: 1
+Pooled coord agents: 0
+Pooled agents total: 0
+
+Address            AppHandl [nod-index] AgentEDUID Priority    Type     State       ClientPid  Userid   ClientNm Rowsread   Rowswrtn   LkTmOt DBName   LastApplId                                                       LastPooled          
+0x0000000202BEF840 8        [000-00008] 22         0           Coord    Inst-Active 18437      db2inst1 db2updv1 281        0          NotSet NPOLICE  *LOCAL.db2inst1.230104153353                                     Wed Jan  4 15:33:52 

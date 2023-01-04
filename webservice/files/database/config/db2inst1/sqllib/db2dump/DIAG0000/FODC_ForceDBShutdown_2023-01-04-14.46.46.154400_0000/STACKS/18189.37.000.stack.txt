@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet href="http://raspd.torolab.ibm.com/db2trapfile.xsl" type="text/xsl"?>
+<DB2TrapFile version="1.0">
+<Trap>
+<Header>
+DB2 build information: DB2 v11.5.8.0 s2209201700 SQL11058
+timestamp: 1672843609.790342000
+convert  : echo `perl -MPOSIX -le 'print strftime "%Y-%m-%d-%H.%M.%S",gmtime(1672843609)'`.790342000 UTC
+instance name: db2inst1.000
+EDU name     : db2pfchr (NPOLICE) 0
+EDU ID       : 37
+Signal #10
+uname: S:Linux R:5.4.0-1094-azure V:#100~18.04.1-Ubuntu SMP Mon Oct 17 11:44:30 UTC 2022 M:x86_64 N:172a429d98e0
+process id: 18189
+parent process id: 18187
+thread id : 140165615970048 (0x7F7AD9BFE700)
+kthread id : 18544
+</Header>
+<SignalDetails>
+<Siginfo_t length="128">
+0A000000 00000000 FAFFFFFF 00000000
+0D470000 E8030000 00000000 00000000
+00000000 00000000 00000000 00000000
+00000000 00000000 00000000 00000000
+00000000 00000000 00000000 00000000
+00000000 00000000 00000000 00000000
+00000000 00000000 00000000 00000000
+00000000 00000000 00000000 00000000
+</Siginfo_t>
+Signal #10 (SIGUSR1); si_code: -6
+</SignalDetails>
+<ResourceLimits>
+Data seg top [sbrk(0)] = 0x0000000001CCA000
+Cur cpu time limit (seconds)  = 0xFFFFFFFFFFFFFFFF
+Cur file limit (bytes)  = 0xFFFFFFFFFFFFFFFF
+Cur data size (bytes)  = 0xFFFFFFFFFFFFFFFF
+Cur stack size (bytes) = 0x0000000000800000
+Cur core size (bytes)  = 0xFFFFFFFFFFFFFFFF
+Cur nofiles (descriptors)  = 0x000000000000FFFE
+Cur memory size (bytes)  = 0xFFFFFFFFFFFFFFFF
+</ResourceLimits>
+<Registers>
+   rax 0xfffffffffffffffc  rbx 0x000000000000801c
+   rcx 0x00007f7ae8cfabbf  rdx 0x0000000000000002
+   rbp 0x0000000000000002  rsp 0x00007f7ad9bfd4b0
+   rsi 0x00007f7ad9bfd540  rdi 0x000000000000801c
+rflags 0x0000000000000293  rip 0x00007f7ae8cfabbf
+   r8  0x0000000000001000  r9  0x0000000000000000
+   r10 0x0000000000000000  r11 0x0000000000000293
+   r12 0x0000000000000000  r13 0x0000000000001000
+   r14 0x00007f7ad9bfd540  r15 0x0000000000000000
+ mxcsr 0x00001fa0
+ mxcr_mask 0x0000ffff
+ zmm0  0x00000000000000000000000000000000 0x00000000000000000000000000000000 ymm0  0x00000000000000000000000000000000 xmm0  0x00000000000000000000000000000000
+ zmm1  0x00000000000000000000000000000000 0x00000000000000000000000000000000 ymm1  0x00000000000000000000000000000000 xmm1  0x00000000000000000000000000000000
+ zmm2  0x00000000000000000000000000000000 0x00000000000000000000000000000000 ymm2  0x00000000000000000000000000000000 xmm2  0x43494c4f504e28207268636670326264
+ zmm3  0x00000000000000000000000000000000 0x00000000000000000000000000000000 ymm3  0x00000000000000000000000000000000 xmm3  0x003020294543494c4f504e2820726863
+ zmm4  0x00000000000000000000000000000000 0x00000000000000000000000000000000 ymm4  0x00000000000000000000000000000000 xmm4  0x000000000000000000007f7af7302060
+ zmm5  0x00000000000000000000000000000000 0x00000000000000000000000000000000 ymm5  0x00000000000000000000000000000000 xmm5  0x5f5e5d5c5b5a59585756555453525150
+ zmm6  0x00000000000000000000000000000000 0x00000000000000000000000000000000 ymm6  0x00000000000000000000000000000000 xmm6  0x4f4e4d4c4b4a49484746454443424160
+ zmm7  0x00000000000000000000000000000000 0x00000000000000000000000000000000 ymm7  0x00000000000000000000000000000000 xmm7  0x7f7e7d7c7b5a59585756555453525150
+ zmm8  0x00000000000000000000000000000000 0x00000000000000000000000000000000 ymm8  0x00000000000000000000000000000000 xmm8  0x69460029642520656c64692820732500
+ zmm9  0x00000000000000000000000000000000 0x00000000000000000000000000000000 ymm9  0x00000000000000000000000000000000 xmm9  0x</Registers>
+<POFDisassembly>
+ msgrcv + 0x005f 	(/lib64/libc.so.6)
+
+	0x00007F7AE8CFABBF : 483D00F0FFFF773D
+</POFDisassembly>
+<StackTrace>
+-----FUNC-ADDR---- ------FUNCTION + OFFSET------
+0x00007F7AE9B419A4 _Z25ossDumpStackTraceInternalmR11OSSTrapFileiP9siginfo_tPvmm + 0x00d4 
+		(/database/config/db2inst1/sqllib/lib64/libdb2osse.so.1)
+0x00007F7AE9B42712 ossDumpStackTraceV98 + 0x0022 
+		(/database/config/db2inst1/sqllib/lib64/libdb2osse.so.1)
+0x00007F7AE9B3DBFA address: 0x00007F7AE9B3DBFA ; dladdress: 0x00007F7AE98BE000 ; offset in lib: 0x000000000027FBFA ; 
+		(/database/config/db2inst1/sqllib/lib64/libdb2osse.so.1)
+0x00007F7AF4A1620C sqlo_trce + 0x083c 
+		(/database/config/db2inst1/sqllib/lib64/libdb2e.so.1)
+0x00007F7AF4BA8720 sqloDumpDiagInfoHandler + 0x0240 
+		(/database/config/db2inst1/sqllib/lib64/libdb2e.so.1)
+0x00007F7AFB92ECE0 address: 0x00007F7AFB92ECE0 ; dladdress: 0x00007F7AFB91C000 ; offset in lib: 0x0000000000012CE0 ; 
+		(/lib64/libpthread.so.0)
+0x00007F7AE8CFABBF msgrcv + 0x005f 
+		(/lib64/libc.so.6)
+0x00007F7AF4B448B3 sqloCSemP + 0x0333 
+		(/database/config/db2inst1/sqllib/lib64/libdb2e.so.1)
+0x00007F7AECD0672B _Z17sqlbpfRemoveFromQP12SQLB_pfQUEUEmPP14SQLB_pfRequestP16sqeLocalDatabasePP12SQLD_OBJ_HDLP12SQLB_GLOBALS + 0x030b 
+		(/database/config/db2inst1/sqllib/lib64/libdb2e.so.1)
+0x00007F7AECB09B5B _Z26sqlbPFPrefetcherEntryPointP16sqbPrefetcherEdu + 0x05eb 
+		(/database/config/db2inst1/sqllib/lib64/libdb2e.so.1)
+0x00007F7AECB0AB74 _ZN16sqbPrefetcherEdu6RunEDUEv + 0x0024 
+		(/database/config/db2inst1/sqllib/lib64/libdb2e.so.1)
+0x00007F7AF6939E64 _ZN9sqzEDUObj9EDUDriverEv + 0x01a4 
+		(/database/config/db2inst1/sqllib/lib64/libdb2e.so.1)
+0x00007F7AF4BAA209 sqloEDUEntry + 0x02a9 
+		(/database/config/db2inst1/sqllib/lib64/libdb2e.so.1)
+0x00007F7AFB9241CF address: 0x00007F7AFB9241CF ; dladdress: 0x00007F7AFB91C000 ; offset in lib: 0x00000000000081CF ; 
+		(/lib64/libpthread.so.0)
+0x00007F7AE8C03DD3 clone + 0x0043 
+		(/lib64/libc.so.6)
+</StackTrace>
+<ProcessObjects>
+Process Objects were dumped in 18189.000.processObj.txt
+</ProcessObjects>
+<SignalHandlers>
+	 SIGABRT 	: 0x7f7af4ba6ac0
+	 SIGBUS 	: 0x7f7af4ba6ac0
+	 SIGCHLD 	: ignored
+	 SIGILL 	: 0x7f7af4ba6ac0
+	 SIGXCPU 	: ignored
+	 SIGINT 	: 0x7f7af4ba6330
+	 SIGSEGV 	: 0x7f7af4ba6ac0
+	 SIGSYS 	: 0x7f7af4ba6ac0
+	 SIGTRAP 	: 0x7f7af4ba6ac0
+	 SIGALRM 	: 0x7f7af4a20a90
+	 SIGURG 	: 0x7f7af4ba8a10
+	 SIGPROF 	: 0x7f7af4b9ba00
+	 SIGPIPE 	: 0x7f7af4ba6730
+	 SIGHUP 	: ignored
+	 SIGFPE 	: 0x7f7af4ba6ac0
+	 SIGUSR1 	: 0x7f7af4ba84e0
+	 SIGUSR2 	: 0x7f7af4ba84e0
+</SignalHandlers>
+<EnvironmentVariables>
+<![CDATA[
+DB2_HOME=/database/config/db2inst1/sqllib
+DB2LIB=/database/config/db2inst1/sqllib/lib
+HOME=/database/config/db2inst1
+PWD=/database/config/db2inst1
+DB2INSTANCE=db2inst1
+DB2LPORT=0
+DB2NODE=0
+HOSTNAME=172a429d98e0
+LANG=C.utf8
+USER=db2inst1
+CLASSPATH=/database/config/db2inst1/sqllib/java/db2java.zip:/database/config/db2inst1/sqllib/java/sqlj4.zip:/database/config/db2inst1/sqllib/function:/database/config/db2inst1/sqllib/java/db2jcc_license_cu.jar:/database/config/db2inst1/sqllib/tools/clpplus.jar:/database/config/db2inst1/sqllib/tools/jline-0.9.93.jar:/database/config/db2inst1/sqllib/java/db2jcc4.jar:/database/config/db2inst1/sqllib/java/db2jcc_license_cisuz.jar:.
+DJX_ODBC_LIBRARY_PATH=/database/config/db2inst1/sqllib/federation/odbc/lib:/database/config/db2inst1/sqllib/federation/netezza/lib64:
+DB2_FED_LIBPATH=/database/config/db2inst1/sqllib/federation/odbc/lib:/database/config/db2inst1/sqllib/federation/netezza/lib64:/database/config/db2inst1/sqllib/federation/netezza/lib64
+ODBCINST=/database/config/db2inst1/sqllib/cfg/odbcinst.ini
+NZ_ODBC_INI_PATH=/database/config/db2inst1/sqllib/cfg
+DB2SYSC_EXEC_OWNER=DB2
+PATH=/database/config/db2inst1/sqllib/bin:/database/config/db2inst1/sqllib/adm:/bin:/usr/bin:/database/config/db2inst1/sqllib/bin:/database/config/db2inst1/sqllib/adm:/bin:/usr/bin:
+LD_LIBRARY_PATH=/database/config/db2inst1/sqllib/lib64:/database/config/db2inst1/sqllib/function:
+S2N_ENABLE_CLIENT_MODE=1
+S2N_DONT_MLOCK=1
+]]></EnvironmentVariables>
+<MemorySets>
+DBM_DBMS [ type 0 ]:
+   Address        = 0000000200000000
+   Option         = 0x42D02000
+   Token          = 0x61
+   Hdl::pAddress  = 0000000200000000
+   Hdl::pMemSet   = 0000000200000000
+   Hdl::size(max) = 175833088
+   Hdl::id        = 1
+   Hdl::type      = 0
+   Hdl::node      = 0
+
+DBM_DB [ type 1 ]:
+   Address        = 0000000000000000
+   Option         = 0x1390A000
+   Token          = 0x00
+   Hdl::pAddress  = 00007F7A7FAB0000
+   Hdl::pMemSet   = 00007F7A7FAB0000
+   Hdl::size(max) = 310968320
+   Hdl::id        = 9
+   Hdl::type      = 1
+   Hdl::node      = 0
+
+FMP_RESOURCES [ type 2 ]:
+   Address        = 0000000000000000
+   Option         = 0x42882000
+   Token          = 0x00
+   Hdl::pAddress  = 0000000240000000
+   Hdl::pMemSet   = 0000000240000000
+   Hdl::size(max) = 23068672
+   Hdl::id        = 2
+   Hdl::type      = 2
+   Hdl::node      = 0
+
+PRIVATE [ type 9 ]:
+   Address        = 0000000000000000
+   Option         = 0x30305000
+   Token          = 0x00
+   Hdl::pAddress  = 00007F7ACECD0000
+   Hdl::pMemSet   = 00007F7ACECD0000
+   Hdl::size(max) = 1099511627776
+   Hdl::id        = 0
+   Hdl::type      = 9
+   Hdl::node      = 0
+
+APL_CTL [ type 12 ]:
+   Address        = 0000000000000000
+   Option         = 0x1390A000
+   Token          = 0x00
+   Hdl::pAddress  = 00007F7A92380000
+   Hdl::pMemSet   = 00007F7A92380000
+   Hdl::size(max) = 163840000
+   Hdl::id        = 8
+   Hdl::type      = 12
+   Hdl::node      = 0
+
+</MemorySets>
+<WaiterInformation>
+current wait state (sqlo_waitlist) = 0x0000000200050CD8: {
+   postcode    = 0
+   nextAgent   = 0x0000000000000000
+   index       = 37
+   semSetId    = 54
+   status      = 0x0001
+   what        = 0
+   IPC_address = 0x0000000000000000
+   taskId      = 140165615970048
+}
+</WaiterInformation>
+<LatchInformation>
+No latches held.
+</LatchInformation>
+<LockName>
+No lock wait information.
+</LockName>
+<OSResourceTrackingInformation>
+Current tracking mode is : POSIX_SEM, Unknown
+</OSResourceTrackingInformation>
+<SAL>
+CF Specific Info: 
+      CF index 0 : lastFreeList= 0
+                   lastDrain: 0 - 0 
+                   lastGrow: 0 - 0 
+      CF index 1 : lastFreeList= 0
+                   lastDrain: 0 - 0 
+                   lastGrow: 0 - 0 
+SAL Flags: NONE
+
+SAL First Class API Info:
+      m_CurrentLevel = 0
+      No SAL API stack recorded ( out of SAL API )
+      m_Timer:
+         Timer State: OFF (reset)
+            m_StartTime = 0 ( 0 )
+         m_RetryTimeout = 0
+                m_Level = 0
+                m_Probe = 0
+           m_FunctionId = 0 => <0>, <0>, <0>
+      Wait For Primary Diagnostics: 
+         - m_WaitForPrimaryFunctionId: 0 => <0>, <0>, <0>
+         - m_WaitForPrimaryProbe: 0
+         - m_BeginNumWaitForPrimary: 0 - 0
+         - m_EndNumWaitForPrimary: 0 - 0 
+         - m_waitForPrimarySampledKey: 0x0
+</SAL>
+<EventStackDump>
+Event stack is empty
+</EventStackDump>
+<EventRecorderDump>
+No records in event recorder
+</EventRecorderDump>
+</Trap>
+</DB2TrapFile>

@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet href="http://raspd.torolab.ibm.com/db2trapfile.xsl" type="text/xsl"?>
+<DB2TrapFile version="1.0">
+<Trap>
+<Header>
+DB2 build information: DB2 v11.5.8.0 s2209201700 SQL11058
+timestamp: 1672846438.138050000
+convert  : echo `perl -MPOSIX -le 'print strftime "%Y-%m-%d-%H.%M.%S",gmtime(1672846438)'`.138050000 UTC
+Process name: db2ckpwd 0
+Signal #23
+uname: S:Linux R:5.4.0-1094-azure V:#100~18.04.1-Ubuntu SMP Mon Oct 17 11:44:30 UTC 2022 M:x86_64 N:172a429d98e0
+process id: 18200
+parent process id: 18189
+thread id : 140420516407040 (0x7FB632FFE700)
+kthread id : 18200
+</Header>
+<SignalDetails>
+<Siginfo_t length="128">
+17000000 00000000 00000000 00000000
+D5480000 E8030000 00000000 00000000
+00000000 00000000 00000000 00000000
+00000000 00000000 00000000 00000000
+00000000 00000000 00000000 00000000
+00000000 00000000 00000000 00000000
+00000000 00000000 00000000 00000000
+00000000 00000000 00000000 00000000
+</Siginfo_t>
+Signal #23 (SIGURG): si_code is 0 (SI_USER:Sent by kill, sigsend, raise.) si_pid is 18645, si_uid is 1000, si_value is 00000000
+</SignalDetails>
+<ResourceLimits>
+Data seg top [sbrk(0)] = 0x0000000001347000
+Cur cpu time limit (seconds)  = 0xFFFFFFFFFFFFFFFF
+Cur file limit (bytes)  = 0xFFFFFFFFFFFFFFFF
+Cur data size (bytes)  = 0xFFFFFFFFFFFFFFFF
+Cur stack size (bytes) = 0x0000000000800000
+Cur core size (bytes)  = 0xFFFFFFFFFFFFFFFF
+Cur nofiles (descriptors)  = 0x0000000000100000
+Cur memory size (bytes)  = 0xFFFFFFFFFFFFFFFF
+</ResourceLimits>
+<Registers>
+   rax 0xfffffffffffffffc  rbx 0x0000000000008006
+   rcx 0x00007fb64cacdbbf  rdx 0x0000000000001ff7
+   rbp 0x0000000000001ff7  rsp 0x00007fb632ff03e0
+   rsi 0x00007fb6329b3140  rdi 0x0000000000008006
+rflags 0x0000000000000293  rip 0x00007fb64cacdbbf
+   r8  0x0000000000001000  r9  0x0000000000000000
+   r10 0x0000000000000000  r11 0x0000000000000293
+   r12 0x0000000000000000  r13 0x0000000000001000
+   r14 0x00007fb6329b3140  r15 0x00007fb632ffe660
+ mxcsr 0x00001fa0
+ mxcr_mask 0x0000ffff
+ zmm0  0x00000000000000000000000000000000 0x00000000000000000000000000000000 ymm0  0x00000000000000000000000000000000 xmm0  0x00000000000000000000000000000000
+ zmm1  0x00000000000000000000000000000000 0x00000000000000000000000000000000 ymm1  0x00000000000000000000000000000000 xmm1  0xffffffffffff00000000000000000000
+ zmm2  0x00000000000000000000000000000000 0x00000000000000000000000000000000 ymm2  0x00000000000000000000000000000000 xmm2  0x00000000000000000000000000000100
+ zmm3  0x00000000000000000000000000000000 0x00000000000000000000000000000000 ymm3  0x00000000000000000000000000000000 xmm3  0x00000000000030206477706b63326264
+ zmm4  0x00000000000000000000000000000000 0x00000000000000000000000000000000 ymm4  0x00000000000000000000000000000000 xmm4  0x4f4e4d4c4b4a49484746454443424140
+ zmm5  0x00000000000000000000000000000000 0x00000000000000000000000000000000 ymm5  0x00000000000000000000000000000000 xmm5  0x5f5e5d5c5b5a59585756555453525150
+ zmm6  0x00000000000000000000000000000000 0x00000000000000000000000000000000 ymm6  0x00000000000000000000000000000000 xmm6  0x4f4e4d4c4b4a49484746454443424160
+ zmm7  0x00000000000000000000000000000000 0x00000000000000000000000000000000 ymm7  0x00000000000000000000000000000000 xmm7  0x7f7e7d7c7b5a59585756555453525150
+ zmm8  0x00000000000000000000000000000000 0x00000000000000000000000000000000 ymm8  0x00000000000000000000000000000000 xmm8  0x79685000657375206e6920746f6e2000
+ zmm9  0x00000000000000000000000000000000 0x00000000000000000000000000000000 ymm9  0x00000000000000000000000000000000 xmm9  0x</Registers>
+<POFDisassembly>
+ msgrcv + 0x005f 	(/lib64/libc.so.6)
+
+	0x00007FB64CACDBBF : 483D00F0FFFF773D
+</POFDisassembly>
+<StackTrace>
+-----FUNC-ADDR---- ------FUNCTION + OFFSET------
+0x00007FB64D9149A4 _Z25ossDumpStackTraceInternalmR11OSSTrapFileiP9siginfo_tPvmm + 0x00d4 
+		(/opt/ibm/db2/V11.5/lib64/libdb2osse.so.1)
+0x00007FB64D915712 ossDumpStackTraceV98 + 0x0022 
+		(/opt/ibm/db2/V11.5/lib64/libdb2osse.so.1)
+0x00007FB64D910BFA address: 0x00007FB64D910BFA ; dladdress: 0x00007FB64D691000 ; offset in lib: 0x000000000027FBFA ; 
+		(/opt/ibm/db2/V11.5/lib64/libdb2osse.so.1)
+0x00007FB65897546A address: 0x00007FB65897546A ; dladdress: 0x00007FB64DC73000 ; offset in lib: 0x000000000AD0246A ; 
+		(/opt/ibm/db2/V11.5/lib64/libdb2e.so.1)
+0x00007FB65F701CE0 address: 0x00007FB65F701CE0 ; dladdress: 0x00007FB65F6EF000 ; offset in lib: 0x0000000000012CE0 ; 
+		(/lib64/libpthread.so.0)
+0x00007FB64CACDBBF msgrcv + 0x005f 
+		(/lib64/libc.so.6)
+0x00007FB6587EE504 _Z16sqlorqueInternalP13SQLO_QUE_DESCP12SQLO_MSG_HDRii + 0x0314 
+		(/opt/ibm/db2/V11.5/lib64/libdb2e.so.1)
+0x00007FB6587EE9E1 sqlorque2 + 0x00c1 
+		(/opt/ibm/db2/V11.5/lib64/libdb2e.so.1)
+0x00007FB65886E799 address: 0x00007FB65886E799 ; dladdress: 0x00007FB64DC73000 ; offset in lib: 0x000000000ABFB799 ; 
+		(/opt/ibm/db2/V11.5/lib64/libdb2e.so.1)
+0x00007FB65886FEC6 sqlockpw_daemon_init + 0x06b6 
+		(/opt/ibm/db2/V11.5/lib64/libdb2e.so.1)
+0x0000000000419A39 _Z12sqleWatchDogm + 0x0839 
+		(db2ckpwd 0)
+0x000000000041C4FF DB2main + 0x139f 
+		(db2ckpwd 0)
+0x00007FB65897D032 sqloEDUEntry + 0x00d2 
+		(/opt/ibm/db2/V11.5/lib64/libdb2e.so.1)
+0x00007FB65F6F71CF address: 0x00007FB65F6F71CF ; dladdress: 0x00007FB65F6EF000 ; offset in lib: 0x00000000000081CF ; 
+		(/lib64/libpthread.so.0)
+0x00007FB64C9D6DD3 clone + 0x0043 
+		(/lib64/libc.so.6)
+</StackTrace>
+<ProcessObjects>
+00400000-00429000 r-xp 00000000 07:00 1482460                            /database/config/db2inst1/sqllib/adm/db2syscr
+00429000-0042a000 r--p 00028000 07:00 1482460                            /database/config/db2inst1/sqllib/adm/db2syscr
+0042a000-0042b000 rw-p 00029000 07:00 1482460                            /database/config/db2inst1/sqllib/adm/db2syscr
+01305000-01347000 rw-p 00000000 00:00 0                                  [heap]
+200000000-20a7b0000 rw-s 00000000 00:01 1                                /SYSV215c9261 (deleted)
+240000000-250000000 rw-s 00000000 00:01 2                                /SYSV00000000 (deleted)
+7fb62adfc000-7fb62ae7f000 r-xp 00000000 00:3b 35247                      /usr/lib64/libpcre2-8.so.0.7.1
+7fb62ae7f000-7fb62b07e000 ---p 00083000 00:3b 35247                      /usr/lib64/libpcre2-8.so.0.7.1
+7fb62b07e000-7fb62b07f000 r--p 00082000 00:3b 35247                      /usr/lib64/libpcre2-8.so.0.7.1
+7fb62b07f000-7fb62b080000 rw-p 00083000 00:3b 35247                      /usr/lib64/libpcre2-8.so.0.7.1
+7fb62b080000-7fb62b0a7000 r-xp 00000000 00:3b 31692                      /usr/lib64/libselinux.so.1
+7fb62b0a7000-7fb62b2a6000 ---p 00027000 00:3b 31692                      /usr/lib64/libselinux.so.1
+7fb62b2a6000-7fb62b2a7000 r--p 00026000 00:3b 31692                      /usr/lib64/libselinux.so.1
+7fb62b2a7000-7fb62b2a8000 rw-p 00027000 00:3b 31692                      /usr/lib64/libselinux.so.1
+7fb62b2a8000-7fb62b2aa000 rw-p 00000000 00:00 0 
+7fb62b2aa000-7fb62b2b0000 r-xp 00000000 00:3b 35199                      /usr/lib64/libuuid.so.1.3.0
+7fb62b2b0000-7fb62b4b0000 ---p 00006000 00:3b 35199                      /usr/lib64/libuuid.so.1.3.0
+7fb62b4b0000-7fb62b4b1000 r--p 00006000 00:3b 35199                      /usr/lib64/libuuid.so.1.3.0
+7fb62b4b1000-7fb62b4b2000 rw-p 00000000 00:00 0 
+7fb62b4b2000-7fb62b4ff000 r-xp 00000000 00:3b 31641                      /usr/lib64/libblkid.so.1.1.0
+7fb62b4ff000-7fb62b6fe000 ---p 0004d000 00:3b 31641                      /usr/lib64/libblkid.so.1.1.0
+7fb62b6fe000-7fb62b703000 r--p 0004c000 00:3b 31641                      /usr/lib64/libblkid.so.1.1.0
+7fb62b703000-7fb62b704000 rw-p 00051000 00:3b 31641                      /usr/lib64/libblkid.so.1.1.0
+7fb62b704000-7fb62b705000 rw-p 00000000 00:00 0 
+7fb62b705000-7fb62b75b000 r-xp 00000000 00:3b 31629                      /usr/lib64/libmount.so.1.1.0
+7fb62b75b000-7fb62b95a000 ---p 00056000 00:3b 31629                      /usr/lib64/libmount.so.1.1.0
+7fb62b95a000-7fb62b95d000 r--p 00055000 00:3b 31629                      /usr/lib64/libmount.so.1.1.0
+7fb62b95d000-7fb62b95e000 rw-p 00058000 00:3b 31629                      /usr/lib64/libmount.so.1.1.0
+7fb62b95e000-7fb62b95f000 rw-p 00000000 00:00 0 
+7fb62b95f000-7fb62c000000 r--p 00000000 00:3b 29489                      /usr/lib/locale/C.utf8/LC_COLLATE
+7fb62c000000-7fb62c021000 rw-p 00000000 00:00 0 
+7fb62c021000-7fb630000000 ---p 00000000 00:00 0 
+7fb6300e3000-7fb6300ea000 r-xp 00000000 00:3b 31516                      /usr/lib64/libcap.so.2.48
+7fb6300ea000-7fb6302e9000 ---p 00007000 00:3b 31516                      /usr/lib64/libcap.so.2.48
+7fb6302e9000-7fb6302ea000 r--p 00006000 00:3b 31516                      /usr/lib64/libcap.so.2.48
+7fb6302ea000-7fb6302eb000 rw-p 00007000 00:3b 31516                      /usr/lib64/libcap.so.2.48
+7fb6302eb000-7fb6303c0000 r-xp 00000000 00:3b 35211                      /usr/lib64/libnss_systemd.so.2
+7fb6303c0000-7fb6305bf000 ---p 000d5000 00:3b 35211                      /usr/lib64/libnss_systemd.so.2
+7fb6305bf000-7fb6305c4000 r--p 000d4000 00:3b 35211                      /usr/lib64/libnss_systemd.so.2
+7fb6305c4000-7fb6305c5000 rw-p 000d9000 00:3b 35211                      /usr/lib64/libnss_systemd.so.2
+7fb6305c5000-7fb6305c6000 rw-p 00000000 00:00 0 
+7fb6305ca000-7fb63061d000 r--p 00000000 00:3b 29491                      /usr/lib/locale/C.utf8/LC_CTYPE
+7fb63061d000-7fb63061e000 r--p 00000000 00:3b 29483                      /usr/lib/locale/C.utf8/LC_NUMERIC
+7fb63061e000-7fb63061f000 r--p 00000000 00:3b 29490                      /usr/lib/locale/C.utf8/LC_TIME
+7fb63061f000-7fb630620000 r--p 00000000 00:3b 29488                      /usr/lib/locale/C.utf8/LC_MONETARY
+7fb630620000-7fb630621000 r--p 00000000 00:3b 29487                      /usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+7fb630621000-7fb630622000 r--p 00000000 00:3b 29493                      /usr/lib/locale/C.utf8/LC_PAPER
+7fb630622000-7fb630623000 r--p 00000000 00:3b 29485                      /usr/lib/locale/C.utf8/LC_NAME
+7fb630623000-7fb63062a000 r--s 00000000 00:3b 40981                      /usr/lib64/gconv/gconv-modules.cache
+7fb63062a000-7fb63090f000 r--p 00000000 00:3b 60708                      /usr/lib/locale/locale-archive
+7fb63090f000-7fb630910000 r--s 00000000 00:01 0                          /SYSV215c9274 (deleted)
+7fb630910000-7fb6329a3000 rw-s 00001000 00:01 0                          /SYSV215c9274 (deleted)
+7fb6329a3000-7fb632c00000 rw-p 00000000 00:00 0 
+7fb632c00000-7fb632c01000 ---p 00000000 00:00 0 
+7fb632c01000-7fb632c21000 rw-p 00000000 00:00 0 
+7fb632c21000-7fb632c22000 ---p 00000000 00:00 0 
+7fb632c22000-7fb642af3000 rw-p 00000000 00:00 0 
+7fb642af3000-7fb642afe000 r-xp 00000000 00:3b 31534                      /usr/lib64/libnss_files-2.28.so
+7fb642afe000-7fb642cfe000 ---p 0000b000 00:3b 31534                      /usr/lib64/libnss_files-2.28.so
+7fb642cfe000-7fb642cff000 r--p 0000b000 00:3b 31534                      /usr/lib64/libnss_files-2.28.so
+7fb642cff000-7fb642d00000 rw-p 0000c000 00:3b 31534                      /usr/lib64/libnss_files-2.28.so
+7fb642d00000-7fb642d06000 rw-p 00000000 00:00 0 
+7fb642d06000-7fb642d0b000 r-xp 00000000 00:3b 31714                      /usr/lib64/libcap-ng.so.0.0.0
+7fb642d0b000-7fb642f0a000 ---p 00005000 00:3b 31714                      /usr/lib64/libcap-ng.so.0.0.0
+7fb642f0a000-7fb642f0b000 r--p 00004000 00:3b 31714                      /usr/lib64/libcap-ng.so.0.0.0
+7fb642f0b000-7fb642f0c000 rw-p 00000000 00:00 0 
+7fb642f0c000-7fb642f31000 r-xp 00000000 00:3b 31603                      /usr/lib64/liblzma.so.5.2.4
+7fb642f31000-7fb643131000 ---p 00025000 00:3b 31603                      /usr/lib64/liblzma.so.5.2.4
+7fb643131000-7fb643132000 r--p 00025000 00:3b 31603                      /usr/lib64/liblzma.so.5.2.4
+7fb643132000-7fb643133000 rw-p 00000000 00:00 0 
+7fb643133000-7fb643149000 r-xp 00000000 00:3b 31620                      /usr/lib64/libz.so.1.2.11
+7fb643149000-7fb643349000 ---p 00016000 00:3b 31620                      /usr/lib64/libz.so.1.2.11
+7fb643349000-7fb64334a000 r--p 00016000 00:3b 31620                      /usr/lib64/libz.so.1.2.11
+7fb64334a000-7fb64334b000 rw-p 00000000 00:00 0 
+7fb64334b000-7fb64336a000 r-xp 00000000 00:3b 35291                      /usr/lib64/libaudit.so.1.0.0
+7fb64336a000-7fb64356a000 ---p 0001f000 00:3b 35291                      /usr/lib64/libaudit.so.1.0.0
+7fb64356a000-7fb64356b000 r--p 0001f000 00:3b 35291                      /usr/lib64/libaudit.so.1.0.0
+7fb64356b000-7fb64356c000 rw-p 00020000 00:3b 35291                      /usr/lib64/libaudit.so.1.0.0
+7fb64356c000-7fb64357c000 rw-p 00000000 00:00 0 
+7fb64357c000-7fb6436fb000 r-xp 00000000 00:3b 57974                      /opt/ibm/db2/V11.5/lib64/libicuucdb2.so.55.1
+7fb6436fb000-7fb6438fa000 ---p 0017f000 00:3b 57974                      /opt/ibm/db2/V11.5/lib64/libicuucdb2.so.55.1
+7fb6438fa000-7fb643908000 r--p 0017e000 00:3b 57974                      /opt/ibm/db2/V11.5/lib64/libicuucdb2.so.55.1
+7fb643908000-7fb643909000 rw-p 0018c000 00:3b 57974                      /opt/ibm/db2/V11.5/lib64/libicuucdb2.so.55.1
+7fb643909000-7fb64390d000 rw-p 00000000 00:00 0 
+7fb64390d000-7fb643a50000 r-xp 00000000 00:3b 57972                      /opt/ibm/db2/V11.5/lib64/libicuucdb2.so.44.2
+7fb643a50000-7fb643c50000 ---p 00143000 00:3b 57972                      /opt/ibm/db2/V11.5/lib64/libicuucdb2.so.44.2
+7fb643c50000-7fb643c5c000 r--p 00143000 00:3b 57972                      /opt/ibm/db2/V11.5/lib64/libicuucdb2.so.44.2
+7fb643c5c000-7fb643c5d000 rw-p 0014f000 00:3b 57972                      /opt/ibm/db2/V11.5/lib64/libicuucdb2.so.44.2
+7fb643c5d000-7fb643c61000 rw-p 00000000 00:00 0 
+7fb643c61000-7fb643d9c000 r-xp 00000000 00:3b 57970                      /opt/ibm/db2/V11.5/lib64/libicuucdb2.so.38.1
+7fb643d9c000-7fb643f9b000 ---p 0013b000 00:3b 57970                      /opt/ibm/db2/V11.5/lib64/libicuucdb2.so.38.1
+7fb643f9b000-7fb643fa6000 r--p 0013a000 00:3b 57970                      /opt/ibm/db2/V11.5/lib64/libicuucdb2.so.38.1
+7fb643fa6000-7fb643fa8000 rw-p 00145000 00:3b 57970                      /opt/ibm/db2/V11.5/lib64/libicuucdb2.so.38.1
+7fb643fa8000-7fb643faa000 rw-p 00000000 00:00 0 
+7fb643faa000-7fb64409c000 r-xp 00000000 00:3b 57968                      /opt/ibm/db2/V11.5/lib64/libicuucdb2.so.32.1
+7fb64409c000-7fb64429b000 ---p 000f2000 00:3b 57968                      /opt/ibm/db2/V11.5/lib64/libicuucdb2.so.32.1
+7fb64429b000-7fb6442a6000 r--p 000f1000 00:3b 57968                      /opt/ibm/db2/V11.5/lib64/libicuucdb2.so.32.1
+7fb6442a6000-7fb6442a8000 rw-p 000fc000 00:3b 57968                      /opt/ibm/db2/V11.5/lib64/libicuucdb2.so.32.1
+7fb6442a8000-7fb6442a9000 rw-p 00000000 00:00 0 
+7fb6442a9000-7fb6442b5000 r-xp 00000000 00:3b 57965                      /opt/ibm/db2/V11.5/lib64/libiculxdb2.so.55.1
+7fb6442b5000-7fb6444b5000 ---p 0000c000 00:3b 57965                      /opt/ibm/db2/V11.5/lib64/libiculxdb2.so.55.1
+7fb6444b5000-7fb6444b6000 r--p 0000c000 00:3b 57965                      /opt/ibm/db2/V11.5/lib64/libiculxdb2.so.55.1
+7fb6444b6000-7fb6444b7000 rw-p 0000d000 00:3b 57965                      /opt/ibm/db2/V11.5/lib64/libiculxdb2.so.55.1
+7fb6444b7000-7fb6444c4000 r-xp 00000000 00:3b 57963                      /opt/ibm/db2/V11.5/lib64/libiculxdb2.so.44.2
+7fb6444c4000-7fb6446c3000 ---p 0000d000 00:3b 57963                      /opt/ibm/db2/V11.5/lib64/libiculxdb2.so.44.2
+7fb6446c3000-7fb6446c4000 r--p 0000c000 00:3b 57963                      /opt/ibm/db2/V11.5/lib64/libiculxdb2.so.44.2
+7fb6446c4000-7fb6446c5000 rw-p 0000d000 00:3b 57963                      /opt/ibm/db2/V11.5/lib64/libiculxdb2.so.44.2
+7fb6446c5000-7fb6446d1000 r-xp 00000000 00:3b 57961                      /opt/ibm/db2/V11.5/lib64/libiculxdb2.so.38.1
+7fb6446d1000-7fb6448d1000 ---p 0000c000 00:3b 57961                      /opt/ibm/db2/V11.5/lib64/libiculxdb2.so.38.1
+7fb6448d1000-7fb6448d2000 r--p 0000c000 00:3b 57961                      /opt/ibm/db2/V11.5/lib64/libiculxdb2.so.38.1
+7fb6448d2000-7fb6448d3000 rw-p 0000d000 00:3b 57961                      /opt/ibm/db2/V11.5/lib64/libiculxdb2.so.38.1
+7fb6448d3000-7fb6448dd000 r-xp 00000000 00:3b 57959                      /opt/ibm/db2/V11.5/lib64/libiculxdb2.so.32.1
+7fb6448dd000-7fb644adc000 ---p 0000a000 00:3b 57959                      /opt/ibm/db2/V11.5/lib64/libiculxdb2.so.32.1
+7fb644adc000-7fb644add000 r--p 00009000 00:3b 57959                      /opt/ibm/db2/V11.5/lib64/libiculxdb2.so.32.1
+7fb644add000-7fb644ade000 rw-p 0000a000 00:3b 57959                      /opt/ibm/db2/V11.5/lib64/libiculxdb2.so.32.1
+7fb644ade000-7fb644b34000 r-xp 00000000 00:3b 57956                      /opt/ibm/db2/V11.5/lib64/libiculedb2.so.55.1
+7fb644b34000-7fb644d34000 ---p 00056000 00:3b 57956                      /opt/ibm/db2/V11.5/lib64/libiculedb2.so.55.1
+7fb644d34000-7fb644d36000 r--p 00056000 00:3b 57956                      /opt/ibm/db2/V11.5/lib64/libiculedb2.so.55.1
+7fb644d36000-7fb644d37000 rw-p 00058000 00:3b 57956                      /opt/ibm/db2/V11.5/lib64/libiculedb2.so.55.1
+7fb644d37000-7fb644d6f000 r-xp 00000000 00:3b 57954                      /opt/ibm/db2/V11.5/lib64/libiculedb2.so.44.2
+7fb644d6f000-7fb644f6e000 ---p 00038000 00:3b 57954                      /opt/ibm/db2/V11.5/lib64/libiculedb2.so.44.2
+7fb644f6e000-7fb644f70000 r--p 00037000 00:3b 57954                      /opt/ibm/db2/V11.5/lib64/libiculedb2.so.44.2
+7fb644f70000-7fb644f71000 rw-p 00039000 00:3b 57954                      /opt/ibm/db2/V11.5/lib64/libiculedb2.so.44.2
+7fb644f71000-7fb644fa6000 r-xp 00000000 00:3b 57952                      /opt/ibm/db2/V11.5/lib64/libiculedb2.so.38.1
+7fb644fa6000-7fb6451a5000 ---p 00035000 00:3b 57952                      /opt/ibm/db2/V11.5/lib64/libiculedb2.so.38.1
+7fb6451a5000-7fb6451a7000 r--p 00034000 00:3b 57952                      /opt/ibm/db2/V11.5/lib64/libiculedb2.so.38.1
+7fb6451a7000-7fb6451a8000 rw-p 00036000 00:3b 57952                      /opt/ibm/db2/V11.5/lib64/libiculedb2.so.38.1
+7fb6451a8000-7fb6451e3000 r-xp 00000000 00:3b 57950                      /opt/ibm/db2/V11.5/lib64/libiculedb2.so.32.1
+7fb6451e3000-7fb6453e2000 ---p 0003b000 00:3b 57950                      /opt/ibm/db2/V11.5/lib64/libiculedb2.so.32.1
+7fb6453e2000-7fb6453e4000 r--p 0003a000 00:3b 57950                      /opt/ibm/db2/V11.5/lib64/libiculedb2.so.32.1
+7fb6453e4000-7fb6453e5000 rw-p 0003c000 00:3b 57950                      /opt/ibm/db2/V11.5/lib64/libiculedb2.so.32.1
+7fb6453e5000-7fb6453f2000 r-xp 00000000 00:3b 57947                      /opt/ibm/db2/V11.5/lib64/libicuiodb2.so.55.1
+7fb6453f2000-7fb6455f1000 ---p 0000d000 00:3b 57947                      /opt/ibm/db2/V11.5/lib64/libicuiodb2.so.55.1
+7fb6455f1000-7fb6455f3000 r--p 0000c000 00:3b 57947                      /opt/ibm/db2/V11.5/lib64/libicuiodb2.so.55.1
+7fb6455f3000-7fb6455f4000 rw-p 0000e000 00:3b 57947                      /opt/ibm/db2/V11.5/lib64/libicuiodb2.so.55.1
+7fb6455f4000-7fb645600000 r-xp 00000000 00:3b 57945                      /opt/ibm/db2/V11.5/lib64/libicuiodb2.so.44.2
+7fb645600000-7fb6457ff000 ---p 0000c000 00:3b 57945                      /opt/ibm/db2/V11.5/lib64/libicuiodb2.so.44.2
+7fb6457ff000-7fb645801000 r--p 0000b000 00:3b 57945                      /opt/ibm/db2/V11.5/lib64/libicuiodb2.so.44.2
+7fb645801000-7fb645802000 rw-p 0000d000 00:3b 57945                      /opt/ibm/db2/V11.5/lib64/libicuiodb2.so.44.2
+7fb645802000-7fb64580e000 r-xp 00000000 00:3b 57943                      /opt/ibm/db2/V11.5/lib64/libicuiodb2.so.38.1
+7fb64580e000-7fb645a0d000 ---p 0000c000 00:3b 57943                      /opt/ibm/db2/V11.5/lib64/libicuiodb2.so.38.1
+7fb645a0d000-7fb645a0f000 r--p 0000b000 00:3b 57943                      /opt/ibm/db2/V11.5/lib64/libicuiodb2.so.38.1
+7fb645a0f000-7fb645a10000 rw-p 0000d000 00:3b 57943                      /opt/ibm/db2/V11.5/lib64/libicuiodb2.so.38.1
+7fb645a10000-7fb645a1c000 r-xp 00000000 00:3b 57941                      /opt/ibm/db2/V11.5/lib64/libicuiodb2.so.32.1
+7fb645a1c000-7fb645c1b000 ---p 0000c000 00:3b 57941                      /opt/ibm/db2/V11.5/lib64/libicuiodb2.so.32.1
+7fb645c1b000-7fb645c1d000 r--p 0000b000 00:3b 57941                      /opt/ibm/db2/V11.5/lib64/libicuiodb2.so.32.1
+7fb645c1d000-7fb645c1e000 rw-p 0000d000 00:3b 57941                      /opt/ibm/db2/V11.5/lib64/libicuiodb2.so.32.1
+7fb645c1e000-7fb645e62000 r-xp 00000000 00:3b 57938                      /opt/ibm/db2/V11.5/lib64/libicui18ndb2.so.55.1
+7fb645e62000-7fb646061000 ---p 00244000 00:3b 57938                      /opt/ibm/db2/V11.5/lib64/libicui18ndb2.so.55.1
+7fb646061000-7fb64606e000 r--p 00243000 00:3b 57938                      /opt/ibm/db2/V11.5/lib64/libicui18ndb2.so.55.1
+7fb64606e000-7fb646070000 rw-p 00250000 00:3b 57938                      /opt/ibm/db2/V11.5/lib64/libicui18ndb2.so.55.1
+7fb646070000-7fb646222000 r-xp 00000000 00:3b 57936                      /opt/ibm/db2/V11.5/lib64/libicui18ndb2.so.44.2
+7fb646222000-7fb646421000 ---p 001b2000 00:3b 57936                      /opt/ibm/db2/V11.5/lib64/libicui18ndb2.so.44.2
+7fb646421000-7fb64642a000 r--p 001b1000 00:3b 57936                      /opt/ibm/db2/V11.5/lib64/libicui18ndb2.so.44.2
+7fb64642a000-7fb64642b000 rw-p 001ba000 00:3b 57936                      /opt/ibm/db2/V11.5/lib64/libicui18ndb2.so.44.2
+7fb64642b000-7fb64642c000 rw-p 00000000 00:00 0 
+7fb64642c000-7fb64655e000 r-xp 00000000 00:3b 57934                      /opt/ibm/db2/V11.5/lib64/libicui18ndb2.so.38.1
+7fb64655e000-7fb64675e000 ---p 00132000 00:3b 57934                      /opt/ibm/db2/V11.5/lib64/libicui18ndb2.so.38.1
+7fb64675e000-7fb646765000 r--p 00132000 00:3b 57934                      /opt/ibm/db2/V11.5/lib64/libicui18ndb2.so.38.1
+7fb646765000-7fb646768000 rw-p 00139000 00:3b 57934                      /opt/ibm/db2/V11.5/lib64/libicui18ndb2.so.38.1
+7fb646768000-7fb646881000 r-xp 00000000 00:3b 57932                      /opt/ibm/db2/V11.5/lib64/libicui18ndb2.so.32.1
+7fb646881000-7fb646a81000 ---p 00119000 00:3b 57932                      /opt/ibm/db2/V11.5/lib64/libicui18ndb2.so.32.1
+7fb646a81000-7fb646a86000 r--p 00119000 00:3b 57932                      /opt/ibm/db2/V11.5/lib64/libicui18ndb2.so.32.1
+7fb646a86000-7fb646a89000 rw-p 0011e000 00:3b 57932                      /opt/ibm/db2/V11.5/lib64/libicui18ndb2.so.32.1
+7fb646a89000-7fb646a8a000 rw-p 00000000 00:00 0 
+7fb646a8a000-7fb647dcc000 r--p 00000000 00:3b 57929                      /opt/ibm/db2/V11.5/lib64/libicudatadb2.so.55.1
+7fb647dcc000-7fb647fcb000 ---p 01342000 00:3b 57929                      /opt/ibm/db2/V11.5/lib64/libicudatadb2.so.55.1
+7fb647fcb000-7fb647fcc000 r--p 01341000 00:3b 57929                      /opt/ibm/db2/V11.5/lib64/libicudatadb2.so.55.1
+7fb647fcc000-7fb648a55000 r--p 00000000 00:3b 57927                      /opt/ibm/db2/V11.5/lib64/libicudatadb2.so.44.2
+7fb648a55000-7fb648c54000 ---p 00a89000 00:3b 57927                      /opt/ibm/db2/V11.5/lib64/libicudatadb2.so.44.2
+7fb648c54000-7fb648c55000 r--p 00a88000 00:3b 57927                      /opt/ibm/db2/V11.5/lib64/libicudatadb2.so.44.2
+7fb648c55000-7fb6492fd000 r--p 00000000 00:3b 57925                      /opt/ibm/db2/V11.5/lib64/libicudatadb2.so.38.1
+7fb6492fd000-7fb6494fc000 ---p 006a8000 00:3b 57925                      /opt/ibm/db2/V11.5/lib64/libicudatadb2.so.38.1
+7fb6494fc000-7fb6494fd000 r--p 006a7000 00:3b 57925                      /opt/ibm/db2/V11.5/lib64/libicudatadb2.so.38.1
+7fb6494fd000-7fb649e50000 r-xp 00000000 00:3b 57923                      /opt/ibm/db2/V11.5/lib64/libicudatadb2.so.32.1
+7fb649e50000-7fb64a04f000 ---p 00953000 00:3b 57923                      /opt/ibm/db2/V11.5/lib64/libicudatadb2.so.32.1
+7fb64a04f000-7fb64a050000 r--p 00952000 00:3b 57923                      /opt/ibm/db2/V11.5/lib64/libicudatadb2.so.32.1
+7fb64a050000-7fb64a051000 rw-p 00953000 00:3b 57923                      /opt/ibm/db2/V11.5/lib64/libicudatadb2.so.32.1
+7fb64a051000-7fb64a0ce000 r-xp 00000000 00:3b 57883                      /opt/ibm/db2/V11.5/lib64/libdb2sdbin.so.1
+7fb64a0ce000-7fb64a0cf000 r--p 0007c000 00:3b 57883                      /opt/ibm/db2/V11.5/lib64/libdb2sdbin.so.1
+7fb64a0cf000-7fb64a0e5000 rw-p 0007d000 00:3b 57883                      /opt/ibm/db2/V11.5/lib64/libdb2sdbin.so.1
+7fb64a0e5000-7fb64a0ff000 r-xp 00000000 00:3b 57823                      /opt/ibm/db2/V11.5/lib64/libdb2locale.so.1
+7fb64a0ff000-7fb64a100000 ---p 0001a000 00:3b 57823                      /opt/ibm/db2/V11.5/lib64/libdb2locale.so.1
+7fb64a100000-7fb64a10b000 r--p 0001a000 00:3b 57823                      /opt/ibm/db2/V11.5/lib64/libdb2locale.so.1
+7fb64a10b000-7fb64a10c000 rw-p 00025000 00:3b 57823                      /opt/ibm/db2/V11.5/lib64/libdb2locale.so.1
+7fb64a10c000-7fb64a13f000 r-xp 00000000 00:3b 57792                      /opt/ibm/db2/V11.5/lib64/libdb2genreg.so.1
+7fb64a13f000-7fb64a140000 r--p 00032000 00:3b 57792                      /opt/ibm/db2/V11.5/lib64/libdb2genreg.so.1
+7fb64a140000-7fb64a141000 rw-p 00033000 00:3b 57792                      /opt/ibm/db2/V11.5/lib64/libdb2genreg.so.1
+7fb64a141000-7fb64a1dc000 r-xp 00000000 00:3b 57779                      /opt/ibm/db2/V11.5/lib64/libdb2dstf.so.1
+7fb64a1dc000-7fb64a1dd000 r--p 0009a000 00:3b 57779                      /opt/ibm/db2/V11.5/lib64/libdb2dstf.so.1
+7fb64a1dd000-7fb64a1de000 rw-p 0009b000 00:3b 57779                      /opt/ibm/db2/V11.5/lib64/libdb2dstf.so.1
+7fb64a1de000-7fb64a62a000 r-xp 00000000 00:3b 57680                      /opt/ibm/db2/V11.5/lib64/libDB2xslt4c.so.112.0
+7fb64a62a000-7fb64a82a000 ---p 0044c000 00:3b 57680                      /opt/ibm/db2/V11.5/lib64/libDB2xslt4c.so.112.0
+7fb64a82a000-7fb64a83e000 r--p 0044c000 00:3b 57680                      /opt/ibm/db2/V11.5/lib64/libDB2xslt4c.so.112.0
+7fb64a83e000-7fb64a845000 rw-p 00460000 00:3b 57680                      /opt/ibm/db2/V11.5/lib64/libDB2xslt4c.so.112.0
+7fb64a845000-7fb64a848000 rw-p 00000000 00:00 0 
+7fb64a848000-7fb64a8a7000 r-xp 00000000 00:3b 57674                      /opt/ibm/db2/V11.5/lib64/libDB2xml4c-depdom.so.58.0
+7fb64a8a7000-7fb64aaa7000 ---p 0005f000 00:3b 57674                      /opt/ibm/db2/V11.5/lib64/libDB2xml4c-depdom.so.58.0
+7fb64aaa7000-7fb64aaab000 r--p 0005f000 00:3b 57674                      /opt/ibm/db2/V11.5/lib64/libDB2xml4c-depdom.so.58.0
+7fb64aaab000-7fb64aaac000 rw-p 00063000 00:3b 57674                      /opt/ibm/db2/V11.5/lib64/libDB2xml4c-depdom.so.58.0
+7fb64aaac000-7fb64aaad000 rw-p 00000000 00:00 0 
+7fb64aaad000-7fb64adbe000 r-xp 00000000 00:3b 57677                      /opt/ibm/db2/V11.5/lib64/libDB2xml4c.so.58.0
+7fb64adbe000-7fb64afbd000 ---p 00311000 00:3b 57677                      /opt/ibm/db2/V11.5/lib64/libDB2xml4c.so.58.0
+7fb64afbd000-7fb64afcf000 r--p 00310000 00:3b 57677                      /opt/ibm/db2/V11.5/lib64/libDB2xml4c.so.58.0
+7fb64afcf000-7fb64aff6000 rw-p 00322000 00:3b 57677                      /opt/ibm/db2/V11.5/lib64/libDB2xml4c.so.58.0
+7fb64aff6000-7fb64aff7000 rw-p 00000000 00:00 0 
+7fb64aff7000-7fb64afff000 r-xp 00000000 00:3b 57671                      /opt/ibm/db2/V11.5/lib64/libDB2xalanMsg.so.112.0
+7fb64afff000-7fb64b1fe000 ---p 00008000 00:3b 57671                      /opt/ibm/db2/V11.5/lib64/libDB2xalanMsg.so.112.0
+7fb64b1fe000-7fb64b1ff000 r--p 00007000 00:3b 57671                      /opt/ibm/db2/V11.5/lib64/libDB2xalanMsg.so.112.0
+7fb64b1ff000-7fb64b200000 rw-p 00008000 00:3b 57671                      /opt/ibm/db2/V11.5/lib64/libDB2xalanMsg.so.112.0
+7fb64b200000-7fb64b20b000 r-xp 00000000 00:3b 41054                      /usr/lib64/libnuma.so.1.0.0
+7fb64b20b000-7fb64b40a000 ---p 0000b000 00:3b 41054                      /usr/lib64/libnuma.so.1.0.0
+7fb64b40a000-7fb64b40b000 r--p 0000a000 00:3b 41054                      /usr/lib64/libnuma.so.1.0.0
+7fb64b40b000-7fb64b40c000 rw-p 0000b000 00:3b 41054                      /usr/lib64/libnuma.so.1.0.0
+7fb64b40c000-7fb64b569000 r-xp 00000000 00:3b 31577                      /usr/lib64/libxml2.so.2.9.7
+7fb64b569000-7fb64b768000 ---p 0015d000 00:3b 31577                      /usr/lib64/libxml2.so.2.9.7
+7fb64b768000-7fb64b771000 r--p 0015c000 00:3b 31577                      /usr/lib64/libxml2.so.2.9.7
+7fb64b771000-7fb64b772000 rw-p 00165000 00:3b 31577                      /usr/lib64/libxml2.so.2.9.7
+7fb64b772000-7fb64b774000 rw-p 00000000 00:00 0 
+7fb64b774000-7fb64b782000 r-xp 00000000 00:3b 31674                      /usr/lib64/libpam.so.0.84.2
+7fb64b782000-7fb64b982000 ---p 0000e000 00:3b 31674                      /usr/lib64/libpam.so.0.84.2
+7fb64b982000-7fb64b983000 r--p 0000e000 00:3b 31674                      /usr/lib64/libpam.so.0.84.2
+7fb64b983000-7fb64b984000 rw-p 0000f000 00:3b 31674                      /usr/lib64/libpam.so.0.84.2
+7fb64b984000-7fb64b98b000 r-xp 00000000 00:3b 31600                      /usr/lib64/librt-2.28.so
+7fb64b98b000-7fb64bb8a000 ---p 00007000 00:3b 31600                      /usr/lib64/librt-2.28.so
+7fb64bb8a000-7fb64bb8b000 r--p 00006000 00:3b 31600                      /usr/lib64/librt-2.28.so
+7fb64bb8b000-7fb64bb8c000 rw-p 00007000 00:3b 31600                      /usr/lib64/librt-2.28.so
+7fb64bb8c000-7fb64bb8f000 r-xp 00000000 00:3b 35258                      /usr/lib64/libdl-2.28.so
+7fb64bb8f000-7fb64bd8e000 ---p 00003000 00:3b 35258                      /usr/lib64/libdl-2.28.so
+7fb64bd8e000-7fb64bd8f000 r--p 00002000 00:3b 35258                      /usr/lib64/libdl-2.28.so
+7fb64bd8f000-7fb64bd90000 rw-p 00003000 00:3b 35258                      /usr/lib64/libdl-2.28.so
+7fb64bd90000-7fb64bdb0000 r-xp 00000000 00:3b 35312                      /usr/lib64/libcrypt.so.1.1.0
+7fb64bdb0000-7fb64bfaf000 ---p 00020000 00:3b 35312                      /usr/lib64/libcrypt.so.1.1.0
+7fb64bfaf000-7fb64bfb0000 r--p 0001f000 00:3b 35312                      /usr/lib64/libcrypt.so.1.1.0
+7fb64bfb0000-7fb64bfb9000 rw-p 00000000 00:00 0 
+7fb64bfb9000-7fb64bfbb000 r-xp 00000000 00:3b 40994                      /usr/lib64/libaio.so.1.0.1
+7fb64bfbb000-7fb64c1ba000 ---p 00002000 00:3b 40994                      /usr/lib64/libaio.so.1.0.1
+7fb64c1ba000-7fb64c1bb000 r--p 00001000 00:3b 40994                      /usr/lib64/libaio.so.1.0.1
+7fb64c1bb000-7fb64c1bc000 rw-p 00000000 00:00 0 
+7fb64c1bc000-7fb64c981000 r-xp 00000000 00:3b 57788                      /opt/ibm/db2/V11.5/lib64/libdb2g11n.so.1
+7fb64c981000-7fb64c982000 ---p 007c5000 00:3b 57788                      /opt/ibm/db2/V11.5/lib64/libdb2g11n.so.1
+7fb64c982000-7fb64c988000 r--p 007c5000 00:3b 57788                      /opt/ibm/db2/V11.5/lib64/libdb2g11n.so.1
+7fb64c988000-7fb64c99b000 rw-p 007cb000 00:3b 57788                      /opt/ibm/db2/V11.5/lib64/libdb2g11n.so.1
+7fb64c99b000-7fb64c99d000 rw-p 00000000 00:00 0 
+7fb64c99d000-7fb64cb59000 r-xp 00000000 00:3b 35215                      /usr/lib64/libc-2.28.so
+7fb64cb59000-7fb64cd58000 ---p 001bc000 00:3b 35215                      /usr/lib64/libc-2.28.so
+7fb64cd58000-7fb64cd5c000 r--p 001bb000 00:3b 35215                      /usr/lib64/libc-2.28.so
+7fb64cd5c000-7fb64cd5e000 rw-p 001bf000 00:3b 35215                      /usr/lib64/libc-2.28.so
+7fb64cd5e000-7fb64cd62000 rw-p 00000000 00:00 0 
+7fb64cd62000-7fb64cd79000 r-xp 00000000 00:3b 31745                      /usr/lib64/libgcc_s-8-20210514.so.1
+7fb64cd79000-7fb64cf78000 ---p 00017000 00:3b 31745                      /usr/lib64/libgcc_s-8-20210514.so.1
+7fb64cf78000-7fb64cf79000 r--p 00016000 00:3b 31745                      /usr/lib64/libgcc_s-8-20210514.so.1
+7fb64cf79000-7fb64cf7a000 rw-p 00017000 00:3b 31745                      /usr/lib64/libgcc_s-8-20210514.so.1
+7fb64cf7a000-7fb64d0fb000 r-xp 00000000 00:3b 31642                      /usr/lib64/libm-2.28.so
+7fb64d0fb000-7fb64d2fa000 ---p 00181000 00:3b 31642                      /usr/lib64/libm-2.28.so
+7fb64d2fa000-7fb64d2fb000 r--p 00180000 00:3b 31642                      /usr/lib64/libm-2.28.so
+7fb64d2fb000-7fb64d2fc000 rw-p 00181000 00:3b 31642                      /usr/lib64/libm-2.28.so
+7fb64d2fc000-7fb64d482000 r-xp 00000000 00:3b 35324                      /usr/lib64/libstdc++.so.6.0.25
+7fb64d482000-7fb64d681000 ---p 00186000 00:3b 35324                      /usr/lib64/libstdc++.so.6.0.25
+7fb64d681000-7fb64d68d000 r--p 00185000 00:3b 35324                      /usr/lib64/libstdc++.so.6.0.25
+7fb64d68d000-7fb64d68e000 rw-p 00191000 00:3b 35324                      /usr/lib64/libstdc++.so.6.0.25
+7fb64d68e000-7fb64d691000 rw-p 00000000 00:00 0 
+7fb64d691000-7fb64dbae000 r-xp 00000000 00:3b 57855                      /opt/ibm/db2/V11.5/lib64/libdb2osse.so.1
+7fb64dbae000-7fb64dbbc000 r--p 0051c000 00:3b 57855                      /opt/ibm/db2/V11.5/lib64/libdb2osse.so.1
+7fb64dbbc000-7fb64dc71000 rw-p 0052a000 00:3b 57855                      /opt/ibm/db2/V11.5/lib64/libdb2osse.so.1
+7fb64dc71000-7fb64dc73000 rw-p 00000000 00:00 0 
+7fb64dc73000-7fb65d9c1000 r-xp 00000000 00:3b 57781                      /opt/ibm/db2/V11.5/lib64/libdb2e.so.1
+7fb65d9c1000-7fb65e3f8000 r--p 0fd4d000 00:3b 57781                      /opt/ibm/db2/V11.5/lib64/libdb2e.so.1
+7fb65e3f8000-7fb65e8a8000 rw-p 10784000 00:3b 57781                      /opt/ibm/db2/V11.5/lib64/libdb2e.so.1
+7fb65e8a8000-7fb65f482000 rw-p 00000000 00:00 0 
+7fb65f482000-7fb65f6dd000 r-xp 00000000 00:3b 57893                      /opt/ibm/db2/V11.5/lib64/libdb2thrift.so.1
+7fb65f6dd000-7fb65f6de000 ---p 0025b000 00:3b 57893                      /opt/ibm/db2/V11.5/lib64/libdb2thrift.so.1
+7fb65f6de000-7fb65f6e7000 r--p 0025b000 00:3b 57893                      /opt/ibm/db2/V11.5/lib64/libdb2thrift.so.1
+7fb65f6e7000-7fb65f6ee000 rw-p 00264000 00:3b 57893                      /opt/ibm/db2/V11.5/lib64/libdb2thrift.so.1
+7fb65f6ee000-7fb65f6ef000 rw-p 00000000 00:00 0 
+7fb65f6ef000-7fb65f70a000 r-xp 00000000 00:3b 35259                      /usr/lib64/libpthread-2.28.so
+7fb65f70a000-7fb65f909000 ---p 0001b000 00:3b 35259                      /usr/lib64/libpthread-2.28.so
+7fb65f909000-7fb65f90a000 r--p 0001a000 00:3b 35259                      /usr/lib64/libpthread-2.28.so
+7fb65f90a000-7fb65f90b000 rw-p 0001b000 00:3b 35259                      /usr/lib64/libpthread-2.28.so
+7fb65f90b000-7fb65f90f000 rw-p 00000000 00:00 0 
+7fb65f90f000-7fb65f93c000 r-xp 00000000 00:3b 31572                      /usr/lib64/ld-2.28.so
+7fb65f93c000-7fb65f961000 rw-p 00000000 00:00 0 
+7fb65f961000-7fb65f965000 r-xp 00000000 00:3b 57807                      /opt/ibm/db2/V11.5/lib64/libdb2install.so.1
+7fb65f965000-7fb65f966000 ---p 00004000 00:3b 57807                      /opt/ibm/db2/V11.5/lib64/libdb2install.so.1
+7fb65f966000-7fb65f967000 r--p 00004000 00:3b 57807                      /opt/ibm/db2/V11.5/lib64/libdb2install.so.1
+7fb65f967000-7fb65f968000 rw-p 00005000 00:3b 57807                      /opt/ibm/db2/V11.5/lib64/libdb2install.so.1
+7fb65f968000-7fb65f96a000 rw-p 00000000 00:00 0 
+7fb65f96a000-7fb65f96d000 r-xp 00000000 00:3b 57783                      /opt/ibm/db2/V11.5/lib64/libdb2encr.so.1
+7fb65f96d000-7fb65f96e000 r--p 00002000 00:3b 57783                      /opt/ibm/db2/V11.5/lib64/libdb2encr.so.1
+7fb65f96e000-7fb65f96f000 rw-p 00003000 00:3b 57783                      /opt/ibm/db2/V11.5/lib64/libdb2encr.so.1
+7fb65f96f000-7fb65f988000 r-xp 00000000 00:3b 57763                      /opt/ibm/db2/V11.5/lib64/libdb2dascmn.so.1
+7fb65f988000-7fb65f989000 ---p 00019000 00:3b 57763                      /opt/ibm/db2/V11.5/lib64/libdb2dascmn.so.1
+7fb65f989000-7fb65f98a000 r--p 00019000 00:3b 57763                      /opt/ibm/db2/V11.5/lib64/libdb2dascmn.so.1
+7fb65f98a000-7fb65f98b000 rw-p 0001a000 00:3b 57763                      /opt/ibm/db2/V11.5/lib64/libdb2dascmn.so.1
+7fb65f98b000-7fb65f98f000 rw-p 00000000 00:00 0 
+7fb65f98f000-7fb65f992000 r-xp 00000000 00:3b 57755                      /opt/ibm/db2/V11.5/lib64/libdb2compr_encr.so.1
+7fb65f992000-7fb65f993000 r--p 00002000 00:3b 57755                      /opt/ibm/db2/V11.5/lib64/libdb2compr_encr.so.1
+7fb65f993000-7fb65f994000 rw-p 00003000 00:3b 57755                      /opt/ibm/db2/V11.5/lib64/libdb2compr_encr.so.1
+7fb65f994000-7fb65f998000 r-xp 00000000 00:3b 57753                      /opt/ibm/db2/V11.5/lib64/libdb2compr.so.1
+7fb65f998000-7fb65f999000 r--p 00003000 00:3b 57753                      /opt/ibm/db2/V11.5/lib64/libdb2compr.so.1
+7fb65f999000-7fb65f99a000 rw-p 00004000 00:3b 57753                      /opt/ibm/db2/V11.5/lib64/libdb2compr.so.1
+7fb65f99a000-7fb65f9e9000 r-xp 00000000 00:3b 57741                      /opt/ibm/db2/V11.5/lib64/libdb2cftrace.so.1
+7fb65f9e9000-7fb65f9ea000 ---p 0004f000 00:3b 57741                      /opt/ibm/db2/V11.5/lib64/libdb2cftrace.so.1
+7fb65f9ea000-7fb65f9fa000 r--p 0004f000 00:3b 57741                      /opt/ibm/db2/V11.5/lib64/libdb2cftrace.so.1
+7fb65f9fa000-7fb65fa0d000 rw-p 0005f000 00:3b 57741                      /opt/ibm/db2/V11.5/lib64/libdb2cftrace.so.1
+7fb65fa0d000-7fb65fa1c000 rw-p 00000000 00:00 0 
+7fb65fa1c000-7fb65fa95000 r-xp 00000000 00:3b 57737                      /opt/ibm/db2/V11.5/lib64/libdb2cf_api.so.1
+7fb65fa95000-7fb65fa96000 ---p 00079000 00:3b 57737                      /opt/ibm/db2/V11.5/lib64/libdb2cf_api.so.1
+7fb65fa96000-7fb65fa97000 r--p 00079000 00:3b 57737                      /opt/ibm/db2/V11.5/lib64/libdb2cf_api.so.1
+7fb65fa97000-7fb65fa98000 rw-p 0007a000 00:3b 57737                      /opt/ibm/db2/V11.5/lib64/libdb2cf_api.so.1
+7fb65fa98000-7fb65fa9c000 rw-p 00000000 00:00 0 
+7fb65fa9c000-7fb65faab000 r-xp 00000000 00:3b 57897                      /opt/ibm/db2/V11.5/lib64/libdb2trcapi.so.1
+7fb65faab000-7fb65faac000 r--p 0000e000 00:3b 57897                      /opt/ibm/db2/V11.5/lib64/libdb2trcapi.so.1
+7fb65faac000-7fb65faad000 rw-p 0000f000 00:3b 57897                      /opt/ibm/db2/V11.5/lib64/libdb2trcapi.so.1
+7fb65faad000-7fb65faaf000 rw-p 00000000 00:00 0 
+7fb65faaf000-7fb65fb2d000 r-xp 00000000 00:3b 57857                      /opt/ibm/db2/V11.5/lib64/libdb2osse_db2.so.1
+7fb65fb2d000-7fb65fb2e000 ---p 0007e000 00:3b 57857                      /opt/ibm/db2/V11.5/lib64/libdb2osse_db2.so.1
+7fb65fb2e000-7fb65fb2f000 r--p 0007e000 00:3b 57857                      /opt/ibm/db2/V11.5/lib64/libdb2osse_db2.so.1
+7fb65fb2f000-7fb65fb30000 rw-p 0007f000 00:3b 57857                      /opt/ibm/db2/V11.5/lib64/libdb2osse_db2.so.1
+7fb65fb30000-7fb65fb36000 rw-p 00000000 00:00 0 
+7fb65fb36000-7fb65fb37000 r--p 00000000 00:3b 29494                      /usr/lib/locale/C.utf8/LC_ADDRESS
+7fb65fb37000-7fb65fb38000 r--p 00000000 00:3b 29484                      /usr/lib/locale/C.utf8/LC_TELEPHONE
+7fb65fb38000-7fb65fb39000 r--p 00000000 00:3b 29492                      /usr/lib/locale/C.utf8/LC_MEASUREMENT
+7fb65fb39000-7fb65fb3a000 r--p 00000000 00:3b 29482                      /usr/lib/locale/C.utf8/LC_IDENTIFICATION
+7fb65fb3a000-7fb65fb3c000 rw-p 00000000 00:00 0 
+7fb65fb3c000-7fb65fb3d000 r--p 0002d000 00:3b 31572                      /usr/lib64/ld-2.28.so
+7fb65fb3d000-7fb65fb3f000 rw-p 0002e000 00:3b 31572                      /usr/lib64/ld-2.28.so
+7ffc9a8ba000-7ffc9a8db000 rwxp 00000000 00:00 0                          [stack]
+7ffc9a922000-7ffc9a925000 r--p 00000000 00:00 0                          [vvar]
+7ffc9a925000-7ffc9a926000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+</ProcessObjects>
+<SignalHandlers>
+	 SIGABRT 	: 0x7fb658979320
+	 SIGBUS 	: 0x7fb658979320
+	 SIGCHLD 	: 0x40b700
+	 SIGILL 	: 0x7fb658979320
+	 SIGXCPU 	: ignored
+	 SIGINT 	: ignored
+	 SIGSEGV 	: 0x7fb658979320
+	 SIGSYS 	: 0x7fb658979320
+	 SIGTRAP 	: 0x7fb658979320
+	 SIGALRM 	: 0x40b6f0
+	 SIGURG 	: 0x7fb658979320
+	 SIGPROF 	: ignored
+	 SIGPIPE 	: ignored
+	 SIGHUP 	: ignored
+	 SIGFPE 	: 0x7fb658979320
+	 SIGUSR1 	: 0x7fb658979320
+	 SIGUSR2 	: 0x7fb658979320
+</SignalHandlers>
+<EnvironmentVariables>
+<![CDATA[
+DB2_HOME=/database/config/db2inst1/sqllib
+DB2LIB=/database/config/db2inst1/sqllib/lib
+HOME=/database/config/db2inst1
+PWD=/database/config/db2inst1
+DB2INSTANCE=db2inst1
+DB2LPORT=0
+DB2NODE=0
+HOSTNAME=172a429d98e0
+LANG=C.utf8
+USER=db2inst1
+CLASSPATH=/database/config/db2inst1/sqllib/java/db2java.zip:/database/config/db2inst1/sqllib/java/sqlj4.zip:/database/config/db2inst1/sqllib/function:/database/config/db2inst1/sqllib/java/db2jcc_license_cu.jar:/database/config/db2inst1/sqllib/tools/clpplus.jar:/database/config/db2inst1/sqllib/tools/jline-0.9.93.jar:/database/config/db2inst1/sqllib/java/db2jcc4.jar:/database/config/db2inst1/sqllib/java/db2jcc_license_cisuz.jar:.
+DJX_ODBC_LIBRARY_PATH=/database/config/db2inst1/sqllib/federation/odbc/lib:/database/config/db2inst1/sqllib/federation/netezza/lib64:
+DB2_FED_LIBPATH=/database/config/db2inst1/sqllib/federation/odbc/lib:/database/config/db2inst1/sqllib/federation/netezza/lib64:/database/config/db2inst1/sqllib/federation/netezza/lib64
+ODBCINST=/database/config/db2inst1/sqllib/cfg/odbcinst.ini
+NZ_ODBC_INI_PATH=/database/config/db2inst1/sqllib/cfg
+DB2SYSC_EXEC_OWNER=DB2
+PATH=/database/config/db2inst1/sqllib/bin:/database/config/db2inst1/sqllib/adm:/bin:/usr/bin:
+LD_LIBRARY_PATH=/database/config/db2inst1/sqllib/lib64:/database/config/db2inst1/sqllib/function:
+CA_TRACE_KEY_FILE=
+]]></EnvironmentVariables>
+</Trap>
+</DB2TrapFile>

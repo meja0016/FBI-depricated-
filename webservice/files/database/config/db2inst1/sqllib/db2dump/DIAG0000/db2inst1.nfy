@@ -1,0 +1,165 @@
+
+2023-01-03-21.03.16.472343   Instance:db2inst1   Node:000
+PID:19869(db2star2)   TID:140603923838848   Appid:none
+base sys utilities  DB2StartMain Probe:911 
+
+ADM7513W  Database manager has started.
+
+2023-01-03-21.05.28.354982   Instance:db2inst1   Node:000
+PID:18152(db2star2)   TID:139905256081280   Appid:none
+base sys utilities  DB2StartMain Probe:911 
+
+ADM7513W  Database manager has started.
+
+2023-01-03-21.05.30.456052   Instance:db2inst1   Node:000
+PID:18158(db2agent (instance) 0)   TID:140152080951040   Appid:*LOCAL.db2inst1.230103210529
+data protection services  sqlpgOpenLFH Probe:750   Database:        
+
+ADM1713C  The database manager cannot start the database on database partition 
+"0" because the database manager can open neither the primary log control file 
+"/database/data/db2inst1/NODE0000/SQL00001/SQLOGCTL.LFH.1" nor the secondary 
+log control file "/database/data/db2inst1/NODE0000/SQL00001/SQLOGCTL.LFH.2".
+
+2023-01-03-21.10.48.318922   Instance:db2inst1   Node:000
+PID:18179(db2star2)   TID:140203461085056   Appid:none
+base sys utilities  DB2StartMain Probe:911 
+
+ADM7513W  Database manager has started.
+
+2023-01-03-21.10.53.155219   Instance:db2inst1   Node:000
+PID:18185(db2agent (NPOLICE) 0)   TID:140458881705728   Appid:*LOCAL.db2inst1.230103211051
+recovery manager  sqlpresr Probe:200   Database:NPOLICE
+
+ADM1530I  Crash recovery has been initiated.
+
+2023-01-03-21.10.58.473806   Instance:db2inst1   Node:000
+PID:18185(db2agent (NPOLICE) 0)   TID:140458881705728   Appid:*LOCAL.db2inst1.230103211051
+recovery manager  sqlpresr Probe:3100   Database:NPOLICE
+
+ADM1531I  Crash recovery has completed successfully.
+
+2023-01-03-21.11.02.802803   Instance:db2inst1   Node:000
+PID:18414(db2bp)   TID:140241502178240   Appid:*LOCAL.db2inst1.230103211051
+base sys utilities  sqlePostUpgDpfTask Probe:1374   Database:NPOLICE 
+
+ADM7535W  The UPGRADE DATABASE command failed to refresh the table space 
+attributes in the catalog table. However the database was upgraded 
+successfully.
+
+2023-01-03-21.11.08.503457   Instance:db2inst1   Node:000
+PID:18185(db2agent (NPOLICE) 0)   TID:140458881705728   Appid:*LOCAL.db2inst1.230103211107
+base sys utilities  sqleDoForceDBShutdownFODC Probe:10   Database:NPOLICE
+
+ADM14001C  An unexpected and critical error has occurred: "ForceDBShutdown". 
+The instance may have been shutdown as a result. "Automatic" FODC (First 
+Occurrence Data Capture) has been invoked and diagnostic information has been 
+recorded in directory 
+"/database/config/db2inst1/sqllib/db2dump/DIAG0000/FODC_ForceDBShutdown_2023-01
+-03-21.11.08.496789_0000/". Please look in this directory for detailed evidence 
+about what happened and contact IBM support if necessary to diagnose the 
+problem.
+
+2023-01-03-21.11.08.503651   Instance:db2inst1   Node:000
+PID:18185(db2agent (NPOLICE) 0)   TID:140458881705728   Appid:*LOCAL.db2inst1.230103211107
+base sys utilities  sqleDoForceDBShutdownFODC Probe:17909   Database:NPOLICE
+
+ADM7518C  The database manager has shut down the following database because a 
+severe error has occurred: "NPOLICE ".
+
+2023-01-03-21.11.33.482472   Instance:db2inst1   Node:000
+PID:19274(db2stop2)   TID:140651797215104   Appid:none
+base sys utilities  DB2StopMain Probe:911 
+
+ADM7514W  Database manager has stopped.
+
+2023-01-03-21.11.36.622162   Instance:db2inst1   Node:000
+PID:19278(db2star2)   TID:140512690677632   Appid:none
+base sys utilities  DB2StartMain Probe:911 
+
+ADM7513W  Database manager has started.
+
+2023-01-03-21.11.44.449233   Instance:db2inst1   Node:000
+PID:19565(db2stop2)   TID:139811162806144   Appid:none
+base sys utilities  DB2StopMain Probe:911 
+
+ADM7514W  Database manager has stopped.
+
+2023-01-03-21.11.46.255623   Instance:db2inst1   Node:000
+PID:19569(db2star2)   TID:140285122946944   Appid:none
+base sys utilities  DB2StartMain Probe:911 
+
+ADM7513W  Database manager has started.
+
+2023-01-04-14.46.34.986888   Instance:db2inst1   Node:000
+PID:18183(db2star2)   TID:140043539707776   Appid:none
+base sys utilities  DB2StartMain Probe:911 
+
+ADM7513W  Database manager has started.
+
+2023-01-04-14.46.43.883549   Instance:db2inst1   Node:000
+PID:18418(db2bp)   TID:140140329683904   Appid:*LOCAL.db2inst1.230104144637
+base sys utilities  sqlePostUpgDpfTask Probe:1374   Database:NPOLICE 
+
+ADM7535W  The UPGRADE DATABASE command failed to refresh the table space 
+attributes in the catalog table. However the database was upgraded 
+successfully.
+
+2023-01-04-14.46.46.161560   Instance:db2inst1   Node:000
+PID:18189(db2agent (NPOLICE) 0)   TID:140165653718784   Appid:*LOCAL.db2inst1.230104144645
+base sys utilities  sqleDoForceDBShutdownFODC Probe:10   Database:NPOLICE
+
+ADM14001C  An unexpected and critical error has occurred: "ForceDBShutdown". 
+The instance may have been shutdown as a result. "Automatic" FODC (First 
+Occurrence Data Capture) has been invoked and diagnostic information has been 
+recorded in directory 
+"/database/config/db2inst1/sqllib/db2dump/DIAG0000/FODC_ForceDBShutdown_2023-01
+-04-14.46.46.154400_0000/". Please look in this directory for detailed evidence 
+about what happened and contact IBM support if necessary to diagnose the 
+problem.
+
+2023-01-04-14.46.46.161948   Instance:db2inst1   Node:000
+PID:18189(db2agent (NPOLICE) 0)   TID:140165653718784   Appid:*LOCAL.db2inst1.230104144645
+base sys utilities  sqleDoForceDBShutdownFODC Probe:17909   Database:NPOLICE
+
+ADM7518C  The database manager has shut down the following database because a 
+severe error has occurred: "NPOLICE ".
+
+2023-01-04-15.32.37.519360   Instance:db2inst1   Node:000
+PID:627(db2stop2)   TID:140341117953920   Appid:none
+base sys utilities  DB2StopMain Probe:911 
+
+ADM7514W  Database manager has stopped.
+
+2023-01-04-15.33.44.113671   Instance:db2inst1   Node:000
+PID:18185(db2star2)   TID:139995401979776   Appid:none
+base sys utilities  DB2StartMain Probe:911 
+
+ADM7513W  Database manager has started.
+
+2023-01-04-15.33.51.288786   Instance:db2inst1   Node:000
+PID:18420(db2bp)   TID:139880143485888   Appid:*LOCAL.db2inst1.230104153346
+base sys utilities  sqlePostUpgDpfTask Probe:1374   Database:NPOLICE 
+
+ADM7535W  The UPGRADE DATABASE command failed to refresh the table space 
+attributes in the catalog table. However the database was upgraded 
+successfully.
+
+2023-01-04-15.33.54.055445   Instance:db2inst1   Node:000
+PID:18191(db2agent (NPOLICE) 0)   TID:140461129852672   Appid:*LOCAL.db2inst1.230104153353
+base sys utilities  sqleDoForceDBShutdownFODC Probe:10   Database:NPOLICE
+
+ADM14001C  An unexpected and critical error has occurred: "ForceDBShutdown". 
+The instance may have been shutdown as a result. "Automatic" FODC (First 
+Occurrence Data Capture) has been invoked and diagnostic information has been 
+recorded in directory 
+"/database/config/db2inst1/sqllib/db2dump/DIAG0000/FODC_ForceDBShutdown_2023-01
+-04-15.33.54.043964_0000/". Please look in this directory for detailed evidence 
+about what happened and contact IBM support if necessary to diagnose the 
+problem.
+
+2023-01-04-15.33.54.056665   Instance:db2inst1   Node:000
+PID:18191(db2agent (NPOLICE) 0)   TID:140461129852672   Appid:*LOCAL.db2inst1.230104153353
+base sys utilities  sqleDoForceDBShutdownFODC Probe:17909   Database:NPOLICE
+
+ADM7518C  The database manager has shut down the following database because a 
+severe error has occurred: "NPOLICE ".
