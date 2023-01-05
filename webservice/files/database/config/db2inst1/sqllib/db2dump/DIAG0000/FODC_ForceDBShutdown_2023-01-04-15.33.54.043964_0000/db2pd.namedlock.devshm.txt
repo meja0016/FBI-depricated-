@@ -1,8 +1,0 @@
-Wed Jan  4 15:34:01 UTC 2023
-
-total 12
-drwxr-xr-x 11 root     root     4100 Jan  4 15:32 ..
--rw-------  1 root     db2iadm1 4096 Jan  4 15:33 DB2_SELF_TUNING_MEMORY_MANAGER_CROSS_INSTANCE_SHARED_MEMORY_SEGMENT
--rw-r-----  1 db2inst1 db2iadm1   32 Jan  4 15:33 sem.db2inst1_database_data_db2inst1_NODE0000_SQL00001_SQLOGCTL.GLFH.LCK_n
--rw-r-----  1 db2inst1 db2iadm1   32 Jan  4 15:33 sem.db2inst1_database_data_db2inst1_NODE0000_SQL00001_db2rhist.lock_n
-drwxrwxrwt  2 root     root      100 Jan  4 15:33 .
