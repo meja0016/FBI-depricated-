@@ -1,28 +1,17 @@
-#!/bin/sh
+#!/bin/bash
 
-mkdir /tmp/conf.d/
 
+
+opt="start"
+if [ "$1" = "$opt" ]  || [ -z "$1"];then
+
+mkdir -p  /tmp/conf.d/
 echo "server {
     listen       80;
     listen  [::]:80;
-    server_name  localhost;
-
-    location /ibm/console{
-        proxy_set_header X-Forwarded-Host $host;
-        proxy_set_header X-Forwarded-Server $host;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_pass https://files_websphere_1:9043/ibm/console;
-    }
-    location /sample {
-        proxy_set_header X-Forwarded-Host $host;
-        proxy_set_header X-Forwarded-Server $host;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_pass http://files_websphere_1:9080/sample;
-    }
-    
-    error_page   500 502 503 504  /50x.html;
-    location = /50x.html {
-        root   /usr/share/nginx/html;
+    server_name  www_nginx_1;
+    location / {
+       root  /usr/share/nginx/html/; 
     }
 }" > /tmp/conf.d/default.conf
 
@@ -49,13 +38,13 @@ services:
   networks:
     - frontend
     - backend
- http:
-  image: httpd
-  privileged: true
-  ports:
-   - 81:80
-  networks:
-     - frontend
+ #http:
+ # image: httpd
+ # privileged: true
+ # ports:
+ #  - 81:80
+ # networks:
+  #   - frontend
  nginx:
    image: nginx
    privileged: true
@@ -63,10 +52,13 @@ services:
     - 80:80
    volumes:
     - /tmp/conf.d/:/etc/nginx/conf.d/
-   depends_on:
-    - websphere
    networks:
      - frontend
+ #  depends_on:
+ #    websphere:
+ #       condition: service_completed_successfully 
+ #  links:
+ #    - websphere
 
  mq:
   image: ibmcom/mq
@@ -79,4 +71,49 @@ networks:
 volumes:
     database:
     " > /tmp/ibm
-docker-compose -f /tmp/ibm up
+docker-compose -p www -f /tmp/ibm up  --remove-orphans
+echo "Starting IBM WebSphere"
+fi
+
+opt="log"
+if [ "$1" = "$opt" ];then
+echo "server {
+    listen       80;
+    listen  [::]:80;
+    server_name  www_nginx_1;
+   
+    location / {
+       root  /usr/share/nginx/html/; 
+    }
+
+    location /ibm/console{
+       proxy_set_header X-Forwarded-Host \$host;
+        proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass https://www_websphere_1:9043/ibm/console;
+    }
+
+    location /nonPoliceXML {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceXML;
+    }
+    
+}" > /tmp/conf.d/default.conf
+
+export password=`docker exec www_websphere_1 cat /tmp/PASSWORD`
+docker exec www_nginx_1 echo "<br>nonPoliceHello<br><a href=/ibm/console>IBM WebSphere</a><br>Username: wsadmin, Password: ${password}" >  /tmp/conf.d/index.html
+docker cp /tmp/conf.d/index.html www_nginx_1:/usr/share/nginx/html/index.html
+docker exec www_nginx_1 nginx -s reload >/dev/null 2>&1
+
+docker exec www_websphere_1 tail  /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/server1/startServer.log
+docker exec www_websphere_1 tail  /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/server1/serverStatus.log
+#docker exec www_websphere_1 ls /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/server1/
+fi
+
+opt="stop"
+if [ "$1" = "$opt" ];then
+  docker-compose -f /tmp/ibm down --remove-orphans
+fi
+
