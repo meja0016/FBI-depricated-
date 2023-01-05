@@ -1,5 +1,0 @@
-Tue Jan  3 21:03:19 2023,19875,22,db2agent (instance) 0,sem,db2inst1_database_data_db2inst1_NODE0000_SQL00001_SQLOGCTL.GLFH.LCK_n,CREATE
-Tue Jan  3 21:05:30 2023,18158,22,db2agent (instance) 0,sem,db2inst1_database_data_db2inst1_NODE0000_SQL00001_SQLOGCTL.GLFH.LCK_n,CREATE
-Tue Jan  3 21:05:31 2023,18158,22,db2agent (instance) 0,sem,db2inst1_database_data_db2inst1_NODE0000_SQL00001_SQLOGCTL.GLFH.LCK_n,CREATE
-Tue Jan  3 21:10:51 2023,18185,22,db2agent (NPOLICE) 0,sem,db2inst1_database_data_db2inst1_NODE0000_SQL00001_SQLOGCTL.GLFH.LCK_n,CREATE
-Tue Jan  3 21:10:51 2023,18185,22,db2agent (NPOLICE) 0,sem,db2inst1_database_data_db2inst1_NODE0000_SQL00001_db2rhist.lock_n,CREATE
