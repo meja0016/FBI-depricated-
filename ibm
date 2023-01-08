@@ -77,7 +77,7 @@ fi
 
 export opt="log"
 export opt2="password"
-if [ "$1" = "$opt" ] || [ "$1" = "$opt2"];then
+if [ "$1" = "$opt" ] ;then
 echo "server {
     listen       80;
     listen  [::]:80;
