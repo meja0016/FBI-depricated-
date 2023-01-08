@@ -1,0 +1,126 @@
+#!/bin/bash
+
+export opt="start"
+if [ "$1" = "$opt" ] ;then
+
+alias d=docker
+
+mkdir -p  /tmp/conf.d/
+echo "server {
+    listen       80;
+    listen  [::]:80;
+    server_name  www_nginx_1;
+    location / {
+       root  /usr/share/nginx/html/; 
+    }
+}" > /tmp/conf.d/default.conf
+
+echo "
+version: '3.9'
+services:
+ db2:
+  image: ibmcom/db2
+  environment:
+    DB2INSTANCE: db2inst1
+    DB2INST1_PASSWORD: password
+    LICENSE: accept
+    DBNAME: nPolice
+  privileged: true
+  volumes:
+    - ./database:/database 
+  networks:
+    - backend
+ websphere: 
+  image: ibmcom/websphere-traditional
+  privileged: true
+  links:
+    - "db2"
+  networks:
+    - frontend
+    - backend
+ #http:
+ # image: httpd
+ # privileged: true
+ # ports:
+ #  - 81:80
+ # networks:
+  #   - frontend
+ nginx:
+   image: nginx
+   privileged: true
+   ports:
+    - 80:80
+   volumes:
+    - /tmp/conf.d/:/etc/nginx/conf.d/
+   networks:
+     - frontend
+ #  depends_on:
+ #    websphere:
+ #       condition: service_completed_successfully 
+ #  links:
+ #    - websphere
+
+ mq:
+  image: ibmcom/mq
+  privileged: true
+  environment:
+    LICENSE: accept
+networks:
+  frontend:
+  backend:
+volumes:
+    database:
+    " > /tmp/ibm
+docker-compose -p www -f /tmp/ibm up  --remove-orphans
+echo "Starting IBM WebSphere"
+fi
+
+export opt="log"
+export opt2="password"
+if [ "$1" = "$opt" ] ;then
+echo "server {
+    listen       80;
+    listen  [::]:80;
+    server_name  www_nginx_1;
+   
+    location / {
+       root  /usr/share/nginx/html/; 
+    }
+
+    location /ibm/console{
+       proxy_set_header X-Forwarded-Host \$host;
+        proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass https://www_websphere_1:9043/ibm/console;
+    }
+
+    location /nonPoliceXML {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceXML;
+    }
+    location /Service {
+          proxy_set_header X-Forwarded-Host \$host;
+        proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+         proxy_pass http://www_websphere_1:9080/Service;
+    }
+    
+}" > /tmp/conf.d/default.conf
+
+export password=`docker exec www_websphere_1 cat /tmp/PASSWORD`
+docker exec www_nginx_1 echo "<br>nonPoliceHello<br><a href=/ibm/console>IBM WebSphere</a><br>Username: wsadmin, Password: ${password}" >  /tmp/conf.d/index.html
+docker cp /tmp/conf.d/index.html www_nginx_1:/usr/share/nginx/html/index.html
+docker exec www_nginx_1 nginx -s reload >/dev/null 2>&1
+
+docker exec www_websphere_1 tail  /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/server1/startServer.log
+docker exec www_websphere_1 tail  /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/server1/serverStatus.log
+#docker exec www_websphere_1 ls /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/server1/
+fi
+
+opt="stop"
+if [ "$1" = "$opt" ];then
+  docker-compose -f /tmp/ibm down --remove-orphans
+fi
+
