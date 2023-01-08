@@ -1,9 +1,9 @@
 #!/bin/bash
 
+export opt="start"
+if [ "$1" = "$opt" ] ;then
 
-
-opt="start"
-if [ "$1" = "$opt" ]  || [ -z "$1"];then
+alias d=docker
 
 mkdir -p  /tmp/conf.d/
 echo "server {
@@ -75,8 +75,9 @@ docker-compose -p www -f /tmp/ibm up  --remove-orphans
 echo "Starting IBM WebSphere"
 fi
 
-opt="log"
-if [ "$1" = "$opt" ];then
+export opt="log"
+export opt2="password"
+if [ "$1" = "$opt" ] || [ "$1" = "$opt2"];then
 echo "server {
     listen       80;
     listen  [::]:80;
@@ -98,6 +99,12 @@ echo "server {
        proxy_set_header X-Forwarded-Server \$host;
         proxy_set_header X-Forwarded-For \$host;
         proxy_pass http://www_websphere_1:9080/nonPoliceXML;
+    }
+    location /Service {
+          proxy_set_header X-Forwarded-Host \$host;
+        proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+         proxy_pass http://www_websphere_1:9080/Service;
     }
     
 }" > /tmp/conf.d/default.conf
