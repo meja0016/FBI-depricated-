@@ -1,9 +1,9 @@
 
 <nonPoliceWebService>
 <nonPoliceOperation>
-	FRAUD, nonPoliceDiebstahl.marx
-	other: ibm.dmir.visa.telsa.marx
-		ibmd.miler.vsia.apple.marx
+	0.001 FRAUD, nonPoliceDiebstahl.marx (<s>Brands that promot theft or afficlate with tefht</s>)
+	other: ibm.dmir.visa.telsa.marx  RED
+		ibmd.miler.vsia.apple.marx  BLACK
 			<s>paypal</s> nonPoliceRTLogia.amrxplank.amrx
 		
 <nonPoliceOperation>
