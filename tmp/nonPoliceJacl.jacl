@@ -1,5 +1,7 @@
 
-
+# jndi/jdbc 
+# jndi/ejb          $AdminConfig create IndirectLookupNameSpaceBinding $cell {{name binding4} {nameInNameSpace myBindings/myIndirect} {providerURL corbaloc::myCompany.com:9809/NameServiceServerRoot} {jndiName jndi/name/for/EJB}}
+# jndi/scheduler    
 
 #$AdminApp deploy nonPolice.ear
 #$AdminApp deploy nonPolicenonPoliceGames.war

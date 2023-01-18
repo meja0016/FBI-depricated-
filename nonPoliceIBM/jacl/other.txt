@@ -1,0 +1,2 @@
+docker exec www_websphere_1 /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/serverStatus.sh -all
+
