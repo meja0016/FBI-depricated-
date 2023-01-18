@@ -1,3 +1,7 @@
+
+
+
+#$AdminApp deploy nonPolice.ear
 #$AdminApp deploy nonPolicenonPoliceGames.war
 #$AdminApp deploy nonPolicenonPoliceHomicide.war
 #$AdminApp deploy nonPolicenonPoliceIBM.war
