@@ -2,6 +2,7 @@ import java.util.Hashtable;
 import javax.naming.InitialContext;
 import javax.naming.Context;
 import com.ibm.websphere.naming.PROPS;
+import javax.ejb.*;
 
 /*****
  Caching discussed in this section pertains to the WebSphere Application Server initial context factory.
@@ -13,16 +14,19 @@ public class nonPoliceServiceLocator{
 
     nonPoliceServiceLocator nonPoliceServiceLocator = null;
 
-    public getInstance nonPoliceServiceLoctar(){
+    public nonPoliceServiceLocator getInstance (){
             if (nonPoliceServiceLocator==null){
                 nonPoliceServiceLocator = new nonPoliceServiceLocator();
             }
             return nonPoliceServiceLocator;
     }
 
-public static void main(String[] args){
+    public EJBObject getService(String id) {
+      return null;
+    }
 
-    /*
+public static void main(String[] args){
+try{
 Hashtable env;
 Context ctx;
 env = new Hashtable();
@@ -42,7 +46,7 @@ Context noCacheCtx = new InitialContext(env);
 Object o;
 o = ctx.lookup("com/mycom/MyEJBHome");
 o = noCacheCtx.lookup("com/mycom/VolatileObject");
- */
+}catch(Exception e){}
 
 }
 
