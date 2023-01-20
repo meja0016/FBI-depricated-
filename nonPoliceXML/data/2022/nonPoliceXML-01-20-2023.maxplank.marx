@@ -148,12 +148,17 @@ ur_opi:
 <nonPoliceOperation>
    gorbachev(dr. maika, nana:oscar-mayer){
 	10c.nonPoliceHomicide{
-		- is a bell
-		- sonny boy
-		- other
+		- is a bell (dead)
+		- sonny boy (dead)
+		- other (dead)
 	   schulz(
 		sunny boy, crime does not pay, sonnenstich
 		ingo, armin(arim) schulz, maika
+	}
+	IPX.marx
+	lux.nonPoliceHomicde{
+		wolfgang (dead)
+		fetus (dead)
 	}
    }
 </nonPoliceOperation>
