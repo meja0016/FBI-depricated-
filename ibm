@@ -75,7 +75,7 @@ docker-compose -p www -f /tmp/ibm up  --remove-orphans
 echo "Starting IBM WebSphere"
 fi
 
-export opt="log"
+export opt="plugin"
 export opt2="password"
 if [ "$1" = "$opt" ] ;then
 echo "server {
