@@ -1,0 +1,100 @@
+#edit-field-obj-assigned-to-target-id--description {
+    color: red;
+}
+
+#drupalFeedbackCommentCharactersRemaining.ibm-right {
+    float: right;
+    font-size: .8rem;
+}
+
+#drupal-modal .description a {
+    color: #018fe2;
+}
+
+
+#edit-relations {
+    display: none;
+}
+
+/* #drupal-modal .ibm-Feedback-To-IBM-Support-thanks-card-view, */
+#my-notifications-page-feedback-form input[name="pageURL"],
+#fix-central-page-feedback-form input[name="pageURL"],
+#ibm-content-main .messages__wrapper.layout-container,
+.block-page-feedback-modal {
+    display: none;
+}
+
+#my-notifications-page-feedback-form .page-feedback-modal-form-btn-ok,
+#fix-central-page-feedback-form .page-feedback-modal-form-btn-ok,
+.ui-dialog .ui-dialog-buttonpane button.page-feedback-modal-form-btn-ok {
+    background: #0062fe;
+    border-color: #4178be;
+    color: #fff;
+}
+
+.page-feedback-modal-form-btn-ok:hover {
+    background: #0354e9!important;
+}
+
+#my-notifications-page-feedback-form .page-feedback-modal-form-btn-ok.form-button-disabled,
+#my-notifications-page-feedback-form .page-feedback-modal-form-btn-ok.form-button-disabled:active,
+#fix-central-page-feedback-form .page-feedback-modal-form-btn-ok.form-button-disabled,
+#fix-central-page-feedback-form .page-feedback-modal-form-btn-ok.form-button-disabled:active,
+.ui-dialog .ui-dialog-buttonpane button.page-feedback-modal-form-btn-ok.form-button-disabled,
+.ui-dialog .ui-dialog-buttonpane button.page-feedback-modal-form-btn-ok.form-button-disabled:active {
+    background: #eee none;
+    border-color: #eee;
+    text-shadow: none;
+    color: #999;
+}
+
+.bx--form-item.hidden {
+    display: none;
+}
+
+.modal-container .ui-dialog-titlebar {
+    background: unset!important;
+    color: unset!important;
+    border: none!important;
+}
+
+.modal-container .ui-dialog-buttonpane {
+    background: none!important;
+    width: 50%;
+    float: right;
+}
+
+.modal-container .page-feedback-modal-form-btn-ok {
+    width: 100%;
+    border-radius: unset!important;
+}
+
+.modal-container .js-form-item {
+    width: 100%;
+}
+
+.modal-container select {
+    padding: 10px!important;
+}
+
+.modal-container input {
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.modal-container ul>li {
+    font-size: 0.85em;
+}
+
+.modal-container .form-item, .modal-container .form-actions {
+    margin-top: 0;
+}
+
+.modal-container .form-item-name, .modal-container .form-item-email {
+    display: none;
+}
+
+.page-feedback-form .js-form-required.form-required {
+    margin-top: -5%;
+    position: absolute;
+}

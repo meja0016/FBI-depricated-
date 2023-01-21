@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application id="Application_ID" version="1.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/application_1_4.xsd">
+	<display-name>nonPoliceXML</display-name><module id="WebModule_1169158408425"><web><web-uri>nonPoliceXML.war</web-uri><context-root>/nonPoliceXML</context-root></web>
+	<display-name>nonPoliceGames</display-name><module id="WebModule_1169158408426"><web><web-uri>nonPoliceGames.war</web-uri><context-root>/nonPoliceGames</context-root></web>
+	<display-name>nonPoliceQA</display-name><module id="WebModule_1169158408427"><web><web-uri>nonPoliceQA.war</web-uri><context-root>/nonPoliceQA</context-root></web>
+	<display-name>nonPoliceRelgion</display-name><module id="WebModule_1169158408428"><web><web-uri>nonPoliceReligion.war</web-uri><context-root>/nonPoliceRelion</context-root></web>
+	<display-name>nonPoliceSocial</display-name><module id="WebModule_1169158408429"><web><web-uri>nonPoliceSocial.war</web-uri><context-root>/nonPoliceSocial</context-root></web>
+	<display-name>nonPoliceHomicide</display-name><module id="WebModule_1169158408410"><web><web-uri>nonPoliceHomicide.war</web-uri><context-root>/nonPoliceHomicide</context-root></web>
+	<display-name>nonPoliceIBM</display-name><module id="WebModule_1169158408411"><web><web-uri>nonPoliceIBM.war</web-uri><context-root>/nonPoliceIBM</context-root></web>
+	<display-name>nonPoliceSchool</display-name><module id="WebModule_1169158408412"><web><web-uri>nonPoliceSchool.war</web-uri><context-root>/nonPoliceSchool</context-root></web>
+	<display-name>nonPoliceWSAM</display-name><module id="WebModule_1169158408413"><web><web-uri>nonPoliceWSAM.war</web-uri><context-root>/nonPoliceWSAM</context-root></web>
+    <display-name>nonPoliceOffice</display-name><module id="WebModule_1169158408414"><web><web-uri>nonPoliceOffice.war</web-uri><context-root>/nonPoliceOffice</context-root></web>
+    </module> 
+</application>

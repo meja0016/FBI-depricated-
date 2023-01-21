@@ -1,0 +1,137 @@
+body,
+input,
+textarea,
+select {
+    color: #000;
+    background: none;
+}
+
+
+/* body.two-sidebars,
+body.sidebar-first,
+body.sidebar-second,
+body {
+  width: 640px;
+} */
+
+#sidebar-first,
+#sidebar-second,
+.navigation,
+#toolbar,
+.site-footer,
+.tabs,
+.shortcut-action {
+    display: none;
+}
+
+.one-sidebar .main-content,
+.two-sidebars .main-content {
+    width: 100%;
+}
+
+.featured-bottom {
+    width: 960px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.featured-bottom-first,
+.featured-bottom-second,
+.featured-bottom-third {
+    width: 250px;
+}
+
+
+/* ---------- Node Pages ---------- */
+
+#comments .title,
+#comments form,
+.comment-forbidden {
+    display: none;
+}
+
+/*------- DISDEV-1038 ---------*/
+body {
+    width: 612pt;
+}
+#teconsent,#sChat,div#ibm-subscribe-section,#ibm-home a::after,div#think-banner-container,div#search-header-wrapper,.ibm-sitenav-menu-container,#ibm-navigation-trail,.ibm-band--anchor-links,button.ibm-contact-widget-btn,.ibm-masthead-rightside{
+    display: none!important;
+}
+div#ibm-universal-nav,.ibm-widget-processed .ibm-container-body,.ibm-tabs-content {
+    display: block!important;
+}
+#ibm-top,.ibm-columns,.ibm-card__content:not(#ibm-document-information .ibm-card__content) {
+    padding: 0!important;
+}
+.ibm-columns {
+    width: auto!important;
+}
+#ibm-home {
+    margin-left: 0!important;
+}
+table {
+   width: 100%!important;
+}
+a[href]:after {
+   content: ' (' attr(href) ')';
+    color: #000;
+    font-size: 80%;
+    font-style: italic;
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 5pt;
+   word-break: break-all;
+}
+a[href^='/']:after {
+   content: ' (https://www.ibm.com' attr(href) ')';
+}
+a[href^='#']:after, a[href^='javascript']:after, header a[href]:after {
+   display: none;
+}
+a.ibm-twisty-trigger::before, .ibm-show-hide a::before {
+    content: "\f1d5"!important;
+}
+#ibm-document-information .ibm-card__content {
+   padding: 20px;
+}
+.ibm-data-table td, .ibm-data-table th {
+    padding: 5px 5px!important;
+}
+/*------- DISDEV-1038 ---------*/
+
+/*------carbon----------------*/
+dds-masthead-l1, dds-masthead-menu-button, dds-search-with-typeahead, dds-masthead-global-bar, dds-footer-container, #ibm-drupal-leadspace {
+    display: none!important;
+}
+dds-masthead {
+    display: block;
+    position: static;
+}
+#block-ibm-carbon-page-title {
+    background: #fff!important;
+}
+#block-ibm-carbon-page-title>div {
+    max-width: 100%;
+}
+.bx--offset-lg-2 {
+    margin-left: 0!important;
+}
+[class^="bx"] {
+    width: unset!important;
+    max-width: unset!important;
+    display: block!important;
+}
+.ibm-anchor-up-link, #supportChatButton, #ibm-drupal-feedback {
+    display: none !important;
+}
+[class*="ibm-col-"] {
+    margin: unset !important;
+    width: unset !important;
+}
+#ibm-content-wrapper, #ibm-content-body {
+    padding-top: 0px!important;
+}
+.ibm-type pre {
+    white-space: break-spaces;
+}

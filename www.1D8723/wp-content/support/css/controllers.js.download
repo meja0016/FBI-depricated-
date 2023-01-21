@@ -1,0 +1,639 @@
+var dBlueSearchResultControllers = angular.module('dBlueSearchResultControllers', []);
+var hpp = SEARCH_RESULT_COUNT;
+
+dBlueSearchResultControllers.controller('dBlueSearchResultController', ['$scope', '$http',
+function ($scope, $http) {
+	var ng_searchresult = jQuery('#ng_searchresult');
+	var q = dcurl(getURLParameter('q').replace(/\+/g, ' ')).substring(0, 125);
+	jQuery("#iptSearch").val(q);
+	q = ecurl(q);
+	
+	if ('' != getURLParameter('hpp') && typeof parseInt(getURLParameter('hpp')) === 'number' && parseInt(getURLParameter('hpp')) % 1 === 0 && parseInt(getURLParameter('hpp')) >= 10 && parseInt(getURLParameter('hpp')) <= 50) {
+		hpp = parseInt(getURLParameter('hpp'));
+	}
+	
+	// Initial begin
+	$scope.search_results = {};
+	var sr = $scope.search_results;
+	sr.beta = isBeta() ? '&' + BETA_PARAMETER + '=' + BETA_VERSION : '';
+	sr.isTagSearch = false;
+	initSearchVars(sr, q);
+	
+	$scope.sr_paginate = function (pageNum) {
+		sr.start = (pageNum - 1) * sr.count;
+		sr.displayStart = sr.start + 1;
+		$scope.sr_doSearch(q, false);
+	};
+	$scope.sr_next = function () {
+		sr.start = sr.start + sr.count;
+		sr.displayStart = sr.start + 1;
+		$scope.sr_doSearch(q, false);
+	};
+	$scope.sr_prev = function () {
+		sr.start = sr.start - sr.count;
+		sr.displayStart = sr.start + 1;
+		$scope.sr_doSearch(q, false);
+	};
+	// Initial end
+	
+	// Build list of Keywords to be highlighted in the text begin
+	$scope.toHighlight = processKeyWord(q);
+	
+	$scope.highlight = function (text) {
+		var finalText = text;
+		finalText = finalText.replace(/\\n/g, ' ');
+		
+		for (var i = 0; i < $scope.toHighlight.length; i++) {
+			var replacement = '<b>' + $scope.toHighlight[i].word + '</b>';
+			finalText = finalText.replace($scope.toHighlight[i].finder, replacement);
+		}
+		
+		return finalText;
+	};
+	// Build list of Keywords to be highlighted in the text end
+	
+	$scope.sr_doSearch = function (query, isNew) {		
+		var tcParam = '';
+		var filter_EngOnly = 'language:en';
+		var todayDate = new Date().toISOString().slice(0,10).split('-').join('');
+		const dcQuery = "(tsdoctype:" + dcurl(getURLParameter('dc').replace(/\+/g, ' ')) + ")";
+		const ent = "(entitled:" + dcurl(getURLParameter('ent').replace(/\+/g, ' ')) + ")";
+		const k = "(keywords:" + dcurl(getURLParameter('k').replace(/\+/g, ' ')) + ")";
+		const topics = "(topics:" + dcurl(getURLParameter('topics').replace(/\+/g, ' ')) + ")";
+		const task = "(ibm_task_avl:" + dcurl(getURLParameter('task').replace(/\+/g, ' ')) + ")";
+		const startdate = "(dcdate:[" + dcurl(getURLParameter('startdate').replace(/\+/g, ' ')) +  ' TO ' + todayDate + ']' + ")";
+		if (isTcSearch() && !IsStartNewKeywordSearch()) {
+			jQuery("#iptSearch").attr("placeholder", "Search within results");
+			jQuery("#ibm-tc-check").show();
+			if (isFilterEnglishOnly && getURLParameter('startdate')) {tcParam = '&filter=(' + filter_EngOnly + ' AND ' + getdBlueSuggestion() + ' AND ' + k + ' AND ' + ent + ' AND ' + task + ' AND ' +  startdate + ')';}
+			else if (isFilterEnglishOnly) {tcParam = '&filter=(' + filter_EngOnly + ' AND ' + getdBlueSuggestion() + ' AND ' + k + ' AND ' + ent + ' AND ' + task + ')';}
+			else {tcParam = '&filter=(' + dcQuery + ' AND ' + getdBlueSuggestion() + ')';}
+		}
+		else {
+			if (isFilterEnglishOnly && getURLParameter('startdate')) {
+				tcParam = '&filter=(' + filter_EngOnly + ' AND ' + dcQuery + ' AND ' + k + ' AND ' + getdBlueSuggestion() +  ' AND ' + ent + ' AND ' + task + ' AND ' +  startdate + ')';
+			} else if (isFilterEnglishOnly) {
+				tcParam = '&filter=(' + filter_EngOnly + ' AND ' + dcQuery + ' AND ' + k + ' AND ' + getdBlueSuggestion() +  ' AND ' + ent + ' AND ' + task + ')'; 
+			}
+		}
+			
+			var sortby = '';
+			
+			if ('desc' == getURLParameter('sortby')) {
+				if (enable_kws && IsDblueSiteSearch() && !(isTcSearch() && !IsStartNewKeywordSearch())) {
+					sortby = '&sort=date:d';
+				} else {
+					sortby = '&sortby=-dcdate';
+				}
+				
+			} else if ('asc' == getURLParameter('sortby')) {
+				if (enable_kws && IsDblueSiteSearch() && !(isTcSearch() && !IsStartNewKeywordSearch())) {
+					sortby = '&sort=date:a';
+				} else {
+					sortby = '&sortby=dcdate';
+				}
+			}
+			
+			q = query; // Replace the local variable:q with new keyword
+			sr.q = query; // Replace the search_result.q with new keyword
+			sr.dc_q = dcurl(query); // Replace the search_result.dc_q with new keyword
+			
+			// Build list of Keywords to be highlighted in the text begin
+			$scope.toHighlight = processKeyWord(q);
+			
+			if (isNew) {
+				sr.start = 0;
+			}
+			
+			var searchresult_spinner = jQuery('#searchresult_spinner');
+			
+			ng_searchresult.hide();
+			searchresult_spinner.addClass("ibm-spinner");
+			
+			if (enable_kws && IsDblueSiteSearch() && !(isTcSearch() && !IsStartNewKeywordSearch())) {
+				sr.isKWS = true;
+				
+				$http.jsonp(kws_url + '?q=' + query + '&hpp=' + hpp + sortby + '&o=' + sr.start + '&callback=JSON_CALLBACK', { timeout: CONNECTION_TIMEOUT })
+				.then(function successCallback(response) {
+					var data = response.data;
+					sr.results = data.results;
+					
+					// this way can't work in IE11
+					//					for (var result of sr.results) {
+					//						result.description = result.summary.replace(/\<br\>\n/g, '');
+					//						result.docattributes = result.attributes;
+					//					}
+					
+					// for IE11 issue
+					for (var i = 0; i < sr.results.length; i++) {
+						var result = sr.results[i];
+						//						result.description = result.summary;
+						result.docattributes = result.attributes;
+						
+						// Add date begin
+						var doc_date = result.attributes["dcterms.date"] ? result.attributes["dcterms.date"] : result.attributes["dc.date"];
+						if (doc_date && doc_date.indexOf(' ') != -1) {
+							doc_date = doc_date.substring(0, doc_date.indexOf(' '));
+						}
+						
+						var doc_date_obj = new Date(doc_date);
+						result.date = doc_date ? doc_date_obj.getDate() + ' ' + monthNames[doc_date_obj.getMonth()] + ' ' + doc_date_obj.getFullYear() + '<br />' : '';
+						
+						if (result.summary.indexOf('<b>...<\/b>') != -1) {
+							result.summary = result.summary.substring(result.summary.indexOf('<b>...<\/b>') + 11, result.summary.length);
+						}
+						// Add date end
+						
+						result.description = result.summary.replace(/\<br>/g, '');
+					}
+					
+					sr.start = data.searchresults.startindex - 1;
+					sr.totalResults = data.searchresults.totalresults;
+					sr.totalResults_comma = numWithComma(sr.totalResults);
+					
+					processSearchResult(sr);
+					
+					searchresult_spinner.removeClass("ibm-spinner");
+					ng_searchresult.show();
+					
+				}, function errorCallback(response) {
+					switch (response.status) {
+						case -1:
+						location.href = ERROR_408_PAGE;
+						break;
+						
+						default:
+						sr.hasResults = false;
+						searchresult_spinner.removeClass("ibm-spinner");
+						ng_searchresult.show();
+						break;
+					}
+					
+				});
+				
+			} else {
+				sr.isKWS = false;
+				query = appendAddOperator(splice(query.trim(), excludeList));
+				
+				$http.jsonp(search_url + '?query=' + query + '&nr=' + hpp + sortby + '&scope=' + SEARCH_SCOPE + '&fr=' + sr.start + '&rmdt=dcdate%2Cratings%2Csocialtags%2Cscope' + '&disableGrouping=title_snippet' + tcParam + '&callback=JSON_CALLBACK', { timeout: CONNECTION_TIMEOUT })
+				.then(function successCallback(response) {
+					var data = response.data;
+					sr.results = data.resultset.searchresults.searchresultlist;
+					sr.start = data.resultset.searchresults.startindex;
+					sr.totalResults = data.resultset.searchresults.totalresults;
+					sr.totalResults_comma = numWithComma(sr.totalResults);
+					
+					processSearchResult(sr);
+
+					var state = {
+						q: document.getElementById("spng-search-query").value,
+						cc: 'us',
+						lang: 'en',
+						tabType: [ IBMSearchInsightsData.TAB_TYPES.ALL ],
+						facetTabs: ['all']
+					};
+
+					let q = document.getElementById("spng-search-query").value;
+
+					state = { ...state, ...{ q } };
+		
+					function handleClick (event) {
+						IBMSearchInsightsData.logClick(event, state, data.resultset.searchresults);
+						event.stopImmediatePropagation();
+					}
+		
+					document.addEventListener('mousedown', handleClick);
+
+					window.addEventListener('load', (event) => {
+						IBMSearchInsightsData.logPageLoad(state, data.resultset.searchresults);
+					});
+
+					if(!sr.totalResults){
+						IBMSearchInsightsData.logNoResults(state);
+					}
+	
+					searchresult_spinner.removeClass("ibm-spinner");
+					ng_searchresult.show();
+					
+				}, function errorCallback(response) {
+					switch (response.status) {
+						case -1:
+						location.href = ERROR_408_PAGE;
+						break;
+						
+						default:
+						sr.hasResults = false;
+
+						searchresult_spinner.removeClass("ibm-spinner");
+						ng_searchresult.show();
+						break;
+					}
+					
+				});
+			}
+			
+		}
+		
+		$scope.sr_doSearch(q, true);
+	}
+]);
+
+dBlueSearchResultControllers.controller('dBlueTagSearchResultController', ['$scope', '$http',
+function ($scope, $http) {
+	var ng_searchresult = jQuery('#ng_searchresult');
+	var q = dcurl(getURLParameter('tag').replace(/\+/g, ' ')).substring(0, 125);
+	
+	jQuery("#iptSearch").val(q);
+	q = ecurl(q);
+	dc
+	if ('' != getURLParameter('hpp') && typeof parseInt(getURLParameter('hpp')) === 'number' && parseInt(getURLParameter('hpp')) % 1 === 0 && parseInt(getURLParameter('hpp')) >= 10 && parseInt(getURLParameter('hpp')) <= 50) {
+		hpp = parseInt(getURLParameter('hpp'));
+	}
+	
+	// Initial begin
+	$scope.search_results = {};
+	var sr = $scope.search_results;
+	sr.beta = isBeta() ? '&' + BETA_PARAMETER + '=' + BETA_VERSION : '';
+	sr.isTagSearch = true;
+	initSearchVars(sr, q);
+	
+	$scope.sr_paginate = function (pageNum) {
+		sr.start = (pageNum - 1) * sr.count;
+		sr.displayStart = sr.start + 1;
+		$scope.sr_doSearch(q, false);
+	};
+	$scope.sr_next = function () {
+		sr.start = sr.start + sr.count;
+		sr.displayStart = sr.start + 1;
+		$scope.sr_doSearch(q, false);
+	};
+	$scope.sr_prev = function () {
+		sr.start = sr.start - sr.count;
+		sr.displayStart = sr.start + 1;
+		$scope.sr_doSearch(q, false);
+	};
+	// Initial end
+	
+	// Build list of Keywords to be highlighted in the text begin
+	$scope.toHighlight = processKeyWord(q);
+	
+	$scope.highlight = function (text) {
+		var finalText = text;
+		finalText = finalText.replace(/\\n/g, ' ');
+		
+		for (var i = 0; i < $scope.toHighlight.length; i++) {
+			var replacement = '<strong>' + $scope.toHighlight[i].word + '</strong>';
+			finalText = finalText.replace($scope.toHighlight[i].finder, replacement);
+		}
+		
+		return finalText;
+	};
+	// Build list of Keywords to be highlighted in the text end
+	
+	$scope.sr_doSearch = function (query, isNew) {
+		var sortby = '';
+		
+		if ('desc' == getURLParameter('sortby')) {
+			sortby = '&sortby=-dcdate';
+		} else if ('asc' == getURLParameter('sortby')) {
+			sortby = '&sortby=dcdate';
+		}
+		
+		q = query; // Replace the local variable:q with new keyword
+		sr.q = query; // Replace the search_result.q with new keyword
+		sr.dc_q = dcurl(query); // Replace the search_result.dc_q with new keyword
+		sr.isKWS = false;
+		
+		// Build list of Keywords to be highlighted in the text begin
+		$scope.toHighlight = processKeyWord(q);
+		
+		if (isNew) {
+			sr.start = 0;
+		}
+		
+		var searchresult_spinner = jQuery('#searchresult_spinner');
+		
+		ng_searchresult.hide();
+		searchresult_spinner.addClass("ibm-spinner");
+		
+		$http.jsonp(search_url + '?filter=(socialtags:' + query + ')&nr=' + hpp + sortby + '&scope=' + SEARCH_SCOPE + '&fr=' + sr.start + '&rmdt=dcdate%2Cratings%2Csocialtags%2Cscope' + '&disableGrouping=title_snippet&callback=JSON_CALLBACK', { timeout: CONNECTION_TIMEOUT })
+		.then(function successCallback(response) {
+			var data = response.data;
+			sr.results = data.resultset.searchresults.searchresultlist;
+			sr.start = data.resultset.searchresults.startindex;
+			sr.totalResults = data.resultset.searchresults.totalresults;
+			sr.totalResults_comma = numWithComma(sr.totalResults);
+			
+			processSearchResult(sr);
+			
+			searchresult_spinner.removeClass("ibm-spinner");
+			ng_searchresult.show();
+			
+		}, function errorCallback(response) {
+			switch (response.status) {
+				case -1:
+				location.href = ERROR_408_PAGE;
+				break;
+				
+				default:
+				sr.hasResults = false;
+				searchresult_spinner.removeClass("ibm-spinner");
+				ng_searchresult.show();
+				break;
+			}
+			
+		});
+	}
+	
+	$scope.sr_doSearch(q, true);
+}
+]);
+
+function initSearchVars(sr, q) {
+	sr.q = q;
+	sr.dc_q = dcurl(q);
+	sr.start = 0;
+	sr.displayStart = sr.start + 1;
+	sr.end = hpp;
+	sr.count = hpp;
+	sr.hasNext = false;
+}
+
+function processSearchResult(sr) {
+	for (var i = 0; i < sr.results.length; i++) {
+		var result = sr.results[i];
+		result.hasRating = false;
+		
+		// @lue160512a begin
+		if (typeof result.url !== "undefined" && result.url !== null) {
+			if (result.url.indexOf('www-01.ibm.com') != -1) {
+				result.url = result.url.replace('www-01.ibm.com', 'www.ibm.com');
+			} else if (result.url.indexOf('www-304.ibm.com') != -1) {
+				result.url = result.url.replace('www-304.ibm.com', 'www.ibm.com');
+			}
+		}
+		// @lue160512a end
+		
+		for (var j = 0; j < result.docattributes.length; j++) {
+			var attribute = result.docattributes[j];
+			
+			// date begin
+			if (attribute.dcdate) {
+				var doc_date_obj = new Date(attribute.dcdate);
+				result.date = doc_date_obj.getDate() + ' ' + monthNames[doc_date_obj.getMonth()] + ' ' + doc_date_obj.getFullYear() + '<br />';
+			}
+			// date end
+			
+			// rating begin
+			if (attribute.ratings) {
+				result.hasRating = true;
+				
+				result.rating_score = attribute.ratings;
+				result.ratingStars = [];
+				var starts = score2Star(result.rating_score);
+				
+				for (var k = 0; k < Math.floor(starts); k++) {
+					result.ratingStars.push(k);
+				}
+				
+				result.ratingHalfstar = (starts - Math.floor(starts) > 0) ? true : false;
+			}
+			// rating end
+			
+			// tagging begin
+			if (attribute.socialtags) {
+				//result.tagList = attribute.socialtags.replace(/\;/g,",");
+				result.tagList = attribute.socialtags;
+			}
+			// tagging end
+		}
+		
+	}
+	
+	if (sr.totalResults === 0) {
+		sr.hasResults = false;
+		return;
+		
+	} else {
+		sr.hasResults = true;
+	}
+	
+	sr.end = sr.start + sr.count;
+	
+	if (sr.totalResults < sr.end) {
+		sr.end = sr.totalResults;
+	}
+	
+	sr.pageNum = Math.floor(sr.start / sr.count) + 1;
+	
+	var pageLinks = 0;
+	if (sr.totalResults > (sr.count * 10)) {
+		pageLinks = 10;
+	} else {
+		pageLinks = sr.totalResults % sr.count == 0 ? sr.totalResults / sr.count : Math.floor(sr.totalResults / sr.count) + 1;
+		
+	}
+	
+	sr.pageLinks = [];
+	for (var i = 1; i <= pageLinks; i++) {
+		if (sr.pageNum < 10) {
+			sr.pageLinks[i - 1] = i;
+		} else {
+			var number = (sr.pageNum - 5) + i;
+			
+			if (Math.ceil(sr.totalResults / sr.count) < number) {
+				break;
+			} else {
+				sr.pageLinks[i - 1] = number;
+			}
+			
+		}
+	}
+	
+	if (sr.totalResults > (sr.start + sr.count)) {
+		sr.hasNext = true;
+	} else {
+		sr.hasNext = false;
+	}
+	
+	if (sr.pageNum > 1) {
+		sr.hasPrev = true;
+	} else {
+		sr.hasPrev = false;
+	}
+}
+
+function processKeyWord(q) {
+	var keywordList = [];
+	var toHighlight = [];
+	
+	q = dcurl(q);
+	q = removeNotKeyword(q);
+	
+	if (q && q.indexOf(' ') != -1) {
+		keywordList = q.split(' ');
+	} else if (q) {
+		keywordList.push(q);
+	}
+	
+	keywordList = removeItem(keywordList, 'AND');
+	keywordList = removeItem(keywordList, 'OR');
+	keywordList = removeItem(keywordList, 'NOT');
+	keywordList = removeItem(keywordList, '&&');
+	keywordList = removeItem(keywordList, '||');
+	keywordList = removeItem(keywordList, '!');
+	keywordList = removeItem(keywordList, '+');
+	keywordList = removeItem(keywordList, '-');
+	keywordList = removeItem(keywordList, '');
+	
+	if (keywordList && keywordList.length > 0) {
+		// Create the regex expressions needed for highlighting
+		// if we do it here, we create them once, rather than once per block of highlighted text
+		// For each word, need to look at regular, capitalized or all-caps version of word
+		// ie: Lotus -> lotus, Lotus & LOTUS
+		// which I realize is silly for most words, but IBM has a lot of acronyms and we can't
+		// trust our end users to search for them in upper caps
+		for (var i = 0; i < keywordList.length; i++) {
+			var k0 = keywordList[i];
+			toHighlight.push(buildKeyword(k0));
+			
+			var k1 = keywordList[i].toLowerCase();
+			toHighlight.push(buildKeyword(k1));
+			
+			var k2 = k1.charAt(0).toUpperCase() + k1.slice(1);
+			toHighlight.push(buildKeyword(k2));
+			
+			var k3 = k1.toUpperCase();
+			toHighlight.push(buildKeyword(k3));
+			
+		}
+	}
+	
+	return toHighlight;
+}
+
+function removeItem(array, item) {
+	var temp = [];
+	
+	for (var i = 0; i < array.length; i++) {
+		if (array[i] != item) {
+			temp.push(array[i]);
+		}
+	}
+	
+	return temp;
+	
+}
+
+function removeNotKeyword(k) {
+	return k.replace(/\(/g, "").replace(/\)/g, "").replace(/\"/g, "").replace(/\'/g, "").replace(/\+/g, "");
+}
+
+function buildKeyword(k) {
+	var result = {};
+	result.word = k;
+	result.finder = new RegExp(k, 'g');
+	
+	return result;
+}
+
+function removeNotTopics(topics) {
+	return topics.replace(/\(/g, "").replace(/\)/g, "").replace(/\"/g, "").replace(/\'/g, "").replace(/\+/g, "");
+}
+
+function buildTopics(topics) {
+	var result = {};
+	result.word = topics;
+	result.finder = new RegExp(topics, 'g');
+	
+	return result;
+}
+
+function isBeta() {
+	return getURLParameter(BETA_PARAMETER) == BETA_VERSION ? true : false;
+}
+
+function htmlDecode(value) {
+	return jQuery('<div/>').html(value).text();
+}
+
+function isEven(n) {
+	return n % 2 == 0;
+}
+
+function splice(input, list) {
+	var arr = dcurl(input).split(" ");
+	var arrList = list.split(",");
+	var num = 0;
+	
+	for (var i = arr.length; i--;) {
+		if (arr[i].indexOf('"') != -1) {
+			num++;
+		}
+		if (arr[i].indexOf('"') == -1 || !arr[i].startsWith("-")) {
+			for (var j in arrList) {
+				if (arr[i].toLowerCase() === arrList[j].toLowerCase() && isEven(num)) {
+					arr.splice(i, 1);
+				}
+			}
+		}
+	}
+	return ecurl(arr.join(" "));
+}
+
+function appendAddOperator(input) {
+	if (typeof input == "undefined" || input == null) return '';
+	//var input = dcurl(input.replace(/\(|\)/g, ''));
+	var input = dcurl(input);
+	// console.log('input: ' + input);
+	var output = '';
+	var count = 0;
+	
+	for (i = 0; i < input.length; i++) {
+		switch (input[i]) {
+			/*case '(':
+			case ')':
+			break;*/
+			case ' ':
+			if ((i + 1 <= input.length && input[i + 1] != '-' && input[i + 1] != '|' && i - 1 >= 0 && input[i - 1] != '|' && isEven(count))
+			&& appendOperatorCheck(input, i)) {
+				output += ' AND ';
+			} else {
+				output += input[i];
+			}
+			// console.log('i: ' + i + ', ' + isContainAndSpace(input, i) + ', ' + isContainSpaceAnd(input, i) + ', ' + isContainSpaceOr(input, i) + ', ' + isContainOrSpace(input, i));
+			break;
+			case '"':
+			count++;
+			default:
+			output += input[i];
+			break;
+		}
+	}
+	// console.log('output: ' + output);
+	return ecurl(output);
+}
+
+function appendOperatorCheck(input, i) {
+	return !isContainAndSpace(input, i) && !isContainSpaceAnd(input, i) && !isContainSpaceOr(input, i) && !isContainOrSpace(input, i);
+}
+
+function isContainAndSpace(input, i) {
+	// Case 'AND '
+	return (input.length >= i - 3 && input[i - 3] === 'A' && input[i - 2] === 'N' && input[i - 3] === 'D') ? true : false;
+}
+
+function isContainSpaceAnd(input, i) {
+	// Case ' AND'
+	return (input.length >= i + 3 && input[i + 1] === 'A' && input[i + 2] === 'N' && input[i + 3] === 'D') ? true : false;
+}
+
+function isContainSpaceOr(input, i) {
+	// Case ' OR'
+	return (input.length >= i + 2 && input[i + 1] === 'O' && input[i + 2] === 'R') ? true : false;
+}
+
+function isContainOrSpace(input, i) {
+	// Case 'OR '
+	return (input.length >= i - 2 && input[i - 2] === 'O' && input[i - 1] === 'R') ? true : false;
+}
