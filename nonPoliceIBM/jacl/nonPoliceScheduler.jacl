@@ -1,0 +1,15 @@
+#https://www.ibm.com/docs/en/was/9.0.5?topic=tasks-submitting-task-scheduler
+
+puts "Creating the task..."
+set params [java::new {java.lang.Object[]} 1]
+$params set 0 $taskInfo
+
+set sigs [java::new {java.lang.String[]} 1]
+$sigs set 0 com.ibm.websphere.scheduler.TaskInfo
+
+set taskStatus [java::cast com.ibm.websphere.scheduler.TaskStatus [$AdminControl invoke_jmx $schedO
+ create $params $sigs]]
+
+puts "Task Created.  TaskID= [$taskStatus getTaskId]"
+
+puts $taskStatus
