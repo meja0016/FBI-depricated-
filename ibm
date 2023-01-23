@@ -38,6 +38,15 @@ services:
   networks:
     - frontend
     - backend
+# oracle:
+#    image: oracleinanutshell/oracle-xe-11g:latest
+#    ports:
+#      - 1521:1521
+#      - 5500:5500
+#      - 8080:8080
+#      - 49161:49161
+#  networks:
+#    - backend
  #http:
  # image: httpd
  # privileged: true
@@ -75,7 +84,7 @@ docker-compose -p www -f /tmp/ibm up  --remove-orphans
 echo "Starting IBM WebSphere"
 fi
 
-export opt="plugin"
+export opt="context"
 export opt2="password"
 if [ "$1" = "$opt" ] ;then
 echo "server {
