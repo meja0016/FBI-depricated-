@@ -13,8 +13,3 @@ International Federal Law (bit.ly/1D8726)
 ```
 $AdminConfig create Server $node {{server2}}
 ```
-```
-development - IBM Microsoft Github
-stage -       IBM Cloud
-production -  IBM z/OS Hosted Service
-```
