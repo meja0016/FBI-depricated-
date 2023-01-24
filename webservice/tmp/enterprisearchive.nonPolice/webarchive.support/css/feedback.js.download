@@ -1,0 +1,124 @@
+var feedback = {
+    charactersRemaining: function (overlayName, id, num) {
+        jQuery('#' + id).html('Characters remaining: ' + num);
+        jQuery('#' + overlayName + ' textarea').keyup(function () {
+            var left = num - jQuery(this).val().length;
+            if (left < 0) {
+                left = 0;
+            }
+            jQuery('#' + id).text('Characters remaining: ' + left);
+            // console.log(jQuery('#' + id).text());
+        });
+    },
+    pageFeedbackLayoutHandler: function () {
+        jQuery('#drupal-modal .page-feedback-form label.form-required, #drupal-modal .support-guide-page-feedback-form label.form-required, #drupal-modal .support-insider-page-feedback-form label.form-required').remove();
+        jQuery('#drupal-modal .page-feedback-form .form-item-topic-option select, #drupal-modal .support-guide-page-feedback-form .form-item-topic-option select, #drupal-modal .support-insider-page-feedback-form .form-item-topic-option select').after('<span class="js-form-required form-required"></span>');
+        jQuery('#drupal-modal .page-feedback-form .form-item-topic-option select option:first').attr('disabled', 'disabled');
+        jQuery('#drupal-modal .page-feedback-form .form-item-country-option select option:first, #drupal-modal .support-guide-page-feedback-form .form-item-country-option select option:first, #drupal-modal .support-insider-page-feedback-form .form-item-country-option select option:first').attr('disabled', 'disabled');
+        jQuery('#drupal-modal .page-feedback-form .form-item-email, #drupal-modal .support-guide-page-feedback-form .form-item-email, #drupal-modal .support-insider-page-feedback-form .form-item-email').after(jQuery('#drupal-modal .page-feedback-form .form-item-country-option, #drupal-modal .support-guide-page-feedback-form .form-item-country-option, #drupal-modal .support-insider-page-feedback-form .form-item-country-option'));
+        jQuery('.page-feedback-modal-form-btn-ok').attr('disabled', 'disabled').addClass('form-button-disabled');
+        jQuery('#drupal-modal .page-feedback-form .form-item-topic-option select, #drupal-modal .support-guide-page-feedback-form .form-item-topic-option select, #drupal-modal .support-insider-page-feedback-form .form-item-topic-option select').on('change', function () {
+            jQuery('.page-feedback-modal-form-btn-ok').removeAttr('disabled').removeClass('form-button-disabled');
+        });
+        jQuery("input[name='vote']").val(jQuery('.votingapi-widgets').data('vote'));
+    }
+};
+
+(function ($, Drupal) {
+    'use strict';
+    var initialized;
+
+    function init(settings) {
+        if (!initialized) {
+            initialized = true;
+            init();
+        }
+    }
+
+    Drupal.behaviors.feedback = {
+        attach: function (context, settings) {
+            init(settings);
+            $(context).find('.form-checkbox').on('change', function(e) {
+                if($('input[name=opt_in]').is(":checked")) {
+                  $('.form-item-name, .form-item-email').show();
+                } else { $('.form-item-name, .form-item-email').hide(); }
+            });
+            $(context).find('#edit-save').on('click', function(e) {
+                if ($('#edit-field-feedback-status').val() === '3' && $('#edit-field-obj-assigned-to-target-id').val().length === 0) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+                    alert('Enter a name in the Assigned To field if you wish to reassign the feedback.');
+                }
+            });
+            $('#edit-field-feedback-status').on('change', function(e) {
+                e.preventDefault();
+                show_hide_assign_to_description();
+            });
+            $('#edit-field-obj-assigned-to-target-id').on('change', function(e) {
+                e.preventDefault();
+                show_hide_assign_to_description();
+            });
+            $(context).find('#my-notifications-page-feedback-form, #fix-central-page-feedback-form, #pa-feedback-form, #pao-feedback-form, #pa-questions-form').once('feedback').each(function () {
+                $('#search-header-wrapper, #ibm-contact-module, footer').remove();
+                IBMCore.common.module.masthead.subscribe('profileMenuReady', 'customjs', function () {
+                    $('.ibm-masthead-iconsonly').remove();
+                });
+                $('.ibm-masthead-rightside .ibm-masthead-item-signin, .ibm-masthead-item-menu').hide();
+                $('#my-notifications-page-feedback-form label.form-required, #fix-central-page-feedback-form label.form-required').remove();
+                $('#my-notifications-page-feedback-form .form-item-topic-option select, #fix-central-page-feedback-form .form-item-topic-option select').after('<span class="js-form-required form-required"></span>');
+                $('.form-item-topic-option select option:first').attr('disabled', 'disabled');
+                $('.form-item-country-option select option:first').attr('disabled', 'disabled');
+                $('#my-notifications-page-feedback-form .form-item-email, #fix-central-page-feedback-form .form-item-email').after($('#my-notifications-page-feedback-form .form-item-country-option, #fix-central-page-feedback-form .form-item-country-option'));
+                $('.page-feedback-modal-form-btn-ok').attr('disabled', 'disabled').addClass('form-button-disabled');
+                $('#my-notifications-page-feedback-form .form-item-topic-option select, #fix-central-page-feedback-form .form-item-topic-option select').on('change', function () {
+                    $('.page-feedback-modal-form-btn-ok').removeAttr('disabled').removeClass('form-button-disabled');
+                });
+                jQuery('.pa-feedback-modal-form-btn-ok').attr('disabled', '').addClass('form-button-disabled');
+                if(jQuery('#edit-topic-option').length === 1){
+                    jQuery('#edit-topic-option').on('change', function () {
+                        jQuery('.pa-feedback-modal-form-btn-ok').removeAttr('disabled').removeClass('form-button-disabled');
+                    });
+                }
+                if(jQuery('#edit-question-comment').length === 1){
+                    $("#edit-question-comment").on('input', function() {
+                      if (jQuery('#edit-question-comment').val().trim().length > 0) {
+                         jQuery('.pa-feedback-modal-form-btn-ok').removeAttr('disabled').removeClass('form-button-disabled');
+                      } else {
+                          jQuery('.pa-feedback-modal-form-btn-ok').attr('disabled', '').addClass('form-button-disabled');
+                      }
+                    })
+                }
+                $("#edit-finding-0").click(function(){
+                    $('.form-item-improve-comment label').html("Please add comments to help us improve the content:");
+                });
+                $("#edit-finding-1").click(function(){
+                    $('.form-item-improve-comment label').html("Please provide information on what you were looking for:");
+                });
+                $("#edit-suggestions-0").click(function(){
+                    $('.form-item-suggest-comment label').html("Please provide your suggestions:");
+                });
+                $("#edit-suggestions-1").click(function(){
+                    $('.form-item-suggest-comment label').html("Additional Comments:");
+                });
+                $('input[name="pageURL"]').val(window.location.href.split('&pageURL=')[1]);
+                feedback.charactersRemaining('my-notifications-page-feedback-form', 'drupalFeedbackCommentCharactersRemaining', 1000);
+                feedback.charactersRemaining('fix-central-page-feedback-form', 'drupalFeedbackCommentCharactersRemaining', 1000);
+                feedback.charactersRemaining('pa-questions-form', 'drupalFeedbackCommentCharactersRemaining', 1000);
+                // console.log($('input[name="pageURL"]').val());
+            });
+        }
+    };
+
+})(jQuery, Drupal);
+
+function init() {
+    jQuery("#edit-field-obj-assigned-to-target-id--description").hide();
+}
+
+function show_hide_assign_to_description() {
+    if (jQuery('#edit-field-feedback-status').val() === '3' && jQuery('#edit-field-obj-assigned-to-target-id').val().length === 0) {
+        jQuery("#edit-field-obj-assigned-to-target-id--description").show();
+    } else {
+        jQuery("#edit-field-obj-assigned-to-target-id--description").hide();
+    }
+}

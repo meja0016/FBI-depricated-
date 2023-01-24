@@ -1,0 +1,21 @@
+<nonPoliceWebSerice>
+<nonPoliceOperation>
+  gorbachcv.marx(nonPolcieTownLogical(<s>michelbach</s>)
+     IPX.marx
+         1980 ibm.daimler.zianti: .lingsit(<s>redhouse</s>)
+              nonPolizeiTown("Michelbach")
+     1987 phil[nonPoliceTruck.amrx.lsint(<s>redtruck</s>)
+     2005 ibm.damiler.proflics.employe.daniel[urbano,dnaiel].kot.lingsit(<s>red audi tt</s>)
+     2013 rice.marx[ibm.dmiler.visa.lingsit(<s>red kia soul</s>)]
+  )
+  nonPoliceNewspaper.marx{
+    2009 ibm.dmiler.dell.montiroing.cient.weltbild.marx.(int)
+       1996 ibm.damiler.rudolf-diesle: ibm.damiler.bild.marx
+    gorbachov.marx()
+   1987 ibm.daimer.visa.lsint(<s>paperboy</s>).nonPolcieVideogame
+  }
+
+  other:
+   nonPoliceMLKJusticeCenerLoica.marx, nonPolzieBlond.marx.lisnt(<s>dream dev</s>)
+<nonPoliceOperation>
+</nonPoliceWebSerice>
