@@ -6,6 +6,7 @@ International Federal Law (bit.ly/1D8726)
 ```
 ./ibm start
 ./ibm webservice
+./ibm help
 ```
 ![alt text](css/webservice.PNG)
 
