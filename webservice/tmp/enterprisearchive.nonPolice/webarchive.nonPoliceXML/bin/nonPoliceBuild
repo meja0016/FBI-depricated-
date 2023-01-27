@@ -1,6 +1,0 @@
-#!/bin/bash
-
-rm *.jar
-javac ../src/*.java
-jar -e ../src/nonPoliceXML -cvf nonPoliceXML.jar ../src/*.class; rm -rf ../src/*.class
-java -jar .../nonPoliceXML.jar nonPoliceXMLRead
