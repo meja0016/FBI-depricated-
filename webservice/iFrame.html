@@ -1,4 +1,20 @@
-nonPoliceHello
-https://raw.githubusercontent.com/meja0016/www/main/webservice/nonPoliceBPM/index.html
 
-<a href=javascript:alert(data) >data</a>
+
+<!DOCTYPE html>
+  <html>
+    <head>
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">            </script>
+      <script>
+         $(document).ready(function(){ 
+                $.get("https://raw.githubusercontent.com/meja0016/www/main/webservice/nonPoliceBPM/index.html", function(data) {
+                                                          $("#header").html(data);
+                                                           });
+              }); 
+       </script>
+  </head>
+ <body>
+   nonPoliceHello
+
+   <div id="header"></div>
+ </body>
+ </html>
