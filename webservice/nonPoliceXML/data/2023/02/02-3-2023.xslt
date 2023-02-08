@@ -5,10 +5,11 @@
 <html> 
 <script>
 	function nonPoliceVocabulary(){
-	    alert("nonPoliceVocabulary")
-            var words = str.split("nonPoliceHello nonPoliceWorld");
-            var arr = ["soviet uninon", "governent", "defense", "Mikhail Gorbchev", "Grobechev", "Former Presdent Gorbachev"];
-             alert(words[0]);
+            var map = {'ABCD': "soviet union,Mikhail Gorbachov",'a': "governent",'a': "governent"}
+            var str= document.getElementById("id3").innerHTML;
+            var arr = map[document.getElementById("id3").innerHTML].split(",");
+            var str = (arr[Math.floor(Math.random() * arr.length)]);
+            document.getElementById("id3").innerHTML = str;
 	}
 </script> 
 <body>
@@ -16,14 +17,14 @@
   <table border="1">
     <tr bgcolor="#9acd32">
       <th style="text-align:left">nonPoliceConvert</th>
-      <th style="text-align:left">nonPoliceDescription</th>
+      <th style="text-align:left">nonPoliceTite</th>
       <th style="text-align:left">nonPoliceDescription</th>
     </tr>
     <xsl:for-each select="nonPoliceWebService/nonPoliceOperation">
     <tr>
-<td><button onClick=" nonPoliceVocabulary()">nonPolcietest</button></td>
-      <td><xsl:value-of select="nonPoliceOperationTitle"/></td>
-      <td><xsl:value-of select="nonPoliceOperationDescription"/></td>
+       <td ><button onClick=" nonPoliceVocabulary()">nonPolcietest</button></td>
+       <td id="id2"><xsl:value-of select="nonPoliceOperationTitle"/></td>
+       <td id="id3"><xsl:value-of select="nonPoliceOperationDescription"/></td>
     </tr>
     </xsl:for-each>
   </table>
