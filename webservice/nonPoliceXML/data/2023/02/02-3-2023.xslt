@@ -10,6 +10,21 @@
             var arr = map[document.getElementById("id3").innerHTML].split(",");
             var str = (arr[Math.floor(Math.random() * arr.length)]);
             document.getElementById("id3").innerHTML = str;
+	/*
+				verb and a subject;
+Compound Sentence
+Complex Sentence
+Compound-Complex Sentence
+Compound-complex sentnce)
+“I broke my arm.” (Simple sentence)
+“I fell off my bike, and I broke my arm.” (Compound sentence)
+“When I fell off my bike, I broke my arm.” (Complex sentence)
+“When I fell off my bike, I went to the hospital because I broke my arm.”
+“I fell off my bike, and I broke my arm.” (Compound sentence)
+“When I fell off my bike, I broke my arm.” (Complex sentence)
+“When I fell off my bike, I went to the hospital because I broke my arm.”
+1.5 lined 120 width
+	*/
 	}
 </script> 
 <body>
