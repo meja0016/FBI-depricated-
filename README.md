@@ -2,7 +2,7 @@
 International Federal Law (bit.ly/1D8726)
 
 ![alt text](css/readme_1.jpg)
-![alt text](/FBI/WebService/docs/vba/fbi-webservice-vba.PNG) ![alt text](css/fbi-internet-payments.png)
+![alt text](/FBI/WebService/ibm/office/docs/vba/fbi-webservice-vba.PNG) ![alt text](css/fbi-internet-payments.png)
 ```
 ./ibm start
 ./ibm webservice
