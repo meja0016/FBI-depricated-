@@ -1,0 +1,3 @@
+(function($){Drupal.behaviors.fixColorboxButtons={attach:function(context,settings){setTimeout(function(){if($("#colorbox",context).length){$('#cboxPrevious',context).attr("aria-label","Previous");$('#cboxNext',context).attr("aria-label","Next");$('#cboxSlideshow',context).attr("aria-label","Slideshow");}},1000);}}})(jQuery);;;/*})'"*/
+(function($){var siteImproveAdded;function addSiteImprove(){if(!siteImproveAdded){siteImproveAdded=true;var sz=document.createElement('script');sz.type='text/javascript';sz.async=true;sz.src='//siteimproveanalytics.com/js/siteanalyze_8906.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(sz,s);}}
+Drupal.behaviors.dojSiteImprove={attach:function(context,settings){addSiteImprove();}};})(jQuery);;/*})'"*/
