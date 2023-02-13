@@ -1,8 +1,0 @@
-var dblue_search_app = angular.module('dblue_search_result_app', [
-	'ngSanitize',
-	'dBlueSearchResultControllers'
-]);
-
-angular.module('dblue_search_app', []).config(function($interpolateProvider){
-    $interpolateProvider.startSymbol('{[{').endSymbol('}]}');
-});
