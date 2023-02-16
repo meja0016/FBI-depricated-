@@ -1,0 +1,23 @@
+(function($, Drupal) {
+    'use strict';
+    var initialized;
+
+    function init(settings) {
+        if (!initialized) {
+            initialized = true;
+        }
+    }
+
+    Drupal.behaviors.support_search = {
+        attach: function(context, settings) {
+            init(settings);
+            $(context).find('.toolbar-support-search').once('support_search').each(function() {
+                $(this).on('click', function(e) {
+                    e.preventDefault();
+                    window.open('//ssw-ui.mybluemix.net', '_blank');
+                });
+            });
+        }
+    };
+
+})(jQuery, Drupal);
