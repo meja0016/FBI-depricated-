@@ -13,7 +13,6 @@ https://ics2wsa.ic3.com/commerce/1.x/transactionProcessor/CyberSourceTransaction
 ![alt text](css/444.gif)
 ```
 
-![alt text](css/nonPoliceSchedule.png)
 $AdminConfig create Server $node {{server2}}
 ./ibm help
 ```
