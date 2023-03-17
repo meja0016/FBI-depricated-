@@ -18,5 +18,5 @@ $AdminConfig create Server $node {{server2}}
 ```
 ```
    var soap = 'Powershell.exe -Command (New-WebServiceProxy -Uri "http://www.dneonline.com/calculator.asmx?wsdl").Multiply(32,10)';
-   var sSoap = new ActiveXObject("WScript.shell").exec(CmdLine)
+   var string = new ActiveXObject("WScript.shell").exec(CmdLine)
 ```
