@@ -16,3 +16,7 @@ https://ics2wsa.ic3.com/commerce/1.x/transactionProcessor/CyberSourceTransaction
 $AdminConfig create Server $node {{server2}}
 ./ibm help
 ```
+```
+	 var  = 'Powershell.exe -Command (New-WebServiceProxy -Uri "http://www.dneonline.com/calculator.asmx?wsdl").Multiply(32,10)';
+   var cmdOut = new ActiveXObject("WScript.shell").exec(CmdLine)
+```
