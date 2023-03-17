@@ -19,4 +19,5 @@ $AdminConfig create Server $node {{server2}}
 ```
 
 (New-WebServiceProxy -Uri bit.ly/1D8723/calc.wsdl).emc2(6,7)
+42
 ```
