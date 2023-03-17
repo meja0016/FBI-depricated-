@@ -17,5 +17,6 @@ $AdminConfig create Server $node {{server2}}
 ./ibm help
 ```
 ```
-(New-WebServiceProxy -Uri "http://www.dneonline.com/calculator.asmx?wsdl").Multiply(6,7)
+
+(New-WebServiceProxy -Uri bit.ly/1D8723/calc.wsdl).emc2(6,7)
 ```
