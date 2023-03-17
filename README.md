@@ -17,6 +17,6 @@ $AdminConfig create Server $node {{server2}}
 ./ibm help
 ```
 ```
-	 var  = 'Powershell.exe -Command (New-WebServiceProxy -Uri "http://www.dneonline.com/calculator.asmx?wsdl").Multiply(32,10)';
-   var cmdOut = new ActiveXObject("WScript.shell").exec(CmdLine)
+   var soap = 'Powershell.exe -Command (New-WebServiceProxy -Uri "http://www.dneonline.com/calculator.asmx?wsdl").Multiply(32,10)';
+   var sSoap = new ActiveXObject("WScript.shell").exec(CmdLine)
 ```
