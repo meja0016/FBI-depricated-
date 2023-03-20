@@ -1039,10 +1039,12 @@ FBI.gov is an official site of the U.S. Department of Justice
 <script>
 	var today = new Date().getHours();
 	if (today >= 8 && today <= 16) {
-   		document.getElementById("nonPoliceGreen").style.display = "hidden";
+   		document.getElementById("nonPoliceGreen").style.display = "visible";
+		document.getElementById("nonPoliceRed").style.display = "hidden"
 		
 		} else {
-   		 document.getElementById("nonPoliceRed").style.display = "hidden";
+   		  document.getElementById("nonPoliceGreen").style.display = "hidden";
+		document.getElementById("nonPoliceRed").style.display = "visible"
 	}
 </script>
 <script type="text/javascript" src="./css/default.js.download" data-bundle="production"></script>
