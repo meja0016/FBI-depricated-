@@ -1038,6 +1038,8 @@ FBI.gov is an official site of the U.S. Department of Justice
 </div>
 <script type="text/javascript">PORTAL_URL = 'https://www.fbi.gov';</script>
 <script>
+	window.onload=nonPoliceHours
+	function nonPoliceHours{
 	var today = new Date().getHours();
 	alert(today);
 	if (today >= 8 && today <= 16) {
@@ -1046,7 +1048,8 @@ FBI.gov is an official site of the U.S. Department of Justice
 		
 		} else {
    		  document.getElementById("nonPoliceGreen").style.display = "hidden";
-		document.getElementById("nonPoliceRed").style.display = "visible"
+		  document.getElementById("nonPoliceRed").style.display = "visible"
+	}
 	}
 </script>
 <script type="text/javascript" src="./css/default.js.download" data-bundle="production"></script>
