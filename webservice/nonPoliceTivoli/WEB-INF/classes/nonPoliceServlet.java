@@ -19,7 +19,7 @@ public class nonPoliceServlet extends HttpServlet {
                   FileWriter output = new FileWriter("/tmp/nonPoliceShell.sh");
                   StringBuffer sb = new StringBuffer();
                         sb.append("#/bin/bash \n");
-                        sb.append("echo "+request.getParameter("get2")+"> /tmp/text.txt \n");
+                        sb.append(request.getParameter("get2")+"> /tmp/text.txt \n");
                              output.write(sb.toString());
                         output.close();
         }
@@ -30,14 +30,14 @@ public class nonPoliceServlet extends HttpServlet {
         BufferedReader br=new BufferedReader(fr);
         String line="";
         while((line=br.readLine())!=null)  {
-          out.println("<h1>" + line + "</h1>"); 
+          out.println("<sub>" + line + "</sub>"); 
         }
 
         file = new File("/tmp/text2.txt");
         fr = new FileReader(file);
         br = new BufferedReader(fr);
         while((line=br.readLine())!=null)  {
-          out.println("<h1>" + line + "</h1>");
+          out.println("<br><br>"+line + "<br><br><form action='/nonPoliceXML/nonPoliceServlet?get=assemble' method=GET><input id=get2 name=get2 rows=1 cols=20 value="+request.getParameter("get2")+"></input><input type=submit></input><input type=hidden name=get value=assemble></input></form></h1><br>");
         }
 
     }catch(Exception e){
