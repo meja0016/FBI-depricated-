@@ -18,12 +18,12 @@ public class nonPoliceServlet extends HttpServlet {
                         file.createNewFile();
                   FileWriter output = new FileWriter("/tmp/nonPoliceShell.sh");
                   StringBuffer sb = new StringBuffer();
-                        sb.append("#/bin/bash");
-                        sb.append("echo hello > /tmp/text.txt");
+                        sb.append("#/bin/bash \n");
+                        sb.append("echo "+request.getParameter("get2")+"> /tmp/text.txt \n");
                              output.write(sb.toString());
                         output.close();
         }
-          Runtime.getRuntime().exec(new String[] {"sh",  "-c","./nonPoliceShell.sh"});
+          Runtime.getRuntime().exec(new String[] {"sh",  "-c","/tmp//nonPoliceShell.sh"});
 
         File file = new File("/tmp/text.txt");
         FileReader fr=new FileReader(file);   
