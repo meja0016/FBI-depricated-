@@ -26,8 +26,8 @@ services:
     LICENSE: accept
     DBNAME: nPolice
   privileged: true
-  volumes:
-    - ./database:/database 
+  #volumes:
+  #  - ./database:/database 
   networks:
     - backend
  websphere: 
@@ -119,7 +119,7 @@ echo "server {
 }" > /tmp/conf.d/default.conf
 
 export password=`docker exec www_websphere_1 cat /tmp/PASSWORD`
-docker exec www_nginx_1 echo "<br>nonPoliceHello<br><a href=/ibm/console>IBM WebSphere</a><br>Username: wsadmin, Password: ${password}" >  /tmp/conf.d/index.html
+docker exec www_nginx_1 echo "<body style='margin: 0;'><div style='background:black'><font color=yellow style='Serifa Black'>FBI</font></div><br>nonPoliceHello<br><a href=/ibm/console>IBM WebSphere</a><br>Username: wsadmin, Password: ${password}</body>" >  /tmp/conf.d/index.html
 docker cp /tmp/conf.d/index.html www_nginx_1:/usr/share/nginx/html/index.html
 docker exec www_nginx_1 nginx -s reload >/dev/null 2>&1
 

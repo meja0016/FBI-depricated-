@@ -1,0 +1,25 @@
+<web-app xmlns="http://geronimo.apache.org/xml/ns/j2ee/web-1.1" xmlns:naming="http://geronimo.apache.org/xml/ns/naming-1.1">
+  <dep:environment xmlns:dep="http://geronimo.apache.org/xml/ns/deployment-1.1">
+    <dep:moduleId>
+      <dep:groupId>org.apache.geronimo.samples</dep:groupId>
+      <dep:artifactId>Calculator</dep:artifactId>
+      <dep:version>1.0</dep:version>
+      <dep:type>car</dep:type>
+    </dep:moduleId>
+    <dep:dependencies>
+	<dep:dependency>
+           <dep:groupId>geronimo</dep:groupId>
+           <dep:artifactId>geronimo-webservices</dep:artifactId>
+           <dep:type>jar</dep:type>
+    </dep:dependency>
+	<dep:dependency>
+           <dep:groupId>geronimo</dep:groupId>
+           <dep:artifactId>geronimo-axis</dep:artifactId>
+           <dep:type>jar</dep:type>
+    </dep:dependency>
+    </dep:dependencies>	
+    <dep:hidden-classes/>
+    <dep:non-overridable-classes/>
+  </dep:environment>
+ <context-root>/Calculator</context-root> 
+</web-app>
