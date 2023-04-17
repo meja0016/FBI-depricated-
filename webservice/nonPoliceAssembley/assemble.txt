@@ -1,0 +1,11 @@
+#!/bin/sh
+
+c++ -I/home/codespace/java/current/include/ -I/home/codespace/java/current/include/linux -shared -o jni.so JNI.c
+
+javac -h . JNI.java
+
+javac -h . JNI
+
+java -Djava.library.path=. JNI
+
+nm jni.so | grep say 0000000000001119 T _Z22Java_HelloJNI_sayHelloP7JNIEnv_P8_jobject
