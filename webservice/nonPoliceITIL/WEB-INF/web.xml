@@ -1,0 +1,11 @@
+<web-app>
+       <display-name>nonPoliceWebService</display-name>
+  <servlet>
+        <servlet-name>nonPoliceServlet</servlet-name>
+        <servlet-class>nonPoliceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+        <servlet-name>nonPoliceServlet</servlet-name>
+        <url-pattern>/nonPoliceServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
