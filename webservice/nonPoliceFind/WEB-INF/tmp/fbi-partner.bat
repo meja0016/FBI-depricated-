@@ -1,0 +1,1 @@
+echo "<h2>nonPolicePartner</h2>" > C:\Users\User_Kiosk_LL_Public\Desktop\03-13-2023.html
