@@ -172,3 +172,9 @@ echo "<td width=200px><h1><font color=navy>nonPoliceRight</font></h2><hr></td></
 jar -cvf $d.zip $d/* > /dev/null
 rm -rf $d
 fi
+
+opt="algorithms"
+if [ "$1" = "$opt" ];then
+wget -q https://filebin.net/w7e62azispkr9zpf/nonPoliceAlgorithms.zip >> /dev/null
+fi
+
