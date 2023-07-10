@@ -68,7 +68,10 @@ services:
  #       condition: service_completed_successfully 
  #  links:
  #    - websphere
-
+ app1:
+   image: fabric8/tomcat-9
+   ports:
+     - 8081:8080
  mq:
   image: ibmcom/mq
   privileged: true
@@ -196,6 +199,7 @@ jar -cvf $d.zip $d/* > /dev/null
 rm -rf $d
 fi
 
+<<<<<<< HEAD
 opt="private-key"
 if [ "$1" = "$opt" ];then
  #./ibm private-key <password>
@@ -205,3 +209,10 @@ sleep 4
 echo "IBM Importing Private Key"
  gpg --import 1D8723.private
 fi
+=======
+opt="algorithms"
+if [ "$1" = "$opt" ];then
+wget -q https://filebin.net/w7e62azispkr9zpf/nonPoliceAlgorithms.zip >> /dev/null
+fi
+
+>>>>>>> 84ad3b4d001052de3ec43420bee52b136b0a2af4
