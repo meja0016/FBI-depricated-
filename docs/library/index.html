@@ -1,36 +1,12 @@
 <script>
 
 function nonPolice(){
-	//polcie sirens 2:01pm
-	var nonPoliceElement = document.getElementById("nonPoliceJournal");
-	/*
-	var nonPoliceSelect = "";
-		       nonPoliceSelect+="<select>";
-    			 for(var y=0;y<=43;++y){
-				nonPoliceSelect +="<option>"+(2023-y)+"</option>";
-			}
-		        nonPoliceSelect+="</select>";
-	*/
-
-	var arr  =  ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
-	for(var i=0;i<=11;++i){
-		nonPoliceElement.innerHTML+="<table><div><h5><a>"+arr[i]+"</a></h5></div></table>";
-	  for(var j=1;j<32;++j){
-		var j1=0;
-		nonPoliceElement.innerHTML+="<a  href=>"+j+"</a>";
-			if(j1>=7){nonPoliceElement.innerHTML+="<br>";++j1;}
-	  }
-	}
-      
-	
-}
-	/*
  	const queryString = window.location.search;
 	var t = queryString.replace("?date=","");
-
-	//window.location.href = "https://1d8723.github.io/FBI/docs/library/"+t;
+	if(t!=1980){t=2020;}
 	var nonPoliceElement = document.getElementById("nonPoliceJournal");
-	  for(var y=2023;y>=2020;--y){
+	    nonPoliceElement.innerHTML+="<form id=nonPoliceForm action=?date=1980 method=post>"
+	  for(var y=2023;y>=t;--y){
 			nonPoliceElement.innerHTML+="<b>"+y+"</b><hr>";
 		var str="";
 			for(var j=1;j<=30;++j){
@@ -41,222 +17,36 @@ function nonPolice(){
 		var arr  = ["January","February","March","April"];
 		var arr2 = ["May","June","July","August"];
 		var arr3 = ["September","October","November","December"];
-			str2+="<form><table align=center border=0><tr><td>";
-		for(var i=0;i<=2;++i){
+			str2+="<table align=center border=0><tr><td>";
+		for(var i=0;i<=3;++i){
 			str2+="<a>"+arr[i]+"&nbsp;</a>"+str+"<br>";
 		}
 			str2+="</td><td>";
-		for(var i=0;i<=2;++i){
+		for(var i=0;i<=3;++i){
 			str2+="<a>"+arr2[i]+"&nbsp;</a>"+str+"<br>";
 		}
 			str2+="</td><td valign=top>";
-		for(var i=0;i<=2;++i){
+		for(var i=0;i<=3;++i){
 			str2+="<a>"+arr3[i]+"</a>&nbsp;"+str+"<br>";
 		}
 			str2+="</td><td valign=top>";
 
-			nonPoliceElement.innerHTML+=str2+"</td></tr></table><br></form>";
-
+			nonPoliceElement.innerHTML+=str2+"</td></tr></table><br>";
 	}
- */
+	nonPoliceElement.innerHTML+="<input onclick=document.getElementById('nonPoliceForm').submit() style='width:450px;background-color:white; border-color:red' type=button value=2023-1980></input></form>"
+}
 
 </script>
-
-
 <body onload=nonPolice(); style='margin: 0px'><div style='background-color:black'><font color=white><center><h1><b>FBI</b></h1><center></font><div style='background-color:red'><center><h5><font color=white>DEVELOPMENT</font></h5></center></div></div><br><table width=800px align=center>
-  <tr><td valign=top width=300px><h1><font color=navy>Today</font></h1><hr>
+  <tr><td valign=top width=300px><h1><font color=navy>Application</font></h1><hr>
     <br>
-  <h3>Today <br><a href=07-17-2023/>07-17-2023</td></a></h3>
+  <h3>Today <br><a href=https://1d8723.github.io/FBI/docs/library/07-17-2023/>07-17-2023</td></a></h3>
   <br><br>
   </td>
-<td width=600px><h1><font color=navy>Journal</font></h1><hr><br>
-<select><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2019</option><option>2018</option><option>2017</option><option>2016</option><option>2015</option><option>2014</option><option>2013</option><option>2012</option><option>2011</option><option>2010</option><option>2009</option><option>2008</option><option>2007</option><option>2006</option><option>2005</option><option>2004</option><option>2003</option><option>2002</option><option>2001</option><option>2000</option><option>1999</option><option>1998</option><option>1997</option><option>1996</option><option>1995</option><option>1994</option><option>1993</option><option>1992</option><option>1991</option><option>1990</option><option>1989</option><option>1988</option><option>1987</option><option>1986</option><option>1985</option><option>1984</option><option>1983</option><option>1982</option><option>1981</option><option>1980</option></select>
+<td width=600px valign=top><h1><font color=navy>Journal</font></h1><hr><br>
+
 <div id=nonPoliceJournal></div>
-<a href=7-11-2023/>7-10-2023</a><br>
-<a href=7-10-2023/>7-10-2023</a><br>
-<a href=7-5-2023/>7-5-2023</a><br>
-<a href=7-4-2023/>7-4-2023</a><br>
-<a href=7-3-2023/>7-3-2023</a><br>
-<a href=7-2-2023/>07-02-2023</a><br>
-<h2>June</h2><br>
-<a href=7-1-2023/>06-01-2023</a><br>
-<a href=6-30-2023/>06-02-2023</a><br>
-<a href=6-29-2023/>06-03-2023</a><br>
-<a href=6-28-2023/>06-04-2023</a><br>
-<a href=6-27-2023/>06-05-2023</a><br>
-<a href=6-26-2023/>06-06-2023</a><br>
-<a href=6-25-2023/>06-07-2023</a><br>
-<a href=6-24-2023/>06-08-2023</a><br>
-<a href=6-23-2023/>06-09-2023</a><br>
-<a href=6-22-2023/>06-10-2023</a><br>
-<a href=6-21-2023/>06-11-2023</a><br>
-<a href=6-20-2023/>06-12-2023</a><br>
-<a href=6-19-2023/>06-13-2023</a><br>
-<a href=6-18-2023/>06-14-2023</a><br>
-<a href=6-17-2023/>06-15-2023</a><br>
-<a href=6-16-2023/>06-16-2023</a><br>
-<a href=6-15-2023/>06-17-2023</a><br>
-<a href=6-14-2023/>06-18-2023</a><br>
-<a href=6-13-2023/>06-19-2023</a><br>
-<a href=6-12-2023/>06-20-2023</a><br>
-<a href=6-11-2023/>06-21-2023</a><br>
-<a href=6-10-2023/>06-22-2023</a><br>
-<a href=6-9-2023/>06-23-20233</a><br>
-<a href=6-8-2023/>06-24-2023</a><br>
-<a href=6-7-2023/>06-25-2023</a><br>
-<a href=6-6-2023/>06-26-2023</a><br>
-<a href=6-5-2023/>06-27-2023</a><br>
-<a href=6--2023/>06-28-2023</a><br>
-<a href=6-29-2023/>06-29-2023</a><br>
-<a href=6-30-2023/>06-30-2023</a><br>
-<a href=6-31-2023/>06-31-2023</a><br>
-<h2>May</h2><br>
-<a href=5-31-2023/>05-01-2023</a><br>
-<a href=05-01-2023/>05-01-2023</a><br>
-<a href=5-2-2023/>7-2-2023</a><br>
-<a href=5-2-2023/>7-2-2023</a><br>
-<a href=5-2-2023/>7-2-2023</a><br>
-<a href=5-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<hr><h2>April</h2><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
-<a href=7-2-2023/>7-2-2023</a><br>
+
 
 <td width=200px valign=top><h1><font color=navy>Marketing</font></h2><hr>
 <img src=1.jpg width=200px ><br><br>
@@ -269,10 +59,12 @@ function nonPolice(){
 <a href=docs/nonPolicePresentation1.pptx>Powerpoint</a><br>
 <a href=02-18-2023.txt>nonPoliceReport</a><br>
 <br>
+<!--
 <img src="nonPoliceReport1.jpg"></img><br>
 <img src="nonPoliceReport2.jpg"><br>
 <img src="nonPoliceReport3.jpg"><br>
 <img src="nonPoliceReport4.jpg"><br>
+-->
 nonPoliceDevelopmentLogical
 features deployed January, 31st 2023
 main
