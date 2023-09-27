@@ -1,5 +1,6 @@
-<nonPoliceProject>
-<nonPoliceName>
-</nonPoliceName>
-  
-</nonPoliceProject>
+<nonPoliceProgram>
+<nonPoliceName>PENTAGON.EMEA</nonPoliceProgram>
+<nonPolicePorjects>
+<nonPoliceProject><nonPoliceName>JFK</nonPoliceName></nonPoliceProject>
+</nonPoliceProjects>
+</nonPoliceProgram>
