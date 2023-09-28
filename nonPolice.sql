@@ -16,7 +16,8 @@ INSERT INTO nonPoliceProject (id, name) VALUES (3, 'REAL ESTATE');
 INSERT INTO nonPoliceProgram (id, name) VALUES (2, 'Chruch');
 INSERT INTO nonPoliceProgram (id, name) VALUES (5, 'USD');
 INSERT INTO nonPoliceProgram (id, name) VALUES (6, '1D8723');
-INSERT INTO nonPoliceProgram (id, name) VALUES (7, '');
+INSERT INTO nonPoliceProgram (id, name) VALUES (7, 'COMMUNCATIONS');
+INSERT INTO nonPoliceProgram (id, name) VALUES (8, 'ATOMBOMB');
 #db2 -c "select * from nonPoliceProgram"
 #db2 -tvf /tmp/nonPolice.sql
 
