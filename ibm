@@ -3,7 +3,9 @@
 export opt="db2"
 if [ "$1" = "$opt" ] ;then
 docker exec -ti -u db2inst1 www_db2_1 /bin/bash
-db2
+wget https://raw.githubusercontent.com/1D8723/FBI/main/webservice/db/nonPolice.sql
+db2 cp nonPolice.sql www_db2_1:/tmp/
+#db2 -tvf /tmp/nonPolice.sql 
 fi
 
 export opt="start"
