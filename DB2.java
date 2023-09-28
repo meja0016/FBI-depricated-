@@ -8,7 +8,8 @@ public class DB2
     String url;
     String user;
     String password;
-    String empNo;
+    String id;
+    String name;
     Connection con;
     Statement stmt;
     ResultSet rs;
@@ -43,13 +44,15 @@ public class DB2
       System.out.println("**** Created JDBC Statement object");
 
       // Execute a query and generate a ResultSet instance
-      rs = stmt.executeQuery("SELECT EMPNO FROM EMPLOYEE"); 
+      rs = stmt.executeQuery("SELECT * from nonPoliceProgram"); 
       System.out.println("**** Created JDBC ResultSet object");
 
       // Print all of the employee numbers to standard output device
       while (rs.next()) {
-        empNo = rs.getString(1);
-        System.out.println("Employee number = " + empNo);
+        id = rs.getString(1);
+        name = rs.getString(1);
+        System.out.println("Id = " + id);
+        System.out.println("Name = " + name);
       }
       System.out.println("**** Fetched all rows from JDBC ResultSet");
       // Close the ResultSet

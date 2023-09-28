@@ -8,6 +8,12 @@ db2 cp nonPolice.sql www_db2_1:/tmp/
 #db2 -tvf /tmp/nonPolice.sql 
 fi
 
+export opt="db2-java"
+if [ "$1" = "$opt" ] ;then
+docker cp DB2.java www_db2_1:/tmp
+docker exec www_db2_1 /database/config/db2inst1/sqllib/java/jdk64/bin/java -cp '/tmp/:/tmp/db2java.zip' DB2 npolice db2inst1 password
+fi
+
 export opt="start"
 if [ "$1" = "$opt" ] ;then
 
