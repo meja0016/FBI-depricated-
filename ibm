@@ -8,10 +8,14 @@ db2 cp nonPolice.sql www_db2_1:/tmp/
 #db2 -tvf /tmp/nonPolice.sql 
 fi
 
-export opt="db2-java"
+export opt="db2-jdk"
 if [ "$1" = "$opt" ] ;then
 docker cp DB2.java www_db2_1:/tmp
 docker exec www_db2_1 /database/config/db2inst1/sqllib/java/jdk64/bin/java -cp '/tmp/:/tmp/db2java.zip' DB2 npolice db2inst1 password
+docker cp  www_db2_1:/tmp/db2jcc4.jar
+docker cp www_db2_1:/tmp/db2jcc_license_cu.jar .
+docker cp db2jcc4.jar www_websphere_1:/tmp
+docker cp db2jcc4.jar www_websphere_1:/tmp
 fi
 
 export opt="start"
@@ -119,7 +123,12 @@ echo "server {
         proxy_set_header X-Forwarded-For \$host;
         proxy_pass https://www_websphere_1:9043/ibm/console;
     }
-
+    location /nonPoliceToday {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceToday;
+    }
     location /nonPoliceXML {
         proxy_set_header X-Forwarded-Host \$host;
        proxy_set_header X-Forwarded-Server \$host;
