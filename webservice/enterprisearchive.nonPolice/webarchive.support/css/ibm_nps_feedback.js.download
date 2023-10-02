@@ -1,0 +1,12 @@
+Drupal.behaviors.ibm_nps_feedback = {
+    attach: function (context, settings) {
+        init(settings);
+        jQuery(document.body, context).once('ibm_nps_feedback').on('click', '.toolbar-ibm-nps-feedback', function (e) {
+            e.preventDefault();
+            BH.showSurvey('braLCDylzovomYkOx6hK1Yg7m');
+            return false;
+        });
+   }
+}
+
+

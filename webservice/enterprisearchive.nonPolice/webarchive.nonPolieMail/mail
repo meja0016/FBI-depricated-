@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# 725 #jdk.tls.disabledAlgorithms=SSLv3, TLSv1, TLSv1.1, RC4, DES, MD5withRSA, \
+#openssl s_client -connect xxxxxx.de:25 -starttls smtp
+
+javac -cp .:mail-1.5.0-b01.jar nonPoliceEmail.java
+java -cp .:mail-1.5.0-b01.jar nonPoliceEmail
