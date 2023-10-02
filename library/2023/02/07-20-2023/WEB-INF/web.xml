@@ -1,0 +1,10 @@
+<web-app>
+  <servlet>
+    <servlet-name>AxisServlet</servlet-name>
+    <servlet-class>org.apache.axis.transport.http.AxisServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AxisServlet</servlet-name>
+    <url-pattern>/services/*</url-pattern>
+  </servlet-mapping>
+</web-app>

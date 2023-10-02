@@ -1,0 +1,24 @@
+ <ns1:deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java" xmlns:ns1="http://xml.apache.org/axis/wsdd/">
+ <ns1:handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper"/>
+ <ns1:service name="nonPolice" provider="java:RPC" style="wrapped" use="literal">
+  <ns2:operation name="add" qname="ns1:add" returnQName="ns1:addReturn" returnType="xsd:int" soapAction="" xmlns:ns1="http://nonPolice"  xmlns:ns2="http://xml.apache.org/axis/wsdd/">
+   <ns2:parameter qname="ns1:a" type="xsd:int"/>
+   <ns2:parameter qname="ns1:b" type="xsd:int"/>
+  </ns2:operation>
+  <ns1:parameter name="allowedMethods" value="add"/>
+  <ns1:parameter name="wsdlPortType" value="nonPolice"/>
+  <ns1:parameter name="className" value="nonPolice.nonPolice"/>
+  <ns1:parameter name="wsdlServicePort" value="nonPolice"/>
+  <ns1:parameter name="schemaQualified" value="http://nonPolice"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://nonPolice"/>
+  <ns1:parameter name="wsdlServiceElement" value="nonPoliceService"/>
+ </ns1:service>
+ <ns1:transport name="http">
+  <ns1:requestFlow>
+   <ns1:handler type="URLMapper"/>
+  </ns1:requestFlow>
+  <ns1:parameter name="qs:list" value="org.apache.axis.transport.http.QSListHandler"/>
+  <ns1:parameter name="qs:wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+  <ns1:parameter name="qs.method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+ </ns1:transport>
+</ns1:deployment> 

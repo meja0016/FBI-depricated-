@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://nonPolice" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://nonPolice" xmlns:intf="http://nonPolice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://nonPolice" xmlns="http://www.w3.org/2001/XMLSchema">
+<!-- State of Californa Program and Project Managment; consultatn  to develop service for  addition in school grade 1 -->
+   <element name="add">
+    <complexType>
+     <sequence>
+      <element name="a" type="xsd:int"/>
+      <element name="b" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addResponse">
+    <complexType>
+     <sequence>
+      <element name="addReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="runTransaction">
+    <complexType>
+     <sequence>
+      <element name="instruction" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="runTransactionResponse">
+    <complexType>
+     <sequence>
+      <element name="runTransactionReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="emc2">
+    <complexType>
+     <sequence>
+      <element name="a" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="emc2Response">
+    <complexType>
+     <sequence>
+      <element name="emc2Return" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="runTransactionResponse">
+
+      <wsdl:part element="impl:runTransactionResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addRequest">
+
+      <wsdl:part element="impl:add" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="emc2Request">
+
+      <wsdl:part element="impl:emc2" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addResponse">
+
+      <wsdl:part element="impl:addResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="runTransactionRequest">
+
+      <wsdl:part element="impl:runTransaction" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="emc2Response">
+
+      <wsdl:part element="impl:emc2Response" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="nonPolice">
+
+      <wsdl:operation name="add">
+
+         <wsdl:input message="impl:addRequest" name="addRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:addResponse" name="addResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="runTransaction">
+
+         <wsdl:input message="impl:runTransactionRequest" name="runTransactionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:runTransactionResponse" name="runTransactionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="emc2">
+
+         <wsdl:input message="impl:emc2Request" name="emc2Request">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:emc2Response" name="emc2Response">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="nonPoliceSoapBinding" type="impl:nonPolice">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="add">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="runTransaction">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="runTransactionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="runTransactionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="emc2">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="emc2Request">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="emc2Response">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="nonPoliceService">
+
+      <wsdl:port binding="impl:nonPoliceSoapBinding" name="nonPolice">
+
+         <wsdlsoap:address location="http://localhost:8080/nonPolice/services/nonPolice"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

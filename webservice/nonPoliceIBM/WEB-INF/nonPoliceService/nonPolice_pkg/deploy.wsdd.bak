@@ -1,0 +1,36 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from nonPoliceService WSDL service -->
+
+  <service name="nonPolice" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://nonPolice"/>
+      <parameter name="wsdlServiceElement" value="nonPoliceService"/>
+      <parameter name="schemaQualified" value="http://nonPolice"/>
+      <parameter name="wsdlServicePort" value="nonPolice"/>
+      <parameter name="className" value="nonPolice_pkg.NonPoliceSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="nonPolice"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="add" qname="operNS:add" xmlns:operNS="http://nonPolice" returnQName="retNS:addReturn" xmlns:retNS="http://nonPolice" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:a" xmlns:pns="http://nonPolice" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:b" xmlns:pns="http://nonPolice" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="runTransaction" qname="operNS:runTransaction" xmlns:operNS="http://nonPolice" returnQName="retNS:runTransactionReturn" xmlns:retNS="http://nonPolice" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:instruction" xmlns:pns="http://nonPolice" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="emc2" qname="operNS:emc2" xmlns:operNS="http://nonPolice" returnQName="retNS:emc2Return" xmlns:retNS="http://nonPolice" returnType="rtns:float" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:a" xmlns:pns="http://nonPolice" type="tns:float" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="add runTransaction emc2"/>
+
+  </service>
+</deployment>
