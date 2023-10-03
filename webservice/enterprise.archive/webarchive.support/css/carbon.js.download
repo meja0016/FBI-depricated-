@@ -1,0 +1,229 @@
+/**
+ * @license
+ *
+ * Copyright IBM Corp. 2020
+ *
+ * This source code is licensed under the Apache-2.0 license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+ window.digitalData = {
+    page: {
+      pageInfo: {
+        language: 'en',
+        ibm: {
+          country: 'US',
+          siteID: 'ESTDBL',
+        },
+      },
+      isDataLayerReady: true,
+    },
+  };
+  
+   const mastheadProps = {
+    searchProps: {
+      hasSearch: false,
+      searchOpenOnload: false
+    }
+  };
+  
+  
+   const MastheadL1 = {
+      title: 'Support',
+      url: 'https://www.ibm.com/mysupport/',
+      menuItems: [
+        {
+          title: 'Downloads',
+          titleEnglish: 'Downloads',
+          hasMenu: true,
+          menuSections: [
+            {
+              menuItems: [
+                {
+                  title: 'Fixes, updates & drivers - Fix Central',
+                  titleEnglish: 'Fixes, updates & drivers - Fix Central',
+                  url: 'https://www.ibm.com/support/fixcentral/',
+                },
+                {
+                  title: 'Licensed software - Passport Advantage',
+                  titleEnglish: 'Licensed software - Passport Advantage',
+                  url: 'https://www.ibm.com/software/passportadvantage/pao_customer.html',
+                },
+                {
+                  title: 'Entitled systems support',
+                  titleEnglish: 'Entitled systems support',
+                  url: 'https://www.ibm.com/servers/eserver/ess/index.wss',
+                },
+                {
+                    title: 'Shopz',
+                    titleEnglish: 'Downloads and support for z Systems',
+                    url: 'https://www.ibm.com/software/shopzseries/ShopzSeries_public.wss',
+                  }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Documentation',
+          titleEnglish: 'Documentation',
+          menuSections: [
+            {
+              menuItems: [
+                {
+                  title: 'Getting Started',
+                  titleEnglish: 'Getting Started',
+                  url: 'https://www.ibm.com/mysupport/s/article/Getting-Started-Guide',
+                },
+                {
+                  title: 'IBM Documentation',
+                  titleEnglish: 'IBM Documentation',
+                  url: 'https://www.ibm.com/docs/',
+                },
+                {
+                  title: 'Support Guide',
+                  titleEnglish: 'Support Guide',
+                  url: 'https://www.ibm.com/support/guide',
+                },
+                {
+                  title: 'Support Site Documentation',
+                  titleEnglish: 'Support Site Documentation',
+                  url: 'https://www.ibm.com/mysupport/s/community-releases',
+                },
+                {
+                  title: 'Use Cases - IBM Redbooks',
+                  titleEnglish: 'Use Cases - IBM Redbooks',
+                  url: 'https://www.redbooks.ibm.com/',
+                }
+              ]
+            }
+          ]  
+        },
+        {
+          title: 'Forums',
+          titleEnglish: 'Forums',
+          url: 'https://www.ibm.com/mysupport/s/forumshome',
+        },
+        {
+          title: 'Cases',
+          titleEnglish: 'Cases',
+          menuSections: [
+            {
+              menuItems: [
+                {
+                  title: 'Open a case',
+                  titleEnglish: 'Open a case',
+                  url: 'https://www.ibm.com/mysupport/s/redirecttoopencasepage',
+                },
+                {
+                  title: 'View your cases',
+                  titleEnglish: 'View your cases',
+                  url: 'https://www.ibm.com/mysupport/s/my-cases',
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Monitoring',
+          titleEnglish: 'Monitoring',
+          menuSections: [
+            {
+              menuItems: [
+                {
+                  title: 'Hardware: Call Home Connect Cloud',
+                  titleEnglish: 'Hardware: Call Home Connect Cloud',
+                  url: 'https://www.ibm.com/support/call-home-connect/cloud/',
+                },
+                {
+                  title: 'Maintenance level comparison reports',
+                  titleEnglish: 'Maintenance level comparison reports',
+                  url: 'https://www.ibm.com/support/home/myproducts/mlcr-support',
+                },
+                {
+                  title: 'Manage Inventory - Entitled Systems Support',
+                  titleEnglish: 'Manage Inventory - Entitled Systems Support',
+                  url: 'https://www.ibm.com/servers/eserver/ess/index.wss',
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Manage support account',
+          titleEnglish: 'Manage support account',
+          menuSections: [
+            {
+              menuItems: [
+                {
+                  title: 'Notifications',
+                  titleEnglish: 'Notifications',
+                  url: 'https://www.ibm.com/systems/support/myview/subscription/css.wss',
+                },
+                {
+                  title: 'Invoices',
+                  titleEnglish: 'Invoices',
+                  url: 'https://www.ibm.com/support/customer/invoices/',
+                },
+                {
+                  title: 'Warranty lookup',
+                  titleEnglish: 'Warranty lookup',
+                  url: 'https://www.ibm.com/support/home/warranty-lookup',
+                },
+                {
+                  title: 'Product resources',
+                  titleEnglish: 'Product resources',
+                  url: 'https://www.ibm.com/mysupport/s/recordlist/Product2/Recent',
+                },
+                {
+                  title: 'Support access',
+                  titleEnglish: 'Support access',
+                  url: 'https://www.ibm.com/mysupport/s/supportaccess',
+                }
+              ]
+            }
+          ]
+        },
+      ],
+    };
+  
+    function waitForElement(selector) {
+      return new Promise(function(resolve, reject) {
+        var element = document.querySelector(selector);
+    
+        if(element) {
+          resolve(element);
+          return;
+        }
+    
+        var observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            var nodes = Array.from(mutation.addedNodes);
+            for(var node of nodes) {
+              if(node.matches && node.matches(selector)) {
+                observer.disconnect();
+                resolve(node);
+                return;
+              }
+            };
+          });
+        });
+    
+        observer.observe(document.documentElement, { childList: true, subtree: true });
+      });
+    }
+  
+    waitForElement("#masthead-container").then(function(element) {
+      document.querySelector('dds-masthead-container').l1Data = MastheadL1;
+    })
+  
+    waitForElement("#leadspace-block").then(function(element) {
+    element=document.querySelector("dds-leadspace-block");
+    var checkExist = setInterval(function() {
+      console.warn = () => {
+          let style = document.createElement('style');
+          style.innerHTML = 'dds-hr{background: var(--cds-ui-04,#262626)}';
+          element.shadowRoot.appendChild(style);
+          clearInterval(checkExist);
+      };
+    }, 100);
+  })  

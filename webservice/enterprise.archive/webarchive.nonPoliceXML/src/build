@@ -1,0 +1,5 @@
+#!/bin/sh
+
+javac nonPolice*.java
+#java nonPoliceXMLRead /workspaces/www2/webservice/files/nonPoliceXML/nonPoliceXML.marxplank.marx
+java nonPoliceXMLRead /workspaces/www2/webservice/files/nonPoliceXML/nonPoliecXML-12-14-2-22-3.maxplank.marx 
