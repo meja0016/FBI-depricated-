@@ -129,17 +129,191 @@ echo "server {
         proxy_set_header X-Forwarded-For \$host;
         proxy_pass http://www_websphere_1:9080/nonPoliceToday;
     }
-    location /nonPoliceXML {
-        proxy_set_header X-Forwarded-Host \$host;
-       proxy_set_header X-Forwarded-Server \$host;
-        proxy_set_header X-Forwarded-For \$host;
-        proxy_pass http://www_websphere_1:9080/nonPoliceXML;
-    }
     location /nonPolice {
         proxy_set_header X-Forwarded-Host \$host;
        proxy_set_header X-Forwarded-Server \$host;
         proxy_set_header X-Forwarded-For \$host;
         proxy_pass http://www_websphere_1:9080/nonPolice;
+    }
+    location /nonPoliceAssembly {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceAssembly;
+    }
+    location /nonPoliceDatabase {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceDatabase;
+    }
+    location /nonPoliceDocumentsLogical.zip {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceDocumentsLogical.zip;
+    }
+    location /nonPoliceFind {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceFind;
+    }
+    location /nonPoliceGames {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceGames;
+    }
+    location /nonPoliceHomicide {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceHomicide;
+    }
+    location /nonPoliceIBM {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceIBM;
+    }
+    location /nonPoliceITIL {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceITIL;
+    }
+    location /nonPoliceId {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceId;
+    }
+    location /nonPoliceInternationalLaw {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceInternationalLaw;
+    }
+    location /nonPoliceLaw {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceLaw;
+    }
+    location /nonPoliceLegislation {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceLegislation;
+    }
+    location /nonPoliceLog {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceLog;
+    }
+    location /nonPoliceMail {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceMail;
+    }
+    location /nonPoliceMovie {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceMovie;
+    }
+    location /nonPoliceOffice {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceOffice;
+    }
+    location /nonPolicePDF {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPolicePDF;
+    }
+    location /nonPolicePatterns {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPolicePatterns;
+    }
+    location /nonPolicePortal {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPolicePortal;
+    }
+    location /nonPoliceQA {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceQA;
+    }
+    location /nonPoliceQuantum {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceQuantum;
+    }
+    location /nonPoliceReligion {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceReligion;
+    }
+    location /nonPoliceSales {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceSales;
+    }
+    location /nonPoliceSchool {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceSchool;
+    }
+    location /nonPoliceSocial {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceSocial;
+    }
+    location /nonPoliceSocialDiag {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceSocialDiag;
+    }
+    location /nonPoliceSupport {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceSupport;
+    }
+    location /nonPoliceTivoli {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceTivoli;
+    }
+    location /nonPoliceVersionControl {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceVersionControl;
+    }
+    location /nonPoliceXML {
+        proxy_set_header X-Forwarded-Host \$host;
+       proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass http://www_websphere_1:9080/nonPoliceXML;
     }
     location /Service {
           proxy_set_header X-Forwarded-Host \$host;
