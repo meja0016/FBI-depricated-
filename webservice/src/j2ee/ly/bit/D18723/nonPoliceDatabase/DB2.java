@@ -1,3 +1,5 @@
+package ly.bit.D18723.nonPoliceDatabase;
+
 import java.sql.*;
 
 public class DB2 

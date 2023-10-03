@@ -5,7 +5,7 @@ import java.awt.*;
 
 class nonPoliceApp extends Frame{
 
-nonPolicApp(){
+public nonPoliceApp nonPolicApp(){
 
 Label  l1 = new Label ("nonPoliceSOALogial.<s>marx</s>");  
    l1.setBounds(20, 40, 100, 30);
@@ -96,5 +96,4 @@ nonPoliceApp f = new nonPoliceApp();
         }
     */
     }
-
 }

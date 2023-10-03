@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"ly.bit.D18723.nonPoliceDatabase","c":"DB2","l":"DB2()","url":"%3Cinit%3E()"},{"p":"ly.bit.D18723.nonPoliceDatabase","c":"DB2","l":"main(String[])","url":"main(java.lang.String[])"}]

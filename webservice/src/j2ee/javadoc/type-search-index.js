@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"ly.bit.D18723.nonPoliceDatabase","l":"DB2"}]
