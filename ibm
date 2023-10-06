@@ -1,5 +1,10 @@
 #!/bin/bash
 
+export opt="websphere"
+if [ "$1" = "$opt" ] ;then
+docker exec -ti www_websphere_1 /bin/bash
+fi
+
 export opt="db2"
 if [ "$1" = "$opt" ] ;then
 docker exec -ti -u db2inst1 www_db2_1 /bin/bash
