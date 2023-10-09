@@ -1,1 +1,0 @@
-C:\Users\User_Kiosk_LL_Public\Desktop\app\jvm\bin\java -cp openpdf-1.1.0.jar nonPolice.java

@@ -128,6 +128,12 @@ echo "server {
         proxy_set_header X-Forwarded-For \$host;
         proxy_pass https://www_websphere_1:9043/ibm/console;
     }
+    location /nonPoliceSunday{
+       proxy_set_header X-Forwarded-Host \$host;
+        proxy_set_header X-Forwarded-Server \$host;
+        proxy_set_header X-Forwarded-For \$host;
+        proxy_pass https://www_websphere_1:9080/nonPoliceSunday
+    }
     location /nonPoliceToday {
         proxy_set_header X-Forwarded-Host \$host;
        proxy_set_header X-Forwarded-Server \$host;
