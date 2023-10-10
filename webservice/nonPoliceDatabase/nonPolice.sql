@@ -36,3 +36,5 @@ INSERT INTO nonPoliceProgram (id, name) VALUES (8, 'ATOMBOMB');
 
 #SQL1024N  A database connection does not exist
 #connect to npolice
+
+CREATE TABLE nonPoliceHomicdie (    id int,   name varchar(255),   year int,  description varchar(80));
