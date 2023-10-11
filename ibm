@@ -39,7 +39,7 @@ mkdir -p  /tmp/conf.d/
 echo "server {
     listen       80;
     listen  [::]:80;
-    server_name  www_nginx_1;
+    server_name  www_http_1;
     location / {
        root  /usr/share/nginx/html/; 
     }
@@ -98,10 +98,6 @@ services:
  #       condition: service_completed_successfully 
  #  links:
  #    - websphere
- app1:
-   image: fabric8/tomcat-9
-   ports:
-     - 8081:8080
  mq:
   image: ibmcom/mq
   privileged: true
@@ -123,7 +119,7 @@ if [ "$1" = "$opt" ] ;then
 echo "server {
     listen       80;
     listen  [::]:80;
-    server_name  www_nginx_1;
+    server_name  www_http_1;
    
     location / {
        root  /usr/share/nginx/html/; 
@@ -344,9 +340,10 @@ echo "server {
 }" > /tmp/conf.d/default.conf
 
 export password=`docker exec www_websphere_1 cat /tmp/PASSWORD`
-docker exec www_nginx_1 echo "<body style='margin: 0;'><div style='background:black'><font color=yellow style='Serifa Black'>FBI</font></div><br>nonPoliceHello<br><a href=/ibm/console>IBM WebSphere</a><br>Username: wsadmin, Password: ${password}</body>" >  /tmp/conf.d/index.html
-docker cp /tmp/conf.d/index.html www_nginx_1:/usr/share/nginx/html/index.html
-docker exec www_nginx_1 nginx -s reload >/dev/null 2>&1
+docker exec www_http_1 echo "<script></script><body style='margin: 0px'><div style='background-color:black'><center><font color=white size=2em><h1>FBI</h1><sub>partner</sub></font><center><div style='background-color:red'><center><h2><font size=0.2em color=white>DEVELOPMENT</font></h2></center></div></div><br><table width=1000px align=center><tr><td valign=top><h1><font color=navy>Application</font></h1><hr><br><a href=><img src=http://1D8723.github.io/FBI/css/PNG/application.png></a><br><h1><font color=navy>Download</font></h1><hr><a href=nonPolice.zip><img src=https://1d8723.github.io/FBI/css/PNG/download.png></a></td><td valign=top width=600px><h1><font color=navy>Journal</font></h1><hr><br><a href="/ibm/console">IBM WebSphere</a></img>
+<Table><tr><td><a href=/10-04-2023>10-04-2023</a></td><td><a href=/nonPolice>nonPolice</a>&nbsp;<a href=/nonPoliceAssembley>Assembly</a></td><td><a href=/nonPoliceDatabase>nonPoliceDatabase</a><br><br><a href=/nonPoliceXML>nonPoliceDocumentsLogical.zip.war</a><br><br><a href=/nonPoliceXML>nonPoliceFind.war</a><br><br><a href=/nonPoliceXML>nonPoliceGames.war</a><br><br><a href=/nonPoliceXML>nonPoliceHomicide.war</a><br><br><a href=/nonPoliceXML>nonPoliceIBM.war</a><br><br><a href=/nonPoliceXML>nonPoliceITIL.war</a><br><br><a href=/nonPoliceXML>nonPoliceId.war</a><br><br><a href=/nonPoliceXML>nonPoliceInternationalLaw.war</a><br><br><a href=/nonPoliceXML>nonPoliceLaw.war</a><br><br><a href=/nonPoliceXML>nonPoliceLegislation.war</a><br><br><a href=/nonPoliceXML>nonPoliceLog.war</a><br><br><a href=/nonPoliceXML>nonPoliceMail.war</a><br><br><a href=/nonPoliceXML>nonPoliceMovie.war</a><br><br><a href=/nonPoliceXML>nonPoliceOffice.war</a><br><br><a href=/nonPoliceXML>nonPolicePDF.war</a><br><br><a href=/nonPoliceXML>nonPolicePatterns.war</a><br><br><a href=/nonPoliceXML>nonPolicePortal.war</a><br>\<br><a href=/nonPoliceXML>nonPoliceQA.war</a><br><br><a href=/nonPoliceXML>nonPoliceQuantum.war</a><br><br><a href=/nonPoliceXML>nonPoliceReligion.war<br><a href=/nonPoliceXML>nonPoliceSales.war<br><a href=/nonPoliceXML>nonPoliceSchool.warnonPoliceSocial.war<br><a href=/nonPoliceXML>nonPoliceSocialDiag.war<br><a href=/nonPoliceXML>nonPoliceSupport.war<br><a href=/nonPoliceXML>nonPoliceTivoli.war<br><a href=/nonPoliceXML>nonPoliceVersionControl</td></tr></table><br><a href=/nonPoliceXML>nonPoliceXML></a><hr><td width=200px valign=top><h1><font color=navy>Marketing</font></h2><table><tr><td><img src='http://1D8723.github.io/FBI/css/PNG/1.png' width=200px ></img><br><br><img src='http://1D8723.github.io/FBI/css/PNG/2.png' width=200px ></img><br><br><a href=https://quantum-computing.ibm.com/login><img src='http://1D8723.github.io/FBI/css/PNG/3.png' width=200px ></img></a><br><sub><a href=nonPolicePresentation.html>Presentation</a></sub></td></tr></table><b><hr><img width=200px  https://1d8723.github.io/FBI/docs/library/07-24-2023/nonPolice.gif></img><br><br><audio controls><source src=poc.mp3 type=audio/mpeg></audio><br><h1><font color=navy>Sales</font></h1><hr><a href=nonPolicePresentation.html /><img src=http://1D8723.github.io/FBI/css/PNG/slides.png'></a></td></tr></table></td></tr></table>" >  /tmp/conf.d/index.html
+docker cp /tmp/conf.d/index.html www_http_1:/usr/share/nginx/html/index.html
+docker exec www_http_1 nginx -s reload >/dev/null 2>&1
 
 docker exec www_websphere_1 tail  /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/server1/startServer.log
 docker exec www_websphere_1 tail  /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/server1/serverStatus.log
