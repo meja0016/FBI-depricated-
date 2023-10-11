@@ -1,6 +1,0 @@
-#!/bin/sh
-
-javac -cp font.jar:pdf.jar nonPolicePDF.java > /dev/null
-javac -cp font.jar:pdf.jar:. nonPoliceXML.java > /dev/null
-java -cp font.jar:pdf.jar:. nonPoliceXML 01-04-2023 
-#jar -cvf nonPoliceXML.jar nonPoliceXML  *.class > /dev/null
