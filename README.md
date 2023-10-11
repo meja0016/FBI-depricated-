@@ -1,7 +1,7 @@
 # Web Service
 International Federal Law (bit.ly/1D8726) 
 
-![alt text](css/PNG/fbi-partner-ibm.png)<![alt text](css/PNG/fbi-partner-microsoft.png)<br>
+![alt text](css/PNG/fbi-partner-ibm.png)<br><![alt text](css/PNG/fbi-partner-microsoft.png)<br>
 ![alt text](css/PNG/readme_1.jpg)<br><br>
 <sub><a href='http://bit.ly/1D8723-nonPoliceApplication'>Download</a></sub><br>
 ![alt text](css/PNG/1-readme.png)<br>
