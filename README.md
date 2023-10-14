@@ -23,6 +23,6 @@ $AdminConfig create Server $node {{server2}}
 ```
 ```
 
-(New-WebServiceProxy -Uri tinyurl.com/WebService-Calculator).multiply(6,7)
+(New-WebServiceProxy -Uri bit.ly/1D8723-nonPoliceWSDL).add(40,5)
 45
 ```
