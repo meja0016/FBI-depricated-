@@ -12,10 +12,6 @@ International Federal Law (bit.ly/1D8726)
 ./ibm start
 ./ibm webservice
 ```
-```
-$AdminConfig create Server $node {{server2}}
-./ibm help
-```
 <sub> [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12</sub>
 ```
 (New-WebServiceProxy -Uri http://bit.ly/1D8723-nonPoliceWSDL).add(40,5)
