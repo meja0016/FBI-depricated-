@@ -1,7 +1,6 @@
 # Web Service
 International Federal Law (bit.ly/1D8726) 
 
-
 ![alt text](css/PNG/readme_1.jpg)<br><br>
 <sub><a href='http://bit.ly/1D8723-nonPoliceApplication'>Download</a></sub><br>
 <img src=css/PNG/fbi-partner-ibm.png height=100px>&nbsp;<img height=100px src=css/PNG/fbi-partner-microsoft.png><br>
@@ -14,15 +13,11 @@ International Federal Law (bit.ly/1D8726)
 ./ibm webservice
 ```
 ```
-<<<<<<< HEAD
-=======
-
 $AdminConfig create Server $node {{server2}}
 ./ibm help
 ```
 <sub> [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12</sub>
 ```
->>>>>>> 9e60d99a68d835182802eebc74d4d4f985ec373a
 (New-WebServiceProxy -Uri http://bit.ly/1D8723-nonPoliceWSDL).add(40,5)
 45
 ```
