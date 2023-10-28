@@ -1,1 +1,0 @@
-for i in nonPoliceGames nonPoliceHomicide nonPoliceIBM nonPoliceOffice nonPoliceQA nonPoliceReligion nonPoliceSchool nonPoliceSocial nonPoliceWSAM nonPoliceXML; do cp ../$i/$i.war .; done
