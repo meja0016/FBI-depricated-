@@ -12,7 +12,19 @@ International Federal Law (bit.ly/1D8726)
 ./ibm start
 ./ibm webservice
 ```
+## collapsible markdown?
+<sub>security</sub>
+<p>
+
+#### yes, even hidden code blocks!
+
+```
 <sub> [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12</sub>
+```
+
+</p>
+</details>
+
 ```
 (New-WebServiceProxy -Uri http://bit.ly/1D8723-nonPoliceWSDL).add(40,5)
 45
