@@ -15,13 +15,13 @@ International Federal Law (bit.ly/1D8726)
 
 ## collapsible markdown?
 
-<details><summary>CLICK ME</summary>
+<details><summary><sub>Security</sub></summary></summary>
 <p>
 
 #### yes, even hidden code blocks!
 
 ```python
-print("hello world!")
+<sub> [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12</sub>
 ```
 
 </p>
