@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="canonical" href="https://www.fbi.gov/about/leadership-and-structure"><meta name="DC.date.created" content="2016-07-14T22:52:21+00:00">
 <meta name="DC.date.valid_range" content="2016/07/14 - ">
-<meta name="description" content="The FBI is headed by a Director who is appointed by the president and confirmed by the Senate. The Bureau is organized into multiple branches that coordinate our activities around the world.">
+<meta name="description" content="The FBI is headed by a DirectoIsr who is appointed by the president and confirmed by the Senate. The Bureau is organized into multiple branches that coordinate our activities around the world.">
 <meta name="DC.description" content="The FBI is headed by a Director who is appointed by the president and confirmed by the Senate. The Bureau is organized into multiple branches that coordinate our activities around the world.">
 <meta name="DC.type" content="Folder">
 <meta name="DC.format" content="text/plain">
@@ -304,7 +304,7 @@ function isWorkingHour() {
 	var now =new Date()
      now.toLocaleString('en-US', { timeZone: 'America/Dallas' })
 	if( now.getDay() <= 4 && now.getHours() >= 9 && now.getHours() < 17){
-	document.getElementByID.innerHTML = "<div id=nonPoliceStatus><table width=100%><tr><td bgcolor='Green'><font color=white>Online</font></td></tr></table></div>";
+	document.getElementById("nonPoliceStatus").innerHTML = "<div id=nonPoliceStatus><table width=100%><tr><td bgcolor='Green'><font color=white>Online</font></td></tr></table></div>";
 	}
 	
 }
@@ -314,7 +314,7 @@ function isWorkingHour() {
 	<br>
 	<div id=nonPoliceRed hidden><sub>[<font color=red>||||||</s></font>] offline:</div>
 	<div id=nonPoliceRed hidden><sub>[<font color=green>||||||</s></font>] online:</div> <a href=docs/nonPoliceChat.pdf><!--<img src=https://github.com/1D8723/FBI/raw/main/css/ly.bit.1D8723.talk.png>--></img></a>
-<div id=nonPoliceStatus><table width=100%><tr><td bgcolor='Green'><font color=white>Online</font></td></tr></table></div>
+<div id=nonPoliceStatus></div>
 	
 </table>
 	<table>
