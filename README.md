@@ -13,15 +13,15 @@ International Federal Law (bit.ly/1D8726)
 ./ibm webservice
 ```
 
-## collapsible markdown?
+## 
 
 <details><summary><sub>Security</sub></summary></summary>
 <p>
 
-#### yes, even hidden code blocks!
+#### 
 
 ```python
-<sub> [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12</sub>
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 ```
 
 </p>
