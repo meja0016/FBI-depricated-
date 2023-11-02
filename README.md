@@ -2,7 +2,7 @@
 International Federal Law (bit.ly/1D8726) 
 
 ![alt text](https://bit.ly/1D8723-css-PNG-readme-1)<br><br>
-Get Service
+<br>Web Service<b><br>
 Do you need to file a police report, track down a towed car or find out how to pay for a parking ticket?  Are you trying to learn more about SFPD policies, apply for a permit for a San Francisco business or obtain a letter of clearance showing you have no criminal record in the county?  Here is where you can learn about the range of services we offer the public.
 <sub><a href='http://bit.ly/1D8723-nonPoliceApplication'>Download</a></sub><br>
 <img src=https://bit.ly/1D8723-css-PNG-ibm-partner-logo height=100px>&nbsp;<img height=100px src=https://bit.ly/1D8723-css-png-microsoft-partner-logo><br>
