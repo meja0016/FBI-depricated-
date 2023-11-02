@@ -44,3 +44,4 @@ $AdminTask createApplicationServer DefaultNode01 {-name server2 -templateName Ap
 ```
 ![alt text](https://bit.ly/1D8723-css-PNG-nonPoliceCloud)
 ![alt text](https://bit.ly/1D8723-css-PNG-nonPolcieWebService)
+![alt text](readme-police-homellessness.png)<br>
