@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+
+<!-- 
+COPYRIGHT LICENSE: 
+This information contains sample code provided in source code form. You may 
+copy, modify, and distribute these sample programs in any form without 
+payment to IBM for the purposes of developing, using, marketing or 
+distributing application programs conforming to the application programming
+interface for the operating platform for which the sample code is written. 
+Notwithstanding anything to the contrary, IBM PROVIDES THE SAMPLE SOURCE CODE
+ON AN "AS IS" BASIS AND IBM DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, 
+INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES OR CONDITIONS OF 
+MERCHANTABILITY, SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR PURPOSE, 
+TITLE, AND ANY WARRANTY OR CONDITION OF NON-INFRINGEMENT. IBM SHALL NOT BE 
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES
+ARISING OUT OF THE USE OR OPERATION OF THE SAMPLE SOURCE CODE. IBM HAS NO 
+OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS OR 
+MODIFICATIONS TO THE SAMPLE SOURCE CODE.
+-->
+
+<project name="JaxWSServicesSamples" default="all">
+  <target name="all" depends="init, clean, document, makeWarFiles, makeEar"/>
+
+  <target name="init" depends="clean">
+    <tstamp/>
+    <echo message="JaxWSServicesSamples.ear build started..."/>
+    <mkdir dir="javadoc"/>
+    <mkdir dir="bld"/>
+    <mkdir dir="lib"/>
+  </target>
+
+  <target name="clean">
+    <tstamp/>
+    <echo message="JaxWSServicesSamples.ear Cleaning..."/>
+    <delete file="lib/JaxWSServicesSamples.ear"/>
+    <delete quiet="true" failonerror="false">
+      <fileset dir="bld"/>
+    </delete>
+  </target>
+
+  <target name="compile" depends="init">
+    <tstamp/>
+    <echo message="JaxWS Services Samples Compiling..."/>
+    <mkdir dir="temp/JaxWS"/>
+    <copy todir="temp/JaxWS">
+      <fileset dir="src/SampleClientSei/src" includes="**/*.java"/>
+      <fileset dir="src/SampleMTOMClient/src" includes="**/*.java"/>
+      <fileset dir="src/SampleMTOMService/src" includes="**/*.java"/>
+      <fileset dir="src/SampleServicesSei/src" includes="**/*.java"/>
+    </copy>
+    <javac srcdir="temp/JaxWS" 
+           destdir="bld"
+           deprecation="true" 
+           debug="on" 
+           classpath="${prereq.classpath}"/>
+    <delete dir="temp"/>
+  </target>
+
+
+   <target name="makeClientWar" depends="init, compile">
+    <!-- Build Client WAR -->
+    <echo message="====="/>
+    <echo message="Building SampleClientSei.war..."/>
+
+    <copy todir="src/SampleClientSei/WebContent/WEB-INF/classes">
+      <fileset dir="bld">
+        <include name="com/ibm/was/wssample/sei/**"/>
+        <exclude name="org/**"/>
+        <exclude name="com/ibm/was/wssample/sei/async/*.*"/>
+        <exclude name="com/ibm/was/wssample/sei/helpers/*.*"/>
+        <exclude name="**/*Impl.*" />
+        <exclude name="**/*PortType.*" />
+      </fileset>
+      <fileset dir="src/SampleClientSei/src">
+        <include name="**"/>
+      </fileset>
+      <fileset dir="src/SampleServicesSei/src">
+        <include name="**"/>
+        <exclude name="**/*Impl.*" />
+        <exclude name="**/*PortType.*" />
+      </fileset>
+    </copy>
+
+    <war warfile="lib/SampleClientSei.war" update="yes"
+      webxml="src/SampleClientSei/WebContent/WEB-INF/web.xml" >
+      <include name="src/SampleClientSei/WebContent/WEB-INF/*.gif"/>
+      <include name="src/SampleClientSei/WebContent/WEB-INF/*.jsp"/>
+      <include name="src/SampleClientSei/WebContent/WEB-INF/*.html"/>
+
+      <!-- Get the target files -->
+      <fileset dir="src/SampleClientSei/WebContent">
+        <include name="theme/**"/>
+        <include name="WEB-INF/**"/>
+        <exclude name="WEB-INF/lib/**"/>
+        <exclude name="WEB-INF/web.xml"/>
+      </fileset>
+
+      <fileset dir="src/SampleServicesSei/WebContent">
+        <include name="WEB-INF/**/*.wsdl"/>
+      </fileset>
+
+      <manifest>
+        <attribute name="Manifest-Version"       value="1.0"/>
+        <attribute name="Specification-Vendor"   value="IBM Corp."/>
+        <attribute name="Implementation-Vendor"  value="IBM Corp."/>
+      </manifest>
+    </war>
+
+    <!-- Build JAX-WS Client JAR -->
+    <jar jarfile="lib/WSSampleSeiClient.jar" update="yes">
+      <fileset dir="src/SampleClientSei/WebContent/WEB-INF/classes">
+        <include name="**"/>
+      </fileset>
+      <fileset dir="src/SampleServicesSei/WebContent/WEB-INF">
+        <include name="wsdl/**"/>
+      </fileset>
+
+      <manifest>
+        <attribute name="Manifest-Version"       value="1.0"/>
+        <attribute name="Specification-Vendor"   value="IBM Corp."/>
+        <attribute name="Implementation-Vendor"  value="IBM Corp."/>
+        <attribute name="Main-Class"             value="com.ibm.was.wssample.sei.cli.SampleClient"/>
+      </manifest>
+    </jar>
+    <delete dir="src/SampleClientSei/WebContent/WEB-INF/classes" />
+   </target>
+
+   <target name="makeServiceWar" depends="init, compile">
+    <!-- Build Services WAR -->
+    <echo message="====="/>
+    <echo message="Building SampleServicesSei.war..."/>
+
+    <copy todir="src/SampleServicesSei/WebContent/WEB-INF/classes">
+      <fileset dir="bld">
+        <include name="com/ibm/was/wssample/sei/**"/>
+        <exclude name="org/**"/>
+        <exclude name="**/EchoService.*" />
+        <exclude name="**/EchoService12.*" />
+        <exclude name="**/PingService.*" />
+        <exclude name="**/PingService12.*" />
+        <exclude name="**/*Client.*" />
+        <exclude name="**/*Handler.*" />
+        <exclude name="**/*Proxy*.*" />
+        <exclude name="com/ibm/was/wssample/sei/async/*.*"/>
+        <exclude name="com/ibm/was/wssample/sei/beans/*.*"/>
+        <exclude name="com/ibm/was/wssample/sei/cli/*.*"/>
+        <exclude name="com/ibm/was/wssample/sei/helpers/*.*"/>
+        <exclude name="com/ibm/was/wssample/sei/servlets/*.*"/>
+      </fileset>
+      <fileset dir="src/SampleServicesSei/src">
+        <include name="**"/>
+      </fileset>
+    </copy>
+
+    <war warfile="lib/SampleServicesSei.war" update="yes"
+      webxml="src/SampleServicesSei/WebContent/WEB-INF/web.xml" >
+      <include name="src/SampleServicesSei/WebContent/WEB-INF/*.gif"/>
+      <include name="src/SampleServicesSei/WebContent/WEB-INF/*.jsp"/>
+      <include name="src/SampleServicesSei/WebContent/WEB-INF/*.html"/>
+
+      <fileset dir="src/SampleServicesSei/WebContent">
+        <include name="WEB-INF/**"/>
+        <exclude name="WEB-INF/lib/**"/>
+        <exclude name="WEB-INF/web.xml"/>
+      </fileset>
+
+      <manifest>
+        <attribute name="Manifest-Version"       value="1.0"/>
+        <attribute name="Specification-Vendor"   value="IBM Corp."/>
+        <attribute name="Implementation-Vendor"  value="IBM Corp."/>
+      </manifest>
+    </war>
+    <delete dir="src/SampleServicesSei/WebContent/WEB-INF/classes" />
+   </target>
+
+   <target name="makeMtomClient" depends="init, compile">
+    <!-- Build MTOM Client WAR -->
+    <echo message="====="/>
+    <echo message="Building SampleMTOMClient.war..."/>
+
+    <copy todir="src/SampleMTOMClient/WebContent/WEB-INF/classes">
+      <fileset dir="bld">
+        <include name="org/apache/axis2/jaxws/sample/**"/>
+        <exclude name="**/*Impl.*" />
+      </fileset>
+      <fileset dir="src/SampleMTOMClient/src">
+        <include name="**"/>
+        <exclude name="META-INF/**"/>
+      </fileset>
+      <fileset dir="src/SampleMTOMService/src">
+        <include name="**"/>
+        <exclude name="**/*Impl.*" />
+        <exclude name="META-INF/**"/>
+      </fileset>
+    </copy>
+
+    <war warfile="lib/SampleMTOMClient.war" update="yes"
+      webxml="src/SampleMTOMClient/WebContent/WEB-INF/web.xml" >
+      <include name="src/SampleMTOMClient/WebContent/WEB-INF/*.gif"/>
+      <include name="src/SampleMTOMClient/WebContent/WEB-INF/*.jsp"/>
+      <include name="src/SampleMTOMClient/WebContent/WEB-INF/*.html"/>
+
+      <fileset dir="src/SampleMTOMClient/WebContent">
+        <include name="WEB-INF/**"/>
+        <exclude name="WEB-INF/lib/**"/>
+        <exclude name="WEB-INF/web.xml"/>
+      </fileset>
+
+      <fileset dir="src/SampleMTOMService/WebContent">
+        <include name="WEB-INF/**/*.wsdl"/>
+      </fileset>
+
+      <manifest>
+        <attribute name="Manifest-Version"       value="1.0"/>
+        <attribute name="Specification-Vendor"   value="IBM Corp."/>
+        <attribute name="Implementation-Vendor"  value="IBM Corp."/>
+      </manifest>
+    </war>
+
+    <!-- Build MTOM Client JAR -->
+    <jar jarfile="lib/WSSampleMTOMClient.jar" update="yes">
+      <fileset dir="src/SampleMTOMClient/WebContent/WEB-INF/classes">
+        <include name="**"/>
+      </fileset>
+      <fileset dir="src/SampleMTOMService/WebContent/WEB-INF">
+        <include name="wsdl/**"/>
+      </fileset>
+
+      <manifest>
+        <attribute name="Manifest-Version"       value="1.0"/>
+        <attribute name="Specification-Vendor"   value="IBM Corp."/>
+        <attribute name="Implementation-Vendor"  value="IBM Corp."/>
+        <attribute name="Main-Class"             value="org.apache.axis2.jaxws.sample.mtom.SampleMTOMTests"/>
+      </manifest>
+    </jar>
+    <delete dir="src/SampleMTOMClient/WebContent/WEB-INF/classes" />
+   </target>
+
+   <target name="makeMtomService" depends="init, compile">
+    <!-- Build MTOM Service WAR -->
+    <echo message="====="/>
+    <echo message="Building SampleMTOMService.war..."/>
+
+    <copy todir="src/SampleMTOMService/WebContent/WEB-INF/classes">
+      <fileset dir="bld">
+        <include name="org/apache/axis2/jaxws/sample/mtom/**"/>
+        <exclude name="org/apache/axis2/jaxws/sample/mtom/servlets/**"/>
+        <exclude name="**/*Tests.*" />
+        <exclude name="**/*Proxy.*" />
+        <exclude name="**/*Service.*" />
+        <exclude name="**/*Service12.*" />
+      </fileset>
+      <fileset dir="src/SampleMTOMService/src">
+        <include name="**"/>
+        <exclude name="META-INF/**"/>
+      </fileset>
+    </copy>
+
+    <war warfile="lib/SampleMTOMService.war" update="yes"
+      webxml="src/SampleMTOMService/WebContent/WEB-INF/web.xml" >
+      <include name="src/SampleMTOMService/WebContent/WEB-INF/*.gif"/>
+      <include name="src/SampleMTOMService/WebContent/WEB-INF/*.jsp"/>
+      <include name="src/SampleMTOMService/WebContent/WEB-INF/*.html"/>
+
+      <fileset dir="src/SampleMTOMService/WebContent">
+        <include name="WEB-INF/**"/>
+        <exclude name="WEB-INF/lib/**"/>
+        <exclude name="WEB-INF/web.xml"/>
+      </fileset>
+
+      <manifest>
+        <attribute name="Manifest-Version"       value="1.0"/>
+        <attribute name="Specification-Vendor"   value="IBM Corp."/>
+        <attribute name="Implementation-Vendor"  value="IBM Corp."/>
+      </manifest>
+    </war>
+    <delete dir="src/SampleMTOMService/WebContent/WEB-INF/classes" />
+  </target>
+
+  <!-- Create JavaDoc -->
+  <target name="document" depends="init">
+    <tstamp/>
+    <echo message="Creating JAX-WS Web Services Samples JavaDoc...."/> 
+    <mkdir dir="temp/JaxWS"/>
+    <copy todir="temp/JaxWS">
+      <fileset dir="src/SampleClientSei/src" includes="**/*.java"/>
+      <fileset dir="src/SampleMTOMClient/src" includes="**/*.java"/>
+      <fileset dir="src/SampleMTOMService/src" includes="**/*.java"/>
+      <fileset dir="src/SampleServicesSei/src" includes="**/*.java"/>
+    </copy>
+    <javadoc sourcepath="temp/JaxWS/" destdir="javadoc" protected="true" Windowtitle="JaxWSServicesSamples Javadoc" author="false" version="false" maxmemory="256M" classpath="${prereq.classpath}:${java.class.path}">
+      <package name="com.ibm.was.wssample.sei.cli"/>
+      <package name="com.ibm.was.wssample.sei.echo"/>
+      <package name="com.ibm.was.wssample.sei.ping"/>
+      <package name="com.ibm.was.wssample.sei.servlets"/>
+      <package name="org.apache.axis2.jaxws.sample.mtom"/>
+      <package name="org.apache.axis2.jaxws.sample.servlet"/>
+    </javadoc>
+    <delete dir="temp"/>
+  </target>
+
+  <target name="makeWarFiles" depends="makeClientWar, makeServiceWar, 
+                                       makeMtomClient, makeMtomService" />
+
+  <!-- Create JAX-WS Samples EAR file -->
+  <target name="makeEar" depends="makeWarFiles">
+    <tstamp/>
+    <echo message="Creating the JaxWSServicesSamples.ear file..."/>
+    <ear earfile="lib/JaxWSServicesSamples.ear" 
+         appxml="src/META-INF/application.xml">
+      <fileset dir="lib" includes="*.war"/>
+    </ear>
+  </target>
+  
+</project>

@@ -1,0 +1,132 @@
+#!/bin/sh
+# COPYRIGHT LICENSE: 
+# This information contains sample code provided in source code form. You may 
+# copy, modify, and distribute these sample programs in any form without 
+# payment to IBM for the purposes of developing, using, marketing or 
+# distributing application programs conforming to the application programming
+# interface for the operating platform for which the sample code is written. 
+# Notwithstanding anything to the contrary, IBM PROVIDES THE SAMPLE SOURCE CODE
+# ON AN "AS IS" BASIS AND IBM DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, 
+# INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES OR CONDITIONS OF 
+# MERCHANTABILITY, SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR PURPOSE, 
+# TITLE, AND ANY WARRANTY OR CONDITION OF NON-INFRINGEMENT. IBM SHALL NOT BE 
+# LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES
+# ARISING OUT OF THE USE OR OPERATION OF THE SAMPLE SOURCE CODE. IBM HAS NO 
+# OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS OR 
+# MODIFICATIONS TO THE SAMPLE SOURCE CODE.
+
+ERROR=
+PROFOFT=
+PROGNAME=$0
+
+# default server name if it is not passed as a command parameter
+export WAS_SERVER=server1
+
+printopts()
+{
+echo ""
+echo "Usage:"
+echo "  ${PROGNAME} [profile] [cell] [node] [server] [-user user -password password]"
+echo "optional parameters:"
+echo "  profile is your WebSphere Application Server profile"
+echo "  cell is the cell name for the profile"
+echo "  node is the node name for the server node"
+echo "  server is the server name"
+echo "Example:"
+echo "  ${PROGNAME} AppSrv01 LINK-T42Node01Cell LINK-T42Node01 server1"
+}
+
+# Get Parms And Save Them
+if [ "$1" != "" ]; then
+  if [ "$1" != "-user" ]; then 
+    WAS_PROFILE=$1
+    PROFOPT="-profileName $1"
+    shift
+  fi
+fi
+
+if [ "$1" != "" ]; then
+  if [ "$1" != "-user" ]; then
+    SAVED_CELL=$1
+    export WAS_CELL=$1
+    shift
+  fi
+fi
+
+if [ "$1" != "" ]; then
+  if [ "$1" != "-user" ]; then
+    SAVED_NODE=$1
+    export WAS_NODE=$1
+    shift
+  fi
+fi
+
+if [ "$1" != "" ]; then
+  if [ "$1" != "-user" ]; then
+    SAVED_SERVER=$1
+    export WAS_SERVER=$1
+    shift
+  fi
+fi
+SAVEDPARMS=$*
+
+if [ "$WAS_HOME" = "" ]; then
+  export ERROR=1
+  echo "ERROR - Environment Variable WAS_HOME  is not defined"
+  return 1
+fi
+
+SCRIPTS_DIR=`dirname $0`
+cd "$SCRIPTS_DIR/../.."
+SAMPLES_HOME=`pwd`
+cd "$WAS_HOME/bin/"
+REPLACE_WAS_HOME=$WAS_HOME
+. "./setupCmdLine.sh"
+cd "$SCRIPTS_DIR"
+
+# Restore Saved Parms If Any
+if [ "$SAVED_CELL" != "" ]; then
+  export WAS_CELL=$SAVED_CELL
+fi
+if [ "$SAVED_NODE" != "" ]; then
+  export WAS_NODE=$SAVED_NODE
+fi
+if [ "$SAVED_SERVER" != "" ]; then
+  export WAS_SERVER=$SAVED_SERVER
+fi
+
+# Edit the lines below if your machine has products installed to different paths
+JAVA_HOME=${WAS_HOME}/java
+PATH=${JAVA_HOME}/bin:$PATH
+
+# Test Profile name
+if [[ ! -d "${USER_INSTALL_ROOT}" ]] 
+then
+  echo ERROR: Profile ${WAS_PROFILE} does not exist
+  echo Valid profiles:
+  "${WAS_HOME}/manageprofiles.sh" -listProfiles
+  printopts
+  return 1
+fi
+
+# Test Cell name
+if [[ ! -d "${CONFIG_ROOT}/cells/${WAS_CELL}" ]] 
+then
+  echo ERROR: Cell ${WAS_CELL} does not exist
+  echo Valid cells on server ${WAS_PROFILE}:
+  ls "${CONFIG_ROOT}/cells"
+  printopts
+  return 1
+fi
+
+# Test Node name
+if [[ ! -d "${CONFIG_ROOT}/cells/${WAS_CELL}/nodes/${WAS_NODE}" ]] 
+then
+  echo ERROR: Node ${WAS_NODE} does not exist
+  echo Valid nodes on cell ${WAS_CELL}:
+  ls "${CONFIG_ROOT}/cells/${WAS_CELL}/nodes"
+  printopts
+  return 1
+fi
+
+

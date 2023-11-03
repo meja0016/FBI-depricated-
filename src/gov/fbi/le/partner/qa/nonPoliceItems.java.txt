@@ -1,0 +1,28 @@
+package gov.fbi.le.partner.qa;
+
+/*
+	To verify aviaiblity fo content items
+*/
+
+public class nonPoliceItems{
+
+	public tearDown(){
+
+	}
+	nonPoliceItem item = new nonPoliceItem()[];
+	item[0]  = "link:04-23-2023/wmd"
+	item[0]  = "link:04-23-2023/cvpc"
+	item[0]  = "link:04-23-2023/"
+	item[0]  = "link:04-23-2023/wmd"
+	item[0]  = "link:04-23-2023/wmd"
+
+	item[0]  = "portlet:04-23-2023/wmd"
+	item[0]  = "portlet:04-23-2023/wmd"
+	item[0]  = "portlet:04-23-2023/wmd"
+	item[0]  = "portlet:04-23-2023/wmd"
+	item[0]  = "portal:04-23-2023d"
+
+	
+	
+
+}

@@ -1,0 +1,1389 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="security" content="public"/>
+<meta name="Robots" content="index,follow"/>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))' />
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="JAX-WS Web Services Samples"/>
+<meta name="abstract" content="These samples demonstrate JAX-WS web services. The samples show the basic implementation of one-way and two-way web services. Included in each sample is a servlet that exercises the service using a browser, and a sample using the Thin Client for JAX-WS with WebSphere Application Server that you can run from a command line."/>
+<meta name="description" content="These samples demonstrate JAX-WS web services. The samples show the basic implementation of one-way and two-way web services. Included in each sample is a servlet that exercises the service using a browser, and a sample using the Thin Client for JAX-WS with WebSphere Application Server that you can run from a command line."/>
+<meta name="DC.Coverage" content="sample"/>
+<meta name="DC.Relation" scheme="URI" content="page_name.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.doowop.com/index.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www14.software.ibm.com/webapp/wsbroker/redirect?version=matt&amp;product=was-nd-dist&amp;topic=topicID"/>
+<meta name="DC.Audience.Job" content="programming"/>
+<meta name="DC.Audience.Type" content="programmer"/>
+<meta name="prodname" content="IBM WebSphere Application Server"/>
+<meta name="version" content="matt"/>
+<meta name="component" content="was-base was-express was-nd"/>
+<meta name="platform" content="dist iseries zos"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="jaxwsservicessamples"/>
+<meta name="DC.Language" content="en-us"/>
+<!-- All rights reserved. Licensed Materials Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="style\samples_readme.css"/>
+<title>JAX-WS Web Services Samples</title>
+</head>
+<body id="jaxwsservicessamples"><a name="jaxwsservicessamples"><!-- --></a>
+
+<div id="sample_header">
+	<img class="sample_header_icon_left" alt="WebSphere software logo" src="images/WS_BrandMark_18x120.png"/>
+	<img class="sample_header_icon_right" alt="IBM Logo" src="images/ibm-logo-white.gif"/>
+</div>
+
+	<h1 class="topictitle1">JAX-WS Web Services Samples</h1>
+
+
+
+
+	<div><p>These samples demonstrate JAX-WS web services. The
+		samples show the basic implementation of one-way and two-way web services.
+		Included in each sample is a servlet that exercises the service using a
+		browser, and a sample using the Thin Client for JAX-WS with WebSphere
+		Application Server that you can run from a command line.</p>
+
+
+
+
+
+		<div class="section">
+
+
+
+			<div class="p">
+				<dl>
+
+						<h4 class="sectiontitle">Time required to set up and configure this sample</h4>
+
+						<dd>
+							<p>Approximately 15 minutes</p>
+
+						</dd>
+
+
+
+						<h4 class="sectiontitle">Prerequisites for use</h4>
+
+						<dd>
+
+
+							<div class="p">
+								<ol>
+									<li>WebSphere Application Server. This sample was tested most recently with Version 8.5 of the product.</li>
+									<li>Stand-alone thin client. When installing WebSphere Application Server, be sure to include this optional feature.
+									If you are using an existing installation that does not include the thin client, use IBM Installation Manager
+									to modify the installation to include the thin client before proceeding. </li>
+
+								</ol>
+
+							</div>
+
+						</dd>
+
+				</dl>
+
+			</div>
+
+	<div class="section">
+		<h4 class="sectiontitle">
+		Copyright license</h4>
+
+			<p>COPYRIGHT LICENSE: This information contains sample code provided in source code form. You may copy, modify, and distribute these sample programs in any form without payment to IBM for the purposes of developing, using, marketing or distributing application programs conforming to the application programming interface for the operating platform for which the sample code is written. Notwithstanding anything to the contrary, IBM PROVIDES THE SAMPLE SOURCE CODE ON AN "AS IS" BASIS AND IBM DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND ANY WARRANTY OR CONDITION OF NON-INFRINGEMENT. IBM SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR OPERATION OF THE SAMPLE SOURCE CODE. IBM HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS OR MODIFICATIONS TO THE SAMPLE SOURCE CODE.</p>
+
+	</div>
+
+		</div>
+
+
+		<div class="section">
+			<h4 class="sectiontitle">
+			About this task</h4>
+
+
+			<p>
+				<span>The following key phrases are associated with this sample:</span>
+				"web service", "JAX-WS"
+			</p>
+
+			<div class="p">
+				The following overview includes usage scenarios that are associated with this
+				sample.
+				<dl>
+
+						<dt class="dlterm">Ping and Echo sample</dt>
+
+						<dd>
+							<p>
+								The Ping and Echo sample illustrates simple JAX-WS services. The
+								Ping sample demonstrates a one-way service transaction. A simple
+								text string is sent from the service client to the service
+								endpoint. The Echo sample demonstrates a two-way service
+								transaction. A simple text string is sent from the service
+								client to the service endpoint. The service prepends an identifier and
+								returns the string to the client. The Echo sample also
+								demonstrates the use of the synchronous programming model and
+								the use of two modes of the asynchronous programming model.
+								<p>
+									You can choose either SOAP 1.1 or SOAP 1.2 as the transport option
+									for the Ping and Echo samples.
+                </p>
+
+								The Ping and Echo sample uses many of the Java Platform,
+								Enterprise Edition (Java EE) and WebSphere Application Server
+								functions, including servlets and JavaServer Pages (JSP)
+								technology.
+							</p>
+
+						</dd>
+
+
+
+						<dt class="dlterm">MTOM sample</dt>
+
+						<dd>
+							<p>The MTOM sample illustrates the use of the SOAP
+								Message Transmission Optimization Mechanism (MTOM) on
+								the transport to send and receive binary files. SOAP
+								bindings use the MTOM feature to optimize the transmission
+								or format of how a SOAP message appears on
+								the wire. The MTOM function selects and encodes portions of the SOAP message,
+								and presents an XML Infoset to the SOAP application. Then, a file with the encoded binary data is
+								sent from the service client to the service endpoint.</p>
+
+							<p>The MTOM sample uses many of the Java Platform,
+								Enterprise Edition (Java EE) and WebSphere
+								Application Server functions, including
+								servlets and JavaServer Pages (JSP) technology.
+              </p>
+
+						</dd>
+
+
+				</dl>
+
+			</div>
+
+			<div class="p">
+				<dl>
+
+						<dt class="dlterm">Getting Started</dt>
+
+						<dd>
+							<p>To learn more about Java API for XML web Services
+								(JAX-WS) web
+								services, see the web Services
+								documentation in the WebSphere
+								Application
+								Server Information Center.
+              </p>
+
+							<p>The JAX-WS web Services Ping and Echo sample
+								demonstrates
+								simple message exchange patterns
+								(MEP) using both a synchronous
+								and asynchronous
+								programming model. This sample supports both
+								SOAP 1.1 and SOAP 1.2 and incorporates web
+								services standards
+								such as WS-Addressing (WS-A),
+								WS-Reliable Messaging (WS-RM), and
+								WS-Secure
+								Conversation (WS-SC). Using this web Service
+								sample, you
+								can complete a broad range of
+								interoperability tests. The sample
+								demonstrates
+								the use of static JAX-WS service endpoints, as
+								well
+								as dispatch and proxy-based clients.
+              </p>
+
+
+							<p>
+								For more information, see the
+								<a href="http://publib.boulder.ibm.com/infocenter/wasinfo/beta/index.jsp" target="_blank">WebSphere Application Server Beta Information Center.
+                </a>
+							</p>
+
+						</dd>
+
+
+
+						<dt class="dlterm">Locating the source code</dt>
+
+						<dd>
+							<div class="p">
+								You can find the source code for the Ping and
+								Echo client sample
+								in subdirectories of the
+								JaxWSServicesSamples/src/ directory.
+								The subdirectory, SampleClientSei/src,
+								contains the
+								source code for the following
+								client samples:
+								<ul>
+									<li>
+										Ping and Echo application
+                  </li>
+
+									<li>
+										Simple servlet client
+                  </li>
+
+									<li>
+										Ping and Echo thin client
+                  </li>
+
+
+								</ul>
+
+							</div>
+
+						</dd>
+
+
+				</dl>
+
+			</div>
+
+			<div class="p">
+				The message exchange patterns for the samples are described in the
+				following section.
+				<dl>
+
+						<dt class="dlterm">One-way request: Ping</dt>
+
+						<dd>
+							<p>The one-way request scenario demonstrates a
+								one-way message
+								exchange pattern to send a ping
+								application message from a client
+								to a
+								service.</p>
+
+						</dd>
+
+
+
+						<dt class="dlterm">Two-way request and response: Sync Echo</dt>
+
+						<dd>
+							<p>The two-way request and response scenario
+								demonstrates a two-way message exchange pattern
+								to send an application message from a client to
+								a service and receives an echo string response
+								from the server on the same request and
+								response channel.
+              </p>
+
+						</dd>
+
+
+
+						<dt class="dlterm">Two-way request and response: Asynchronous Echo with Sync
+							Communication</dt>
+
+						<dd>
+							<p>The two-way asynchronous request and response
+								scenario
+								demonstrates a two-way message exchange
+								pattern that sends an
+								echo string message from a
+								client to a service and expects the
+								echo string
+								response from the server on the same request and
+								response channel. Although this message exchange
+								pattern is
+								similar to the Sync Echo sample, this
+								sample implements the
+								JAX-WS asynchronous
+								programming model. In this scenario, a
+								request
+								is made; however, the application can continue to do
+								additional
+								work. When a response is received, a
+								callback handler routine is
+								used to process the
+								response. Over the wire, this sample is identical
+								to the Sync Echo sample.</p>
+
+						</dd>
+
+
+
+						<dt class="dlterm">Two-way request and response: Asynchronous Echo with
+							Async
+							Communication</dt>
+
+						<dd>
+							<p> The two-way asynchronous request and response
+								with
+								asynchronous communication scenario
+								demonstrates a two-way
+								message exchange pattern
+								to send an echo string message from a
+								client to
+								a service. The client expects the echo string
+								response
+								from the server on a different request
+								and response channel. This
+								sample implements the
+								JAX-WS asynchronous programming model. In
+								this
+								scenario, a request is made to the service but
+								the client
+								application can continue to do
+								additional work. When a response
+								is received, a
+								callback handler routine is then used to process
+								the response. The client listens on separate
+								channel to receive
+								the response messages from a
+								server initiated channel.</p>
+
+						</dd>
+
+
+				</dl>
+
+			</div>
+
+		</div>
+
+<div class="section">
+	<h4 class="sectiontitle">
+	Procedure </h4>
+	<br>
+
+			<b>Build the JaxWSServicesSamples application</b>
+			<br><br>
+
+		<ol>
+			<li>
+				<span>Identify the directory structure of the JaxWSServicesSamples samples.</span>
+
+					<p> You do not
+						have to build the JaxWSServicesSamples samples before
+						using them. The following
+						steps describe how
+						to rebuild the JaxWSServicesSamples samples, with
+						additional information for modifications.
+          </p>
+
+					<p>
+						The JaxWSServicesSamples samples are located in the following compressed file directories:
+          </p>
+
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="border" border="1" rules="all"><caption>Table 1. JaxWSServicesSamples Compressed File Directory Structure</caption>
+
+
+							<thead align="left">
+								<tr valign="bottom">
+									<th valign="bottom" id="N66100">Directory</th>
+
+									<th valign="bottom" id="N66106">Description</th>
+
+								</tr>
+
+							</thead>
+
+							<tr>
+								<td valign="top">
+									jaxWSServicesSamples/src/
+                </td>
+
+								<td valign="top">
+									Contains the sample source code for the Ping,
+									Echo and MTOM samples.
+                </td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">
+									JaxWSServicesSamples/installableApps/
+                </td>
+
+								<td valign="top">
+									Contains the Java archive (JAR) files, and the JaxWSServicesSamples.ear
+									file for
+									samples. This directory is not modified if this sample is rebuilt.
+								</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">
+									JaxWSServicesSamples/lib/
+                </td>
+
+								<td valign="top">
+									Contains the web archive (WAR) files, the Java archive (JAR) files, and
+									the
+									final JaxWSServicesSamples.ear file for samples. This directory is
+									created when
+									this sample is rebuilt.
+                </td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">
+									JaxWSServicesSamples/javadoc/
+              </td>
+
+								<td valign="top">
+									Contains the samples Javadoc documentation. This directory is updated
+									when this
+									sample is rebuilt.
+              </td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">
+									JaxWSServicesSamples/bld/
+                </td>
+
+								<td valign="top">
+									Contains the generated class files. These class files
+									are used to generate the final JaxWSServicesSamples.ear file. This
+									directory is
+									created when this sample is rebuilt.
+                </td>
+
+							</tr>
+
+						</table>
+</div>
+
+
+			</li>
+
+			<li>
+				<span>Run the samples build script.</span>
+
+				<p>
+					To rebuild the JAX-WS WebServices sample EAR file, complete the
+					following steps:</p>
+
+					<ol type="a">
+						<li>
+							Set the WAS_HOME environment variable to point to
+							your WebSphere
+							Application Server install directory.
+							<ul>
+								<li>
+									Locate the WebSphere Application Server
+									directory.</li>
+
+								<li>
+									On UNIX operating systems, issue the command:
+									<pre>export WAS_HOME=directory</pre>
+
+								</li>
+
+								<li>
+									On Windows operating systems, issue the command:
+									<pre>set WAS_HOME=directory</pre>
+
+								</li>
+
+							</ul>
+
+							In each of these, replace 'directory' with the value
+							for your WebSphere installation. For example,
+							<pre>export WAS_HOME=/opt/IBM/WebSphere/AppServer</pre>
+
+						</li>
+
+						<li>
+							Change to the JaxWSServicesSamples directory where
+							you extracted
+							the sample. This directory contains
+							build.xml which is used to
+							build the sample.
+            </li>
+
+						<li>
+							Run the samples build script.
+							<ul>
+								<li>
+									On UNIX operating systems, run the following command:
+									<pre>scripts/buildsamples.sh</pre>
+
+								</li>
+
+								<li>
+									On Windows operating systems, run run the following command:
+									<pre>scripts\buildsamples.bat</pre>
+
+								</li>
+
+							</ul>
+
+						</li>
+
+					</ol>
+
+					The sample is now built.
+					<p>
+						The buildsamples scripts are located in the
+						JaxWSServicesSamples/scripts directory. The
+						scripts set the appropriate class path information and
+						run the Ant build utility. The Ant utility reads the
+						build.xml files, which describe how to build the
+						samples. Refer to the Apache Ant web site for additional
+						documentation on the Ant utility.
+          </p>
+
+
+			</li>
+
+		<li>
+
+		Install and remove the JaxWSServicesSamples.ear file.
+
+
+					<ul>
+						<li>
+							Located in the JaxWSServicesSamples/scripts directory is a file
+							called install.jacl. Use wsdamin to install the sample as follows:
+							<pre>\WebSphere\AppServer70\bin\wsadmin.bat -conntype none -f	samplesMaster.jacl -command install -samples JaxWSServicesSamples</pre>
+
+						</li>
+
+						<li>
+							Scripts are provided in the operating-system specific
+							directories:
+							<ul>
+								<li>
+									installear: Available both as a Windows installear.bat file and as a
+									UNIX installear.sh file. If you are using the default node and cell, no
+									options are required.
+                </li>
+
+								<li>
+									uninstallear: Available both as a Windows uninstallear.bat file and
+									as a UNIX uninstallear.sh file. If you are using the default node and cell, no
+									options are required.
+                </li>
+
+							</ul>
+
+						</li>
+
+					</ul>
+			</li>
+
+			<br>
+
+			<b>Web Services Message Patterns</b>
+
+					<p>The Ping and Echo samples are two simple JAX-WS web services.</p>
+
+
+					The Ping sample demonstrates a one-way operation. A simple string
+					value is passed to the service. The client operation is complete
+					after it has contacted the service. Two endpoints exist in the
+					sample. One endpoint uses SOAP 1.1 and the other endpoint uses SOAP
+					1.2.
+					<p>
+					The Echo sample demonstrates a two-way operation. A simple string
+					value is passed to the service. The service prepends an identifier
+					string value and returns this value back to the client. There are
+					two endpoints in the sample. One endpoint uses SOAP 1.1 and the
+					other endpoint uses SOAP 1.2. The Echo sample also demonstrates the
+					synchronous and asynchronous programming models, as well as
+					synchronous and asynchronous over-the-wire behavior.</p>
+
+					<ul>
+						<li>
+							Synchronous: The client waits for the service response. </li>
+
+						<li>
+							Asynchronous
+							with synchronous communication: The service client does not wait for
+							the service response. A callback method is provided. When the
+							service responds, the callback method is called to handle the
+							response string. However, the communication on the wire is still
+							synchronous.
+            </li>
+
+						<li>
+							Asynchronous with asynchronous communication: The service client does not
+							wait for the service response. A callback method is provided.
+							When the
+							service responds, the callback method is called to handle the response
+							string. The service contacts the client on a channel that is
+							different
+							from the channel that was used by the client to contact the service.
+						</li>
+
+					</ul>
+
+
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="border" border="1" rules="all"><caption>Table 2. JaxWSServicesSamples Enpoints</caption>
+
+
+							<thead align="left">
+								<tr valign="bottom">
+									<th valign="bottom" id="N66429">Sample service endpoints URI</th>
+
+									<th valign="bottom" id="N66435">Description</th>
+
+								</tr>
+
+							</thead>
+
+							<tr>
+								<td valign="top">
+									http://localhost:9080/WSSampleSei/PingService
+                </td>
+
+								<td valign="top">
+									Ping service sample using SOAP 1.1
+                </td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">
+									http://localhost:9080/WSSampleSei/EchoService
+                </td>
+
+								<td valign="top">
+									Ping service sample using SOAP 1.1
+                </td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">
+									http://localhost:9080/WSSampleSei/PingService12
+                </td>
+
+								<td valign="top">
+									Ping service sample using SOAP 1.2
+                </td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">
+									http://localhost:9080/WSSampleSei/EchoService12
+                </td>
+
+								<td valign="top">
+									Ping service sample using SOAP 1.2
+                </td>
+
+							</tr>
+
+						</table>
+</div>
+
+					<i>Note: Port 9080 is the default value; however, the port number is
+					different if you install to a profile other than the AppSrv01
+					profile.</i>
+			<br><br>
+			<b>Running the Ping and Echo sample</b>
+
+					<p>
+					Before you begin, you must verify that the application server is
+					running before you start the clients.</p>
+
+					<p>
+					The Ping and Echo sample includes two services, Ping and Echo.
+					</p>
+
+					<p>
+					The Ping sample demonstrates a one-way service transaction. The source
+					for this sample is located in the JaxWSServicesSamples/src/SampleClientSei
+					directory.</p>
+
+					<p>
+					The Echo sample demonstrates a two-way service transaction. The source
+					for this sample is located in the JaxWSServicesSamples/src/SampleClientSei
+					directory.</p>
+
+					<p>
+					To run the Ping and Echo client servlet from WebSphere Application
+					Server, complete the following steps:</p>
+
+					<ol>
+						<li>
+							Start the server.
+            </li>
+
+						<li>Point your browser at the client interface; for example,
+							http://localhost:9080/wssamplesei/demo</li>
+
+					</ol>
+
+
+
+
+					<p>
+					The Ping and Echo thin client sample is similar to the Ping and Echo
+					client servlet. This sample accesses the same Ping and Echo web
+					services beans, but it uses a Java archive (JAR) file that requires
+					the Thin Client for JAX-WS with WebSphere Application JAR file in
+					the class path.</p>
+
+					<div class="p">
+					The WSSampleClientSei.jar file is located in the following directory:
+					<pre>JaxWSServicesSamples/lib/</pre>
+
+					</div>
+
+					<p>
+					The Ping and Echo thin client sample creates a JAX-WS proxy for the
+					Ping or Echo web service based on the parameters that you provide.
+					The proxy then contacts the service endpoint with the message. The
+					Echo sample waits for the response.</p>
+
+					<p>
+					In the following steps, the variable, app_server_root, refers to the
+					application server installation root.</p>
+
+					<p>
+					To run the Ping and Echo thin client from a WebSphere Application
+					Server, complete the following steps, based on your operating
+					system:</p>
+
+					<ol>
+						<li>Start the server.</li>
+
+						<li>Open a command prompt.</li>
+
+						<li>
+							Set the WAS_HOME environment variable.
+							On Windows operating systems:
+
+							<pre>set WAS_HOME=c:\WebSphere\AppServer</pre>
+
+
+							On operating systems such as AIX, Linux, and z/OS:
+
+							<pre>export WAS_HOME=/opt/IBM/WebSphere/AppServer</pre>
+
+       </li>
+
+						<li>Go to the JaxWSServicesSamples directory.
+
+							On Windows operating systems:
+
+							<pre>cd JaxWSServicesSamples\scripts\windows</pre>
+
+
+							On operating systems such as AIX and Linux:
+
+							<pre>cd JaxWSServicesSamples/scripts/unix</pre>
+
+  		</li>
+
+						<li>Run the Ping and Echo thin client sample.
+
+							On Windows operating systems:
+
+							<pre>runSampleSei.bat -h hostname -p port -f urlSuffix -m testMessage -s service -t timeout -w asyncwire -c count -1 -2</pre>
+
+
+							On operating systems such as AIX, Linux, and z/OS:
+
+							<pre>./runSampleSei.sh -h hostname -p port -f urlSuffix -m testMessage -s service -t timeout -w asyncwire -c count -1 -2</pre>
+
+
+							On iSeries operating systems:
+
+							<pre>./runSampleSei -h hostname -p port -f urlsuffix -m testMessage -s service -t timeout -w asyncwire -c count -1 -2</pre>
+
+        </li>
+
+					</ol>
+
+
+					The parameters are:
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="border" border="1" rules="all"><caption>Table 3. runSampleSei Options</caption>
+
+
+							<thead align="left">
+								<tr valign="bottom">
+									<th valign="bottom" id="N66706">Option</th>
+
+									<th valign="bottom" id="N66712">Description</th>
+
+								</tr>
+
+							</thead>
+
+							<tr>
+								<td valign="top">-h &lt;hostname&gt;</td>
+
+								<td valign="top">Specifies the name of the host. The default is localhost.</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">-p &lt;port&gt;</td>
+
+								<td valign="top">Specifies the port number. The default value is 9080.</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">-f &lt;urlsuffix&gt;</td>
+
+								<td valign="top">Specifies the service endpoint context. The default is	<pre>/WSSampleSei/EchoService</pre>
+</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">-m &lt;message&gt; </td>
+
+								<td valign="top">Specifies the  text of the message. The default is hello. If	the message contains blanks, use quotation marks around the message.</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">-c count </td>
+
+								<td valign="top">Specifies the number of transactions to run. The default is 1.</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">-1 </td>
+
+								<td valign="top">Specifies to use SOAP 1.1. The default is SOAP 1.1.</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">-2 </td>
+
+								<td valign="top">Specifies to use SOAP 1.2. </td>
+
+							</tr>
+
+						</table>
+</div>
+
+
+					The following example illustrates a successful run of the Ping and
+					Echo client on the Windows operating system:
+
+<pre>
+runSampleSei.bat -p 9081
+Jan 12, 2011 7:01:00 PM com.ibm.ws.ssl.config.SSLConfigManager
+INFO: ssl.disable.url.hostname.verification.CWPKI0027I
+&gt;&gt; CLIENT: SEI Async to http://localhost:9081/WSSampleSei/EchoService
+[WAShttpAsyncResponseListener] listening on port 4733
+&gt;&gt; CLIENT: SEI Async invocation complete.
+&gt;&gt; CLIENT: SEI Async response is: JAX-WS==&gt;&gt;HELLO
+</pre>
+
+
+					To learn more about how the sample client and application work, see
+					the Ping and Echo technotes or view the Java source code.
+					<p>
+					For more information about web services clients, see the documentation
+					on developing and deploying web services clients in the WebSphere
+					Application Server Information Center.
+					</p>
+
+
+			<b>Enabling Reliable Messaging &amp; Security</b>
+			<br>
+
+
+
+
+					<p><b>Policy set scripts</b>
+					<br>Policy sets are used to enable quality of service (QoS) such as
+					ReliableMessaging and SecureConversation. Policy sets that are
+					attached to an application define the quality of service for that
+					application. A set of scripts are provided to enable the policy
+					sets for WS-ReliableMessaging (WS-RM), WS-SecureConversation
+					(WS-SC) and WS-I Reliable Secure Profile (RSP). RSP is a
+					composition of both WS-RM and WS-SC. These scripts are provided as
+					examples. You can also enable Policy sets using the administrative
+					console. These scripts are designed to work with the sample
+					applications only. The following tables describe the Policy set
+					sample scripts.</p>
+
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="border" border="1" rules="all"><caption>Table 4. Scripts for the Windows operating system</caption>
+
+
+							<thead align="left">
+								<tr valign="bottom">
+									<th valign="bottom" id="N66909">Filename</th>
+
+									<th valign="bottom" id="N66915">Description</th>
+
+								</tr>
+
+							</thead>
+
+							<tr>
+								<td valign="top">enableRMQoS.bat</td>
+
+								<td valign="top">Enable WS-ReliableMessaging Version 1.1</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">enableRM1QoS.bat</td>
+
+								<td valign="top">Enable WS-ReliableMessaging Version 1.0</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">enableSCQoS.bat</td>
+
+								<td valign="top">Enable WS-SecureConversation</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">enableRSPQoS.bat</td>
+
+								<td valign="top">Enable WS-ReliableMessaging and WS-SecureConversation</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">enableWSAQoS.bat</td>
+
+								<td valign="top">Enable WS-Addressing</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">disableRMQoS.bat</td>
+
+								<td valign="top">Disable WS-ReliableMessaging Version 1.1</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">disableRM1QoS.bat</td>
+
+								<td valign="top">Disable WS-ReliableMessaging Version 1.0</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">disableSCQoS.bat</td>
+
+								<td valign="top">Disable WS-SecureConversation</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">disableRSPQoS.bat</td>
+
+								<td valign="top">Disable WS-ReliableMessaging and WS-SecureConversation</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">disableWSAQoS.bat</td>
+
+								<td valign="top">Disable WS-Addressing</td>
+
+							</tr>
+
+						</table>
+</div>
+
+
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="border" border="1" rules="all"><caption>Table 5. Scripts for operating systems such as AIX, Linux, and z/OS</caption>
+
+
+							<thead align="left">
+								<tr valign="bottom">
+									<th valign="bottom" id="N67129">Filename</th>
+
+									<th valign="bottom" id="N67135">Description</th>
+
+								</tr>
+
+							</thead>
+
+							<tr>
+								<td valign="top">enableRMQoS.sh</td>
+
+								<td valign="top">Enable WS-ReliableMessaging Version 1.1</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">enableRM1QoS.sh</td>
+
+								<td valign="top">Enable WS-ReliableMessaging Version 1.0</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">enableSCQoS.sh</td>
+
+								<td valign="top">Enable WS-SecureConversation</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">enableRSPQoS.sh</td>
+
+								<td valign="top">Enable WS-ReliableMessaging and WS-SecureConversation</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">enableWSAQoS.sh</td>
+
+								<td valign="top">Enable WS-Addressing</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">disableRMQoS.sh</td>
+
+								<td valign="top">Disable WS-ReliableMessaging Version 1.1</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">disableRM1QoS.sh</td>
+
+								<td valign="top">Disable WS-ReliableMessaging Version 1.0</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">disableSCQoS.sh</td>
+
+								<td valign="top">Disable WS-SecureConversation</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">disableRSPQoS.sh</td>
+
+								<td valign="top">Disable WS-ReliableMessaging and WS-SecureConversation</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">disableWSAQoS.sh</td>
+
+								<td valign="top">Disable WS-Addressing</td>
+
+							</tr>
+
+						</table>
+</div>
+
+
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="border" border="1" rules="all"><caption>Table 6. Scripts for the i5/OS operating system</caption>
+
+
+							<thead align="left">
+								<tr valign="bottom">
+									<th valign="bottom" id="N67349">Filename</th>
+
+									<th valign="bottom" id="N67355">Description</th>
+
+								</tr>
+
+							</thead>
+
+							<tr>
+								<td valign="top">enableRMQoS</td>
+
+								<td valign="top">Enable WS-ReliableMessaging Version 1.1</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">enableRM1QoS</td>
+
+								<td valign="top">Enable WS-ReliableMessaging Version 1.0</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">enableSCQoS</td>
+
+								<td valign="top">Enable WS-SecureConversation</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">enableRSPQoS</td>
+
+								<td valign="top">Enable WS-ReliableMessaging and WS-SecureConversation</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">enableWSAQoS</td>
+
+								<td valign="top">Enable WS-Addressing</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">disableRMQoS</td>
+
+								<td valign="top">Disable WS-ReliableMessaging Version 1.1</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">disableRM1QoS</td>
+
+								<td valign="top">Disable WS-ReliableMessaging Version 1.0</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">disableSCQoS</td>
+
+								<td valign="top">Disable WS-SecureConversation</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">disableRSPQoS</td>
+
+								<td valign="top">Disable WS-ReliableMessaging and WS-SecureConversation</td>
+
+							</tr>
+
+							<tr>
+								<td valign="top">disableWSAQoS</td>
+
+								<td valign="top">Disable WS-Addressing</td>
+
+							</tr>
+
+						</table>
+</div>
+
+
+					Use the following steps to run the reliable messaging scripts on the
+					Windows operating system. You can run the all of the scripts in a
+					similar manner based on your operating system.
+					<ol>
+					<li>Open a command prompt using the Start menu: Click Start-&gt; Run. Enter cmd.</li>
+
+					<li>Change to the JaxWSServicesSamples/bin directory. For example:
+					<pre>cd C:\samples\JaxWSServiceSamples\bin</pre>
+</li>
+
+					<li>Set the WAS_HOME environment variable.
+							On Windows operating systems:
+
+							<pre>set WAS_HOME=c:\WebSphere\AppServer</pre>
+
+
+							On operating systems such as AIX, Linux, and z/OS:
+
+							<pre>export WAS_HOME=/opt/IBM/WebSphere/AppServer</pre>
+</li>
+
+					<li>Run the reliable messaging scripts.
+					<ul>
+					<li>To run the enable reliable messaging scripts, enter the command:
+					<pre>enableRMQos.bat</pre>
+</li>
+
+					<li>To run the disable reliable messaging scripts, enter the command:
+					<pre>disableRMQos.bat</pre>
+</li>
+
+					</ul>
+
+					</li>
+
+					<li>(Optional) Specify your profile, cell, node or server name when
+					you run the reliable messaging or security scripts. The enable and
+					disable scripts for reliable messaging and security have four
+					optional parameters:
+					<ul>
+					<li>profile: application server profile</li>
+
+					<li>cell: application server cell</li>
+
+					<li>node: application server node</li>
+
+					<li>server: application server name</li>
+
+					</ul>
+
+					</li>
+
+
+
+
+					The following example demonstrates how to run the Enable
+					WS-ReliableMessaging script with the optional profile, cell, and
+					node parameters specified:
+
+					<pre>enableRMQoS.bat AppSrv02 MyServerNode01Cell MyServerNode01</pre>
+
+
+					The following example demonstrates how to run the Disable
+					WS-ReliableMessaging script with the optional profile, cell, and
+					node parameters specified:
+
+					<pre>disableRMQoS.bat AppSrv02 MyServerNode01Cell MyServerNode01</pre>
+
+					<li>Configure additional parameters on the command line as needed. If
+					your server has administrative security enabled, then you must
+					provide the user ID and password or the script fails, for example:
+					<pre>./enableRMQoS.sh -user myuserid -password mypassword</pre>
+
+					</li>
+
+					<li>Ensure the sample applications start correctly. If you receive a
+					warning message, the sample applications might have started
+					incorrectly. Use the administrative console to stop and then
+					restart the sample applications.</li>
+
+
+
+
+					<p>
+					To test the Ping and Echo thin client sample with the QoS policy
+					sets, follow these guidelines.</p>
+
+					<ol>
+					<li>Apply the quality of service (QoS) that you want to test to the
+					sample applications as indicated in the Policy Set Scripts section.</li>
+
+					<li>Edit the runSampleSei script for your operating system.</li>
+
+					<li>To add the WS-I RSP and SecureConversation policies, add the
+					following statement to include the path to the Java Authentication
+					and Authorization (JAAS) login file. On Windows operating systems:
+
+					<pre>set JAASLOGIN=-Djava.security.auth.login.config=&lt;profile_root&gt;/properties/wsjaas_client.conf</pre>
+
+
+					On operating systems such as AIX, Linux, and z/OS:
+
+					<pre>export JAASLOGIN=-Djava.security.auth.login.config=&lt;profile_root&gt;/properties/wsjaas_client.conf</pre>
+
+
+					The profile_root indicates the server directory where your profile
+					is located, for example:
+					<pre>set JAASLOGIN=-Djava.security.auth.login.config=C:/IBM/WebSphere/profiles/AppSrv02/properties/wsjaas_client.conf</pre>
+
+					</li>
+
+					<li>Change the class path statement.
+
+					On Windows operating systems:
+
+					<pre>set CLASSPATH=%THIN_JAR%;./WSSampleClientSei.jar;.</pre>
+
+
+					On operating systems such as AIX, Linux, and z/OS:
+
+					<pre>export CLASSPATH=${THIN_JAR}:./WSSampleClientSei.jar:.</pre>
+
+
+					Note: The period (.) is included at the end of the class path statement.
+					The period is included so the policy set loading code finds the
+					META-INF directory. Do not omit the period.</li>
+
+					<li>Add &lt;JAASLOGIN&gt; and
+					-DUSER_INSTALL_ROOT="&lt;profile_root&gt;" to the Java command.
+
+					On Windows operating systems:
+
+					<pre>java %JAASLOGIN% -DUSER_INSTALL_ROOT= "&lt;profile_root&gt;" -cp "%CLASSPATH%" com.ibm.was.wssample.sei.cli.SampleClient %*</pre>
+
+
+					On operating systems such as AIX, Linux, and z/OS:
+
+					<pre>java ${JAASLOGIN} -DUSER_INSTALL_ROOT="&lt;profile_root&gt;" -cp "${CLASSPATH} " com.ibm.was.wssample.sei.cli.SampleClient $@</pre>
+
+					</li>
+
+					<li>Create a directory named META-INF in the
+					directory where the version of the script is located. For example <pre>JaxWSServicesSamples/scripts/unix/META-INF</pre>
+</li>
+
+					<li>Copy the PolicySets directory from the
+					profile_root/config/cells/CELL_NAME/ directory to the
+					META-INF directory.</li>
+
+					<li>Copy the bindings subdirectory and the clientPolicyAttachment.xml
+					file from the profile_root/config/cells/CELL_NAME/applications/JaxWSServicesSamples.ear/deployments/JaxWSServicesSamples/META-INF directory to the META-INF
+					directory.</li>
+
+					<li>Copy the entire bindings subdirectory and its contents;
+					for example, SecureConversationClientBinding or
+					RAMP_client_default_bindings.</li>
+
+					<li>Change to the
+					directory with the script and run the sample.</li>
+
+					</ol>
+
+</div>
+
+		<div class="section">
+	<h4 class="sectiontitle">
+	  Results </h4>
+
+			<p>The following illustration shows the
+				correctly running
+				Ping and Echo sample:</p>
+
+			<p>
+				<img src="images/pingecho.gif" alt="The running Ping and Echo sample"/>
+			</p>
+
+			<br><br>
+
+			<p>The following illustration shows the
+				correctly running
+				MTOM sample:</p>
+
+			<p>
+				<img src="images/mtom.gif" alt="The running MTOM sample"/>
+			</p>
+
+
+		</div>
+
+
+
+	</div>
+
+
+	<div><div class="reltasks"><strong>Related tasks</strong><br/>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+</div>
+</div>
+</body>
+</html>

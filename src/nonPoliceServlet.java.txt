@@ -1,0 +1,6 @@
+public class nonPoliceServlet{
+	public get(HTTPPost post, HTTPRequest request){
+	}
+	public post(HTTPPost post, HTTPRequest request){
+	}
+}

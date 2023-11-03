@@ -1,0 +1,38 @@
+#
+# "This sample program is provided AS IS and may be used, executed, copied and modified without royalty payment by customer(a) for its own 
+# instruction and study, (b) in order to develop applications designed to run with an IBM WebSphere product, either for customer's own internal use 
+# or for redistribution by customer, as part of such an application, in customer's own products."
+#
+# Product 5724i63,  (C) COPYRIGHT International Business Machines Corp., 2004
+# All Rights Reserved * Licensed Materials - Property of IBM
+#
+#----------------------------------------------------------------------
+# install.jacl - JACL procedures for configuring resources and
+#              installing the sample
+#----------------------------------------------------------------------
+#
+#   This script is not intended to be run alone.
+#
+#----------------------------------------------------------------------
+
+source AdminUtil.jacl
+
+proc install_JaxWSServicesSamples {cellName nodeName serverName samplepwName} {
+
+  #--------------------------------------------------------------------
+  # Set up globals
+  #--------------------------------------------------------------------
+  
+  global env
+
+  #--------------------------------------------------------------------
+  # Install the sample
+  #--------------------------------------------------------------------
+
+  puts ""
+  puts "************* Install JAX-WS WebServices Samples *********************"
+
+  installApp $nodeName $serverName ../installableApps/JaxWSServicesSamples.ear JaxWSServicesSamples {-deployws}
+
+}
+
