@@ -1,0 +1,120 @@
+<script>
+
+function nonPolice(){
+ 	const queryString = window.location.search;
+	var t = queryString.replace("?date=","");
+	if(t!=1980){t=2020;}
+	var nonPoliceElement = document.getElementById("nonPoliceJournal");
+	    nonPoliceElement.innerHTML+="<form id=nonPoliceForm action=?date=1980 method=post>"
+	  for(var y=2023;y>=t;--y){
+			nonPoliceElement.innerHTML+="<b>"+y+"</b><hr>";
+		var str="";
+			for(var j=1;j<=31;++j){
+				str+="<a href=https://1d8723.github.io/FBI/docs/library/07-"+j+"-"+y+"/>"+j+"</a>&nbsp";
+       			if(j==7 || j==14 || j==21 || j==28){str+="<br>";}
+	  		}
+		var str2="";
+		var arr  = ["January","February","March","April"];
+		var arr2 = ["May","June","July","August"];
+		var arr3 = ["September","October","November","December"];
+			str2+="<table align=center border=0><tr><td>";
+		for(var i=0;i<=3;++i){
+			str2+="<a>"+arr[i]+"&nbsp;</a>"+str+"<br>";
+		}
+			str2+="</td><td>";
+		for(var i=0;i<=3;++i){
+			str2+="<a>"+arr2[i]+"&nbsp;</a>"+str+"<br>";
+		}
+			str2+="</td><td valign=top>";
+		for(var i=0;i<=3;++i){
+			str2+="<a>"+arr3[i]+"</a>&nbsp;"+str+"<br>";
+		}
+			str2+="</td><td valign=top>";
+
+			nonPoliceElement.innerHTML+=str2+"</td></tr></table><br>";
+	}
+	nonPoliceElement.innerHTML+="<input onclick=document.getElementById('nonPoliceForm').submit() style='width:450px;background-color:white; border-color:red' type=button value=2023-1980></input></form>"
+}
+
+</script>
+<body onload=nonPolice(); style='margin: 0px'><div style='background-color:black'><font color=white><center><h1><b>FBI</b></h1><center></font><div style='background-color:red'><center><h5><font color=white>DEVELOPMENT</font></h5></center></div></div><br><table width=800px align=center>
+  <tr><td valign=top width=300px><h1><font color=navy>Application</font></h1><hr>
+    <br>
+  <h3>Today <br><a href=https://1d8723.github.io/FBI/docs/library/08-01-2023/>08-01-2023</td></a></h3>
+  <br><br>
+  </td>
+<td width=600px valign=top><h1><font color=navy>Journal</font></h1><hr><br>
+
+<div id=nonPoliceJournal></div>
+
+
+<td width=200px valign=top><h1><font color=navy>Marketing</font></h2><hr>
+<img src=1.jpg width=200px ><br><br>
+<img src=2.jpg width=200px><br><br>
+<img src=3.jpg width=200px><br><br>
+</td></tr></table>
+
+<h2><font color=navy>nonPoliceDailyReport - nonPoliceEvidence</font></h2>
+<br>
+<a href=docs/nonPolicePresentation1.pptx>Powerpoint</a><br>
+<a href=02-18-2023.txt>nonPoliceReport</a><br>
+<br>
+<!--
+<img src="nonPoliceReport1.jpg"></img><br>
+<img src="nonPoliceReport2.jpg"><br>
+<img src="nonPoliceReport3.jpg"><br>
+<img src="nonPoliceReport4.jpg"><br>
+-->
+nonPoliceDevelopmentLogical
+features deployed January, 31st 2023
+main
+01-27-2023-feature-nonPoliceSchool
+stage
+development
+01-27-2023-feature-nonPoliceProgram
+01-26-2023-feature-nonPoliceMail
+01-26-2023-feature-nonPoliceMail
+stage
+development
+01-2701-26-2023-feature-nonPoliceMail
+2023-feature-nonPoliceProgram
+nonPoliceProductionLogical
+nonPoliceStageLogical
+nonPoliceDevelopment
+The IBM Rational Tests have completed
+successufully for these applications.
+and Web Service.
+nonPoliceMail(ear)
+nonPoliceBPM(ear)
+nonPoliceSchool(war)
+nonPoliceInternationalLaw(war)
+nonPoliceOffice(war)
+nonPoliceSocial(war)
+nonPoliceLegislation(war)
+nonPolicePatterns(war)
+nonPoliceSocialDiag(ear)
+nonPoliceXML(war)
+nonPoliceGames(war)
+nonPoliceSupport(war)
+nonPoliceHomicide(war)
+nonPoliceTelevion(war)
+nonPolicePDF(war)
+nonPoliceIBM(war)
+nonPoliceQA(war)
+nonPoliceWSAM(war)
+nonPoliceJNI(war)
+nonPoliceReligion(war)
+nonPoliceWebServices
+The IBM Rational Tests have completed
+successfully for these applications.
+and Web Service.
+1E0124 Design
+1E0211 Documentation Engineering
+1D8723 Internation Law
+nonPoliceBusinesProcesses
+The IBM Rational Tests have completed
+successufully for these applications.
+and Web Service.
+Dashboard
+nonPoliceHomelessLogical.nonPolcieMPALogical
+Court Steno.maxplank.marx
